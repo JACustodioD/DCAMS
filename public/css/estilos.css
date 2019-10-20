@@ -18,6 +18,12 @@ body{
     font-family: 'Nunito', sans-serif;
     font-size: 1.1em;
 }
+
+.menu-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
 .menu  a{
     list-style: none;
     text-decoration: none;
