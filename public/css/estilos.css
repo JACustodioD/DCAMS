@@ -9,3 +9,17 @@ body{
 .icon-head:hover{
     color: #007bff;
 }
+.icono{
+    width: 150px;
+    height: 150px;
+}
+.menu{
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1em;
+}
+.menu  a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
