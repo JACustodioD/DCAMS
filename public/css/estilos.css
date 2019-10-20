@@ -39,7 +39,7 @@ body{
     color: black !important;
 }
 #main .carousel-inner img{
-    height: 80vh;
+    height: 90vh;
     object-fit: cover;
     filter: grayscale(20%);
     opacity: 0.5;
@@ -61,10 +61,27 @@ body{
 #carousel .overlay .row{
     height: 100%;
 }
+.text-slider{
+    color: white;
+    text-shadow: 1px 1px  #606060;
+}
+.text-slider strong{
+    font-weight: bold;
+}
 .card-encabezado{
     background-color: white;
     border-bottom: 0;
+    padding-bottom: 0;
+}
+.form-card{
+    background-color: rgba(255, 255, 255, 0.7)
 }
 .text-cardh{
     color:  #007bff;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+.icono-calendar{
+    height: 50px;
+    width: 50px;
 }

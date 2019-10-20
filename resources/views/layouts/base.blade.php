@@ -86,11 +86,17 @@
                    <div class="overlay">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-5 offset-md-7 mt-4">
+                                <div class="col-md-7 mt-2 d-flex align-items-center">
+                                    <h1 class="display-4 text-slider"> Tu Consultorio dental <strong> de confianza </strong> </h1>
+                                </div>
+                                <div class="col-md-5  mt-2">
                                     <form action="">
-                                         <div class="card">
+                                         <div class="card form-card">
                                              <div class="card-header card-encabezado">
-                                                <h2 class="text-cardh">Tu primera cita</h2>
+                                                 <div class="row d-flex justify-content-between">
+                                                    <span class="text-cardh">Tu primera cita</span>
+                                                    <img src="/img/icono-calendar.png" class="icono-calendar" alt="">
+                                                 </div>
                                               </div>
                                               <div class="card-body">
                                                  <div class="form-group">
@@ -98,16 +104,27 @@
                                                     <input type="text" class="form-control">
                                                  </div>
                                                  <div class="form-group">
-                                                    <label for="email">E-mail:</label>
-                                                    <input type="email" class="form-control">
-                                                 </div>
-                                                 <div class="form-group">
                                                     <label for="telefono">Telefono:</label>
                                                     <input type="telefono" class="form-control">
                                                  </div>
                                                  <div class="form-group">
+                                                     <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label for="fecha">Fecha:</label>
+                                                            <input type="date" name="fecha" class="form-control">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="hora">Hora:</label>
+                                                            <input type="time" name="hora" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                                 <div class="form-group">
                                                     <label for="comentarios">Comentarios</label>
                                                     <textarea class="form-control" id="comentarios" rows="3"></textarea>
+                                                 </div>
+                                                 <div class="form-group text-center">
+                                                    <button class="btn btn-primary" style="width:50%;"><b>Agendar</b></button>
                                                  </div>
                                               </div>
                                          </div>
