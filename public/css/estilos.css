@@ -6,6 +6,12 @@ body{
     margin-right: 5px;
     color: black;
 }
+.head-button{
+    height: 100%;
+}
+.text-phone{
+    margin-bottom: 0;
+}
 .icon-head:hover{
     color: #007bff;
 }

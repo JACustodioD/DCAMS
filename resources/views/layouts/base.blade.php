@@ -20,22 +20,26 @@
     <header class="header-container container  mt-2">
         <div class="row">
             <div class="col-md-6">
-                <h2> <i class="fas fa-phone"></i> 5522-9901 ext 29</h2>
+                <h2 class="text-phone"> <i class="fas fa-phone"></i> 5522-9901 ext 29</h2>
             </div>
-            <div class="col-md-6 d-flex justify-content-end">
-                <button class="btn btn-primary mr-3">Agenda tu primera cita</button>
-                <button class="btn btn-primary"><i class="fas fa-user mr-2"></i>Iniciar sesión</button>
+            <div class="col-md-6 d-flex justify-content-end head-button">
+                <button class="btn btn-primary mr-3"><b>Agenda tu primera cita</b></button>
+                <button class="btn btn-primary"><i class="fas fa-user mr-2"><b></i>Iniciar sesión</b></button>
             </div>
         </div>
 
         <!--SOCIAL RED-->
-        <div class="row mt-2">
-            <div class="col-md-12 d-flex justify-content-end">
+        <div class="row  d-flex justify-content-between ">
+            <div class="col-md-3">
+                <span><small>Dra. Amy Hernández Hernández <i class="fas fa-check"></i></small></span>
+            </div>
+            <div class="col-md-2 d-flex justify-content-end">
                 <a href=""><i class="fab fa-instagram  icon-head hvr-grow-rotate"></i> </a>  
                 <a href=""><i class="fab fa-facebook-square icon-head hvr-grow-rotate"></i></a>
                 <a href=""><i class="fab fa-twitter-square icon-head hvr-grow-rotate"></i> </a>   
             </div>
         </div>
+    
        
         <!--MENU-->
             <div class="col-md-12 col-menu">
