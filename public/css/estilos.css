@@ -35,3 +35,36 @@ body{
     text-decoration: none;
     color: black;
 }
+.nav-link{
+    color: black !important;
+}
+#main .carousel-inner img{
+    height: 80vh;
+    object-fit: cover;
+    filter: grayscale(20%);
+    opacity: 0.5;
+}
+#carousel{
+    position: relative;
+}
+#carousel .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    z-index: 1;
+}
+#carousel .overlay .container,
+#carousel .overlay .row{
+    height: 100%;
+}
+.card-encabezado{
+    background-color: white;
+    border-bottom: 0;
+}
+.text-cardh{
+    color:  #007bff;
+}

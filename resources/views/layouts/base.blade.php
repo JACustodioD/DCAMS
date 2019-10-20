@@ -39,8 +39,6 @@
                 <a href=""><i class="fab fa-twitter-square icon-head hvr-grow-rotate"></i> </a>   
             </div>
         </div>
-    
-       
         <!--MENU-->
             <div class="col-md-12 col-menu">
                 <nav class="navbar navbar-expand-md navbar-light menu">
@@ -70,7 +68,56 @@
                   </nav>
             </div>
         </div>
-     </header>
+    </header>
+    <!--SECCION SLIDER-->
+    <section class="container" id="main">
+         <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+             <div class="carousel-inner">
+                 <div class="carousel-item active">
+                     <img src="/img/slider2.jpg" class="d-block w-100" alt="...">
+                 </div>
+                 <div class="carousel-item">
+                     <img src="/img/slider4.jpg" class="d-block w-100" alt="...">
+                 </div>
+                 <div class="carousel-item">
+                     <img src="/img/slider5.jpg" class="d-block w-100" alt="...">
+                 </div>
+                 </div>
+                   <div class="overlay">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-5 offset-md-7 mt-4">
+                                    <form action="">
+                                         <div class="card">
+                                             <div class="card-header card-encabezado">
+                                                <h2 class="text-cardh">Tu primera cita</h2>
+                                              </div>
+                                              <div class="card-body">
+                                                 <div class="form-group">
+                                                    <label for="name">Nombre:</label>
+                                                    <input type="text" class="form-control">
+                                                 </div>
+                                                 <div class="form-group">
+                                                    <label for="email">E-mail:</label>
+                                                    <input type="email" class="form-control">
+                                                 </div>
+                                                 <div class="form-group">
+                                                    <label for="telefono">Telefono:</label>
+                                                    <input type="telefono" class="form-control">
+                                                 </div>
+                                                 <div class="form-group">
+                                                    <label for="comentarios">Comentarios</label>
+                                                    <textarea class="form-control" id="comentarios" rows="3"></textarea>
+                                                 </div>
+                                              </div>
+                                         </div>
+                                     </form>
+                             </div>
+                          </div>
+                     </div>
+                  </div>
+             </div>
+    </section>
      <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/all.js"></script>
