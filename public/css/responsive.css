@@ -16,3 +16,24 @@
         width: 50px;
     }
 }
+@media (max-width:766px){
+    .horarios{
+      margin-left: 0 !important;
+      text-align: center;
+    }
+    .btn-sesion{
+        height: 100%;
+    }
+    .name-doc{
+        text-align: center;
+    }
+    .text-phone{
+        font-size: 1.5em;
+    }
+    .col-phone{
+        text-align: center;
+    }
+    .text-slider{
+        font-size: 2em;
+    }
+}

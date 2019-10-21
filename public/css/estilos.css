@@ -6,9 +6,10 @@ body{
     margin-right: 5px;
     color: black;
 }
-.head-button{
-    height: 100%;
+.btn-sesion{
+    height: 80%;
 }
+
 .text-phone{
     margin-bottom: 0;
 }

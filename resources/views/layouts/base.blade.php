@@ -19,18 +19,24 @@
 <body>
     <header class="header-container container  mt-2">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4 col-phone">
                 <h2 class="text-phone"> <i class="fas fa-phone"></i> 5522-9901 ext 29</h2>
             </div>
-            <div class="col-md-6 d-flex justify-content-end head-button">
-                <button class="btn btn-primary mr-3"><b>Agenda tu primera cita</b></button>
-                <button class="btn btn-primary"><i class="fas fa-user mr-2"><b></i>Iniciar sesión</b></button>
+            <div class="offset-1">
+
+            </div>
+            <div class="col-md-5 d-flex justify-content-end">
+                <span class="ml-4 horarios"><small><b>Horario:</b> Lun. a vie. de 8:00 a 17:00 <b>/</b>  Avenida Alfredo del Mazo #678, Tlalnepantla Edo. Mex.</small></span>
+            </div>
+            <div class="col-12 col-md-2 text-center">
+                <button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-user"><b></i>Iniciar sesión</b></button>
+
             </div>
         </div>
 
         <!--SOCIAL RED-->
         <div class="row  d-flex justify-content-between ">
-            <div class="col-md-3">
+            <div class="col-md-3 name-doc">
                 <span><small>Dra. Amy Hernández Hernández <i class="fas fa-check"></i></small></span>
             </div>
             <div class="col-md-2 d-flex justify-content-end">
