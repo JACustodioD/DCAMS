@@ -10,7 +10,7 @@
 }
 
 /*LOGO*/
-@media screen and (max-width:855px){
+@media screen and (max-width:990px){
     .icono{
         height: 50px;
         width: 50px;
@@ -33,7 +33,33 @@
     .col-phone{
         text-align: center;
     }
-    .text-slider{
-        font-size: 2em;
+    .text-slider, .text-cardh{
+        font-size: 1em;
+        text-align: center;
+    }
+
+}
+@media(max-width:1198px){
+    .text-phone{
+        font-size: 1.5em;
+    }
+}
+@media(max-width:990px){
+    .text-phone{
+        font-size: 1.2em;
+    }
+    .horarios{
+        margin-left: 0 !important;
+        font-size: 0.9em;
+    }
+    .namedoc span small{
+        font-size: 0.9em;
+    }
+    .col-ocult{
+        margin-left: 0 !important;
+    }
+    .btn-sesion{
+        font-size: 0.7em;
+        margin-left: 50px;
     }
 }

@@ -22,13 +22,13 @@
             <div class="col-md-4 col-phone">
                 <h2 class="text-phone"> <i class="fas fa-phone"></i> 5522-9901 ext 29</h2>
             </div>
-            <div class="offset-1">
+            <div class="offset-1 col-ocult">
 
             </div>
             <div class="col-md-5 d-flex justify-content-end">
                 <span class="ml-4 horarios"><small><b>Horario:</b> Lun. a vie. de 8:00 a 17:00 <b>/</b>  Avenida Alfredo del Mazo #678, Tlalnepantla Edo. Mex.</small></span>
             </div>
-            <div class="col-12 col-md-2 text-center">
+            <div class=" col-12 col-md-2 text-center">
                 <button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-user"><b></i>Iniciar sesión</b></button>
 
             </div>
