@@ -114,3 +114,9 @@ body{
 .about-icon{
     font-size: 3.5em;
 }
+.tratamientos-section{
+    background-image: url("/img/wallpaper-tratamientos.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
