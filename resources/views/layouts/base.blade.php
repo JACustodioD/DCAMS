@@ -145,7 +145,7 @@
          <div class="about-section">
              <div class="row">
                  <div class="col-12 mt-3">
-                     <h1 class="text-about text-center display-4" >En Consultorio Dental <strong>Amy</strong></h1>
+                     <h1 class="text-about text-center display-4" >En consultorio dental <strong>Amy</strong></h1>
                  </div>
              </div>
              <div class="row">
@@ -192,8 +192,33 @@
      <section class="container">
         <div class="tratamientos-section">
             <div class="row">
-                <div class="col-md-12">
-                    <h1>Tratamientos</h1>
+                <div class="col-md-12 mt-3">
+                    <h1 class="pl-4">Tratamientos para ti</h1>
+                </div>
+            </div>
+            <div class="row pl-4">
+                <div class="col-md-6 col-tratamientos mt-2">
+                     <img src="/img/icono2.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Limpieza dental</span>
+                </div>
+            </div>
+            <div class="row pl-4">
+                <div class="col-md-6 mt-1 col-tratamientos">
+                     <img src="/img/icono1.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Blanqueamiento dental</span>
+                </div>
+            </div>
+            <div class="row pl-4">
+                <div class="col-md-6 mt-1 col-tratamientos">
+                     <img src="/img/icono3.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Implantes</span>
+                </div>
+            </div>
+            <div class="row pl-4">
+                <div class="col-md-6 mt-1 col-tratamientos">
+                     <img src="/img/icono4.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Diseño de sonrisa</span>
+                </div>
+            </div>
+            <div class="row pl-4">
+                <div class="col-md-6 mt-1 col-tratamientos">
+                     <img src="/img/icono6.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Ortodoncia y endodoncia</span>
                 </div>
             </div>
         </div>
