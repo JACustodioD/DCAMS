@@ -1,13 +1,14 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+
 .icon-head{
     font-size: 1.8em;
     margin-right: 5px;
     color: black;
 }
 .btn-sesion{
-    height: 80%;
+    height: 100%;
 }
 
 .text-phone{
@@ -19,6 +20,11 @@ body{
 .icono{
     width: 150px;
     height: 150px;
+}
+.row-horario{
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px 5px 20px;
 }
 .menu{
     height: 100%;
@@ -64,7 +70,7 @@ body{
 }
 .text-slider{
     color: white;
-    text-shadow: 1px 1px  #606060;
+    text-shadow: 1px 1px 
 }
 .text-slider strong{
     font-weight: bold;
@@ -76,6 +82,7 @@ body{
 }
 .form-card{
     background-color: rgba(255, 255, 255, 0.7);
+    
 }
 .text-cardh{
     color:  #007bff;
@@ -85,4 +92,22 @@ body{
 .icono-calendar{
     height: 50px;
     width: 50px;
+}
+.about-section {
+    background-color:  #007bff;
+    color: white;
+}
+.text-about{
+    text-shadow: 1px 1px  #606060;
+}
+.text-about strong{
+    font-weight: bold;
+}
+.parrafo-about{
+    font-size: 1.2em;
+}
+.separator{
+    background-color: white;
+    width: 25%;
+    height: 5px;
 }
