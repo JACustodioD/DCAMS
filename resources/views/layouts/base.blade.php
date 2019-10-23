@@ -189,43 +189,45 @@
              </div>
          </div>
      </section>
+     <!--SECCION DE TRATAMIENTOS-->
      <section class="container">
         <div class="tratamientos-section">
             <div class="row">
-                <div class="col-md-12 mt-3">
-                    <h1 class="pl-4">Tratamientos para ti</h1>
+                <div class="col-md-12 mt-3" id="tratamiento1">
+                    <h1 class="pl-4 tratamientos">Tratamientos para ti</h1>
                 </div>
             </div>
             <div class="row pl-4">
-                <div class="col-md-6 col-tratamientos mt-2">
+                <div class="col-md-6 col-tratamientos mt-2" id="tratamiento2">
                      <img src="/img/icono2.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Limpieza dental</span>
                 </div>
             </div>
             <div class="row pl-4">
-                <div class="col-md-6 mt-1 col-tratamientos">
+                <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento3">
                      <img src="/img/icono1.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Blanqueamiento dental</span>
                 </div>
             </div>
             <div class="row pl-4">
-                <div class="col-md-6 mt-1 col-tratamientos">
+                <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento4">
                      <img src="/img/icono3.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Implantes</span>
                 </div>
             </div>
             <div class="row pl-4">
-                <div class="col-md-6 mt-1 col-tratamientos">
+                <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento5">
                      <img src="/img/icono4.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Diseño de sonrisa</span>
                 </div>
             </div>
             <div class="row pl-4">
-                <div class="col-md-6 mt-1 col-tratamientos">
+                <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento6">
                      <img src="/img/icono6.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Ortodoncia y endodoncia</span>
                 </div>
             </div>
         </div>
      </section>
-
-     <script src="/js/jquery.js"></script>
+    <!--SCRIPTS-->
+    <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/all.js"></script>
+    <script src="/js/efecto.js"></script>
 </body>
 </html>
