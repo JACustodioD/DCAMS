@@ -140,6 +140,7 @@
                   </div>
              </div>
      </section>
+     <!--SECCION ACERCA DE-->
      <section class="container">
          <div class="about-section">
              <div class="row">
@@ -154,8 +155,36 @@
                         nuestros servicios especializados comprometiendonos con el bienestar y satisfacción de nuestros pacientes.</p>
                         <hr class="separator">
                  </div>
-                 <div class="col-md-12">
+             </div>
+             <div class="row">
+                <div class="col-md-12">
                     <h3 class="text-center">¡A su servicio!</h3>
+                 </div>
+             </div>
+             <div class="row mt-5">
+                <div class="col-md-3">
+                    <figure class="text-center">
+                        <i class="fas fa-tooth about-icon"></i>
+                        <figcaption>Servicios odontológicos especializados.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-3">
+                     <figure class="text-center">
+                         <i class="fas fa-dollar-sign about-icon"></i>
+                         <figcaption>Presupuestos totalmente gratis y pagos accesibles.</figcaption>
+                     </figure>
+                </div>
+                <div class="col-md-3">
+                     <figure class="text-center">
+                         <i class="fas fa-teeth about-icon"></i>
+                         <figcaption>Diseñamos las mejores sonrisas, con los mejores servicios.</figcaption>
+                     </figure>
+                 </div>
+                 <div class="col-md-3">
+                     <figure class="text-center">
+                         <i class="fas fa-thumbs-up about-icon"></i>
+                         <figcaption>Mejoramos tu calidad de vida.</figcaption>
+                     </figure>
                  </div>
              </div>
          </div>
