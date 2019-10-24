@@ -18,7 +18,7 @@
 </head>
 <body>
     <header class="header-container container  mt-2" style="width: 100%">
-        <div class="row row-horario">
+        <div class="row ">
             <div class="col-md-4 col-phone">
                 <h2 class="text-phone"> <i class="fas fa-phone"></i> 5522-9901 ext 29</h2>
             </div>
@@ -29,7 +29,7 @@
                 <span class="ml-4 horarios"><small><b>Horario:</b> Lun. a vie. de 8:00 a 17:00 <b>/</b>  Avenida Alfredo del Mazo #678, Tlalnepantla Edo. Mex.</small></span>
             </div>
             <div class=" col-12 col-md-2 text-center">
-                <button type="button" class="btn  btn-primary btn-sesion"> <i class="fas fa-user"><b></i>Iniciar sesión</b></button>
+                <button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-user"><b></i>Iniciar sesión</b></button>
             </div>
         </div>
 
@@ -129,7 +129,7 @@
                                                     <textarea class="form-control" id="comentarios" rows="3"></textarea>
                                                  </div>
                                                  <div class="form-group text-center">
-                                                    <button class="btn btn-primary" style="width:50%;"><b>Agendar</b></button>
+                                                    <button class="btn btn-primary form-control" style="width:50%;"><b>Agendar</b></button>
                                                  </div>
                                               </div>
                                          </div>
@@ -220,6 +220,24 @@
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento6">
                      <img src="/img/icono6.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Ortodoncia y endodoncia</span>
+                </div>
+            </div>
+        </div>
+     </section>
+     <section class="container">
+        <div class="gif-implante">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="/img/implante.gif"  class="implante" alt="implante-gif">
+                </div>
+            </div>
+        </div>
+     </section>
+     <section class="container">
+        <div class="promociones">
+            <div class="row">
+                <div class="col-md-12 mt-3">
+                    <h1 class="pl-4">Nuestras promociones</h1>
                 </div>
             </div>
         </div>

@@ -63,3 +63,42 @@
         margin-left: 50px;
     }
 }
+@media(max-width:375px){
+   
+    .icono-calendar{
+        height: 30px;
+        width:30px;
+    }
+    .card-body{
+       font-size: 0.9em;
+    }
+    .card-body label{
+        margin-bottom: 0;
+    }
+    #main .carousel-inner img{
+        height: 120vh;
+    }
+}
+@media(max-width:768px) (min-width:319px){
+    #main .carousel-inner img{
+        height: 65vh;
+    }
+    .text-slider{
+        font-size: 2em;
+    }
+    .icon-tratamientos{
+        height: 70px;
+        width: 70px;
+    }
+    .col-tratamientos{
+        font-size: 1.1em;
+    }
+    .tratamientos-section, .implante{
+        height: 50vh;
+    }
+    .tratamientos, .text-about{
+        font-size: 2em;
+    }
+   
+  
+}
