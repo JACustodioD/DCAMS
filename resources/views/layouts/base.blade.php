@@ -14,9 +14,14 @@
     <!--CSS Y RESPONSIVE-->
     <link rel="stylesheet" href="/css/estilos.css">
     <link rel="stylesheet" href="/css/responsive.css">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
     
 </head>
 <body>
+
     <header class="header-container container  mt-2" style="width: 100%">
         <div class="row ">
             <div class="col-md-4 col-phone">
@@ -95,7 +100,8 @@
                                     <h1 class="display-4 text-slider"> Creamos sonrisas, mejoramos <strong> tú vida </strong> </h1>
                                 </div>
                                 <div class="col-md-5  mt-2">
-                                    <form action="">
+                                    <form action="/cita" method="POST">
+                                         @csrf
                                          <div class="card form-card">
                                              <div class="card-header card-encabezado">
                                                  <div class="row d-flex justify-content-between">
@@ -106,30 +112,56 @@
                                               <div class="card-body">
                                                  <div class="form-group">
                                                     <label for="name">Nombre:</label>
-                                                    <input type="text" class="form-control">
+                                                    <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" required autofocus>
+
+                                                    @error('name')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
                                                  </div>
                                                  <div class="form-group">
-                                                    <label for="telefono">Telefono:</label>
-                                                    <input type="telefono" class="form-control">
+                                                    <label for="phone">Telefono:</label>
+                                                    <input type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" required autofocus>
+                                                     @error('phone')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
                                                  </div>
                                                  <div class="form-group">
                                                      <div class="row">
                                                         <div class="col-md-6">
-                                                            <label for="fecha">Fecha:</label>
-                                                            <input type="date" name="fecha" class="form-control">
+                                                            <label for="date">Fecha:</label>
+                                                            <input type="date" name="date" class="form-control" required autofocus>
+                                                            @error('date')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                            @enderror
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <label for="hora">Hora:</label>
-                                                            <input type="time" name="hora" class="form-control">
+                                                            <label for="hour">Hora:</label>
+                                                            <input type="time" name="hour" class="form-control" required autofocus>
+                                                            @error('hour')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                            @enderror
                                                         </div>
                                                     </div>
                                                  </div>
                                                  <div class="form-group">
-                                                    <label for="comentarios">Comentarios</label>
-                                                    <textarea class="form-control" id="comentarios" rows="3"></textarea>
+                                                    <label for="commentary">Comentarios</label>
+                                                    <textarea class="form-control" id="comentarios" rows="3" name="commentary" autofocus required></textarea>
+                                                     @error('commentary')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
                                                  </div>
                                                  <div class="form-group text-center">
-                                                    <button class="btn btn-primary form-control" style="width:50%;"><b>Agendar</b></button>
+                                                    <button class="btn btn-primary form-control" style="width:50%;" type="submit"><b>Agendar</b></button>
                                                  </div>
                                               </div>
                                          </div>

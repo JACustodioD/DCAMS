@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDatesTable extends Migration
+class CreateMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateDatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('dates', function (Blueprint $table) {
+        Schema::create('messages', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user');
-            $table->date('dateOfAppointment');
+            $table->string('name');
+            $table->string('phone');
+            $table->date('date');
             $table->string('hour');
-            $table->string('affair');
-            $table->string('status');
-            $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
+            $table->text('commentary');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ class CreateDatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dates');
+        Schema::dropIfExists('messages');
     }
 }
