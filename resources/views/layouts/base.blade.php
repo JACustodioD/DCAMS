@@ -140,12 +140,15 @@
                   </div>
              </div>
      </section>
+     <section class="container" id="img">
+        
+     </section>
      <!--SECCION ACERCA DE-->
      <section class="container">
          <div class="about-section">
              <div class="row">
                  <div class="col-12 mt-3">
-                     <h1 class="text-about text-center display-4" >En consultorio dental <strong>Amy</strong></h1>
+                     <h1 class="text-about text-center display-4" >¿Por qué debería <strong>elegirnos</strong>?</h1>
                  </div>
              </div>
              <div class="row">
@@ -245,17 +248,18 @@
             </div>
             <div class="row mt-3">
               <div class="col-md-4">
-                <img src="/img/image-promo.jpg" class="pl-3 pb-3" alt="" height="300px" width="330px">
+                <img src="/img/image-promo.jpg" class="pl-3 pb-3 img-fluid" alt="" height="300px" width="330px">
               </div>
               <div class="col-md-4">
-                <img src="/img/image-promo1.jpg" class="pl-3 pb-3" alt="" height="300px" width="330px"> 
+                <img src="/img/image-promo1.jpg" class="pl-3 pb-3 img-fluid" alt="" height="300px" width="330px"> 
              </div>
              <div class="col-md-4">
-                <img src="/img/image-promo2.jpg" class="pl-3 pb-3" alt="" height="300px" width="330px"> 
+                <img src="/img/image-promo2.jpg" class="pl-3 pb-3 img-fluid" alt="" height="300px" width="330px"> 
              </div>
            </div>
         </div>
      </section>
+     <!--SECCION DE CONTÁCTO-->
      <section class="container">
         <div class="contacto">
             <div class="row mt-3">
@@ -291,6 +295,9 @@
             </div>
         </div>
      </section>
+     <footer class="container">
+        
+     </footer>
     <!--SCRIPTS-->
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
