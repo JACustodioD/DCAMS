@@ -90,6 +90,10 @@ body{
     height: 50px;
     width: 50px;
 }
+/*--*/
+
+/*--*/
+
 .about-section {
     background-color:  #007bff;
     color: white;
@@ -155,5 +159,23 @@ body{
     width: 100%;
     background-color: #007bff;
 }
+.logo-foot{
+    width: 100px;
+    height: 100px;
+}
+.foot{
+    background-color: #007bff;
+    color: white;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.col-foot{
+    border-left: 1px solid gainsboro;
 
-
+}
+ul li a{
+    list-style: !important;
+    text-decoration: none !important;
+    color: white;
+    line-height: 30px;
+}
