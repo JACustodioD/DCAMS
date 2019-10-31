@@ -304,7 +304,7 @@
      <footer class="container">
         <div class="foot">
             <div class="row">
-                <div class="col-md-4 mt-3 col-foot">
+                <div class="col-md-4 mt-3 mb-3 col-foot">
                     <div class="text-justify">
                         <img src="/img/icono-dental.png" alt="" class="logo-foot"> <span><small>El consultorio AMY <br>
                             fue fundado por la doctora Amy Hernández Hernández y abrió sus puertas el 15 de marzo de 1994, 
@@ -314,7 +314,7 @@
                     </small></span>
                     </div>
                 </div>
-                <div class="col-md-4 mt-3 col-foot">
+                <div class="col-md-4 mt-3 mb-3 col-foot">
                     <small>Navegación:</small>
                     <ul>
                         <li><a href=""><small>Home</small></a></li>
@@ -324,7 +324,7 @@
                         <li><a href=""><small>Contácto</small></a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 mt-3 col-foot" style="border-right: 1px solid gainsboro;">
+                <div class="col-md-4 mt-3 mb-3 col-foot" style="border-right: 1px solid gainsboro;">
                     <small>Tratamientos:</small>
                     <ul>
                         <li><a href=""><small>Limpieza dental</small></a></li>
@@ -333,6 +333,15 @@
                         <li><a href=""><small>Diseño de sonrisa</small></a></li>
                         <li><a href=""><small>Ortodoncia y endodoncia</small></a></li>
                     </ul>
+                </div>
+            </div>
+        </div>
+     </footer>
+     <footer class="container">
+        <div class="subfoot">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <small>&copy; Todos los derechos reservados </small>
                 </div>
             </div>
         </div>
