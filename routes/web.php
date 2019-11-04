@@ -14,6 +14,15 @@
 Route::get('/', function () {
     return view('layouts.base');
 });
+
 Route::get('/index', function () {
     return view('index');
 });
+
+
+Route::post('/cita','MessageController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
