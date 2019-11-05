@@ -140,6 +140,13 @@ body{
   background: linear-gradient(45deg, rgba(255,0,34,1) 0%, rgba(255,255,255,1) 88%, rgba(255,255,255,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0022', endColorstr='#ffffff', GradientType=1 );
 }
+.col-tratamientos a{
+    text-decoration: none;
+    color: white;
+}
+.col-tratamientos a:hover{
+    color:  #007bff;
+}
 .implante{
     width: 100%;
     height: 50vh;
@@ -182,4 +189,15 @@ ul li a{
 .subfoot{
     background-color: #003abf;
     color: white;
+}
+
+/*TRATAMIENTOS*/
+.tratamientosd{
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}
+.tratamientos{
+    font-weight: bold;
 }
