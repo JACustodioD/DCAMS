@@ -86,9 +86,52 @@
          @yield('content')
      <!-- /Content -->
     
-   
-     <footer class="container">
 
+     <footer class="container">
+        <div class="foot">
+            <div class="row">
+                <div class="col-md-4 mt-3 mb-3 col-foot">
+                    <div class="text-justify">
+                        <img src="/img/icono-dental.png" alt="" class="logo-foot"> <span><small>El consultorio AMY <br>
+                            fue fundado por la doctora Amy Hernández Hernández y abrió sus puertas el 15 de marzo de 1994, 
+                            con el entusiasmo que puede tener una joven dentista que desea formar su propia empresa
+                            y con una clara visión: conseguir que el consultorio se convirtiera en un miembro integrado
+                            en cada familia, logrando ser el consultorio de referencia del barrio y de las familias que en el viven.
+                    </small></span>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3 mb-3 col-foot">
+                    <small>Navegación:</small>
+                    <ul>
+                        <li><a href=""><small>Home</small></a></li>
+                        <li><a href=""><small>Acerca de</small></a></li>
+                        <li><a href=""><small>Tratamientos</small></a></li>
+                        <li><a href=""><small>Promociones</small></a></li>
+                        <li><a href=""><small>Contácto</small></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mt-3 mb-3 col-foot" style="border-right: 1px solid gainsboro;">
+                    <small>Tratamientos:</small>
+                    <ul>
+                        <li><a href=""><small>Limpieza dental</small></a></li>
+                        <li><a href=""><small>Blanqueamiento dental</small></a></li>
+                        <li><a href=""><small>Implantes</small></a></li>
+                        <li><a href=""><small>Diseño de sonrisa</small></a></li>
+                        <li><a href=""><small>Ortodoncia y endodoncia</small></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+     </footer>
+     <footer class="container">
+        <div class="subfoot">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <small>&copy; Todos los derechos reservados </small>
+                </div>
+            </div>
+        </div>
+     </footer>
     <!--SCRIPTS-->
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
