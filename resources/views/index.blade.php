@@ -124,27 +124,27 @@
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 col-tratamientos mt-2" id="tratamiento2">
-                     <a href=""><img src="/img/icono2.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Limpieza dental</span></a>
+                     <a href="/tratamientos"><img src="/img/icono2.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Limpieza dental</span></a>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento3">
-                     <a href=""><img src="/img/icono1.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Blanqueamiento dental</span></a>
+                     <a href="/tratamientos"><img src="/img/icono1.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Blanqueamiento dental</span></a>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento4">
-                    <a href=""><img src="/img/icono3.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Implantes</span></a>
+                    <a href="/tratamientos"><img src="/img/icono3.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Implantes</span></a>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento5">
-                    <a href=""> <img src="/img/icono4.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Diseño de sonrisa</span></a>
+                    <a href="/tratamientos"> <img src="/img/icono4.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Diseño de sonrisa</span></a>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento6">
-                    <a href=""> <img src="/img/icono6.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Ortodoncia y endodoncia</span></a>
+                    <a href="/tratamientos"> <img src="/img/icono6.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Ortodoncia y endodoncia</span></a>
                </div>
             </div>    
         </div>

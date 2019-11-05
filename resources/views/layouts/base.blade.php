@@ -17,8 +17,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    
+    <script src="{{ asset('js/app.js') }}" defer></script>  
 </head>
 <body>
 
@@ -52,7 +51,7 @@
         <!--MENU-->
             <div class="col-md-12 col-menu">
                 <nav class="navbar navbar-expand-md navbar-light menu">
-                    <a class="navbar-brand" href="#"><img src="/img/icono-dental.png " class="icono" alt="logo"></a>
+                    <a class="navbar-brand" href="/index.php"><img src="/img/icono-dental.png " class="icono" alt="logo"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -92,7 +91,7 @@
             <div class="row">
                 <div class="col-md-4 mt-3 mb-3 col-foot">
                     <div class="text-justify">
-                        <img src="/img/icono-dental.png" alt="" class="logo-foot"> <span><small>El consultorio AMY <br>
+                        <img src="/img/icono-dental.png" alt="" class="logo-foot"> <span><small><b>El consultorio AMY</b> <br>
                             fue fundado por la doctora Amy Hernández Hernández y abrió sus puertas el 15 de marzo de 1994, 
                             con el entusiasmo que puede tener una joven dentista que desea formar su propia empresa
                             y con una clara visión: conseguir que el consultorio se convirtiera en un miembro integrado
@@ -101,7 +100,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mt-3 mb-3 col-foot">
-                    <small>Navegación:</small>
+                    <small><b>Navegación:</b></small>
                     <ul>
                         <li><a href=""><small>Home</small></a></li>
                         <li><a href=""><small>Acerca de</small></a></li>
@@ -111,13 +110,15 @@
                     </ul>
                 </div>
                 <div class="col-md-4 mt-3 mb-3 col-foot" style="border-right: 1px solid gainsboro;">
-                    <small>Tratamientos:</small>
+                    <small><b>Tratamientos:</b></small>
                     <ul>
-                        <li><a href=""><small>Limpieza dental</small></a></li>
-                        <li><a href=""><small>Blanqueamiento dental</small></a></li>
-                        <li><a href=""><small>Implantes</small></a></li>
-                        <li><a href=""><small>Diseño de sonrisa</small></a></li>
-                        <li><a href=""><small>Ortodoncia y endodoncia</small></a></li>
+                        <li><a href="/tratamientos"><small>Limpieza dental</small></a></li>
+                        <li><a href="/tratamientos"><small>Blanqueamiento dental</small></a></li>
+                        <li><a href="/tratamientos"><small>Implantes</small></a></li>
+                        <li><a href="/tratamientos"><small>Diseño de sonrisa</small></a></li>
+                        <li><a href="/tratamientos"><small>Ortodoncia y endodoncia</small></a></li>
+                        <li><a href="/tratamientos"><small>Periodoncia</small></a></li>
+                        <li><a href="/tratamientos"><small>Resinas</small></a></li>
                     </ul>
                 </div>
             </div>
