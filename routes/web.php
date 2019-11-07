@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/tratamientos', function () {
     return view('tratamientos.tratamientos');
 });
+Route::get('/citas', function () {
+    return view('citas.formcitas');
+});
 
 
 Route::post('/cita','MessageController@store');

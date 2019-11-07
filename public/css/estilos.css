@@ -8,7 +8,7 @@ body{
     color: black;
 }
 .btn-sesion{
-    height: 80%;
+  margin: 3px;
 }
 
 .text-phone{
@@ -197,7 +197,4 @@ ul li a{
     color: white;
     font-weight: bold;
     padding: 15px;
-}
-.tratamientos{
-    font-weight: bold;
 }

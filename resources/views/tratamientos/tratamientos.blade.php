@@ -4,7 +4,7 @@
     <div class="tratamientosd pl-2">
         <div class="row">
             <div class="col-md-12">
-               <h1 class="tratamientos"> Tratamientos  dentales</h1>
+               <h1> Tratamientos  dentales</h1>
                <p>Consulta y pregunta por nuestras especialidades</p>
             </div>
         </div>
@@ -20,6 +20,7 @@
                 <p> Incluye aplicación de fluor el cual otorga tres beneficios a los dientes: 
                     aumenta la resistencia del esmalte, es antibacteriano, o sea, que actúa frente al crecimiento 
                     de bacterias que producen el sarro, y permite remineralizar la capa del esmalte.</p>
+                    <button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button>
             </div>
             <div class="col-md-6">
                     <img src="/img/tratamiento1.png" alt="" height="300px" width="540px"class="img-fluid">
@@ -43,6 +44,7 @@
                      <li><b>Blanqueamiento dental interno:</b> Consiste en la introducción de un producto blanqueador
                              en el interior de la pieza dental.</li>
                  </ul>
+                 <button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button>
              </div>      
         </div>
      </div>
@@ -56,6 +58,7 @@
                      o dar un soporte adicional a las prótesis removibles.</p>
                  <p>Con la ayuda de implantes dentales podemos apoyar: prótesis dentales, coronas, puentes, sobredentaduras, 
                      prótesis faciales o hasta anclajes ortodónticos.</p>
+                     <button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button>
               </div>   
               <div class="col-md-6">                
                     <img src="/img/tratamiento3.png" alt="" height="300px" width="540px"class="img-fluid">         
@@ -75,6 +78,7 @@
                     Con la odontología actual se busca llevar a los dientes hasta un estado natural, altamente armónico y visualmente muy agradable.</p>
                 <p>Se puede llevar a cabo con Carillas, Resinas de Alta Estética, Blanqueamiento e incluso tratamiento de Ortodoncia Invisible. En consultorio Amy
                     sabemos que sonreír es salud.</p>
+                    <button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button>
             </div>     
          </div>
      </div>
@@ -87,6 +91,7 @@
                  <p>Si tienes los dientes desalineados, la solución es el tratamiento de ortodoncia; en dónde los dientes se colocan en su posición adecuada,
                       para así lograr su correcta función y como consecuencia, dientes perfectamente bien alineados. Existen varios tipos de tratamientos de ortodoncia, tales como: 
                      brackets metálicos, estéticos, sin ligas e incluso sistemas totalmente transparentes..</p>
+                     <button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button>
                  </div>   
              <div class="col-md-6">                
                 <img src="/img/tratamiento5.png" alt="" height="300px" width="540px"class="img-fluid">         
@@ -106,6 +111,7 @@
                       tienen alguna afección en el nervio (pulpa) dental y su periferia.</p>
                  <p>Si has notado que de repente te duele un diente cuando tomas líquidos frías o muy calientes, cuando estas acostado, cuando masticas y que el diente te punza, entonces, 
                      puedes necesitar de un tratamiento de conductos o endodoncia.</p>
+                     <button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button>
              </div>     
          </div>
      </div>
@@ -119,6 +125,7 @@
                  causando inflamación y provocando sangrado.</p>
                  <p>Las encías es un lugar en donde se acumula una gran cantidad de sarro, causando inflamación y provocando este sangrado. Puede ser que tengas enfermedad periodontal, la cual tiene como
                  principal problema que usualmente es lenta y no duele, pero puedes llegar a perder los dientes si no la combates a tiempo.</p>
+                 <button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button>
              </div>   
              <div class="col-md-6">                
                  <img src="/img/tratamiento7.png" alt="" height="300px" width="540px" class="img-fluid">         
@@ -139,7 +146,8 @@
                  <p>Las resinas de alta estética son del color del diente y se colocan en la superficie de los mismos para igualar su apariencia natural. 
                      Esto se hace después de eliminar algunas caries, 
                      fracturas que haya que restaurar; espacios entre los dientes y pequeñas imperfecciones, diente pequeño.</p>
-             </div>     
+                     <button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button>
+             </div> 
          </div>
      </div>
  </section>

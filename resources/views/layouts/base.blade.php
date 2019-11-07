@@ -26,14 +26,9 @@
             <div class="col-md-4 col-phone">
                 <h2 class="text-phone"> <i class="fas fa-phone"></i> 5522-9901 ext 29</h2>
             </div>
-            <div class="offset-1 col-ocult">
-
-            </div>
-            <div class="col-md-5 d-flex justify-content-end">
-                <span class="ml-4 horarios"><small><b>Horario:</b> Lun. a vie. de 8:00 a 17:00 <b>/</b>  Avenida Alfredo del Mazo #678, Tlalnepantla Edo. Mex.</small></span>
-            </div>
-            <div class=" col-12 col-md-2 text-center">
-                <button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-user"><b></i>Iniciar sesión</b></button>
+            <div class=" col-md-8 col-md-2 d-flex justify-content-end">
+                <a href="/citas"><button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button></a>
+               <a href=""><button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-user"><b></i>Iniciar sesión</b></button></a>
             </div>
         </div>
 
@@ -51,7 +46,7 @@
         <!--MENU-->
             <div class="col-md-12 col-menu">
                 <nav class="navbar navbar-expand-md navbar-light menu">
-                    <a class="navbar-brand" href="/index.php"><img src="/img/icono-dental.png " class="icono" alt="logo"></a>
+                    <a class="navbar-brand" href="/"><img src="/img/icono-dental.png " class="icono" alt="logo"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -102,6 +97,7 @@
                 <div class="col-md-4 mt-3 mb-3 col-foot">
                     <small><b>Navegación:</b></small>
                     <ul>
+                        <li><a href="/citas"><small>Citas</small></a></li>
                         <li><a href=""><small>Home</small></a></li>
                         <li><a href=""><small>Acerca de</small></a></li>
                         <li><a href=""><small>Tratamientos</small></a></li>

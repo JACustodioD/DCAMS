@@ -211,7 +211,7 @@
                    </span>
                    <hr id="separator-contacto">
                    <span>
-                       <button class="btn btn-primary">Agendar una cita</button>
+                       <a href="/citas"><button class="btn btn-primary">Agendar una cita</button></a>
                    </span>
                 </div>
             </div>
