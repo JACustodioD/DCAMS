@@ -23,3 +23,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     border: 1px solid black;
     padding: 15px;
 }
+.tratamientos{
+    background-color: #007bff;
+    color: white;
+}
