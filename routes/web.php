@@ -20,6 +20,9 @@ Route::get('/tratamientos', function () {
 Route::get('/citas', function () {
     return view('citas.formcitas');
 });
+Route::get('/user', function () {
+    return view('user.index');
+});
 
 
 Route::post('/cita','MessageController@store');

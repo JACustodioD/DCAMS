@@ -1,0 +1,25 @@
+.encabezado{
+
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 26%, rgba(255,255,255,1) 74%, rgba(0,123,255,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(26%, rgba(255,255,255,1)), color-stop(74%, rgba(255,255,255,1)), color-stop(100%, rgba(0,123,255,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 26%, rgba(255,255,255,1) 74%, rgba(0,123,255,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 26%, rgba(255,255,255,1) 74%, rgba(0,123,255,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 26%, rgba(255,255,255,1) 74%, rgba(0,123,255,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 26%, rgba(255,255,255,1) 74%, rgba(0,123,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#007bff', GradientType=0 );
+
+}
+.icon-menu{
+    font-size: 1.5em;
+    color: #007bff;
+}
+.profile-photo{
+    border: 1px solid gray;
+    width: 65%;
+    height: 150px;
+}
+.cont-form{
+    border: 1px solid black;
+    padding: 15px;
+}
