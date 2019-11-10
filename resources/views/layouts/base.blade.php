@@ -21,7 +21,8 @@
 </head>
 <body>
 
-    <header class="header-container container  mt-2" style="width: 100%">
+<header class="container  mt-2" style="width: 100%">
+    <div class="header-container">
         <div class="row ">
             <div class="col-md-4 col-phone">
                 <h2 class="text-phone"> <i class="fas fa-phone"></i> 5522-9901 ext 29</h2>
@@ -72,7 +73,8 @@
                   </nav>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
     
    

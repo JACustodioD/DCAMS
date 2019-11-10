@@ -1,6 +1,10 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+.header-container{
+background-image: url('/img/fondoheader.png');
+
+}
 
 .icon-head{
     font-size: 1.8em;

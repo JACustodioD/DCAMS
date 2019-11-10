@@ -54,7 +54,7 @@
                 </form>
             </div>
             <div class="col-md-6">
-                    <img src="/img/imgform.png" alt="imagenform">
+                    <img src="/img/imgform.png" alt="imagenform" class="img-fluid">
             </div>
         </div>
     </div>
