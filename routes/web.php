@@ -13,9 +13,8 @@
 
 
 //Rutas generales que no necesitan acceso
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/','HomeController@index');
+
 Route::get('/tratamientos', function () {
     return view('tratamientos.tratamientos');
 });
@@ -26,8 +25,6 @@ Route::post('/cita','MessageController@store');
 
 //Rutas de Autenticacion
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 //Rutas a las que puede accesar el administrador
 Route::group([
