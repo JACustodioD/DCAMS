@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/user.css">
     <link rel="stylesheet" href="/css/estilos.css">
     <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/calendar.css">
 </head>
 </head>
 <body>
@@ -232,11 +233,42 @@
 </div>
 <!-- Card --> 
 </section>
-
+<section class="container">
+  <div class="citas">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class=" pl-5 mt-5 mb-5">Citas</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 pl-5">
+        <div class="calendar calendar-first" id="calendar_first">
+          <div class="calendar_header">
+            <button class="switch-month switch-left"> <i class="fa fa-chevron-left"></i></button>
+               <h2></h2>
+              <button class="switch-month switch-right"> <i class="fa fa-chevron-right"></i></button>
+           </div>
+          <div class="calendar_weekdays"></div>
+         <div class="calendar_content"></div>
+      </div>
+      </div>
+      <div class="col-md-6">
+          <div class="jumbotron">
+              <h3>Próxima cita: 15/Noviembre/2019</h3>
+              <p class="lead">Hora: 12:30</p>
+              <p class="lead">Consulta: Limpieza de dientes</p>
+              <hr class="my-4">
+              <p>Recuerde llegar con 15 minutos de anticipación a su cita.</p>
+            </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!--SCRIPT-->
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script src="/js/calendar.js"></script>
 <script src="/js/all.js"></script>  
 </body>
 </html>
