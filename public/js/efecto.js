@@ -24,9 +24,6 @@ $(document).ready(function() {
                 $('#tratamiento6').fadeIn(1500);
             },5000);
 
-        }else{
-            $("#tratamiento1").hide();
-            $('.col-tratamientos').hide();
         }
      });
 

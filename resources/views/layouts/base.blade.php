@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <!--FONTS GOOGLE-->
     <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet"> 
     <!--BOOTSTRAP-->
@@ -29,7 +29,7 @@
             </div>
             <div class=" col-md-8 col-md-2 d-flex justify-content-end">
                 <a href="/citas"><button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button></a>
-               <a href=""><button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-user"><b></i>Iniciar sesión</b></button></a>
+               <a href="/login"><button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-user"><b></i>Iniciar sesión</b></button></a>
             </div>
         </div>
 
@@ -39,9 +39,9 @@
                 <span><small>Dra. Amy Hernández Hernández <i class="fas fa-check"></i></small></span>
             </div>
             <div class="col-md-2 d-flex justify-content-end">
-                <a href=""><i class="fab fa-instagram  icon-head hvr-grow-rotate"></i> </a>  
-                <a href=""><i class="fab fa-facebook-square icon-head hvr-grow-rotate"></i></a>
-                <a href=""><i class="fab fa-twitter-square icon-head hvr-grow-rotate"></i> </a>   
+                <a href="https://www.instagram.com"><i class="fab fa-instagram  icon-head hvr-grow-rotate"></i> </a>  
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-square icon-head hvr-grow-rotate"></i></a>
+                <a href="https://www.twitter.com"><i class="fab fa-twitter-square icon-head hvr-grow-rotate"></i> </a>   
             </div>
         </div>
         <!--MENU-->
@@ -54,7 +54,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                       <ul class="navbar-nav menu-list">
                         <li class="nav-item">
-                          <a class="nav-link hvr-underline-from-left" href="#">Home</a>
+                          <a class="nav-link hvr-underline-from-left" href="/">Home</a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link hvr-underline-from-left" href="#">Acerca de </a>

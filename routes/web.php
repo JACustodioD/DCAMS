@@ -18,7 +18,7 @@ Route::get('/tratamientos', function () {
     return view('tratamientos.tratamientos');
 });
 Route::get('/citas', function () {
-    return view('citas.formcitas');
+    return view('citas.crearCita');
 });
 Route::get('/user', function () {
     return view('user.index');
