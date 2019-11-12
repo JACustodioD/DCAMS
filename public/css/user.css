@@ -49,3 +49,9 @@ a h4:hover{
 .title-tratamientos{
     color: white;
 }
+.citas{
+    background-image: url('/img/citas.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
