@@ -15,15 +15,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     color: #007bff;
 }
 .profile-photo{
-    border: 1px solid gray;
+    border: 1px solid  #eaeaea;
     width: 65%;
     height: 150px;
 }
 .cont-form{
-    border: 1px solid black;
-    padding: 15px;
+    border: 1px solid  #eaeaea;
+
+    padding: 45px;
 }
 .tratamientos{
-    background-color: #007bff;
+    background-image: url('/img/tratamiento.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-y: -150px;
+    background-position-x: -300px;
+}
+.head-tratamientos{
+    background-color:  #0132c9;
+}
+.head-tratamientos:hover{
+    background-color:  #717171;
+    transition: 0.5s;
+
+}
+a h4{
+    color: white;
+}
+a h4:hover{
+    color: black;
+}
+
+.title-tratamientos{
     color: white;
 }

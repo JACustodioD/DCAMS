@@ -58,18 +58,21 @@
             </div>
         </div>
         <div class="container mt-5 cont-form">
-             <div class="row d-flex justify-content-center">    
+             <div class="row">    
                 <div class="col-md-3">
                     <div class="profile-photo text-center">
                         <span>Foto de perfil</span>
                     </div>
                 </div>
+               </div>
+              <div class="row">
                 <div class="col-md-3">
                     <form method="post" enctype="multipart/form-data"><br>
                         <input type=file size=100 name="file1">     
                     </form>
                 </div>
-             </div>
+              </div>
+            
              <!--FORMULARIO-->
              <form class="mt-5">
                 <div class="form-row">
@@ -114,64 +117,120 @@
     </div>
 </section>
 
-<section class="container ">
-    <div class="tratamientos pl-4 ">
-       <div class="row">
-            <div class="col-md-12 mt-5">
-                <h3>Tratamientos</h3>
+<section class="container">
+  <!-- Card -->
+<div class="card card-image tratamientos">
+<h1 class="pl-4 title-tratamientos text-center mt-5">Tratamientos</h1>
+<!-- Content -->
+<div class="rgba-black-strong py-5 px-4">
+  <div class="row d-flex justify-content-end">
+    <div class="col-md-10 col-xl-8">
+
+      <!--Accordion wrapper-->
+      <div class="accordion md-accordion accordion-5" id="accordionEx5" role="tablist"
+        aria-multiselectable="true">
+
+        <!-- Accordion card -->
+        <div class="card mb-4">
+
+          <!-- Card header -->
+          <div class="card-header p-0 z-depth-1 head-tratamientos" role="tab" id="heading30">
+            <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse30" aria-expanded="true"
+              aria-controls="collapse30">
+              <i class="fas fa-cloud fa-2x p-3 mr-4 float-left black-text" aria-hidden="true"></i>
+              <h4 class="text-uppercase white-text mb-0 py-3 mt-1"><i class="fas fa-tooth"></i>
+                TRATAMIENTO DE BRAKETS
+              </h4>
+            </a>
+          </div>
+
+          <!-- Card body -->
+          <div id="collapse30" class="collapse show" role="tabpanel" aria-labelledby="heading30"
+            data-parent="#accordionEx5">
+            <div class="card-body rgba-black-light white-text z-depth-1">
+              <p class="p-md-4 mb-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                terry richardson ad squid. 3 wolf moon officia aute,
+                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                shoreditch et.</p>
+                <div class="d-flex justify-content-end">
+                 <button type="button" class="btn btn-outline-dark">Ver Detalles</button>
+               </div>
             </div>
-       </div>
-       <div class="row">
-            <div class="col-md-11">
-                    <div class="accordion" id="accordionExample">
-                            <div class="card">
-                              <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Tratamiento de ortodoncia
-                                  </button>
-                                </h2>
-                              </div>
-                          
-                              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card">
-                              <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Extracción de muela
-                                  </button>
-                                </h2>
-                              </div>
-                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card">
-                              <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Blanqueamiento dental y curetaje
-                                  </button>
-                                </h2>
-                              </div>
-                              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+          </div>
+        </div>
+        <!-- Accordion card -->
+
+        <!-- Accordion card -->
+        <div class="card mb-4">
+
+          <!-- Card header -->
+          <div class="card-header p-0 z-depth-1 head-tratamientos" role="tab" id="heading31">
+            <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse31" aria-expanded="true"
+              aria-controls="collapse31">
+              <i class="fas fa-comment-alt fa-2x p-3 mr-4 float-left black-text" aria-hidden="true"></i>
+              <h4 class="text-uppercase white-text mb-0 py-3 mt-1"><i class="fas fa-tooth"></i>
+                LIMPIEZA DENTAL
+              </h4>
+            </a>
+          </div>
+
+          <!-- Card body -->
+          <div id="collapse31" class="collapse" role="tabpanel" aria-labelledby="heading31"
+            data-parent="#accordionEx5">
+            <div class="card-body rgba-black-light white-text z-depth-1">
+              <p class="p-md-4 mb-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                terry richardson ad squid. 3 wolf moon officia aute,
+                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                shoreditch et.</p>
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-outline-dark">Ver Detalles</button>
+                </div>
             </div>
-        </div> 
-    </div>  
-        
+          </div>
+        </div>
+        <!-- Accordion card -->
+
+        <!-- Accordion card -->
+        <div class="card mb-4">
+
+          <!-- Card header -->
+          <div class="card-header p-0 z-depth-1 head-tratamientos" role="tab" id="heading32">
+            <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse32" aria-expanded="true"
+              aria-controls="collapse32">
+              <i class="fas fa-cogs fa-2x p-3 mr-4 float-left black-text" aria-hidden="true"></i>
+              <h4 class="text-uppercase white-text mb-0 py-3 mt-1"><i class="fas fa-tooth"></i>
+                RECINAS DE ALTA ESTETICA
+              </h4>
+            </a>
+          </div>
+
+          <!-- Card body -->
+          <div id="collapse32" class="collapse" role="tabpanel" aria-labelledby="heading32"
+            data-parent="#accordionEx5">
+            <div class="card-body rgba-black-light white-text z-depth-1">
+              <p class="p-md-4 mb-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+                terry richardson ad squid. 3 wolf moon officia aute,
+                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
+                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                shoreditch et.</p>
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-outline-dark">Ver Detalles</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- Accordion card -->
+      </div>
+      <!--/.Accordion wrapper-->
+
+    </div>
+  </div>
+</div>
+<!-- Content -->
+</div>
+<!-- Card --> 
 </section>
 
 
