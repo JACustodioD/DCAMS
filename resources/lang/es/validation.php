@@ -30,7 +30,7 @@ return [
         'array'   => 'El campo :attribute debe contener entre :min y :max elementos.',
     ],
     'boolean'              => 'El campo :attribute debe ser verdadero o falso.',
-    'confirmed'            => 'El campo confirmación de :attribute no coincide.',
+    'confirmed'            => 'Los campos no coinciden.',
     'date'                 => 'El campo :attribute no corresponde con una fecha válida.',
     'date_equals'          => 'El campo :attribute debe ser una fecha igual a :date.',
     'date_format'          => 'El campo :attribute no corresponde con el formato de fecha :format.',
@@ -47,8 +47,8 @@ return [
     'gt'                   => [
         'numeric' => 'El campo :attribute debe ser mayor a :value.',
         'file'    => 'El archivo :attribute debe pesar más de :value kilobytes.',
-        'string'  => 'El campo :attribute debe contener más de :value caracteres.',
-        'array'   => 'El campo :attribute debe contener más de :value elementos.',
+        'string'  => 'El campo debe contener más de :value caracteres.',
+        'array'   => 'El campo debe contener más de :value elementos.',
     ],
     'gte'                  => [
         'numeric' => 'El campo :attribute debe ser mayor o igual a :value.',
@@ -67,7 +67,7 @@ return [
     'lt'                   => [
         'numeric' => 'El campo :attribute debe ser menor a :value.',
         'file'    => 'El archivo :attribute debe pesar menos de :value kilobytes.',
-        'string'  => 'El campo :attribute debe contener menos de :value caracteres.',
+        'string'  => 'El campo debe contener menos de :value caracteres.',
         'array'   => 'El campo :attribute debe contener menos de :value elementos.',
     ],
     'lte'                  => [
@@ -77,7 +77,7 @@ return [
         'array'   => 'El campo :attribute debe contener :value o menos elementos.',
     ],
     'max'                  => [
-        'numeric' => 'El campo :attribute no debe ser mayor a :max.',
+        'numeric' => 'El campo no debe ser mayor a :max.',
         'file'    => 'El archivo :attribute no debe pesar más de :max kilobytes.',
         'string'  => 'El campo :attribute no debe contener más de :max caracteres.',
         'array'   => 'El campo :attribute no debe contener más de :max elementos.',
@@ -87,7 +87,7 @@ return [
     'min'                  => [
         'numeric' => 'El campo :attribute debe ser al menos :min.',
         'file'    => 'El archivo :attribute debe pesar al menos :min kilobytes.',
-        'string'  => 'El campo :attribute debe contener al menos :min caracteres.',
+        'string'  => 'El campo debe contener al menos :min caracteres.',
         'array'   => 'El campo :attribute debe contener al menos :min elementos.',
     ],
     'not_in'               => 'El campo :attribute seleccionado es inválido.',
@@ -96,7 +96,7 @@ return [
     'password'             => 'La contraseña es incorrecta.',
     'present'              => 'El campo :attribute debe estar presente.',
     'regex'                => 'El formato del campo :attribute es inválido.',
-    'required'             => 'El campo :attribute es obligatorio.',
+    'required'             => 'El campo es obligatorio.',
     'required_if'          => 'El campo :attribute es obligatorio cuando el campo :other es :value.',
     'required_unless'      => 'El campo :attribute es requerido a menos que :other se encuentre en :values.',
     'required_with'        => 'El campo :attribute es obligatorio cuando :values está presente.',

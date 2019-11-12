@@ -16,11 +16,11 @@
     <link rel="stylesheet" href="/css/responsive.css">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>  
 </head>
 <body>
-
 <header class="container  mt-2" style="width: 100%">
     <div class="header-container">
         <div class="row ">

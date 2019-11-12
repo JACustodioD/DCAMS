@@ -11,6 +11,8 @@
 |
 */
 
+
+//Rutas generales que no necesitan acceso
 Route::get('/', function () {
     return view('index');
 });
@@ -20,14 +22,31 @@ Route::get('/tratamientos', function () {
 Route::get('/citas', function () {
     return view('citas.crearCita');
 });
-Route::get('/user', function () {
-    return view('user.index');
-});
-
-
 Route::post('/cita','MessageController@store');
 
+//Rutas de Autenticacion
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Rutas a las que puede accesar el administrador
+Route::group([
+	'middleware' => 'admin',
+	'prefix' => 'consultorio',
+	
+],function(){
+	Route::get('/home',function(){
+		return view('admin.index');
+	});
+});
+
+//Rutas a las que puede accesar el usuario
+Route::group([
+	'middleware' => 'user',
+	'prefix' => 'pacientes',
+	
+],function(){
+	Route::get('/home', function () {
+    	return view('user.index');
+	});
+});
