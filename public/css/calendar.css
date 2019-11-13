@@ -1,5 +1,6 @@
 .calendar, .calendar_weekdays, .calendar_content {
-    max-width: 300px;
+    max-width: 400px;
+
     
 }
 .calendar {
@@ -21,7 +22,7 @@
     text-align: center;
     background-color: transparent;
     color: black;
-    font-size: 14px;
+    font-size: 20px;
 }
 .calendar_content div {
     border: 1px solid transparent;
@@ -40,7 +41,7 @@
 }
 .calendar_content div.today {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
     color:  #0132c9;
     border: 1px solid black;
 }

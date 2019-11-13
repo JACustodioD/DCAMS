@@ -47,3 +47,7 @@ Route::group([
     	return view('user.index');
 	});
 });
+
+Route::get('/user', function () {
+    return view('user.index');
+});
