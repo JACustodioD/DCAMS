@@ -6,7 +6,7 @@
     <div class="bienvenida">
         <div class="row">
             <div class="col-md-12">
-                <h3>Bienvenido(a) a tu consultorio dental Amy</h3>
+                <h3>Bienvenido(a) {{Auth::user()->name}} a tu consultorio dental Amy</h3>
             </div>
         </div>
         <div class="container mt-5 cont-form">
@@ -218,3 +218,8 @@
 
 
 @endsection
+
+
+
+
+select S.*, D.*, T.* from users U join dates D on U.id = D.user join treatments T on U.id = T.user join services S on T.service = S.id where U.id = '2';

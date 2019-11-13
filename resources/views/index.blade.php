@@ -20,45 +20,73 @@
                          <h1 class="display-4 text-slider"> Creamos sonrisas, mejoramos <strong> tú vida </strong> </h1>
                      </div>
                      <div class="col-md-5  mt-2">
-                         <form action="">
-                             <div class="card form-card">
-                                 <div class="card-header card-encabezado">
-                                     <div class="row d-flex justify-content-between">
-                                         <span class="text-cardh">Tu primera cita</span>
-                                         <img src="/img/icono-calendar.png" class="icono-calendar" alt="">
-                                     </div>
-                                 </div>
-                                 <div class="card-body">
-                                     <div class="form-group">
-                                         <label for="name">Nombre:</label>
-                                         <input type="text" class="form-control">
-                                     </div>
-                                     <div class="form-group">
-                                         <label for="telefono">Telefono:</label>
-                                         <input type="telefono" class="form-control">
-                                     </div>
-                                     <div class="form-group">
-                                     <div class="row">
-                                         <div class="col-md-6">
-                                             <label for="fecha">Fecha:</label>
-                                             <input type="date" name="fecha" class="form-control">
-                                         </div>
-                                         <div class="col-md-6">
-                                             <label for="hora">Hora:</label>
-                                             <input type="time" name="hora" class="form-control">
-                                         </div>
-                                     </div>
-                                     </div>
-                                     <div class="form-group">
-                                         <label for="comentarios">Comentarios</label>
-                                         <textarea class="form-control" id="comentarios" rows="3"></textarea>
-                                     </div>
-                                     <div class="form-group text-center">
-                                         <button class="btn btn-primary form-control" style="width:50%;"><b>Agendar</b></button>
-                                     </div>
-                                 </div>
+                <form action="/cita" method="POST">
+                    @csrf
+                    <div class="card form-card">
+                        <div class="card-header card-encabezado">
+                            <div class="row d-flex justify-content-between">
+                                <span class="text-cardh">Agenda una cita</span>
+                                <img src="/img/icono-calendar.png" class="icono-calendar" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required autofocus>
+                                @error('nombre')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Telefono:</label>
+                                 <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required autofocus>
+
+                                 @error('telefono')
+                                 <span class="invalid-feedback" role="alert">
+                                     <strong>{{ $message }}</strong>
+                                 </span>
+                                 @enderror
+                            </div>
+                            <div class="form-group">
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="fecha">Fecha:</label>
+                                        <input type="date" name="fecha" class="form-control @error('fecha') is-invalid @enderror" required autofocus>
+                                        @error('fecha')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="hora">Hora:</label>
+                                         <input type="time" name="hora" class="form-control @error('hora') is-invalid @enderror" required autofocus>
+                                         @error('hora')
+                                         <span class="invalid-feedback" role="alert">
+                                             <strong>{{ $message }}</strong>
+                                         </span>
+                                         @enderror
+                                    </div>
+                                </div>
                              </div>
-                         </form>
+                             <div class="form-group">
+                                <label for="comentarios">Comentarios</label>
+                                 <textarea class="form-control @error('comentario') is-invalid @enderror" id="comentarios" rows="3" name="comentario" required autofocus></textarea>
+
+                                 @error('comentario')
+                                 <span class="invalid-feedback" role="alert">
+                                     <strong> {{ $message }}</strong>
+                                 </span>
+                                 @enderror
+                             </div>
+                             <div class="form-group text-center">
+                                <button type="submit" class="btn btn-primary form-control" style="width:50%;" autofocus><b>Agendar</b></button>
+                             </div>
+                         </div>
+                     </div>
+                </form>
                  </div>
              </div>
          </div>

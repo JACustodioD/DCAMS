@@ -19,6 +19,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>  
+    
 </head>
 <body>
 <header class="container  mt-2" style="width: 100%">
