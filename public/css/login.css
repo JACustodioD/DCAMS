@@ -1,0 +1,35 @@
+.fondo-login{
+    background-image: url('/img/citas.jpg');
+    background-size: cover;
+    background-position:center;
+}
+
+.col-login{
+    background-image: url('/img/fondologin.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-position-x:
+}
+.text-image-login{
+    color: white;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+/*RESPONSIVE*/
+@media(max-width:766px){
+   .col-login{
+       display: none;
+   }
+}
+@media(max-width:518px){
+    .text-image-login{
+        font-size: 3em;
+    }
+}
+@media(max-width:405px){
+    .text-image-login{
+        font-size: 2.5em;
+        text-align: center;
+    }
+}
