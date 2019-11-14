@@ -14,13 +14,9 @@
 
 //Rutas generales que no necesitan acceso
 Route::get('/','HomeController@index');
+Route::get('/tratamientos','HomeController@tratamientos');
+Route::get('/citas','HomeController@citas');
 
-Route::get('/tratamientos', function () {
-    return view('tratamientos.tratamientos');
-});
-Route::get('/citas', function () {
-    return view('citas.crearCita');
-});
 Route::post('/cita','MessageController@store');
 
 //Rutas de Autenticacion

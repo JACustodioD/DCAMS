@@ -6,7 +6,7 @@
     <div class="bienvenida">
         <div class="row">
             <div class="col-md-12">
-                <h3>Bienvenido(a) a tu consultorio dental Amy</h3>
+                <h3>Bienvenido(a) <span class="text-info">{{Auth::user()->name}}</span> a tu consultorio dental Amy</h3>
             </div>
         </div>
         <div class="container mt-5 cont-form">
@@ -30,35 +30,35 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="name">Nombre(s):</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" id="name" disabled value="{{Auth::user()->name}}">
                      </div>
                      <div class="form-group col-md-6">
                         <label for="lastname">Apellidos:</label>
-                        <input type="text" class="form-control" id="lastname">
+                        <input type="text" class="form-control" id="lastname" value="ni idea" disabled>
                      </div>
                  </div>
                  <div class="form-row">
                      <div class="form-group col-md-6">
                          <label for="age">Fecha de nacimiento:</label>
-                         <input type="date" class="form-control" id="age">
+                         <input type="date" class="form-control" id="age" disabled value="{{Auth::user()->dateOfBirth}}">
                      </div>
                      <div class="form-group col-md-6">
                          <label for="phone">Teléfono:</label>
-                         <input type="password" class="form-control" id="phone">
+                         <input type="text" class="form-control" id="phone" disabled value="{{Auth::user()->phone}}">
                      </div>
                  </div>
                  <div class="form-group">
                      <label for="adress">Dirección:</label>
-                     <input type="text" class="form-control" id="adress">
+                     <input type="text" class="form-control" id="adress" disabled value="{{Auth::user()->address}}">
                  </div>
                  <div class="form-row">
                      <div class="form-group col-md-6">
                         <label for="inputCity">Correo:</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" id="email" disabled value="{{Auth::user()->email}}">
                      </div>
                      <div class="form-group col-md-6">
                         <label for="pacient">Paciente desde:</label>
-                        <input type="text" class="form-control" id="pacient">
+                        <input type="text" class="form-control" id="pacient" disabled value="{{Auth::user()->created_at}}">
                      </div>
                  </div>
                     <div class="form-group col-md-12 text-center">

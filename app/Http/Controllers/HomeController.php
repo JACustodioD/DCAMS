@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('index');
     }
+
+     public function tratamientos()
+    {
+        return view('tratamientos.tratamientos');
+    }
+
+     public function citas()
+    {
+        return view('citas.crearCita');
+    }
 }

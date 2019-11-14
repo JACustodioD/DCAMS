@@ -37,19 +37,19 @@ class MessageController extends Controller
     public function store(Request $request)
     {
         $validData = $request->validate([
-            'name' =>['required','string','max:255'],
-            'phone' => ['required','string','min:10','max:12'],
-            'date' => ['required','date'],
-            'hour' => ['required','string'],
-            'commentary' => ['required','string'],    
+            'nombre' =>['required','string','max:255'],
+            'telefono' => ['required','string','min:10','max:12'],
+            'fecha' => ['required','date'],
+            'hora' => ['required','string'],
+            'comentario' => ['required','string'],    
         ]);
 
         $message = new Message();
-        $message->name = $validData['name'];
-        $message->phone = $validData['phone'];
-        $message->date = $validData['date'];
-        $message->hour = $validData['hour'];
-        $message->commentary = $validData['commentary'];
+        $message->name = $validData['nombre'];
+        $message->phone = $validData['telefono'];
+        $message->date = $validData['fecha'];
+        $message->hour = $validData['hora'];
+        $message->commentary = $validData['comentario'];
         $message->save();
         return redirect('/');
     }
