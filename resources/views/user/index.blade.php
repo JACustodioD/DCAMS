@@ -89,8 +89,8 @@
           <div class="card-header p-0 z-depth-1 head-tratamientos" role="tab" id="heading30">
             <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse30" aria-expanded="true"
               aria-controls="collapse30">
-              <i class="fas fa-cloud fa-2x p-3 mr-4 float-left black-text" aria-hidden="true"></i>
-              <h4 class="text-uppercase white-text mb-0 py-3 mt-1"><i class="fas fa-tooth"></i>
+              <i aria-hidden="true"></i>
+              <h4 class="text-uppercase white-text mb-0 py-3 mt-1 text-tratamientos ml-3"><i class="fas fa-tooth"></i>
                 TRATAMIENTO DE BRAKETS
               </h4>
             </a>
@@ -100,11 +100,12 @@
           <div id="collapse30" class="collapse show" role="tabpanel" aria-labelledby="heading30"
             data-parent="#accordionEx5">
             <div class="card-body rgba-black-light white-text z-depth-1">
-              <p class="p-md-4 mb-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et.</p>
+              <p class="p-md-4 mb-0">
+                Este tratamiento tiene un costo de: <b> $15,000</b>
+              </p>
+              <p class="p-md-4 mb-0">
+                El cual inicio a partir  de: <b> 12/11/2019</b>
+              </p>
                 <div class="d-flex justify-content-end">
                  <button type="button" class="btn btn-outline-dark">Ver Detalles</button>
                </div>
@@ -120,8 +121,8 @@
           <div class="card-header p-0 z-depth-1 head-tratamientos" role="tab" id="heading31">
             <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse31" aria-expanded="true"
               aria-controls="collapse31">
-              <i class="fas fa-comment-alt fa-2x p-3 mr-4 float-left black-text" aria-hidden="true"></i>
-              <h4 class="text-uppercase white-text mb-0 py-3 mt-1"><i class="fas fa-tooth"></i>
+         
+              <h4 class="text-uppercase white-text mb-0 py-3 mt-1 text-tratamientos ml-3"><i class="fas fa-tooth"></i>
                 LIMPIEZA DENTAL
               </h4>
             </a>
@@ -151,8 +152,8 @@
           <div class="card-header p-0 z-depth-1 head-tratamientos" role="tab" id="heading32">
             <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse32" aria-expanded="true"
               aria-controls="collapse32">
-              <i class="fas fa-cogs fa-2x p-3 mr-4 float-left black-text" aria-hidden="true"></i>
-              <h4 class="text-uppercase white-text mb-0 py-3 mt-1"><i class="fas fa-tooth"></i>
+              
+              <h4 class="text-uppercase white-text mb-0 py-3 mt-1 text-tratamientos ml-3"><i class="fas fa-tooth"></i>
                 RECINAS DE ALTA ESTETICA
               </h4>
             </a>
@@ -188,11 +189,11 @@
   <div class="citas">
     <div class="row">
       <div class="col-md-12">
-        <h1 class=" pl-5 mt-5 mb-5">Citas</h1>
+        <h1 class=" pl-5 mt-5 mb-5 title-citas">Citas</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 pl-5">
+      <div class="col-md-6 pl-5 col-calendar">
         <div class="calendar calendar-first" id="calendar_first">
           <div class="calendar_header">
             <button class="switch-month switch-left"> <i class="fa fa-chevron-left"></i></button>

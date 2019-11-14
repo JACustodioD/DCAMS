@@ -1,11 +1,16 @@
 @extends('layouts.app')
 
 @section('content') 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+        <div class="row">
+                <div class="col-md-4">
+                    <img src="/img/icono-dental.png" alt="" height="150" width="150" class="mb-4">
+                </div>
+            </div>
             <div class="card">
-                <div class="card-header">{{ __('Regístrate') }}</div>
+              <h1 class="text-center">Registrate</h1>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -90,13 +95,16 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Guardar') }}
+                                    {{ __('Regístrarse') }}
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="col-md-6 col-login d-flex align-items-center">
+            <h1 class=" text-image-login display-4">Forma parte de nosotros <br> ¡Regístrate ahora!</h1> 
         </div>
     </div>
 </div>

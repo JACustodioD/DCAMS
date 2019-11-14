@@ -1,12 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Inicio de sesión') }}</div>
-
+ 
+<div class="container-fluid" >
+    <div class="row" style="height: 500px;">
+        <div class="col-md-6 ">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/img/icono-dental.png" alt="" height="150" width="150" class="mb-5">
+                </div>
+            </div>
+            <div cla class="card">
+                <h1 class="text-center">Iniciar sesión</h1>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -67,6 +72,9 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="col-md-6 col-login d-flex align-items-center">
+            <h1 class=" text-image-login display-4">En consultorio Amy <br> Tú eres nuestra prioridad</h1> 
         </div>
     </div>
 </div>
