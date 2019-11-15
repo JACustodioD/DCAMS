@@ -137,5 +137,8 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/all.js"></script>
     <script src="/js/efecto.js"></script>
+    <!--SCRIPT-->
+        @yield('script')
+    <!-- /SCRIPT -->
 </body>
 </html>

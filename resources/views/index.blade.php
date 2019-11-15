@@ -20,7 +20,8 @@
                          <h1 class="display-4 text-slider"> Creamos sonrisas, mejoramos <strong> tú vida </strong> </h1>
                      </div>
                      <div class="col-md-5  mt-2">
-                <form action="/cita" method="POST">
+                         
+                <form action="/cita" method="POST" name="frm_registro">
                     @csrf
                     <div class="card form-card">
                         <div class="card-header card-encabezado">
@@ -239,10 +240,21 @@
                    </span>
                    <hr id="separator-contacto">
                    <span>
-                       <a href="/citas"><button class="btn btn-primary">Agendar una cita</button></a>
+                       <a href="/citas"><button class="btn btn-primary" onclick=”confirmar_envio()”>Agendar una cita</button></a>
                    </span>
                 </div>
             </div>
         </div>
      </section>
+ @endsection
+ @section('script')
+ <script language=“JavaScript”>
+
+function confirmar_envio(){
+if (confirm(‘Estas seguro de enviar los datos de este formulario?’))
+{
+        document.frm_registro.submit()
+     }
+}
+</script>
  @endsection

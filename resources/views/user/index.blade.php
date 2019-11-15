@@ -9,6 +9,28 @@
                 <h3>Bienvenido(a) <span class="text-info">{{Auth::user()->name}}</span> a tu consultorio dental Amy</h3>
             </div>
         </div>
+        <section class="container">
+        <div class="submenu">
+            <div class="row">
+              <div class="col-md-12">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              </div>
+            </div>
+        </div>
+    </section>
         <div class="container mt-5 cont-form">
              <div class="row">    
                 <div class="col-md-3">

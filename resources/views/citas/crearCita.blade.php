@@ -9,6 +9,19 @@
         </div>
     </div>
 </section>
+<section class="container mt-2">
+    <div class="nota">
+        <div cla4="row">
+            <div class="col-md-12">
+                <div class="alert alert-warning" role="alert">
+                   <b>Importante:</b>
+                  Una vez que agende su cita se redireccionará a la página principal, 
+                  pero sus datos ya habrán sido guardados para ponernos en contácto con usted. <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="container mt-5 mb-5">
     <div class="formulario">
         <div class="row">
