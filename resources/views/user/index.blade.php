@@ -15,16 +15,10 @@
               <div class="col-md-12">
               <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Active</a>
+                  <a class="nav-link" href="#">Tratamientos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  <a class="nav-link" href="#">Citas</a>
                 </li>
               </ul>
               </div>
@@ -122,15 +116,16 @@
           <div id="collapse30" class="collapse show" role="tabpanel" aria-labelledby="heading30"
             data-parent="#accordionEx5">
             <div class="card-body rgba-black-light white-text z-depth-1">
-              <p class="p-md-4 mb-0">
+              <p class=" mb-0">
                 Este tratamiento tiene un costo de: <b> $15,000</b>
               </p>
-              <p class="p-md-4 mb-0">
-                El cual inicio a partir  de: <b> 12/11/2019</b>
+              <p class=" mb-0">
+                Fecha de inicio de tratamiento: <b> 12/11/2019</b>
               </p>
-                <div class="d-flex justify-content-end">
-                 <button type="button" class="btn btn-outline-dark">Ver Detalles</button>
-               </div>
+              <p class=" mb-0">
+                Actividad de cita anterior: <b> Se cambiaron ligas de color</b>
+              </p>
+                
             </div>
           </div>
         </div>
@@ -154,14 +149,16 @@
           <div id="collapse31" class="collapse" role="tabpanel" aria-labelledby="heading31"
             data-parent="#accordionEx5">
             <div class="card-body rgba-black-light white-text z-depth-1">
-              <p class="p-md-4 mb-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et.</p>
-                <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-outline-dark">Ver Detalles</button>
-                </div>
+            <p class=" mb-0">
+                Este tratamiento tiene un costo de: <b> $15,000</b>
+              </p>
+              <p class=" mb-0">
+                Fecha de inicio de tratamiento: <b> 12/11/2019</b>
+              </p>
+              <p class=" mb-0">
+                Actividad de cita anterior: <b> Se cambiaron ligas de color</b>
+              </p>
+             
             </div>
           </div>
         </div>
@@ -185,14 +182,16 @@
           <div id="collapse32" class="collapse" role="tabpanel" aria-labelledby="heading32"
             data-parent="#accordionEx5">
             <div class="card-body rgba-black-light white-text z-depth-1">
-              <p class="p-md-4 mb-0">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et.</p>
-                <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-outline-dark">Ver Detalles</button>
-                </div>
+            <p class=" mb-0">
+                Este tratamiento tiene un costo de: <b> $15,000</b>
+              </p>
+              <p class=" mb-0">
+                Fecha de inicio de tratamiento: <b> 12/11/2019</b>
+              </p>
+              <p class=" mb-0">
+                Actividad de cita anterior: <b> Se cambiaron ligas de color</b>
+              </p>
+              
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@
         <div class="col-md-6 ">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="/img/icono-dental.png" alt="" height="150" width="150" class="mb-5">
+                   <a href="/"> <img src="/img/icono-dental.png" alt="" height="150" width="150" class="mb-5"></a>
                 </div>
             </div>
             <div cla class="card">
@@ -64,7 +64,7 @@
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('¿Olvidaste tu contraseña?') }}
+                                        {{ __('¿No tienes cuenta?, Regístrate aquí') }}
                                     </a>
                                 @endif
                             </div>

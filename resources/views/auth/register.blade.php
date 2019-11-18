@@ -6,17 +6,17 @@
         <div class="col-md-8">
         <div class="row">
                 <div class="col-md-4">
-                    <img src="/img/icono-dental.png" alt="" height="150" width="150" class="mb-4">
+                    <a href="/"><img src="/img/icono-dental.png"  alt="" height="150" width="150" class="mb-4"></a>
                 </div>
             </div>
             <div class="card">
-              <h1 class="text-center">Registrate</h1>
+              <h1 class="text-center">Paciente nuevo</h1>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="name" class="col-form-label">{{ __('Nombre de usuario') }}</label>
+                                <label for="name" class="col-form-label">{{ __('Nombre de usuario:') }}</label>
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -25,7 +25,7 @@
                                 @enderror
                              </div>
                              <div class="form-group  col-md-6">
-                                <label for="dateOfBirth" class="col-form-label ">{{ __('Fecha de nacimiento') }}</label>
+                                <label for="dateOfBirth" class="col-form-label ">{{ __('Fecha de nacimiento:') }}</label>
                                 <input id="dateOfBirth" type="date" class="form-control @error('dateOfBirth') is-invalid @enderror" name="dateOfBirth" value="{{ old('dateOfBirth') }}" required autocomplete="dateOfBirth" >
 
                                 @error('dateOfBirth')
@@ -37,8 +37,8 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
-                                <label for="phone" class="col-form-label ">{{ __('Número de teléfono') }}</label>
-                                <input id="phone" type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" >
+                                <label for="phone" class="col-form-label ">{{ __('Número de teléfono:') }}</label>
+                                <input id="phone" type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" placeholder="Móvil o local" >
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -47,7 +47,7 @@
                             </div>
                             <div class="form-group col-md-8">
                                 <label for="address" class="col-form-label">{{ __('Dirección') }}</label>
-                                <input type="text" id="address" class="form-control @error('address') is-invalid @enderror" name="address" value="{{old('address') }}" required autofocus autocomplete="address">
+                                <input type="text" id="address" class="form-control @error('address') is-invalid @enderror" name="address" value="{{old('address') }}" required autofocus autocomplete="address" placeholder="Calle, numero, colonia">
                                 
                                 @error('address')
                                 <span class="invalid-feedback" role="alert">
