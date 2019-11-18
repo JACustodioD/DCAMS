@@ -7,7 +7,7 @@
                  <img src="/img/slider2.jpg" class="d-block w-100" alt="...">
              </div>
              <div class="carousel-item">
-                 <img src="/img/slider4.jpg" class="d-block w-100" alt="...">
+                 <img src="/img/slider3.jpg" class="d-block w-100" alt="...">
              </div>
              <div class="carousel-item">
                  <img src="/img/slider5.jpg" class="d-block w-100" alt="...">
@@ -16,8 +16,8 @@
          <div class="overlay">
              <div class="container">
                  <div class="row">
-                     <div class="col-md-7 mt-2 d-flex align-items-center">
-                         <h1 class="display-4 text-slider"> Creamos sonrisas, mejoramos <strong> tú vida </strong> </h1>
+                     <div class="  col-md-7 mt-2 d-flex align-items-center">
+                         <h1 class="text-slider"> Creamos sonrísas, mejoramos <strong> tú vida. </strong> </h1>
                      </div>
                      <div class="col-md-5  mt-2">
                          
@@ -26,12 +26,17 @@
                     <div class="card form-card">
                         <div class="card-header card-encabezado">
                             <div class="row d-flex justify-content-between">
-                                <span class="text-cardh">Agenda una cita</span>
+                                <p class="text-cardh">Agendar una cita</p>
                                 <img src="/img/icono-calendar.png" class="icono-calendar" alt="">
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div class="form-group">
+                        <div class="card-body form-body">
+                            <div class="form-group inputs">
+                                <div class="alert alert-warning" role="alert">
+                                        <p class="text-citas"><b>Importante:</b>
+                                        Una vez que agende su cita se redireccionará a esta misma página, 
+                                        pero sus datos ya habrán sido guardados para ponernos en contácto con usted.</p>
+                                 </div>
                                 <label for="nombre">Nombre:</label>
                                 <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required autofocus>
                                 @error('nombre')
@@ -40,7 +45,7 @@
                                     </span>
                                 @enderror
                             </div>
-                            <div class="form-group">
+                            <div class="form-group inputs">
                                 <label for="telefono">Telefono:</label>
                                  <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required autofocus>
 
@@ -50,7 +55,7 @@
                                  </span>
                                  @enderror
                             </div>
-                            <div class="form-group">
+                            <div class="form-group inputs">
                                  <div class="row">
                                     <div class="col-md-6">
                                         <label for="fecha">Fecha:</label>
@@ -72,7 +77,7 @@
                                     </div>
                                 </div>
                              </div>
-                             <div class="form-group">
+                             <div class="form-group ">
                                 <label for="comentarios">Comentarios</label>
                                  <textarea class="form-control @error('comentario') is-invalid @enderror" id="comentarios" rows="3" name="comentario" required autofocus></textarea>
 
@@ -82,7 +87,7 @@
                                  </span>
                                  @enderror
                              </div>
-                             <div class="form-group text-center">
+                             <div class="form-group text-center inputs">
                                 <button type="submit" class="btn btn-primary form-control" style="width:50%;" autofocus><b>Agendar</b></button>
                              </div>
                          </div>
@@ -148,42 +153,42 @@
         <div class="tratamientos-section">
             <div class="row">
                 <div class="col-md-12 mt-3" id="tratamiento1">
-                    <h1 class="pl-4">Tratamientos para ti.</h1>
+                    <h1 class="pl-4 title-tratamientos">Tratamientos para ti.</h1>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 col-tratamientos mt-2" id="tratamiento2">
-                     <a href="/tratamientos"><img src="/img/icono2.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Limpieza dental</span></a>
+                     <a href="/tratamientos"><img src="/img/icono2.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Limpieza dental</span></a>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento3">
-                     <a href="/tratamientos"><img src="/img/icono1.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Blanqueamiento dental</span></a>
+                     <a href="/tratamientos"><img src="/img/icono1.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Blanqueamiento dental</span></a>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento4">
-                    <a href="/tratamientos"><img src="/img/icono3.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Implantes</span></a>
+                    <a href="/tratamientos"><img src="/img/icono3.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Implantes</span></a>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento5">
-                    <a href="/tratamientos"> <img src="/img/icono4.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Diseño de sonrisa</span></a>
+                    <a href="/tratamientos"> <img src="/img/icono4.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Diseño de sonrisa</span></a>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento6">
-                    <a href="/tratamientos"> <img src="/img/icono6.png" class="icon-tratamientos" alt="limpieza-dental"> <span>Ortodoncia y endodoncia</span></a>
+                    <a href="/tratamientos"> <img src="/img/icono6.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Ortodoncia</span></a>
                </div>
             </div>    
         </div>
      </section>
      <!--GIF-->
-     <section class="container">
+     <section class="container" >
         <div class="gif-implante">
             <div class="row">
-                <div class="col-md-12">
-                    <img src="/img/implante.gif"  class="implante" alt="implante-gif">
+                <div class="col-md-12" >
+                    <img src="/img/implante.gif"  class="implante" alt="implante-gif" >          
                 </div>
             </div>
         </div>
@@ -198,8 +203,9 @@
                 </div>
             </div>
             <div class="row mt-3">
+    
               <div class="col-md-4">
-                <img src="/img/image-promo.jpg" class="pl-3 pb-3 img-fluid" alt="" height="300px" width="330px">
+                <img src="/img/image-promo.jpg" class=" pl-3 pb-3 img-fluid" alt="" height="300px" width="330px">
               </div>
               <div class="col-md-4">
                 <img src="/img/image-promo1.jpg" class="pl-3 pb-3 img-fluid" alt="" height="300px" width="330px"> 
@@ -207,6 +213,7 @@
              <div class="col-md-4">
                 <img src="/img/image-promo2.jpg" class="pl-3 pb-3 img-fluid" alt="" height="300px" width="330px"> 
              </div>
+            
            </div>
         </div>
      </section>
@@ -240,21 +247,12 @@
                    </span>
                    <hr id="separator-contacto">
                    <span>
-                       <a href="/citas"><button class="btn btn-primary" onclick=”confirmar_envio()”>Agendar una cita</button></a>
+                       <a href="/citas"><button class="btn btn-primary">Agendar una cita</button></a>
                    </span>
                 </div>
             </div>
         </div>
      </section>
+    
  @endsection
- @section('script')
- <script language=“JavaScript”>
-
-function confirmar_envio(){
-if (confirm(‘Estas seguro de enviar los datos de este formulario?’))
-{
-        document.frm_registro.submit()
-     }
-}
-</script>
- @endsection
+ 

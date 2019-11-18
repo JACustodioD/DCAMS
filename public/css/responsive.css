@@ -33,11 +33,27 @@
     .col-phone{
         text-align: center;
     }
-    .text-slider, .text-cardh{
-        font-size: 1em;
-        text-align: center;
+    .text-slider, .text-about, .title-tratamientos{
+        font-size: 1.5em !important;
+        text-align: center !important;
     }
-
+    .text-cardh{
+        font-size: 1em;
+    }
+    .icon-tratamientos{
+        height: 70px;
+        width: 70px;
+    }
+    .text-tratamientos{
+        font-size: 10px !important;
+    }
+    .inputs{
+        margin-bottom: 0;
+    }
+    #main .carousel-inner img{
+        height: 80vh;
+    }
+  
 }
 @media(max-width:1198px){
     .text-phone{
@@ -62,6 +78,11 @@
         font-size: 0.7em;
         margin-left: 50px;
     }
+   
+    #main .carousel-inner img{
+       max-height: auto;
+    }
+  
 }
 @media(max-width:375px){
    
@@ -79,25 +100,25 @@
         height: 120vh;
     }
 }
-@media(max-width:768px) (min-width:319px){
-    #main .carousel-inner img{
-        height: 65vh;
-    }
+@media(max-width:768px){
+   
     .text-slider{
-        font-size: 2em;
+        font-size: 1.8em;
     }
     .icon-tratamientos{
         height: 70px;
         width: 70px;
     }
     .col-tratamientos{
-        font-size: 1.1em;
+        font-size: 0.9em;
+        max-width: 94%;
     }
-    .tratamientos-section, .implante{
-        height: 50vh;
-    }
+
     .tratamientos, .text-about{
         font-size: 2em;
+    }
+    .text-cardh{
+        font-size: 1em;
     }
    
   

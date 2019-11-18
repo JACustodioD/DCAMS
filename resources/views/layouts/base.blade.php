@@ -26,7 +26,7 @@
     <div class="header-container">
         <div class="row ">
             <div class="col-md-4 col-phone">
-                <h2 class="text-phone"> <i class="fas fa-phone"></i> 5522-9901 ext 29</h2>
+                <h2 class="text-phone"> <i class="fas fa-phone"></i> 55229901 ext 02</h2>
             </div>
             <div class=" col-md-8 col-md-2 d-flex justify-content-end">
                 <a href="/citas"><button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button></a>
@@ -137,8 +137,5 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/all.js"></script>
     <script src="/js/efecto.js"></script>
-    <!--SCRIPT-->
-        @yield('script')
-    <!-- /SCRIPT -->
 </body>
 </html>
