@@ -16,10 +16,10 @@
          <div class="overlay">
              <div class="container">
                  <div class="row">
-                     <div class="  col-md-7 mt-2 d-flex align-items-center">
+                     <div class=" col-sm-4 col-md-6 mt-2 d-flex align-items-center">
                          <h1 class="text-slider"> Creamos sonrísas, mejoramos <strong> tú vida. </strong> </h1>
                      </div>
-                     <div class="col-md-5  mt-2">
+                     <div class=" col-sm-7 col-md-6 d-flex align-items-center  mt-2">
                          
                 <form action="/cita" method="POST" name="frm_registro">
                     @csrf
@@ -199,19 +199,19 @@
             <div class="row">
                 <div class="col-md-12 mt-3">
                     <h1 class="pl-4 text-section"> Promociones. </h1>
-                    <span class="pl-4 text-section">Disfruta de las promociones que Amy tiene para ti</span>
+                    <span class="pl-4" style="color: white;">Disfruta de nuestras promociones</span>
                 </div>
             </div>
             <div class="row mt-3">
     
               <div class="col-md-4">
-                <img src="/img/image-promo.jpg" class=" pl-3 pb-3 img-fluid" alt="" height="300px" width="330px">
+                <img src="/img/image-promo.jpg" class=" pl-3 pb-3 img-fluid img-tratamientos" alt="" height="300px" width="330px">
               </div>
               <div class="col-md-4">
-                <img src="/img/image-promo1.jpg" class="pl-3 pb-3 img-fluid" alt="" height="300px" width="330px"> 
+                <img src="/img/image-promo1.jpg" class="pl-3 pb-3 img-fluid img-tratamientos" alt="" height="300px" width="330px"> 
              </div>
-             <div class="col-md-4">
-                <img src="/img/image-promo2.jpg" class="pl-3 pb-3 img-fluid" alt="" height="300px" width="330px"> 
+             <div class="col-md-4 img-tratamientos">
+                <img src="/img/image-promo2.jpg" class="pl-3 pb-3 img-fluid "  alt="" height="300px" width="330px"> 
              </div>
             
            </div>
@@ -220,14 +220,14 @@
      <!--SECCION DE CONTÁCTO-->
      <section class="container">
         <div class="contacto">
-            <div class="row mt-3">
+            <div class="row mt-3 mb-3">
                 <div class="col-md-6">
                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.9968264891002!2d-99.15708017083129!3d19.542153799176397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f79a7764e5e3%3A0x32a6f5e67a308dfa!2sAv%20Alfredo%20del%20Mazo%20V%C3%A9lez%2029%2C%20Chalma%20La%20Barranca%2C%2054143%20Tlalnepantla%20de%20Baz%2C%20M%C3%A9x.!5e0!3m2!1sen!2smx!4v1572051999050!5m2!1sen!2smx"
                           width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="">
                      </iframe>
                 </div>
                 <div class="col-md-6">
-                    <h1>Contáctenos</h1>
+                    <h1 class="title-contacto">Contáctenos</h1>
                     <span><i class="fas fa-map-marker-alt icon-contacto"></i>Av Alfredo del Mazo Vélez 29, Chalma La Barranca,
                          54143 Tlalnepantla de Baz, Méx.
                     </span>

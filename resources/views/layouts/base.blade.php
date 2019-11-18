@@ -28,7 +28,7 @@
             <div class="col-md-4 col-phone">
                 <h2 class="text-phone"> <i class="fas fa-phone"></i> 55229901 ext 02</h2>
             </div>
-            <div class=" col-md-8 col-md-2 d-flex justify-content-end">
+            <div class=" col-md-8 col-md-2 d-flex justify-content-end col-btn">
                 <a href="/citas"><button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button></a>
                <a href="/login"><button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-user"><b></i>Iniciar sesión</b></button></a>
             </div>
@@ -36,7 +36,7 @@
 
         <!--SOCIAL RED-->
         <div class="row  d-flex justify-content-between ">
-            <div class="col-md-3 name-doc">
+            <div class=" col-sm-4 col-md-3 name-doc">
                 <span><small>Dra. Amy Hernández Hernández <i class="fas fa-check"></i></small></span>
             </div>
             <div class="col-md-2 d-flex justify-content-end">

@@ -1,128 +1,123 @@
-@media screen and (max-width:991px){
-    .menu{
-      
-        height: 50%;
-        padding: 0;
-    }
-    .col-menu{
-        padding: 0;
-    }
-}
-
-/*LOGO*/
 @media screen and (max-width:990px){
-    .icono{
-        height: 50px;
-        width: 50px;
-    }
-}
-@media (max-width:766px){
-    .horarios{
-      margin-left: 0 !important;
-      text-align: center;
-    }
-    .btn-sesion{
-        height: 100%;
-    }
-    .name-doc{
-        text-align: center;
-    }
-    .text-phone{
-        font-size: 1.5em;
-    }
-    .col-phone{
-        text-align: center;
-    }
-    .text-slider, .text-about, .title-tratamientos{
-        font-size: 1.5em !important;
-        text-align: center !important;
-    }
-    .text-cardh{
-        font-size: 1em;
-    }
-    .icon-tratamientos{
-        height: 70px;
-        width: 70px;
-    }
-    .text-tratamientos{
-        font-size: 10px !important;
-    }
-    .inputs{
-        margin-bottom: 0;
-    }
-    #main .carousel-inner img{
-        height: 80vh;
-    }
-  
-}
-@media(max-width:1198px){
-    .text-phone{
-        font-size: 1.5em;
-    }
-}
-@media(max-width:990px){
     .text-phone{
         font-size: 1.2em;
     }
-    .horarios{
-        margin-left: 0 !important;
-        font-size: 0.9em;
-    }
-    .namedoc span small{
-        font-size: 0.9em;
-    }
-    .col-ocult{
-        margin-left: 0 !important;
-    }
-    .btn-sesion{
-        font-size: 0.7em;
-        margin-left: 50px;
-    }
-   
-    #main .carousel-inner img{
-       max-height: auto;
-    }
-  
+    .icono{
+        width: 100px;
+        height: 100px;
+        }
 }
-@media(max-width:375px){
-   
-    .icono-calendar{
-        height: 30px;
-        width:30px;
-    }
-    .card-body{
-       font-size: 0.9em;
-    }
-    .card-body label{
-        margin-bottom: 0;
-    }
+@media screen and (max-width:800px){
     #main .carousel-inner img{
-        height: 120vh;
+        height: 55vh;
     }
-}
-@media(max-width:768px){
-   
-    .text-slider{
-        font-size: 1.8em;
+    .text-cardh{
+        font-size: 1.3em;
+    }
+    .text-slider, .text-about, .title-tratamientos, .text-section, .title-contacto{
+        font-size: 2em;
+       
+    }
+    .tratamientos-section{
+        height: 40vh;
+        background-position-y: -100px;
     }
     .icon-tratamientos{
         height: 70px;
         width: 70px;
     }
     .col-tratamientos{
-        font-size: 0.9em;
-        max-width: 94%;
+        font-size: 17px;
     }
-
-    .tratamientos, .text-about{
-        font-size: 2em;
+}
+@media screen and (max-width:768px){
+    #main .carousel-inner img{
+        height: 65vh;
     }
-    .text-cardh{
+    .tratamientos-section{
+        height: 50vh;
+        background-position-y: -100px;
+    }
+}
+    
+@media screen and (max-width:766px){
+    .btn-sesion{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:415px){
+    #main .carousel-inner img{
+        height: 110vh;
+    }
+    .text-phone{
+        text-align: center;
+    }
+    .name-doc{
+        text-align: center;
+    }
+    .col-btn{
+        justify-content: center !important;
+    }
+    .text-slider{
+        text-align: center;
+    }
+    .tratamientos-section{
+        height: 70vh;
+    }
+    .col-tratamientos{
+        width: 90%;
+    }
+}
+@media screen and (max-width:375px){
+    #main .carousel-inner img{
+        height: 120vh;
+    }
+    .parrafo-about{
         font-size: 1em;
     }
-   
-  
+    
 }
+@media screen and (max-width:342px){
+    .btn-sesion{
+        font-size: 13px;
+    }
+    .name-doc, .text-phone{
+        text-align: center;
+    }
+    .btn-sesion{
+        font-size: 10px;
+    }
+    
+}
+@media screen and (max-width:325px){
+    .text-slider{
+       display: none;
+    }
+    
+    #main .carousel-inner img{
+        height: 130vh;
+    }
+    .parrafo-about{
+        font-size: 1em;
+    }
+    .text-slider, .text-about, .title-tratamientos, .text-section, .title-contacto{
+        font-size: 1.5em;
+       
+    }
+    .icon-tratamientos{
+        width: 50px;
+        height: 50px;
+    }
+    .col-tratamientos{
+        font-size: 14px;
+    }
+    .img-tratamientos{
+        padding-left: !important;
+    }
+}
+
+
+
 
 /*USUARIO*/
 
