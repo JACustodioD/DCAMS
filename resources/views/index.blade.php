@@ -21,7 +21,7 @@
                      </div>
                      <div class=" col-sm-7 col-md-6 d-flex align-items-center  mt-2">
                          
-                <form action="/cita" method="POST" name="frm_registro">
+                <form action="/cita" method="POST" name="frm_registro" style="width: 100%;">
                     @csrf
                     <div class="card form-card">
                         <div class="card-header card-encabezado">
@@ -31,12 +31,7 @@
                             </div>
                         </div>
                         <div class="card-body form-body">
-                            <div class="form-group inputs">
-                                <div class="alert alert-warning" role="alert">
-                                        <p class="text-citas"><b>Importante:</b>
-                                        Una vez que agende su cita se redireccionará a esta misma página, 
-                                        pero sus datos ya habrán sido guardados para ponernos en contácto con usted.</p>
-                                 </div>
+                            <div class="form-group">
                                 <label for="nombre">Nombre:</label>
                                 <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required autofocus>
                                 @error('nombre')
@@ -45,7 +40,7 @@
                                     </span>
                                 @enderror
                             </div>
-                            <div class="form-group inputs">
+                            <div class="form-group">
                                 <label for="telefono">Telefono:</label>
                                  <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required autofocus>
 
@@ -55,7 +50,7 @@
                                  </span>
                                  @enderror
                             </div>
-                            <div class="form-group inputs">
+                            <div class="form-group">
                                  <div class="row">
                                     <div class="col-md-6">
                                         <label for="fecha">Fecha:</label>
@@ -87,7 +82,7 @@
                                  </span>
                                  @enderror
                              </div>
-                             <div class="form-group text-center inputs">
+                             <div class="form-group text-center">
                                 <button type="submit" class="btn btn-primary form-control" style="width:50%;" autofocus><b>Agendar</b></button>
                              </div>
                          </div>
