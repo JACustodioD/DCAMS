@@ -58,16 +58,16 @@
                           <a class="nav-link hvr-underline-from-left" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link hvr-underline-from-left" href="#">Acerca de </a>
+                          <a class="nav-link hvr-underline-from-left"  data-scroll href="acercade">Acerca de </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link hvr-underline-from-left" href="#">Tratamientos</a>
+                          <a class="nav-link hvr-underline-from-left"  data-scroll href="tratamientos">Tratamientos</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link hvr-underline-from-left" href="#">Promociones</a>
+                          <a class="nav-link hvr-underline-from-left"  data-scroll href="promociones">Promociones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link hvr-underline-from-left" href="#">Contácto</a>
+                            <a class="nav-link hvr-underline-from-left"  data-scroll href="contacto">Contácto</a>
                           </li>
                       </ul>
                     </div>
@@ -137,5 +137,6 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/all.js"></script>
     <script src="/js/efecto.js"></script>
+    @yield('script')
 </body>
 </html>
