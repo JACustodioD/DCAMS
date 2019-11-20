@@ -116,6 +116,7 @@ background-image: url('/img/fondoheader.png');
 .about-section {
     background-color:  #007bff;
     color: white;
+    height: 100vh;
 }
 .text-about{
     text-shadow: 1px 1px  #606060;

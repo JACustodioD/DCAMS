@@ -29,6 +29,9 @@
     .col-tratamientos{
         font-size: 17px;
     }
+    .about-section{
+        height: 50vh;
+    }
 }
 @media screen and (max-width:768px){
     #main .carousel-inner img{
@@ -38,6 +41,10 @@
         height: 50vh;
         background-position-y: -100px;
     }
+    .about-section{
+        height: 60vh;
+    }
+}
 }
     
 @media screen and (max-width:766px){
@@ -67,6 +74,10 @@
     .col-tratamientos{
         width: 90%;
     }
+    .about-section{
+        height: 100%;
+    }
+}
 }
 @media screen and (max-width:375px){
     #main .carousel-inner img{
@@ -74,6 +85,9 @@
     }
     .parrafo-about{
         font-size: 1em;
+    }
+    .about-section{
+        height: 100%;
     }
     
 }

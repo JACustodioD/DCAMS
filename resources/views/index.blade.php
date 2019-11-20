@@ -96,7 +96,7 @@
  </section>
      <!--SECCION ACERCA DE-->
      <section class="container">
-         <div class="about-section" id="acercade">
+         <div class="about-section" id="acercade"  >
              <div class="row">
                  <div class="col-12 mt-3">
                      <h1 class="text-about text-center display-4" >¿Por qué debería <strong>elegirnos</strong>?</h1>
@@ -110,12 +110,12 @@
                         <hr id="separator">
                  </div>
              </div>
-             <div class="row">
+             <div class="row mt-5">
                 <div class="col-md-12">
                     <h3 class="text-center">¡A su servicio!</h3>
                  </div>
              </div>
-             <div class="row mt-5">
+             <div class="row" style="margin-top: 120px;">
                 <div class="col-md-3">
                     <figure class="text-center">
                         <i class="fas fa-tooth about-icon"></i>
@@ -253,54 +253,15 @@
  @section('script')
     <script src="/smooth-scroll.min"></script>
     <script>
-        var scroll = new SmoothScroll('a[href*="#"]', {
-        // Selectors
-        ignore: '[data-scroll-ignore]', // Selector for links to ignore (must be a valid CSS selector)
-        header: null, // Selector for fixed headers (must be a valid CSS selector)
-        topOnEmptyHash: true, // Scroll to the top of the page for links with href="#"
-
-        // Speed & Duration
-        speed: 500, // Integer. Amount of time in milliseconds it should take to scroll 1000px
-        speedAsDuration: false, // If true, use speed as the total duration of the scroll animation
-        durationMax: null, // Integer. The maximum amount of time the scroll animation should take
-        durationMin: null, // Integer. The minimum amount of time the scroll animation should take
-        clip: true, // If true, adjust scroll distance to prevent abrupt stops near the bottom of the page
-        offset: function (anchor, toggle) {
-
-            // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
-            // This example is a function, but you could do something as simple as `offset: 25`
-
-            // An example returning different values based on whether the clicked link was in the header nav or not
-            if (toggle.classList.closest('.my-header-nav')) {
-                return 25;
-            } else {
-                return 50;
-            }
-
-        },
-
-        // Easing
-        easing: 'easeInOutCubic', // Easing pattern to use
-        customEasing: function (time) {
-
-            // Function. Custom easing pattern
-            // If this is set to anything other than null, will override the easing option above
-
-            // return <your formulate with time as a multiplier>
-
-            // Example: easeInOut Quad
-            return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
-
-        },
-
-        // History
-        updateURL: true, // Update the URL on scroll
-        popstate: true, // Animate scrolling with the forward/backward browser buttons (requires updateURL to be true)
-
-        // Custom Events
-        emitEvents: true // Emit custom events
-
-        });
+     var scroll = new SmoothScroll;
+      smootScroll.init({
+          selector: '[data-scroll]',
+          selectorHeader: null,
+          speed: 500,
+          easing: 'easeInOutCubic',
+          offset: 0,
+          callback: function(anchor, toggle){}
+      });
     </script>
  @endsection
  
