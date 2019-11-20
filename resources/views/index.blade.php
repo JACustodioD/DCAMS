@@ -33,7 +33,7 @@
                         <div class="card-body form-body">
                             <div class="form-group">
                                 <label for="nombre">Nombre:</label>
-                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required autofocus>
+                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required >
                                 @error('nombre')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="telefono">Telefono:</label>
-                                 <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required autofocus>
+                                 <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required >
 
                                  @error('telefono')
                                  <span class="invalid-feedback" role="alert">
@@ -54,7 +54,7 @@
                                  <div class="row">
                                     <div class="col-md-6">
                                         <label for="fecha">Fecha:</label>
-                                        <input type="date" name="fecha" class="form-control @error('fecha') is-invalid @enderror" required autofocus>
+                                        <input type="date" name="fecha" class="form-control @error('fecha') is-invalid @enderror" required >
                                         @error('fecha')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="hora">Hora:</label>
-                                         <input type="time" name="hora" class="form-control @error('hora') is-invalid @enderror" required autofocus>
+                                         <input type="time" name="hora" class="form-control @error('hora') is-invalid @enderror" required >
                                          @error('hora')
                                          <span class="invalid-feedback" role="alert">
                                              <strong>{{ $message }}</strong>
@@ -74,7 +74,7 @@
                              </div>
                              <div class="form-group ">
                                 <label for="comentarios">Comentarios</label>
-                                 <textarea class="form-control @error('comentario') is-invalid @enderror" id="comentarios" rows="3" name="comentario" required autofocus></textarea>
+                                 <textarea class="form-control @error('comentario') is-invalid @enderror" id="comentarios" rows="3" name="comentario" required ></textarea>
 
                                  @error('comentario')
                                  <span class="invalid-feedback" role="alert">
@@ -83,7 +83,7 @@
                                  @enderror
                              </div>
                              <div class="form-group text-center">
-                                <button type="submit" class="btn btn-primary form-control" style="width:50%;" autofocus><b>Agendar</b></button>
+                                <button type="submit" class="btn btn-primary form-control" style="width:50%;" ><b>Agendar</b></button>
                              </div>
                          </div>
                      </div>
@@ -95,8 +95,8 @@
     </div>
  </section>
      <!--SECCION ACERCA DE-->
-     <section class="container">
-         <div class="about-section" id="acercade">
+     <section class="container" id="acercade">
+         <div class="about-section" >
              <div class="row">
                  <div class="col-12 mt-3">
                      <h1 class="text-about text-center display-4" >¿Por qué debería <strong>elegirnos</strong>?</h1>
@@ -144,8 +144,8 @@
          </div>
      </section>
      <!--SECCION DE TRATAMIENTOS-->
-     <section class="container">
-        <div class="tratamientos-section" id="tratamientos">
+     <section class="container" id="tratamientos">
+        <div class="tratamientos-section">
             <div class="row">
                 <div class="col-md-12 mt-3" id="tratamiento1">
                     <h1 class="pl-4 title-tratamientos">Tratamientos para ti.</h1>
@@ -189,8 +189,8 @@
         </div>
      </section>
      <!--PROMOCIONES-->
-     <section class="container">
-        <div class="promociones" id="promociones">
+     <section class="container" id="promociones" >
+        <div class="promociones" >
             <div class="row">
                 <div class="col-md-12 mt-3">
                     <h1 class="pl-4 text-section"> Promociones. </h1>
@@ -213,8 +213,8 @@
         </div>
      </section>
      <!--SECCION DE CONTÁCTO-->
-     <section class="container">
-        <div class="contacto" id="contacto">
+     <section class="container" id="contacto">
+        <div class="contacto" >
             <div class="row mt-3 mb-3">
                 <div class="col-md-6">
                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.9968264891002!2d-99.15708017083129!3d19.542153799176397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f79a7764e5e3%3A0x32a6f5e67a308dfa!2sAv%20Alfredo%20del%20Mazo%20V%C3%A9lez%2029%2C%20Chalma%20La%20Barranca%2C%2054143%20Tlalnepantla%20de%20Baz%2C%20M%C3%A9x.!5e0!3m2!1sen!2smx!4v1572051999050!5m2!1sen!2smx"
@@ -251,7 +251,8 @@
     
  @endsection
  @section('script')
-    <script src="/smooth-scroll.min"></script>
+    <script src="/js/smooth-scroll.min.js"></script>
+
     <script>
         var scroll = new SmoothScroll('a[href*="#"]', {
         // Selectors
@@ -265,19 +266,19 @@
         durationMax: null, // Integer. The maximum amount of time the scroll animation should take
         durationMin: null, // Integer. The minimum amount of time the scroll animation should take
         clip: true, // If true, adjust scroll distance to prevent abrupt stops near the bottom of the page
-        offset: function (anchor, toggle) {
+        offset: 25 //function (anchor, toggle) {
 
             // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
             // This example is a function, but you could do something as simple as `offset: 25`
 
             // An example returning different values based on whether the clicked link was in the header nav or not
-            if (toggle.classList.closest('.my-header-nav')) {
+           /* if (toggle.classList.closest('.navbarNav')) {
                 return 25;
             } else {
                 return 50;
             }
 
-        },
+        }*/ ,
 
         // Easing
         easing: 'easeInOutCubic', // Easing pattern to use

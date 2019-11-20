@@ -52,22 +52,22 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="collapse navbar-collapse navbarNav" id="navbarNav">
                       <ul class="navbar-nav menu-list">
                         <li class="nav-item">
                           <a class="nav-link hvr-underline-from-left" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link hvr-underline-from-left"  data-scroll href="acercade">Acerca de </a>
+                          <a class="nav-link hvr-underline-from-left"  data-scroll href="/#acercade">Acerca de </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link hvr-underline-from-left"  data-scroll href="tratamientos">Tratamientos</a>
+                          <a class="nav-link hvr-underline-from-left"  data-scroll href="/#tratamientos">Tratamientos</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link hvr-underline-from-left"  data-scroll href="promociones">Promociones</a>
+                          <a class="nav-link hvr-underline-from-left"  data-scroll href="/#promociones">Promociones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link hvr-underline-from-left"  data-scroll href="contacto">Contácto</a>
+                            <a class="nav-link hvr-underline-from-left"  data-scroll href="/#contacto">Contácto</a>
                           </li>
                       </ul>
                     </div>
