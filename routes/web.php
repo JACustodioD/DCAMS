@@ -45,4 +45,8 @@ Route::group([
 	Route::get('/home', function () {
     	return view('user.index');
 	});
+	Route::get('/historiamedica', function(){
+		return view('user.historiaMedica');
+
+	});
 });
