@@ -51,7 +51,7 @@ class MessageController extends Controller
         $message->hour = $validData['hora'];
         $message->commentary = $validData['comentario'];
         $message->save();
-        return redirect('/');
+        return redirect('/message');
     }
 
     /**

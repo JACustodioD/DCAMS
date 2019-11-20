@@ -1,7 +1,22 @@
 @extends('layouts.user')
 
 @section('content')
-
+<section class="container">
+        <div class="submenu">
+            <div class="row">
+              <div class="col-md-12">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link hvr-underline-from-left"  data-scroll href="#tratamientos">Tratamientos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link hvr-underline-from-left"   data-scroll href="#citas">Citas</a>
+                </li>
+              </ul>
+              </div>
+            </div>
+        </div>
+</section>
 <section class="container mt-5">
     <div class="bienvenida">
         <div class="row">
@@ -9,34 +24,19 @@
                 <h3>Bienvenido(a) <span class="text-info">{{Auth::user()->name}}</span> a tu consultorio dental Amy</h3>
             </div>
         </div>
-        <section class="container">
-        <div class="submenu">
-            <div class="row">
-              <div class="col-md-12">
-              <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Tratamientos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Citas</a>
-                </li>
-              </ul>
-              </div>
-            </div>
-        </div>
-    </section>
         <div class="container mt-5 cont-form">
              <div class="row">    
                 <div class="col-md-3">
                     <div class="profile-photo text-center">
-                        <span>Foto de perfil</span>
+                        <img src="/img/dental.png" alt="foto-perfil" width="100%" height="100%">
                     </div>
                 </div>
                </div>
               <div class="row">
                 <div class="col-md-3">
                     <form method="post" enctype="multipart/form-data"><br>
-                        <input type=file size=100 name="file1">     
+                        <input type=file size=100 name="file1">   
+                        <button type="submit" class="btn btn-primary mt-2">Guardar cambios</button>
                     </form>
                 </div>
               </div>
@@ -44,13 +44,9 @@
              <!--FORMULARIO-->
              <form class="mt-5">
                 <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="name">Nombre(s):</label>
+                    <div class="form-group col-md-12">
+                        <label for="name">Nombre completo:</label>
                         <input type="text" class="form-control" id="name" disabled value="{{Auth::user()->name}}">
-                     </div>
-                     <div class="form-group col-md-6">
-                        <label for="lastname">Apellidos:</label>
-                        <input type="text" class="form-control" id="lastname" value="ni idea" disabled>
                      </div>
                  </div>
                  <div class="form-row">
@@ -77,15 +73,13 @@
                         <input type="text" class="form-control" id="pacient" disabled value="{{Auth::user()->created_at}}">
                      </div>
                  </div>
-                    <div class="form-group col-md-12 text-center">
-                         <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                    </div>    
+                      
              </form>
         </div>
     </div>
 </section>
 
-<section class="container">
+<section class="container" id="tratamientos">
   <!-- Card -->
 <div class="card card-image tratamientos">
 <h1 class="pl-4 title-tratamientos text-center mt-5">Tratamientos</h1>
@@ -206,7 +200,7 @@
 </div>
 <!-- Card --> 
 </section>
-<section class="container">
+<section class="container" id="citas">
   <div class="citas">
     <div class="row">
       <div class="col-md-12">
@@ -239,6 +233,58 @@
     </div>
   </div>
 </section>
-
-
 @endsection
+@section('script')
+    <script src="/js/smooth-scroll.min.js"></script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            // Selectors
+            ignore: '[data-scroll-ignore]', // Selector for links to ignore (must be a valid CSS selector)
+            header: null, // Selector for fixed headers (must be a valid CSS selector)
+            topOnEmptyHash: true, // Scroll to the top of the page for links with href="#"
+
+            // Speed & Duration
+            speed: 800, // Integer. Amount of time in milliseconds it should take to scroll 1000px
+            speedAsDuration: false, // If true, use speed as the total duration of the scroll animation
+            durationMax: null, // Integer. The maximum amount of time the scroll animation should take
+            durationMin: null, // Integer. The minimum amount of time the scroll animation should take
+            clip: true, // If true, adjust scroll distance to prevent abrupt stops near the bottom of the page
+            offset:25 /* function (anchor, toggle) {
+
+                // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
+                // This example is a function, but you could do something as simple as `offset: 25`
+
+                // An example returning different values based on whether the clicked link was in the header nav or not
+                if (toggle.classList.closest('.my-header-nav')) {
+                    return 25;
+                } else {
+                    return 50;
+                }
+
+            }*/,
+
+            // Easing
+            easing: 'easeInOutCubic', // Easing pattern to use
+            customEasing: function (time) {
+
+                // Function. Custom easing pattern
+                // If this is set to anything other than null, will override the easing option above
+
+                // return <your formulate with time as a multiplier>
+
+                // Example: easeInOut Quad
+                return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
+
+            },
+
+            // History
+            updateURL: true, // Update the URL on scroll
+            popstate: true, // Animate scrolling with the forward/backward browser buttons (requires updateURL to be true)
+
+            // Custom Events
+            emitEvents: true // Emit custom events
+
+        });
+    </script>
+ @endsection

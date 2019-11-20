@@ -21,7 +21,7 @@
                      </div>
                      <div class=" col-sm-7 col-md-6 d-flex align-items-center  mt-2">
                          
-                <form action="/cita" method="POST" name="frm_registro">
+                <form action="/cita" method="POST" name="frm_registro" style="width: 100%;">
                     @csrf
                     <div class="card form-card">
                         <div class="card-header card-encabezado">
@@ -31,23 +31,18 @@
                             </div>
                         </div>
                         <div class="card-body form-body">
-                            <div class="form-group inputs">
-                                <div class="alert alert-warning" role="alert">
-                                        <p class="text-citas"><b>Importante:</b>
-                                        Una vez que agende su cita se redireccionará a esta misma página, 
-                                        pero sus datos ya habrán sido guardados para ponernos en contácto con usted.</p>
-                                 </div>
+                            <div class="form-group">
                                 <label for="nombre">Nombre:</label>
-                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required autofocus>
+                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required >
                                 @error('nombre')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-                            <div class="form-group inputs">
+                            <div class="form-group">
                                 <label for="telefono">Telefono:</label>
-                                 <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required autofocus>
+                                 <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required >
 
                                  @error('telefono')
                                  <span class="invalid-feedback" role="alert">
@@ -55,11 +50,11 @@
                                  </span>
                                  @enderror
                             </div>
-                            <div class="form-group inputs">
+                            <div class="form-group">
                                  <div class="row">
                                     <div class="col-md-6">
                                         <label for="fecha">Fecha:</label>
-                                        <input type="date" name="fecha" class="form-control @error('fecha') is-invalid @enderror" required autofocus>
+                                        <input type="date" name="fecha" class="form-control @error('fecha') is-invalid @enderror" required >
                                         @error('fecha')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -68,7 +63,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="hora">Hora:</label>
-                                         <input type="time" name="hora" class="form-control @error('hora') is-invalid @enderror" required autofocus>
+                                         <input type="time" name="hora" class="form-control @error('hora') is-invalid @enderror" required >
                                          @error('hora')
                                          <span class="invalid-feedback" role="alert">
                                              <strong>{{ $message }}</strong>
@@ -79,7 +74,7 @@
                              </div>
                              <div class="form-group ">
                                 <label for="comentarios">Comentarios</label>
-                                 <textarea class="form-control @error('comentario') is-invalid @enderror" id="comentarios" rows="3" name="comentario" required autofocus></textarea>
+                                 <textarea class="form-control @error('comentario') is-invalid @enderror" id="comentarios" rows="3" name="comentario" required ></textarea>
 
                                  @error('comentario')
                                  <span class="invalid-feedback" role="alert">
@@ -87,8 +82,8 @@
                                  </span>
                                  @enderror
                              </div>
-                             <div class="form-group text-center inputs">
-                                <button type="submit" class="btn btn-primary form-control" style="width:50%;" autofocus><b>Agendar</b></button>
+                             <div class="form-group text-center">
+                                <button type="submit" class="btn btn-primary form-control" style="width:50%;" ><b>Agendar</b></button>
                              </div>
                          </div>
                      </div>
@@ -101,7 +96,7 @@
  </section>
      <!--SECCION ACERCA DE-->
      <section class="container">
-         <div class="about-section">
+         <div class="about-section" id="acercade"  >
              <div class="row">
                  <div class="col-12 mt-3">
                      <h1 class="text-about text-center display-4" >¿Por qué debería <strong>elegirnos</strong>?</h1>
@@ -115,12 +110,12 @@
                         <hr id="separator">
                  </div>
              </div>
-             <div class="row">
+             <div class="row mt-5">
                 <div class="col-md-12">
                     <h3 class="text-center">¡A su servicio!</h3>
                  </div>
              </div>
-             <div class="row mt-5">
+             <div class="row" style="margin-top: 120px;">
                 <div class="col-md-3">
                     <figure class="text-center">
                         <i class="fas fa-tooth about-icon"></i>
@@ -149,7 +144,7 @@
          </div>
      </section>
      <!--SECCION DE TRATAMIENTOS-->
-     <section class="container">
+     <section class="container" id="tratamientos">
         <div class="tratamientos-section">
             <div class="row">
                 <div class="col-md-12 mt-3" id="tratamiento1">
@@ -183,19 +178,9 @@
             </div>    
         </div>
      </section>
-     <!--GIF-->
-     <section class="container" >
-        <div class="gif-implante">
-            <div class="row">
-                <div class="col-md-12" >
-                    <img src="/img/implante.gif"  class="implante" alt="implante-gif" >          
-                </div>
-            </div>
-        </div>
-     </section>
-     <!--PROMOCIONES-->
-     <section class="container">
-        <div class="promociones">
+       <!--PROMOCIONES-->
+       <section class="container" id="promociones">
+        <div class="promociones" style="height: 100vh;" >
             <div class="row">
                 <div class="col-md-12 mt-3">
                     <h1 class="pl-4 text-section"> Promociones. </h1>
@@ -203,7 +188,6 @@
                 </div>
             </div>
             <div class="row mt-3">
-    
               <div class="col-md-4">
                 <img src="/img/image-promo.jpg" class=" pl-3 pb-3 img-fluid img-tratamientos" alt="" height="300px" width="330px">
               </div>
@@ -215,12 +199,18 @@
              </div>
             
            </div>
-        </div>
+             <div class="row">
+                <div class="col-md-12" >
+                    <img src="/img/implante.gif"  class="implante" alt="implante-gif" width="100%" height="50%" >          
+                </div>
+            </div>
+       </div>  
      </section>
+   
      <!--SECCION DE CONTÁCTO-->
-     <section class="container">
-        <div class="contacto">
-            <div class="row mt-3 mb-3">
+     <section class="container" id="contacto">
+        <div class="contacto" >
+            <div class="row mt-5 mb-3">
                 <div class="col-md-6">
                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.9968264891002!2d-99.15708017083129!3d19.542153799176397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f79a7764e5e3%3A0x32a6f5e67a308dfa!2sAv%20Alfredo%20del%20Mazo%20V%C3%A9lez%2029%2C%20Chalma%20La%20Barranca%2C%2054143%20Tlalnepantla%20de%20Baz%2C%20M%C3%A9x.!5e0!3m2!1sen!2smx!4v1572051999050!5m2!1sen!2smx"
                           width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="">
@@ -254,5 +244,59 @@
         </div>
      </section>
     
+ @endsection
+ @section('script')
+    <script src="/js/smooth-scroll.min.js"></script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            // Selectors
+            ignore: '[data-scroll-ignore]', // Selector for links to ignore (must be a valid CSS selector)
+            header: null, // Selector for fixed headers (must be a valid CSS selector)
+            topOnEmptyHash: true, // Scroll to the top of the page for links with href="#"
+
+            // Speed & Duration
+            speed: 800, // Integer. Amount of time in milliseconds it should take to scroll 1000px
+            speedAsDuration: false, // If true, use speed as the total duration of the scroll animation
+            durationMax: null, // Integer. The maximum amount of time the scroll animation should take
+            durationMin: null, // Integer. The minimum amount of time the scroll animation should take
+            clip: true, // If true, adjust scroll distance to prevent abrupt stops near the bottom of the page
+            offset:25 /* function (anchor, toggle) {
+
+                // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
+                // This example is a function, but you could do something as simple as `offset: 25`
+
+                // An example returning different values based on whether the clicked link was in the header nav or not
+                if (toggle.classList.closest('.my-header-nav')) {
+                    return 25;
+                } else {
+                    return 50;
+                }
+
+            }*/,
+
+            // Easing
+            easing: 'easeInOutCubic', // Easing pattern to use
+            customEasing: function (time) {
+
+                // Function. Custom easing pattern
+                // If this is set to anything other than null, will override the easing option above
+
+                // return <your formulate with time as a multiplier>
+
+                // Example: easeInOut Quad
+                return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
+
+            },
+
+            // History
+            updateURL: true, // Update the URL on scroll
+            popstate: true, // Animate scrolling with the forward/backward browser buttons (requires updateURL to be true)
+
+            // Custom Events
+            emitEvents: true // Emit custom events
+
+        });
+    </script>
  @endsection
  

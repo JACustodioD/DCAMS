@@ -1,6 +1,12 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+.fondo-mensaje{
+    background-image: url('/img/fondo-mensaje.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vh;
+}
 .header-container{
 background-image: url('/img/fondoheader.png');
 
@@ -47,7 +53,7 @@ background-image: url('/img/fondoheader.png');
 }
 
 #main .carousel-inner img{
-    height: 110vh;
+    height: 100vh;
     object-fit: cover;
     filter: grayscale(20%);
     opacity: 0.5;
@@ -110,6 +116,7 @@ background-image: url('/img/fondoheader.png');
 .about-section {
     background-color:  #007bff;
     color: white;
+    height: 100vh;
 }
 .text-about{
     text-shadow: 1px 1px  #606060;
@@ -162,9 +169,7 @@ background-image: url('/img/fondoheader.png');
 .col-tratamientos a:hover{
     color:  #007bff;
 }
-.implante{
-    width: 100%;
-}
+
 .promociones{
     background-color: #007bff;
 }

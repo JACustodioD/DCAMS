@@ -16,8 +16,11 @@
 Route::get('/','HomeController@index');
 Route::get('/tratamientos','HomeController@tratamientos');
 Route::get('/citas','HomeController@citas');
-
 Route::post('/cita','MessageController@store');
+Route::get('/message',function(){
+	return view('citas.mensajeCita');
+});
+
 
 //Rutas de Autenticacion
 Auth::routes();
