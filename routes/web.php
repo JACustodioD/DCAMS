@@ -39,7 +39,6 @@ Route::group([
 	'prefix' => 'pacientes',
 	
 ],function(){
-	Route::get('/home', function () {
-    	return view('user.index');
-	});
+	Route::get('/home','TreatmentController@homeUser');
+
 });

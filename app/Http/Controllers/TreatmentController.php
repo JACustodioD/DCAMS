@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Treatment;
 use Illuminate\Http\Request;
+use App\Date;
+use Illuminate\Support\Facades\Auth;
 
 class TreatmentController extends Controller
 {
@@ -81,5 +83,13 @@ class TreatmentController extends Controller
     public function destroy(Treatment $treatment)
     {
         //
+    }
+
+    public function homeUser(){
+        $date = new Date();
+
+        return view('user.index',[
+            'dates' => $date::where('user',Auth::user()->id)->get()->take(1)
+        ]);
     }
 }

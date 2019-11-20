@@ -225,15 +225,17 @@
          <div class="calendar_content"></div>
       </div>
       </div>
+      @foreach ($dates as $date)
       <div class="col-md-6">
           <div class="jumbotron">
-              <h3>Próxima cita: 15/Noviembre/2019</h3>
-              <p class="lead">Hora: 12:30</p>
-              <p class="lead">Consulta: Limpieza de dientes</p>
+              <h3>Próxima cita: {{$date->dateOfAppointment}}</h3>
+              <p class="lead">Hora: {{ $date->hour }}</p>
+              <p class="lead">Consulta: {{ $date->affair }}</p>
               <hr class="my-4">
               <p>Recuerde llegar con 15 minutos de anticipación a su cita.</p>
             </div>
       </div>
+      @endforeach
     </div>
   </div>
 </section>
