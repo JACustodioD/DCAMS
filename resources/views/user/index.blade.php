@@ -91,107 +91,48 @@
       <!--Accordion wrapper-->
       <div class="accordion md-accordion accordion-5" id="accordionEx5" role="tablist"
         aria-multiselectable="true">
+        @if(sizeOf($treatments)>0)
+          @foreach ($treatments as $treatment)
+          <span hidden>{{$cont++}}</span>
+          <!-- Accordion card -->
+          <div class="card mb-4">
 
-        <!-- Accordion card -->
-        <div class="card mb-4">
+            <!-- Card header -->
+            <div class="card-header p-0 z-depth-1 head-tratamientos" role="tab" id="heading3{{$cont}}">
+              <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse3{{$cont}}" aria-expanded="true"
+                aria-controls="collapse3{{$cont}}">
+                <i aria-hidden="true"></i>
+                <h4 class="text-uppercase white-text mb-0 py-3 mt-1 text-tratamientos ml-3"><i class="fas fa-tooth"></i>
+                  {{ $treatment->name}}
+                </h4>
+              </a>
+            </div>
 
-          <!-- Card header -->
-          <div class="card-header p-0 z-depth-1 head-tratamientos" role="tab" id="heading30">
-            <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse30" aria-expanded="true"
-              aria-controls="collapse30">
-              <i aria-hidden="true"></i>
-              <h4 class="text-uppercase white-text mb-0 py-3 mt-1 text-tratamientos ml-3"><i class="fas fa-tooth"></i>
-                TRATAMIENTO DE BRAKETS
-              </h4>
-            </a>
-          </div>
-
-          <!-- Card body -->
-          <div id="collapse30" class="collapse show" role="tabpanel" aria-labelledby="heading30"
-            data-parent="#accordionEx5">
-            <div class="card-body rgba-black-light white-text z-depth-1">
-              <p class=" mb-0">
-                Este tratamiento tiene un costo de: <b> $15,000</b>
-              </p>
-              <p class=" mb-0">
-                Fecha de inicio de tratamiento: <b> 12/11/2019</b>
-              </p>
-              <p class=" mb-0">
-                Actividad de cita anterior: <b> Se cambiaron ligas de color</b>
-              </p>
-                
+            <!-- Card body -->
+            <div id="collapse3{{$cont}}" class="collapse " role="tabpanel" aria-labelledby="heading3{{$cont}}"
+              data-parent="#accordionEx5">
+              <div class="card-body rgba-black-light white-text z-depth-1">
+                <p class=" mb-0">
+                  Este tratamiento tiene un costo de: <b> ${{$treatment->total}}</b>
+                </p>
+                <p class=" mb-0">
+                  Fecha de inicio de tratamiento: <b> {{ $treatment->startDate }}</b>
+                </p>
+                <p class=" mb-0">
+                  Actividad de cita anterior: <b> Se cambiaron ligas de color</b>
+                </p>
+                  
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Accordion card -->
+          <!-- /Accordion card -->
+          @endforeach
+        @else
+        <h4 style="color:white">Aún no hay tratamientos :( </h4>
 
-        <!-- Accordion card -->
-        <div class="card mb-4">
-
-          <!-- Card header -->
-          <div class="card-header p-0 z-depth-1 head-tratamientos" role="tab" id="heading31">
-            <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse31" aria-expanded="true"
-              aria-controls="collapse31">
-         
-              <h4 class="text-uppercase white-text mb-0 py-3 mt-1 text-tratamientos ml-3"><i class="fas fa-tooth"></i>
-                LIMPIEZA DENTAL
-              </h4>
-            </a>
-          </div>
-
-          <!-- Card body -->
-          <div id="collapse31" class="collapse" role="tabpanel" aria-labelledby="heading31"
-            data-parent="#accordionEx5">
-            <div class="card-body rgba-black-light white-text z-depth-1">
-            <p class=" mb-0">
-                Este tratamiento tiene un costo de: <b> $15,000</b>
-              </p>
-              <p class=" mb-0">
-                Fecha de inicio de tratamiento: <b> 12/11/2019</b>
-              </p>
-              <p class=" mb-0">
-                Actividad de cita anterior: <b> Se cambiaron ligas de color</b>
-              </p>
-             
-            </div>
-          </div>
-        </div>
-        <!-- Accordion card -->
-
-        <!-- Accordion card -->
-        <div class="card mb-4">
-
-          <!-- Card header -->
-          <div class="card-header p-0 z-depth-1 head-tratamientos" role="tab" id="heading32">
-            <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse32" aria-expanded="true"
-              aria-controls="collapse32">
-              
-              <h4 class="text-uppercase white-text mb-0 py-3 mt-1 text-tratamientos ml-3"><i class="fas fa-tooth"></i>
-                RECINAS DE ALTA ESTETICA
-              </h4>
-            </a>
-          </div>
-
-          <!-- Card body -->
-          <div id="collapse32" class="collapse" role="tabpanel" aria-labelledby="heading32"
-            data-parent="#accordionEx5">
-            <div class="card-body rgba-black-light white-text z-depth-1">
-            <p class=" mb-0">
-                Este tratamiento tiene un costo de: <b> $15,000</b>
-              </p>
-              <p class=" mb-0">
-                Fecha de inicio de tratamiento: <b> 12/11/2019</b>
-              </p>
-              <p class=" mb-0">
-                Actividad de cita anterior: <b> Se cambiaron ligas de color</b>
-              </p>
-              
-            </div>
-          </div>
-        </div>
-        <!-- Accordion card -->
+        @endif
       </div>
-      <!--/.Accordion wrapper-->
+      <!--/Accordion wrapper-->
 
     </div>
   </div>
@@ -219,17 +160,23 @@
          <div class="calendar_content"></div>
       </div>
       </div>
-      @foreach ($dates as $date)
-      <div class="col-md-6">
-          <div class="jumbotron">
-              <h3>Próxima cita: {{$date->dateOfAppointment}}</h3>
-              <p class="lead">Hora: {{ $date->hour }}</p>
-              <p class="lead">Consulta: {{ $date->affair }}</p>
-              <hr class="my-4">
-              <p>Recuerde llegar con 15 minutos de anticipación a su cita.</p>
-            </div>
-      </div>
+      @if(sizeOf($dates)>0)
+        @foreach ($dates as $date)
+        <div class="col-md-6">
+            <div class="jumbotron">
+                <h3>Próxima cita: {{$date->dateOfAppointment}}</h3>
+                <p class="lead">Hora: {{ $date->hour }}</p>
+                <p class="lead">Consulta: {{ $date->affair }}</p>
+                <hr class="my-4">
+                <p>Recuerde llegar con 15 minutos de anticipación a su cita.</p>
+              </div>
+        </div>
       @endforeach
+      @else
+        <div class="text-primary text-center" role="status">
+          <h3>Aún no tiene citas.</h3>
+        </div>
+      @endif
     </div>
   </div>
 </section>

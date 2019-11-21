@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="/css/estilos.css">
     <link rel="stylesheet" href="/css/responsive.css">
     <link rel="stylesheet" href="/css/calendar.css">
+
+    <!--SCRIPT-->
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
 </head>
 </head>
 <body>
@@ -66,9 +71,7 @@
 
 
 
-<!--SCRIPT-->
-<script src="/js/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+
 <script src="/js/calendar.js"></script>
 <script src="/js/all.js"></script>  
 @yield('script')
