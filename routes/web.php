@@ -21,6 +21,10 @@ Route::get('/message',function(){
 	return view('citas.mensajeCita');
 });
 
+Route::get('/save', function () {
+    	return view('admin.index');
+});
+
 
 //Rutas de Autenticacion
 Auth::routes();
@@ -43,8 +47,10 @@ Route::group([
 	
 ],function(){
 	Route::get('/home','TreatmentController@homeUser');
-
-
 	Route::post('/image','StorageController@save');
+	Route::get('/historiamedica', function(){
+		return view('user.historiaMedica');
+
+	});
 
 });
