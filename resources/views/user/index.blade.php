@@ -28,14 +28,22 @@
              <div class="row">    
                 <div class="col-md-3">
                     <div class="profile-photo text-center">
-                        <img src="/img/dental.png" alt="foto-perfil" width="100%" height="100%">
+                        <img src="/perfil/{{Auth::user()->image}}" alt="foto-perfil" width="100%" height="100%">
                     </div>
                 </div>
                </div>
               <div class="row">
-                <div class="col-md-3">
-                    <form method="post" enctype="multipart/form-data"><br>
-                        <input type=file size=100 name="file1">   
+                <div class="col-md-4">
+                    <form action="/pacientes/image" method="post" enctype="multipart/form-data">
+                   @csrf
+                      <br>
+                        <input type=file size=100 name="perfil" required class="@error('perfil') is-invalid @enderror">
+
+                        @error('perfil')
+                          <span class="text-danger" role="alert">
+                            <strong>{{ $message }}</strong>
+                          </span>
+                        @enderror
                         <button type="submit" class="btn btn-primary mt-2">Guardar cambios</button>
                     </form>
                 </div>

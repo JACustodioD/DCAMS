@@ -56,7 +56,7 @@ return [
         'string'  => 'El campo :attribute debe contener :value o más caracteres.',
         'array'   => 'El campo :attribute debe contener :value o más elementos.',
     ],
-    'image'                => 'El campo :attribute debe ser una imagen.',
+    'image'                => 'El archivo debe ser una imagen.',
     'in'                   => 'El campo :attribute es inválido.',
     'in_array'             => 'El campo :attribute no existe en :other.',
     'integer'              => 'El campo :attribute debe ser un número entero.',

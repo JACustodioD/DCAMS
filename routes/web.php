@@ -44,4 +44,7 @@ Route::group([
 ],function(){
 	Route::get('/home','TreatmentController@homeUser');
 
+
+	Route::post('/image','StorageController@save');
+
 });
