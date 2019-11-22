@@ -235,7 +235,7 @@
                      </tr>
                      <tr>
                         <th scope="row" class="text-info">F</th>
-                        <td>¿Ha abido algún cambio general en su salud en el ultimo año?</td>
+                        <td>¿Ha habido algún cambio general en su salud en el ultimo año?</td>
                         <td><div class="form-check">
                                 <input class="form-check-input" required type="radio" name="radio6" id="exampleRadios2" value="option2">
                                 <label class="form-check-label" for="11">
@@ -301,167 +301,98 @@
              </table>
         </div>
     </div>
+<!--APARTADO DE OVSERVACIONES-->
     <div class="container">
         <div class="observaciones">
             <div class="row">
                 <div  class="col-md-12">
-                    <h3 class="text-info">Observaciones</h3>
+                    <h3 class="text-warning">Observaciones</h3> <br>
+                    <p>Marque cuales de los siguientes padecimientos tiene:</p>
                 </div>
             </div>
-            <table class="table table-hover">
-                    <tr>
-                        <th scope="col" colspan="2" class="text-info"><h3>Historia general</h3></th>
-                        <th scope="col" class="text-info"><h3>Si</h3></th>
-                        <th scope="col" class="text-info"><h3>No</h3></th>
-                      </tr>
-                    <tbody>
-                        <tr>
-                            <th scope="row" class="text-info">A</th>
-                            <td scope="col">¿Considera buena su salud actualmente?</td>
-                            <td><div class="form-check">
-                                    <input class="form-check-input" required type="radio" name="radio1" id="exampleRadios1" value="option1" checked>
-                                    <label class="form-check-label" for="1"> 
-                                    </label>
-                                </div>
-                             </td>
-                            <td><div class="form-check">
-                                    <input class="form-check-input" required type="radio" name="radio1" id="exampleRadios2" value="option2">
-                                    <label class="form-check-label" for="2">
-                                    </label>
-                                </div>
-                             </td>
-                        </tr>
-                      <tr>
-                        <th scope="row" class="text-info">B</th>
-                        <td>¿Actualmente esta bajo el cuídado de algún médico?</td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio2" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="3"> 
-                                </label>
-                            </div>
-                         </td>
-                         <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="radio2" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="4">
-                                </label>
-                            </div>
-                         </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-info">C</th>
-                        <td>¿Le trataron o esta actualmente en tratamiento para la degeneración <br> de huesos (osteoporosis), por medio de inyección?</td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="radio3" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="5">
-                                </label>
-                            </div>
-                         </td>
-                         <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="radio3" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="6">
-                                </label>
-                            </div>
-                         </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-info">D</th>
-                        <td>¿Utiliza tabaco?</td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="radio4" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="7">
-                                </label>
-                            </div>
-                         </td>
-                         <td><div class="form-check">
-                                <input class="form-check-input" type="radio" name="radio4" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="8">
-                                </label>
-                            </div>
-                         </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-info">E</th>
-                        <td>¿Utiliza alcohol?</td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="radio5" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="9">
-                                </label>
-                            </div>
-                         </td>
-                         <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="radio5" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="10">
-                                </label>
-                            </div>
-                         </td>
-                     </tr>
-                     <tr>
-                        <th scope="row" class="text-info">F</th>
-                        <td>¿Ha abido algún cambio general en su salud en el ultimo año?</td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="radio6" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="11">
-                                </label>
-                            </div>
-                         </td>
-                         <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="radio6" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="12">
-                                </label>
-                            </div>
-                         </td>
-                     </tr>
-                     <tr>
-                        <th scope="row" class="text-info">G</th>
-                        <td><b>Para mujeres</b> ¿Utiliza pildoras anticonceptivas o terapia hormonal?</td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="radio7" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="13">
-                                </label>
-                            </div>
-                         </td>
-                         <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="radio7" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="14">
-                                </label>
-                            </div>
-                         </td>
-                     </tr>
-                     <tr>
-                        <th scope="row" class="text-info">H</th>
-                            <td><b>Para mujeres</b> ¿Esta embarazada?</td>
-                            <td><div class="form-check">
-                                    <input class="form-check-input" required type="radio" name="radio8" id="exampleRadios2" value="option2">
-                                    <label class="form-check-label" for="15">
-                                    </label>
-                                </div>
-                             </td>
-                             <td><div class="form-check">
-                                    <input class="form-check-input" required type="radio" name="radio8" id="exampleRadios2" value="option2">
-                                    <label class="form-check-label" for="16">
-                                    </label>
-                                </div>
-                             </td>
-                     </tr>
-                     <tr>
-                            <th scope="row" class="text-info">I</th>
-                                <td><b>Para mujeres</b> ¿Esta dando de amamantar?</td>
-                                <td><div class="form-check">
-                                        <input class="form-check-input" required type="radio" name="radio9" id="exampleRadios2" value="option2">
-                                        <label class="form-check-label" for="17">
-                                        </label>
-                                    </div>
-                                 </td>
-                                 <td><div class="form-check">
-                                        <input class="form-check-input" required type="radio" name="radio9" id="exampleRadios2" value="option2">
-                                        <label class="form-check-label" for="18">
-                                        </label>
-                                    </div>
-                                 </td>
-                         </tr>
-                    </tbody>
-             </table>
+            <hr width="100%">
+            <div class="row">
+                <div class="col-md-2">
+                     <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                         <label class="form-check-label" for="exampleCheck1"> <small>Enfermedad cardiaca.</small> </label>
+                     </div>            
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group form-check">
+                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                         <label class="form-check-label" for="exampleCheck1"> <small>Enfermedad cardiovascular.</small> </label>
+                    </div>            
+                 </div>
+                 <div class="col-md-2">
+                     <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                         <label class="form-check-label" for="exampleCheck1"> <small>Presión arterial alta.</small> </label>
+                     </div>            
+                 </div>
+                 <div class="col-md-2">
+                     <div class="form-group form-check">
+                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                         <label class="form-check-label" for="exampleCheck1"> <small>Anemia.</small> </label>
+                     </div>            
+                 </div>
+                 <div class="col-md-2">
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1"> <small>SIDA o VIH.</small> </label>
+                    </div>            
+                 </div>
+                 <div class="col-md-2">
+                    <div class="form-group form-check">
+                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                         <label class="form-check-label" for="exampleCheck1"> <small>Asma.</small> </label>
+                     </div>            
+                 </div>
+            </div>
+            <div class="row">
+                 <div class="col-md-2">
+                     <div class="form-group form-check">
+                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                         <label class="form-check-label" for="exampleCheck1"> <small>Lupus eritematoso.</small> </label>
+                     </div>            
+                 </div>
+             <div class="col-md-2">
+                 <div class="form-group form-check">
+                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                     <label class="form-check-label" for="exampleCheck1"> <small>Efisema.</small> </label>
+                 </div>            
+              </div>
+             <div class="col-md-2">
+                 <div class="form-group form-check">
+                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                         <label class="form-check-label" for="exampleCheck1"> <small>Sinusitis.</small> </label>
+                 </div>            
+             </div>
+             <div class="col-md-2">
+                 <div class="form-group form-check">
+                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                         <label class="form-check-label" for="exampleCheck1"> <small>Hipertensión.</small> </label>
+                 </div>            
+             </div>
+             <div class="col-md-2">
+                 <div class="form-group form-check">
+                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                     <label class="form-check-label" for="exampleCheck1"> <small>Ulceras.</small> </label>
+                 </div>            
+              </div>
+             <div class="col-md-2">
+                 <div class="form-group form-check">
+                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                     <label class="form-check-label" for="exampleCheck1"> <small>Cáncer.</small> </label>
+                 </div>            
+             </div>
+         </div>
+         <div class="row d-flex justify-content-center mb-3">
+            <div class="col-md-3">
+                <button class="btn btn-primary btn-block">Guardar historia</button>
+            </div>
          </div>
      </div>
+ </div>
 </form>
 @endsection
