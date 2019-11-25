@@ -55,3 +55,11 @@ a h4:hover{
     background-attachment: fixed;
     background-position: center;
 }
+
+/*HISTORIAL DE PAGOS*/
+
+.encabezado-table{
+    background-color: #e1e1e1;
+    border-bottom: 1px solid black;
+ 
+}
