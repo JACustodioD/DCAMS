@@ -34,6 +34,9 @@ Route::group([
 	Route::get('/home',function(){
 		return view('admin.index');
 	});
+	Route::get('/pacientes',function(){
+		return view('admin.pacientes');
+	});
 });
 
 //Rutas a las que puede accesar el usuario

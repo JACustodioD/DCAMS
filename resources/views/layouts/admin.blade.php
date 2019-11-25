@@ -12,7 +12,7 @@
     <!--EFECTOS HOVER-->
     <link rel="stylesheet" href="/css/hover.css" media="all">
     <!--CSS Y RESPONSIVE-->
-    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/admin.css">
     <link rel="stylesheet" href="/css/estilos.css">
     <link rel="stylesheet" href="/css/responsive.css">
     <link rel="stylesheet" href="/css/calendar.css">
@@ -30,17 +30,14 @@
                          </button>
                          <div class="collapse navbar-collapse" id="navbarNav">
                              <ul class="navbar-nav menu-list">
-                                <li class="nav-item">
-                                  <a class="nav-link hvr-underline-from-center" href="#"><i class="fas fa-user icon-menu mr-1"></i>Mi perfil</a>
+                                <li class="nav-item nav-text">
+                                  <a class="nav-link  hvr-underline-from-center text-primary" href="#"><i class="far fa-comment  mr-1 "></i>Mensajes</a>
                                 </li>
-                                <li class="nav-item">
-                                  <a class="nav-link hvr-underline-from-center" href="#"><i class="fas fa-notes-medical icon-menu mr-1"></i>Tratamientos</a>
+                                <li class="nav-item nav-text">
+                                  <a class="nav-link hvr-underline-from-center text-primary" href="#"><i class="fas fa-users  mr-1"></i></i>Pacientes</a>
                                 </li>
-                                <li class="nav-item">
-                                  <a class="nav-link hvr-underline-from-center" href="#"><i class="fas fa-clock icon-menu mr-1"></i>Citas</a>
-                                </li>
-                                <li class="nav-item">
-                                   <a class="nav-link hvr-underline-from-center" href="{{ route('logout') }}"
+                                <li class="nav-item nav-text">
+                                   <a class="nav-link hvr-underline-from-center text-primary" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt icon-menu mr-1"></i>Cerrar sesión</a>
                                     </a>
