@@ -36,10 +36,10 @@
                          <div class="collapse navbar-collapse" id="navbarNav">
                              <ul class="navbar-nav menu-list">
                                 <li class="nav-item">
-                                  <a class="nav-link hvr-underline-from-center" href="/home"><i class="fas fa-user icon-menu mr-1"></i>Home</a>
+                                  <a class="nav-link hvr-underline-from-center" href="/pacientes/home"><i class="fas fa-user icon-menu mr-1"></i>Home</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link hvr-underline-from-center" href="/historiamedica"><i class="fas fa-notes-medical icon-menu mr-1"></i>Historia Médica</a>
+                                  <a class="nav-link hvr-underline-from-center" href="/pacientes/historiamedica"><i class="fas fa-notes-medical icon-menu mr-1"></i>Historia Médica</a>
                                 </li>
                                 <li class="nav-item">
                                   <a class="nav-link hvr-underline-from-center" href="historialdepagos"><i class="fas fa-dollar-sign icon-menu mr-1"></i>Historial de pagos</a>

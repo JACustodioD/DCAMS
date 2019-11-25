@@ -86,12 +86,9 @@ class TreatmentController extends Controller
     }
 
     public function homeUser(){
-        $date = new Date();
-        $treatment = new Treatment();
-
         return view('user.index',[
-            'dates' => $date::where('user',Auth::user()->id)->get()->take(1),
-            'treatments' => $treatment::join('services','services.id','=','treatments.service')->where('user',Auth::user()->id)->get(),
+            'dates' => \App\Date::where('user',Auth::user()->id)->get()->take(1),
+            'treatments' => \App\Treatment::join('services','services.id','=','treatments.service')->where('user',Auth::user()->id)->get(),
            'cont' => 0
         ]);
     }

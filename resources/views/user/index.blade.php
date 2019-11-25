@@ -78,8 +78,9 @@
                      </div>
                      <div class="form-group col-md-6">
                         <label for="pacient">Paciente desde:</label>
-                        <input type="text" class="form-control" id="pacient" disabled value="{{Auth::user()->created_at}}">
+                        <input type="text" class="form-control" id="pacient" disabled value="{{Str::limit(Auth::user()->created_at,10,'')}}">
                      </div>
+                     
                  </div>
                       
              </form>
@@ -120,14 +121,17 @@
             <div id="collapse3{{$cont}}" class="collapse " role="tabpanel" aria-labelledby="heading3{{$cont}}"
               data-parent="#accordionEx5">
               <div class="card-body rgba-black-light white-text z-depth-1">
+              	 <p class=" mb-0">
+                  Descripción del tratamiento: <b> {{$treatment->description}}</b>
+                </p>
                 <p class=" mb-0">
                   Este tratamiento tiene un costo de: <b> ${{$treatment->total}}</b>
                 </p>
                 <p class=" mb-0">
-                  Fecha de inicio de tratamiento: <b> {{ $treatment->startDate }}</b>
+                  Fecha de inicio de tratamiento: <b> {{date('d-m-Y',strtotime($treatment->startDate)) }}</b>
                 </p>
                 <p class=" mb-0">
-                  Actividad de cita anterior: <b> Se cambiaron ligas de color</b>
+                  Fecha de finalización de tratamiento: <b> {{date('d-m-Y',strtotime($treatment->endDate)) }}</b>
                 </p>
                   
               </div>
@@ -172,7 +176,7 @@
         @foreach ($dates as $date)
         <div class="col-md-6">
             <div class="jumbotron">
-                <h3>Próxima cita: {{$date->dateOfAppointment}}</h3>
+                <h3>Próxima cita: {{date('d-m-Y',strtotime($date->dateOfAppointment))}}</h3>
                 <p class="lead">Hora: {{ $date->hour }}</p>
                 <p class="lead">Consulta: {{ $date->affair }}</p>
                 <hr class="my-4">
