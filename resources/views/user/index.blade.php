@@ -5,14 +5,14 @@
         <div class="submenu">
             <div class="row">
               <div class="col-md-12">
-              <ul class="nav">
+              <ul class="nav nav-tabs">
                 <li class="nav-item">
-                  <a class="nav-link hvr-underline-from-left"  data-scroll href="#tratamientos">Tratamientos</a>
+                  <a class="nav-link hvr-underline-from-right"  data-scroll href="#tratamientos">Tratamientos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link hvr-underline-from-left"   data-scroll href="#citas">Citas</a>
+                  <a class="nav-link hvr-underline-from-right "  data-scroll href="#citas">Citas</a>
                 </li>
-              </ul>
+               </ul>
               </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
              <div class="row">    
                 <div class="col-md-3">
                     <div class="profile-photo text-center">
-                        <img src="/img/dental.png" alt="foto-perfil" width="100%" height="100%">
+                        <img src="/img/dental.png" alt="foto-perfil" width="100%" height="100%" class="img-fluid">
                     </div>
                 </div>
                </div>
