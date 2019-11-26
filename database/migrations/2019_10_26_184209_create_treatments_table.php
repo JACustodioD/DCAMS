@@ -9,18 +9,18 @@ class CreateTreatmentsTable extends Migration
     /**
      * Run the migrations.
      *
-     * @return void
+     * @return void 
      */
     public function up()
     {
         Schema::create('treatments', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id_treatment');
             $table->unsignedBigInteger('service');
             $table->unsignedBigInteger('user');
             $table->date('startDate');
             $table->date('endDate');
-            $table->date('total');
-            $table->foreign('service')->references('id')->on('services')->onDelete('cascade');
+            $table->double('total');
+            $table->foreign('service')->references('id_service')->on('services')->onDelete('cascade');
             $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

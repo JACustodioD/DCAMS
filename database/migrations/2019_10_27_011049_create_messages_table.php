@@ -20,6 +20,7 @@ class CreateMessagesTable extends Migration
             $table->date('date');
             $table->string('hour');
             $table->text('commentary');
+            $table->string('status');
             $table->timestamps();
         });
     }

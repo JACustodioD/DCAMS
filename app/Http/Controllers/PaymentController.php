@@ -49,7 +49,7 @@ class PaymentController extends Controller
      */
     public function show(Payment $payment)
     {
-        $payments = \App\Payment::join('treatments','payments.treatment','=','treatments.id')->join('services','treatments.service', '=', 'services.id')->where('treatments.user',Auth::user()->id)->get();
+        $payments = \App\Payment::join('treatments','payments.treatment','=','treatments.id_treatment')->join('services','treatments.service', '=', 'services.id_service')->where('treatments.user',Auth::user()->id)->get();
         return view('user.historiaPagos',[
             'payments' => $payments
         ]);

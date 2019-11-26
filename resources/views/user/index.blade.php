@@ -174,16 +174,33 @@
       </div>
       @if(sizeOf($dates)>0)
         @foreach ($dates as $date)
-        <div class="col-md-6">
-            <div class="jumbotron">
-                <h3>Próxima cita: {{date('d-m-Y',strtotime($date->dateOfAppointment))}}</h3>
-                <p class="lead">Hora: {{ $date->hour }}</p>
-                <p class="lead">Consulta: {{ $date->affair }}</p>
-                <hr class="my-4">
-                <p>Recuerde llegar con 15 minutos de anticipación a su cita.</p>
+          @if(strcmp($date->status,'Pendiente')==0)
+              <div class="col-md-6">
+                  <div class="jumbotron">
+                      <h3>Próxima cita: {{date('d-m-Y',strtotime($date->dateOfAppointment))}}</h3>
+                      <p class="lead">Hora: {{ $date->hour }}</p>
+                      <p class="lead">Consulta: {{ $date->affair }}</p>
+                      <hr class="my-4">
+                      <p>Recuerde llegar con 15 minutos de anticipación a su cita.</p>
+                    </div>
               </div>
-        </div>
-      @endforeach
+          @else
+            <div class="col-md-6">
+                  <div class="jumbotron">
+                      <h3>Próxima cita: {{date('d-m-Y',strtotime($date->dateOfAppointment))}}</h3>
+                      <p class="lead">Hora: {{ $date->hour }}</p>
+                      <p class="lead">Consulta: {{ $date->affair }}</p>
+                      <hr class="my-4">
+                      <p>Recuerde llegar con 15 minutos de anticipación a su cita.</p>
+                      @if(strcmp($date->status,'Cancelada')==0)
+                        <p class="text-danger"><b>{{$date->status}}: </b>{{$date->commentary}}</p>
+                      @else
+                        <p class="text-success"><b>{{$date->status}}: </b>{{$date->commentary}}</p>
+                      @endif
+                    </div>
+              </div>
+          @endif
+        @endforeach
       @else
         <div class="text-primary text-center" role="status">
           <h3>Aún no tiene citas.</h3>

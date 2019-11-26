@@ -29,7 +29,7 @@
                           <ul class="list-group list-group-flush">
                              <li class="list-group-item"><b>Costo inicio:</b> $ {{$payment->cost}} </li>
                              <li class="list-group-item"><b>Restante:</b> ${{ $payment->total }}</li>
-                             <li class="list-group-item"><b>Último pago:</b> {{$payment->paymentDate}} </li>
+                             <li class="list-group-item"><b>Último pago:</b> {{$payment->payments['created_at']}} </li>
                              <li class="list-group-item"><b>Cantidad:</b> ${{$payment->credit}} </li>
                            
                           </ul>

@@ -50,6 +50,7 @@ class MessageController extends Controller
         $message->date = $validData['fecha'];
         $message->hour = $validData['hora'];
         $message->commentary = $validData['comentario'];
+        $message->status = "Pendiente";
         $message->save();
         return redirect('/message');
     }

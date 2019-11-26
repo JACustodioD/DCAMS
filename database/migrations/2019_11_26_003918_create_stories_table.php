@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDatesTable extends Migration
+class CreateStoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,14 @@ class CreateDatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('dates', function (Blueprint $table) {
-            $table->bigIncrements('id_date');
+        Schema::create('stories', function (Blueprint $table) {
+            $table->bigIncrements('id_stories');
             $table->unsignedBigInteger('user');
-            $table->date('dateOfAppointment');
-            $table->string('hour');
-            $table->string('affair');
-            $table->string('status');
-            $table->string('commentary');
+            $table->unsignedBigInteger('sffering');
             $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('sffering')->references('id_sfferings')->on('sfferings')->onDelete('cascade');
             $table->timestamps();
+
         });
     }
 
@@ -33,6 +31,6 @@ class CreateDatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dates');
+        Schema::dropIfExists('stories');
     }
 }
