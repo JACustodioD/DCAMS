@@ -28,11 +28,7 @@
              <div class="row">    
                 <div class="col-md-3">
                     <div class="profile-photo text-center">
-<<<<<<< HEAD
                         <img src="/perfil/{{Auth::user()->image}}" alt="foto-perfil" width="100%" height="100%">
-=======
-                        <img src="/img/dental.png" alt="foto-perfil" width="100%" height="100%" class="img-fluid">
->>>>>>> master
                     </div>
                 </div>
                </div>

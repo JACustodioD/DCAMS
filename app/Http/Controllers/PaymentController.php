@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Payment;
+use App\Service;
+use App\Treatment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PaymentController extends Controller
 {
@@ -46,7 +49,10 @@ class PaymentController extends Controller
      */
     public function show(Payment $payment)
     {
-        //
+        $payments = \App\Payment::join('treatments','payments.treatment','=','treatments.id')->join('services','treatments.service', '=', 'services.id')->where('treatments.user',Auth::user()->id)->get();
+        return view('user.historiaPagos',[
+            'payments' => $payments
+        ]);
     }
 
     /**

@@ -52,9 +52,6 @@ Route::group([
 		return view('user.historiaMedica');
 
 	});
-	Route::get('/historialdepagos', function(){
-		return view('user.historiaPagos');
-
-	});
+	Route::get('/historialdepagos','PaymentController@show');
 
 });
