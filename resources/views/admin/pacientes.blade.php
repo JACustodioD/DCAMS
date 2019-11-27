@@ -19,15 +19,16 @@
                  </nav>
             </div>
          </div>
+         @foreach ($patients as $patient)
          <div class="row mt-5 shadow-sm p-3 mb-5 bg-white rounded">
              <div class="col-md-4">
                  <div class="card border-primary mb-3">
                      <div class="card">
-                         <img src="/img/sol.jpg" class="card-img-top img-paciente mt-2">
+                         <img src="/perfil/{{ $patient->image }}" class="card-img-top img-paciente mt-2">
                         <div class="card-body">
                             <div class="text-center">
-                                <h5 class="card-title text-primary">Marisol Mondragón</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Paciente desde: 13/02/2019</h6>
+                                <h5 class="card-title text-primary">{{ $patient->name }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Paciente desde: {{ $patient->created_at }}</h6>
                             
                                 <button  class="btn btn-outline-secondary btn-block mb-1">Ver tratamientos</button>
                                 <button class="btn btn-outline-secondary btn-block mb-1">Ver Historia médica</button>
@@ -40,5 +41,6 @@
                  </div>
              </div>
          </div>
+         @endforeach
     </div>
 @endsection

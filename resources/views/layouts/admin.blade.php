@@ -31,10 +31,10 @@
                          <div class="collapse navbar-collapse" id="navbarNav">
                              <ul class="navbar-nav menu-list">
                                 <li class="nav-item nav-text">
-                                  <a class="nav-link  hvr-underline-from-center text-primary" href="#"><i class="far fa-comment  mr-1 "></i>Mensajes</a>
+                                  <a class="nav-link  hvr-underline-from-center text-primary" href="/"><i class="far fa-comment  mr-1 "></i>Mensajes</a>
                                 </li>
                                 <li class="nav-item nav-text">
-                                  <a class="nav-link hvr-underline-from-center text-primary" href="#"><i class="fas fa-users  mr-1"></i></i>Pacientes</a>
+                                  <a class="nav-link hvr-underline-from-center text-primary" href="/consultorio/pacientes"><i class="fas fa-users  mr-1"></i></i>Pacientes</a>
                                 </li>
                                 <li class="nav-item nav-text">
                                    <a class="nav-link hvr-underline-from-center text-primary" href="{{ route('logout') }}"

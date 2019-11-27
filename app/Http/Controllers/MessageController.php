@@ -61,9 +61,10 @@ class MessageController extends Controller
      * @param  \App\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function show(Message $message)
-    {
-        return view('user.index');
+    public function show(Message $message){
+        return view('admin.index',[
+            'messages' => \App\Message::all()
+        ]);
     }
 
     /**

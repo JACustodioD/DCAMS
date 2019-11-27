@@ -35,12 +35,8 @@ Route::group([
 	'prefix' => 'consultorio',
 	
 ],function(){
-	Route::get('/home',function(){
-		return view('admin.index');
-	});
-	Route::get('/pacientes',function(){
-		return view('admin.pacientes');
-	});
+	Route::get('/home','MessageController@show');
+	Route::get('/pacientes','AdminController@showPacientes');
 });
 
 //Rutas a las que puede accesar el usuario

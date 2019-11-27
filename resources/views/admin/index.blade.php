@@ -12,30 +12,32 @@
 	</div>
 </div>
 <div class="container">
+
+	@foreach ($messages as $message)
 	<div class="cont-mensaje">
 			<button type="button" class="close mb-2" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
-				  </button>
+			</button>
 		<div class="row shadow-sm p-3 mb-5 bg-white rounded">
 			<div class="col-md-3">	
-				<p>Nombre paciente</p>		
+				<p>{{ $message->name }}</p>		
 			</div>
 			<div class="col-md-3">
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint iusto laborum cumque nostrum! Eos totam iusto ipsum earum distinctio impedit, 
-				</p>
+				<p> {{ $message->commentary }} </p>
 			</div>
 			<div class="col-md-2">
-				<p>Télefono</p>
+				<p>{{ $message->phone }}</p>
 			</div>
 			<div class="col-md-2">
-				<p>Fecha</p>
+				<p>{{ $message->date}} | {{ $message->hour }}</p>
 			</div>
 			<div class="col-md-2">
 				<button class="btn btn-danger">Atendido</button>
 			</div>
 		</div>
-
 	</div>
+	@endforeach
+
 </div>
 
 @endsection
