@@ -140,7 +140,14 @@
           <!-- /Accordion card -->
           @endforeach
         @else
-        <h4 style="color:white">Aún no hay tratamientos :( </h4>
+        <div class="row">
+           <div class="col-md-12 text-center">
+              <figure class="figure">
+                 <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
+                  <figcaption class="figure-caption"> <h4 class="text-light text-ups"> <b> ¡UPS! </b> <br> Aún no tienes tratamientos.</h4>  </figcaption>
+               </figure>   
+           </div>
+        </div>
 
         @endif
       </div>
@@ -202,8 +209,13 @@
           @endif
         @endforeach
       @else
-        <div class="text-primary text-center" role="status">
-          <h3>Aún no tiene citas.</h3>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <figure class="figure">
+                     <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="150" width="150">
+                     <figcaption class="figure-caption"> <h3 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tienes citas médicas.</h3>  </figcaption>
+                 </figure>   
+             </div>
         </div>
       @endif
     </div>
