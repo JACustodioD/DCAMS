@@ -1,5 +1,27 @@
 @extends('layouts.user')
 @section('content')
+@if(Auth::user()->hisotria)
+    <div class="container mt-5">
+        <h4 class="text-primary">Ya ha completado su historial médico</h4>
+       <div class="shadow p-3 mb-5 bg-white rounded">
+            <ul>
+                <h5 class="text-info">Historia médica dental</h5>
+                @foreach ($padecimientos as $padecimiento)
+                    <li>{{ $padecimiento->description }}</li>   
+                @endforeach
+                <li>Padecimiento</li>
+                <h5 class="text-info">Historia médica general</h5>
+                <li>Padecimiento</li>
+                <li>Padecimiento</li>
+                <li>Padecimiento</li> <br>
+                <h5 class="text-info">Observaciones</h5>
+                <li>Padecimiento</li>
+                <li>Padecimiento</li>
+                <li>Padecimiento</li>
+            </ul>
+       </div> 
+    </div>
+@else
 <div class="container mt-3">
     <div class="historia">
         <div class="row">
@@ -16,16 +38,6 @@
     </div>
 </div>
 
-@if(Auth::user()->hisotria)
-	<div class="container">
-        <ul>
-            @foreach ($padecimientos as $padecimiento)
-                <li>{{ $padecimiento->description }}</li>   
-            @endforeach
-        </ul>
-		
-	</div>
-@else
 <div class="container">
     <div class="historia-dental">
         <form action="/pacientes/historiamedica" method="POST">

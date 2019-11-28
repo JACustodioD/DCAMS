@@ -1,5 +1,6 @@
 @extends('layouts.user')
 @section('content')
+ @if(sizeOf($payments)>0)
     <div class="container mt-3">
         <div class="pagos">
             <div class="row">
@@ -19,7 +20,7 @@
     <div  class="container mb-3">
         <div class="historial">
             <div class="row">
-                @if(sizeOf($payments)>0)
+               
                 @foreach ($payments as $payment)
                 <div class="col-md-4">
                      <div class="card" style="width: 18rem;">
@@ -42,14 +43,23 @@
                 </div>
 
                 @endforeach
-
-                @else
-                <h1>nO HAY NOTHING</h1>
-                <h2>{{ $texto }}</h2>
-                @endif
             </div>
         </div>
     </div>
+     @else
+         <div class="container mt-3">
+             <div class="row">
+                 <div class="col-md-12 text-center">
+                      <figure class="figure">
+                             <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
+                              <figcaption class="figure-caption"> <h2 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tienes historial de pagos.</h2>  </figcaption>
+
+                            </figure>   
+                        </div>
+                 </div>
+         </div>
+                        
+                @endif
 
 <!--MODAL DE HISTORIAL DE PAGOS-->
                 <div class="container">
