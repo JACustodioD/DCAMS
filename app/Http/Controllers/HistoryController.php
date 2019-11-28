@@ -12,7 +12,7 @@ class HistoryController extends Controller
 
     public function show(){
         return view('user.historiaMedica',[
-            'padecimientos' => \App\Storie::select('description')->join('sfferings','sffering','id_sfferings')->where('user','=',Auth::user()->id)->get()
+            'padecimientos' => \App\Storie::select('description','category')->join('sfferings','sffering','id_sfferings')->where('user','=',Auth::user()->id)->get()
         ]);
     }
     public function store(Request $request){

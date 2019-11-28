@@ -7,17 +7,22 @@
             <ul>
                 <h5 class="text-info">Historia médica dental</h5>
                 @foreach ($padecimientos as $padecimiento)
-                    <li>{{ $padecimiento->description }}</li>   
-                @endforeach
-                <li>Padecimiento</li>
+                  @if (strcmp($padecimiento->category,'Dental')==0)
+                    <li>{{ $padecimiento->description }}</li>  
+                  @endif  
+                @endforeach <br>
                 <h5 class="text-info">Historia médica general</h5>
-                <li>Padecimiento</li>
-                <li>Padecimiento</li>
-                <li>Padecimiento</li> <br>
+                @foreach ($padecimientos as $padecimiento)
+                  @if (strcmp($padecimiento->category,'General')==0)
+                    <li>{{ $padecimiento->description }}</li>  
+                  @endif  
+                @endforeach <br>
                 <h5 class="text-info">Observaciones</h5>
-                <li>Padecimiento</li>
-                <li>Padecimiento</li>
-                <li>Padecimiento</li>
+                @foreach ($padecimientos as $padecimiento)
+                  @if (strcmp($padecimiento->category,'Observaciones')==0)
+                    <li>{{ $padecimiento->description }}</li>  
+                  @endif  
+                @endforeach
             </ul>
        </div> 
     </div>
