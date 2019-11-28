@@ -19,8 +19,8 @@
                  </nav>
             </div>
          </div>
-         @foreach ($patients as $patient)
          <div class="row mt-5 shadow-sm p-3 mb-5 bg-white rounded">
+            @foreach ($patients as $patient)
              <div class="col-md-4">
                  <div class="card border-primary mb-3">
                      <div class="card">
@@ -40,7 +40,8 @@
                     </div>
                  </div>
              </div>
+                @endforeach
          </div>
-         @endforeach
+      
     </div>
 @endsection

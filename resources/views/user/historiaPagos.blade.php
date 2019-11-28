@@ -29,12 +29,12 @@
                           <ul class="list-group list-group-flush">
                              <li class="list-group-item"><b>Costo inicio:</b> $ {{$payment->cost}} </li>
                              <li class="list-group-item"><b>Restante:</b> ${{ $payment->total }}</li>
-                             <li class="list-group-item"><b>Último pago:</b> {{$payment->payments['created_at']}} </li>
-                             <li class="list-group-item"><b>Cantidad:</b> ${{$payment->credit}} </li>
+                             <li class="list-group-item"><b>Liquidar antes de:</b> {{$payment->endDate}} </li>
+                             <li class="list-group-item"><b>Cantidad:</b> ${{$payment->id_treatment}} </li>
                            
                           </ul>
                              <div class="card-body text-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" class="btnDetalles" tratamiento = {{$payment->treatment }}>
+                                <button type="button" class="btn btn-primary btnDetalles" tratamiento="{{$payment->id_treatment}}">
                                     Ver detalles
                                 </button>
                              </div>
@@ -43,12 +43,19 @@
 
                 @endforeach
 
-                    <!--MODAL DE HISTORIAL DE PAGOS-->
+                @else
+                <h1>nO HAY NOTHING</h1>
+                @endif
+            </div>
+        </div>
+    </div>
+
+<!--MODAL DE HISTORIAL DE PAGOS-->
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalPagos" aria-hidden="true">
+                            <div class="modal " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="modalPagos" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -66,16 +73,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach ($payments as $payment)
-                                            @if($payment->treatment == $payment->id )
-                                                <tr>
-                                                    <th scope="row">{{$payment->paymentDate}}</th>
-                                                    <td>$ {{ $payment->credit }}</td>
-                                                </tr>
-                                            @else
-                                            <h1>no hay</h1>
-                                            @endif
-                                            @endforeach
+                                        
                                             </tbody>
                                         </table>
                                     </div>
@@ -85,27 +83,49 @@
                         </div>
                     </div>
                 </div>
-                @else
-                <h1>nO HAY NOTHING</h1>
-                @endif
-            </div>
-        </div>
-    </div>
 
+@endsection
 
+@section('script')
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.btnDetalles').click(function(){
+           table = $('.table').children('tbody');
+            $.post('/pacientes/historialdepagos',{
+                "_token": $("meta[name='csrf-token']").attr("content"),
+                "tratamientos": $(this).attr('tratamiento'),
+            }, function(data) {
+            	if(data.length>0){
+					for (var i = 0; i <= data.length-1; i++) {
+            			row =''+
+            			'<tr class="listaPagos">'+
+                    	'<th scope="row">'+data[i].created_at+'</th>'+
+                    	'<td>$'+data[i].credit+'</td>'+
+                    	'</tr>';
+                    	table.append(row);
+            		}
+            	}else{
+            		row = ''+
+            		'<tr class="listaPagos">'+
+            		'<td scope="row" class="text-danger text-center" colspan="2">No hay pagos</td>'+
+            		'</tr>';
+            		table.append(row);
+            	}
+                setTimeout(function(){ 
+                    $(".modal").fadeIn(1500);
+                },300);
 
-    <script type="text/javascript">
-
-        $(document).ready(function(){
-            $(".btnDetaller").click(function(){
-                var contenido = ''+
                 
-                var tratamiento = $(this).attr('tratamiento');
-                 $('.modal-body').append(contenido);
-            });
+
+           });
         });
 
-   
-    </script>
-
+        $(".close").click(function(){
+        	setTimeout(function(){ 
+                    $(".modal").fadeOut(1500);
+                    $('.listaPagos').remove();
+            },300);
+        });
+    });
+</script>
 @endsection

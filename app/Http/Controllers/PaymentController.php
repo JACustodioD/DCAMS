@@ -49,7 +49,8 @@ class PaymentController extends Controller
      */
     public function show(Payment $payment)
     {
-        $payments = \App\Payment::join('treatments','payments.treatment','=','treatments.id_treatment')->join('services','treatments.service', '=', 'services.id_service')->where('treatments.user',Auth::user()->id)->get();
+        $payments = \App\Treatment::select('services.name','services.cost','treatments.total','treatments.endDate','treatments.id_treatment')->join('services','treatments.service','=','services.id_service')->where('treatments.user',Auth::user()->id)->get();
+
         return view('user.historiaPagos',[
             'payments' => $payments
         ]);
@@ -87,5 +88,11 @@ class PaymentController extends Controller
     public function destroy(Payment $payment)
     {
         //
+    }
+
+    public function payments(Request $request){
+       $datos = \App\Payment::select('credit','created_at')->where('treatment',$request['tratamientos'])->get();
+    
+        return $datos;
     }
 }

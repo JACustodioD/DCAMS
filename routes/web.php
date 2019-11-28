@@ -53,5 +53,6 @@ Route::group([
 	});
 	Route::post('/historiamedica','HistoryController@store');
 	Route::get('/historialdepagos','PaymentController@show');
+	Route::post('/historialdepagos','PaymentController@payments');
 
 });
