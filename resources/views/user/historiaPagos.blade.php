@@ -45,6 +45,7 @@
 
                 @else
                 <h1>nO HAY NOTHING</h1>
+                <h2>{{ $texto }}</h2>
                 @endif
             </div>
         </div>
@@ -113,7 +114,7 @@
             	}
                 setTimeout(function(){ 
                     $(".modal").fadeIn(1500);
-                },300);
+                },100);
 
                 
 
@@ -124,7 +125,7 @@
         	setTimeout(function(){ 
                     $(".modal").fadeOut(1500);
                     $('.listaPagos').remove();
-            },300);
+            },100);
         });
     });
 </script>

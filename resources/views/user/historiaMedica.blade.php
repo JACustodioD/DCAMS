@@ -18,7 +18,12 @@
 
 @if(Auth::user()->hisotria)
 	<div class="container">
-		<h1>Ya hay registro</h1>
+        <ul>
+            @foreach ($padecimientos as $padecimiento)
+                <li>{{ $padecimiento->description }}</li>   
+            @endforeach
+        </ul>
+		
 	</div>
 @else
 <div class="container">

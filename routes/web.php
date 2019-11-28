@@ -47,10 +47,7 @@ Route::group([
 ],function(){
 	Route::get('/home','TreatmentController@homeUser');
 	Route::post('/image','StorageController@save');
-	Route::get('/historiamedica', function(){
-		return view('user.historiaMedica');
-
-	});
+	Route::get('/historiamedica','HistoryController@show');
 	Route::post('/historiamedica','HistoryController@store');
 	Route::get('/historialdepagos','PaymentController@show');
 	Route::post('/historialdepagos','PaymentController@payments');
