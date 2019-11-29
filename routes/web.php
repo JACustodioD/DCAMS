@@ -37,6 +37,9 @@ Route::group([
 ],function(){
 	Route::get('/home','MessageController@show');
 	Route::get('/pacientes','AdminController@showPacientes');
+	Route::get('/tratamientos', function(){
+		return view('admin.tratamientos');
+	});
 });
 
 //Rutas a las que puede accesar el usuario
