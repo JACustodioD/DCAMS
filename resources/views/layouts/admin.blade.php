@@ -72,5 +72,6 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/calendar.js"></script>
 <script src="/js/all.js"></script>  
+@yield('script')
 </body>
 </html>

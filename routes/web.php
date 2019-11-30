@@ -46,6 +46,8 @@ Route::group([
 	Route::get('/historialdepagos', function(){
 		return view('admin.historialdepagos');
 	});
+	Route::post('/atendido','MessageController@update');
+	Route::post('/borrarmensaje','MessageController@destroy');
 });
 
 //Rutas a las que puede accesar el usuario

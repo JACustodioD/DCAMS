@@ -63,7 +63,7 @@ class MessageController extends Controller
      */
     public function show(Message $message){
         return view('admin.index',[
-            'messages' => \App\Message::all()
+            'messages' => \App\Message::where('status','Pendiente')->orderBy('date')->orderBy('hour')->get()
         ]);
     }
 
@@ -87,7 +87,11 @@ class MessageController extends Controller
      */
     public function update(Request $request, Message $message)
     {
-        //
+        $atendido = $message->find($request['mensaje']);
+        $atendido->status = "Atendido";
+        $atendido->save();
+
+        return ($atendido);
     }
 
     /**
@@ -96,8 +100,10 @@ class MessageController extends Controller
      * @param  \App\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Message $message)
+    public function destroy(Request $request,Message $message)
     {
-        //
+        $mensaje = $message->find($request['mensaje']);
+        $mensaje->delete();
+        return true;
     }
 }
