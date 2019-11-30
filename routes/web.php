@@ -40,6 +40,12 @@ Route::group([
 	Route::get('/tratamientos', function(){
 		return view('admin.tratamientos');
 	});
+	Route::get('/historialmedico', function(){
+		return view('admin.historialmedico');
+	});
+	Route::get('/historialdepagos', function(){
+		return view('admin.historialdepagos');
+	});
 });
 
 //Rutas a las que puede accesar el usuario

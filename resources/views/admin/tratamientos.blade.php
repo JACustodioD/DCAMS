@@ -15,7 +15,7 @@
 		<form action="">
 			<div class="row">
 				<div class="col-md-12">
-						<h3>Agregar un nuevo trataiento.</h3>
+						<h3>Agregar un nuevo tratamiento.</h3>
 						<div class="form-group">
 							<label for="exampleFormControlSelect1">Tratamientos disponibles</label>
 							<select class="form-control" id="exampleFormControlSelect1">
