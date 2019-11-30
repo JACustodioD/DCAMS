@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-
+@if(sizeOf($messages)>0)
 <div class="container mt-3">
 	<div class="mensaje">
 		<div class="row">
@@ -39,5 +39,21 @@
 	@endforeach
 
 </div>
+
+@else
+
+<div class="container mt-5">
+	<div class="row">
+           <div class="col-md-12 text-center">
+              <figure class="figure">
+                 <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
+                  <figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tienes mensajes.</h4>  </figcaption>
+               </figure>   
+           </div>
+     </div>	
+</div>
+
+
+@endif
 
 @endsection
