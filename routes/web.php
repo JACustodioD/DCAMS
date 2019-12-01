@@ -46,6 +46,12 @@ Route::group([
 	Route::get('/historialdepagos', function(){
 		return view('admin.historialdepagos');
 	});
+	Route::get('/citas', function(){
+		return view('admin.citas');
+	});
+	Route::get('/miscitas', function(){
+		return view('admin.miscitas');
+	});
 });
 
 //Rutas a las que puede accesar el usuario
