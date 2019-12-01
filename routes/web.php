@@ -21,10 +21,6 @@ Route::get('/message',function(){
 	return view('citas.mensajeCita');
 });
 
-Route::get('/save', function () {
-    	return view('admin.index');
-});
-
 
 //Rutas de Autenticacion
 Auth::routes();
@@ -50,6 +46,12 @@ Route::group([
 	Route::post('/borrarmensaje','MessageController@destroy');
 	Route::post('/buscarusuario','AdminController@buscarPaciente');
 	Route::post('/mostrarusuario','AdminController@mostrarTodos');
+	Route::get('/citas', function(){
+		return view('admin.citas');
+	});
+	Route::get('/miscitas', function(){
+		return view('admin.miscitas');
+	});
 });
 
 //Rutas a las que puede accesar el usuario

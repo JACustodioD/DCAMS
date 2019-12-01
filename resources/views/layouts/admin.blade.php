@@ -39,6 +39,9 @@
                                   <a class="nav-link hvr-underline-from-center text-primary" href="/consultorio/pacientes"><i class="fas fa-users  mr-1"></i></i>Pacientes</a>
                                 </li>
                                 <li class="nav-item nav-text">
+                                  <a class="nav-link hvr-underline-from-center text-primary" href="/consultorio/miscitas"><i class="fas fa-calendar-check  mr-1"></i></i>Citas</a>
+                                </li>
+                                <li class="nav-item nav-text">
                                    <a class="nav-link hvr-underline-from-center text-primary" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt icon-menu mr-1"></i>Cerrar sesión</a>
