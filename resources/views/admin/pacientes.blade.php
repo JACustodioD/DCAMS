@@ -32,7 +32,6 @@
                             
                                 <button  class="btn btn-outline-secondary btn-block mb-1">Ver tratamientos</button>
                                 <button class="btn btn-outline-secondary btn-block mb-1">Ver Historia médica</button>
-                                <button class="btn btn-outline-secondary btn-block mb-1">Ver Historial de pagos</button>
                                 <button class="btn btn-outline-secondary  btn-block mb-1">Crear nueva cita</button>
                              </div>
                              <a href="#" class="card-link"> <p class="text-danger"> Eliminar paciente</p></a>
