@@ -40,7 +40,7 @@ $(document).ready(function(){
             }, function(data) {
             	$('.'+mensaje).remove();
             	if($('.cont-mensaje').length == 0){
-            			var vacio = ''+
+            		var vacio = ''+
             		 '<div class="container mt-5">'+
 					 '<div class="row">'+
           			 '<div class="col-md-12 text-center">'+

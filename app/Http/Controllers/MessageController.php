@@ -104,6 +104,6 @@ class MessageController extends Controller
     {
         $mensaje = $message->find($request['mensaje']);
         $mensaje->delete();
-        return true;
+        return ($mensaje);
     }
 }
