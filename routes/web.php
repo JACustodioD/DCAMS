@@ -48,6 +48,8 @@ Route::group([
 	});
 	Route::post('/atendido','MessageController@update');
 	Route::post('/borrarmensaje','MessageController@destroy');
+	Route::post('/buscarusuario','AdminController@buscarPaciente');
+	Route::post('/mostrarusuario','AdminController@mostrarTodos');
 });
 
 //Rutas a las que puede accesar el usuario

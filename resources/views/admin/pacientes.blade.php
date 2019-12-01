@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+@if(sizeOf($patients)>0)
  <div class="container mt-3" >
      <div class="pacientes">
          <div class="row">
@@ -12,16 +13,16 @@
             <div class="col-md-12">
                  <nav class="navbar navbar-light bg-light">
                      <a class="navbar-brand">Buscar paciente</a>
-                     <form class="form-inline">
-                         <input class="form-control mr-sm-2" type="search" placeholder="Nombre" aria-label="Search">
-                         <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
-                     </form>
+                     <div class="form-inline">
+                         <input class="form-control mr-sm-2" type="search" placeholder="Nombre" aria-label="Search" id="nombre" >
+                         <button class="btn btn-outline-primary my-2 my-sm-0 btnBuscar">Buscar</button>
+                     </div>
                  </nav>
             </div>
          </div>
-         <div class="row mt-5 shadow-sm p-3 mb-5 bg-white rounded">
+         <div class="row mt-5 shadow-sm p-3 mb-5 bg-white rounded" id="pacientes">
             @foreach ($patients as $patient)
-             <div class="col-md-4">
+             <div class="col-md-4" >
                  <div class="card border-primary mb-3">
                      <div class="card">
                          <img src="/perfil/{{ $patient->image }}" class="card-img-top img-paciente mt-2">
@@ -43,4 +44,23 @@
          </div>
       
     </div>
+    @else
+
+<div class="container mt-5">
+    <div class="row">
+           <div class="col-md-12 text-center">
+              <figure class="figure">
+                 <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
+                  <figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tienes pacientes.</h4>  </figcaption>
+               </figure>   
+           </div>
+     </div> 
+</div>
+
+
+@endif
+@endsection
+
+@section('script')
+<script type="text/javascript" src="/js/pacientes.js"></script>
 @endsection
