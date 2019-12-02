@@ -2,83 +2,76 @@ $(document).ready(function(){
 
 
     /* CODIGO PARA BUSCAR PACIENTE */
-	$('#nombre').keyup(function(){
-		var nombre = $("#nombre").val(); 
-		if (nombre.length == 0) {
-			$.post('/consultorio/buscarusuario',{
-        		"_token": $("meta[name='csrf-token']").attr("content"),
-        		"paciente": nombre,
-    		}, function(data) {
 
-    			$('#pacientes').children().remove();
-
-    				for (var i = 0; i <= data.length - 1; i++) {
-    					$("#pacientes").append(''+
-    						'<div class="col-md-4" >'+
-                 			'<div class="card border-primary mb-3">'+
-                     		'<div class="card">'+
-                         	'<img src="/perfil/'+ data[i].image+'" class="card-img-top img-paciente mt-2">'+
-                        	'<div class="card-body">'+
+    $(document).on('keyup','#nombre',function(){
+        var nombre = $(this).val();
+        if(nombre.length==0){
+            $.post('/consultorio/mostrarusuario',{
+                "_token": $("meta[name='csrf-token']").attr("content"),
+                "paciente": nombre,
+            }, function(data) {
+                $('#pacientes').children().remove();
+                   for (var i = 0; i <= data.length - 1; i++) {
+                        $("#pacientes").append(''+
+                            '<div class="col-md-4" >'+
+                            '<div class="card border-primary mb-3">'+
+                            '<div class="card">'+
+                            '<img src="/perfil/'+ data[i].image+'" class="card-img-top img-paciente mt-2">'+
+                            '<div class="card-body">'+
                             '<div class="text-center">'+
                             '<h5 class="card-title text-primary">'+data[i].name+'</h5>'+
                             '<h6 class="card-subtitle mb-2 text-muted">Paciente desde: '+data[i].created_at +'</h6>'+
-                            '<button  class="btn btn-outline-secondary btn-block mb-1">Ver tratamientos</button>'+
+                            '<button  class="btn btn-outline-secondary btn-block mb-1 btnTratamientos">Ver tratamientos</button>'+
                             '<button class="btn btn-outline-secondary btn-block mb-1">Ver Historia médica</button>'+
                             '<button class="btn btn-outline-secondary  btn-block mb-1">Crear nueva cita</button>'+
                             '</div>'+
-                            '<a href="#" class="card-link"> <p class="text-danger"> Eliminar paciente</p></a>'+
-                        	'</div> </div> </div>');
-    				}
-    			
-    		
-    		});	
-		}else{
-			$.post('/consultorio/buscarusuario',{
-        		"_token": $("meta[name='csrf-token']").attr("content"),
-        		"paciente": nombre,
-    		}, function(data) {
-
-    			$('#pacientes').children().remove();
-
-    			if (data.length == 0) {
-    				$("#pacientes").append(''+
-    					'<div class="col-md-12" >'+
+                            ' <p class="text-danger card-link btnEliminarP" patient="{{$patient->id}}" data-toggle="modal" data-target="#exampleModal1"> Eliminar paciente</p>'+
+                            '</div> </div> </div>');
+                    }     
+            
+            }); 
+       }else{
+            $.post('/consultorio/buscarusuario',{
+                "_token": $("meta[name='csrf-token']").attr("content"),
+                "paciente": nombre,
+            }, function(data) {
+                $('#pacientes').children().remove();
+                if (data.length == 0) {
+                    $("#pacientes").append(''+
+                        '<div class="col-md-12" >'+
                         '<div class="text-center">'+
-                     	'<h5 class="text-primary"> No se encontro ningun usuario con ese nombre </h5>'+
-                     	'</div> </div> ');
-    			}else{
-    				for (var i = 0; i <= data.length - 1; i++) {
-    					$("#pacientes").append(''+
-    						'<div class="col-md-4" >'+
-                 			'<div class="card border-primary mb-3">'+
-                     		'<div class="card">'+
-                         	'<img src="/perfil/'+ data[i].image+'" class="card-img-top img-paciente mt-2">'+
-                        	'<div class="card-body">'+
+                        '<h5 class="text-primary"> No se encontro ningun usuario con ese nombre </h5>'+
+                        '</div> </div> ');
+                }else{
+                    for (var i = 0; i <= data.length - 1; i++) {
+                        $("#pacientes").append(''+
+                            '<div class="col-md-4" >'+
+                            '<div class="card border-primary mb-3">'+
+                            '<div class="card">'+
+                            '<img src="/perfil/'+ data[i].image+'" class="card-img-top img-paciente mt-2">'+
+                            '<div class="card-body">'+
                             '<div class="text-center">'+
                             '<h5 class="card-title text-primary">'+data[i].name+'</h5>'+
                             '<h6 class="card-subtitle mb-2 text-muted">Paciente desde: '+data[i].created_at +'</h6>'+
-                            '<button  class="btn btn-outline-secondary btn-block mb-1">Ver tratamientos</button>'+
+                            '<button  class="btn btn-outline-secondary btn-block mb-1 btnTratamientos">Ver tratamientos</button>'+
                             '<button class="btn btn-outline-secondary btn-block mb-1">Ver Historia médica</button>'+
                             '<button class="btn btn-outline-secondary  btn-block mb-1">Crear nueva cita</button>'+
                             '</div>'+
-                            '<a href="#" class="card-link"> <p class="text-danger"> Eliminar paciente</p></a>'+
-                        	'</div> </div> </div>');
-    				}
-    				
-    			}
-    			
-    		
-    		});	
-		}	
-	});
+                            ' <p class="text-danger card-link btnEliminarP" patient="{{$patient->id}}" data-toggle="modal" data-target="#exampleModal1"> Eliminar paciente</p>'+
+                            '</div> </div> </div>');
+                    }
+                }
+            });
+       }
+       
+    });
     /* FIN CODIGO PARA BUSCAR PACIENTE */
 
     /* CODIGO PARA ELIMAR PACIENTE */
-    $('.btnEliminarP').click(function(){
-        $('.btnBorrarP').attr('patient',$(this).attr('patient'));;
+    $(document).on('click','.btnEliminarP',function(){
+        $('.btnBorrarP').attr('patient',$(this).attr('patient'));
     });
-
-    $('.btnBorrarP').click(function(){
+    $(document).on('click','.btnBorrarP',function(){
         var paciente  = $(this).attr('patient');
         $.post('/consultorio/borrarpaciente',{
                 "_token": $("meta[name='csrf-token']").attr("content"),
@@ -102,4 +95,13 @@ $(document).ready(function(){
     });
     /*FIN DEL CODIGO PARA ELIMINAR PACIENTE */
 
+
+    /*Codigo para mostrar trataminetos*/
+  $(document).on('click','.btnTratamientos',function(){
+    alert("message?: DOMString");
+  });
+
+    /* Fin de codigo para mostrar tratamientoss*/
+
 });
+

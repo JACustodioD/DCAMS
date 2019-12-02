@@ -31,7 +31,7 @@
                                 <h5 class="card-title text-primary">{{ $patient->name }}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Paciente desde: {{ $patient->created_at }}</h6>
                             
-                                <button  class="btn btn-outline-secondary btn-block mb-1">Ver tratamientos</button>
+                                <button  class="btn btn-outline-secondary btn-block mb-1 btnTratamientos">Ver tratamientos</button>
                                 <button class="btn btn-outline-secondary btn-block mb-1">Ver Historia médica</button>
                                 <button class="btn btn-outline-secondary  btn-block mb-1">Crear nueva cita</button>
                              </div>
