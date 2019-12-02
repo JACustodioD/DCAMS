@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Date;
+use App\User;
 use Illuminate\Http\Request;
 
 class DateController extends Controller
@@ -46,7 +47,15 @@ class DateController extends Controller
      */
     public function show(Date $date)
     {
-        //
+        return view('admin.miscitas',[
+            'citas' => $date::join('users','user','id')->orderBy('dateOfAppointment')->orderBy('hour')->get()
+        ]);
+    }
+    public function buscarCitas(Request $request, Date $date){
+        return $date::join('users','user','id')->where('name', 'like', $request['paciente'].'%')->where('typeOfUser','=','U')->get();
+    }
+     public function mostrarCitas(Request $request, Date $date){
+        return $date::join('users','user','id')->get();
     }
 
     /**

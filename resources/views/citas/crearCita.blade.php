@@ -25,7 +25,7 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="nombre">Nombre:</label>
-                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required autofocus>
+                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required autofocus autocomplete value="{{ old('nombre')}}">
                                 @error('nombre')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -34,7 +34,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="telefono">Telefono:</label>
-                                 <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required autofocus>
+                                 <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required autofocus autocomplete value="{{ old('telefono')}}">
 
                                  @error('telefono')
                                  <span class="invalid-feedback" role="alert">
@@ -46,7 +46,7 @@
                                  <div class="row">
                                     <div class="col-md-6">
                                         <label for="fecha">Fecha:</label>
-                                        <input type="date" name="fecha" class="form-control @error('fecha') is-invalid @enderror" required autofocus>
+                                        <input type="date" name="fecha" class="form-control @error('fecha') is-invalid @enderror" required autofocus autocomplete value="{{old('fecha')}}">
                                         @error('fecha')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -55,7 +55,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="hora">Hora:</label>
-                                         <input type="time" name="hora" class="form-control @error('hora') is-invalid @enderror" required autofocus>
+                                         <input type="time" name="hora" class="form-control @error('hora') is-invalid @enderror" required autofocus autocomplete value="{{old('hora')}}">
                                          @error('hora')
                                          <span class="invalid-feedback" role="alert">
                                              <strong>{{ $message }}</strong>
@@ -66,7 +66,7 @@
                              </div>
                              <div class="form-group">
                                 <label for="comentarios">Comentarios</label>
-                                 <textarea class="form-control @error('comentario') is-invalid @enderror" id="comentarios" rows="3" name="comentario" required autofocus></textarea>
+                                 <textarea class="form-control @error('comentario') is-invalid @enderror" id="comentario" rows="3" name="comentario" required autofocus autocomplete >{{old('comentario')}}</textarea>
 
                                  @error('comentario')
                                  <span class="invalid-feedback" role="alert">

@@ -46,12 +46,13 @@ Route::group([
 	Route::post('/borrarmensaje','MessageController@destroy');
 	Route::post('/buscarusuario','AdminController@buscarPaciente');
 	Route::post('/mostrarusuario','AdminController@mostrarTodos');
-	Route::get('/citas', function(){
+	Route::post('/borrarpaciente','AdminController@borrarPaciente');
+	Route::post('/buscarcitas','DateController@buscarCitas');
+	Route::post('/mostrarcitas','DateController@mostrarCitas');
+	Route::get('/citas',function(){
 		return view('admin.citas');
 	});
-	Route::get('/miscitas', function(){
-		return view('admin.miscitas');
-	});
+	Route::get('/miscitas', 'DateController@show');
 });
 
 //Rutas a las que puede accesar el usuario

@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+    /* CODIGO PARA BUSCAR PACIENTE */
 	$('#nombre').keyup(function(){
 		var nombre = $("#nombre").val(); 
 		if (nombre.length == 0) {
@@ -67,9 +69,37 @@ $(document).ready(function(){
     			
     		
     		});	
-		}
-
-    	
+		}	
 	});
+    /* FIN CODIGO PARA BUSCAR PACIENTE */
+
+    /* CODIGO PARA ELIMAR PACIENTE */
+    $('.btnEliminarP').click(function(){
+        $('.btnBorrarP').attr('patient',$(this).attr('patient'));;
+    });
+
+    $('.btnBorrarP').click(function(){
+        var paciente  = $(this).attr('patient');
+        $.post('/consultorio/borrarpaciente',{
+                "_token": $("meta[name='csrf-token']").attr("content"),
+                'paciente': paciente
+                
+        }, function(data) {
+                $('.'+paciente).remove();
+                if($('.cont-pacientes').length == 0){
+                    var vacio = ''+
+                     '<div class="container mt-5">'+
+                     '<div class="row">'+
+                     '<div class="col-md-12 text-center">'+
+                     '<figure class="figure">'+
+                     '<img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">'+
+                     '<figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Ya no tienes más pacientes.</h4>  </figcaption>'+
+                     '</figure> </div> </div> </div>';
+                    $(".titulo").remove(); 
+                    $(".pacientes").append(vacio);
+                }
+            });
+    });
+    /*FIN DEL CODIGO PARA ELIMINAR PACIENTE */
 
 });

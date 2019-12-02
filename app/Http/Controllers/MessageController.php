@@ -66,6 +66,7 @@ class MessageController extends Controller
             'messages' => \App\Message::where('status','Pendiente')->orderBy('date')->orderBy('hour')->get()
         ]);
     }
+    
 
     /**
      * Show the form for editing the specified resource.

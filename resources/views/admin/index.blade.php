@@ -80,7 +80,7 @@
 </div>
 <!-- /FIN DE MODAL-->
 
-<!-- MODAL PARA CONFIRMAR QUE SE ATENDIO -->
+<!-- MODAL PARA CONFIRMAR QUE SE ELIMINARA -->
 
 <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

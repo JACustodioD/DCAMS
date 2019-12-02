@@ -19,4 +19,9 @@ class AdminController extends Controller
     public function mostrarTodos(Request $request, User $user){
     	return $user::where('typeOfUser','U')->get();
     }
+    public function borrarPaciente(Request $request, User $user){
+        $user = $user->find($request['paciente']);
+        $user->delete();
+        return ($user);
+    }
 }

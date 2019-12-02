@@ -1,6 +1,6 @@
 @extends('layouts.admin')
-
 @section('content')
+@if(sizeOf($citas)>0)
 <div class="container mt-3">
     <div class="miscitas">
         <div class="row">
@@ -12,10 +12,10 @@
              <div class="col-md-12">
                 <nav class="navbar navbar-light bg-light">
                     <a class="navbar-brand">Buscar cita</a>
-                        <form class="form-inline">
-                             <input class="form-control mr-sm-2" type="search" placeholder="Paciente" aria-label="Search">
+                        <div class="form-inline">
+                             <input class="form-control mr-sm-2" type="search" placeholder="Paciente" aria-label="Search" id="nombre">
                              <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
-                         </form>
+                         </div>
                      </nav>
                 </div>
              </div>
@@ -32,18 +32,36 @@
                         <th scope="col">Asunto</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><p>...</p></th>
-                        <td><p>...</p></td>
-                        <td><p>...</p></td>
-                        <td><p>...</p></td>
-                      </tr>
-                      <tr>
+                    <tbody id="tbody">
+                      @foreach ($citas as $cita)
+                        <tr>
+                          <th scope="row"><p>{{$cita->name}}</p></th>
+                          <td><p>{{$cita->dateOfAppointment}}</p></td>
+                          <td><p>{{$cita->hour}}</p></td>
+                          <td><p>{{$cita->affair}}</p></td>
+                        </tr>
+                      @endforeach
             
                     </tbody>
-                  </table>
+            </table>
     </div>
 </div>
+@else
+  <div class="container mt-5">
+    <div class="row">
+           <div class="col-md-12 text-center">
+              <figure class="figure">
+                 <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
+                  <figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tienes citas.</h4>  </figcaption>
+                </figure>   
+            </div>
+      </div> 
+  </div>
 
+
+@endif
+
+@endsection
+@section('script')
+<script type="text/javascript" src="/js/citas.js"></script>
 @endsection

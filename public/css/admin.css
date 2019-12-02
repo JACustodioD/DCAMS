@@ -26,3 +26,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .text-ups{
 	  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
+
+.btnEliminarP:hover{
+	cursor: pointer;
+}

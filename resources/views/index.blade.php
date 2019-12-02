@@ -33,7 +33,7 @@
                         <div class="card-body form-body">
                             <div class="form-group">
                                 <label for="nombre">Nombre:</label>
-                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required >
+                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required autocomplete value="{{old('nombre')}}">
                                 @error('nombre')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="telefono">Telefono:</label>
-                                 <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required >
+                                 <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required autocomplete value="{{old('telefono')}}">
 
                                  @error('telefono')
                                  <span class="invalid-feedback" role="alert">
@@ -54,7 +54,7 @@
                                  <div class="row">
                                     <div class="col-md-6">
                                         <label for="fecha">Fecha:</label>
-                                        <input type="date" name="fecha" class="form-control @error('fecha') is-invalid @enderror" required >
+                                        <input type="date" name="fecha" class="form-control @error('fecha') is-invalid @enderror" required autocomplete value="{{old('fecha')}}">
                                         @error('fecha')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="hora">Hora:</label>
-                                         <input type="time" name="hora" class="form-control @error('hora') is-invalid @enderror" required >
+                                         <input type="time" name="hora" class="form-control @error('hora') is-invalid @enderror" required autocomplete value="{{old('hora')}}">
                                          @error('hora')
                                          <span class="invalid-feedback" role="alert">
                                              <strong>{{ $message }}</strong>
@@ -74,7 +74,7 @@
                              </div>
                              <div class="form-group ">
                                 <label for="comentarios">Comentarios</label>
-                                 <textarea class="form-control @error('comentario') is-invalid @enderror" id="comentarios" rows="3" name="comentario" required ></textarea>
+                                 <textarea class="form-control @error('comentario') is-invalid @enderror" id="comentarios" rows="3" name="comentario" required autocomplete>{{old('comentario')}}</textarea>
 
                                  @error('comentario')
                                  <span class="invalid-feedback" role="alert">
@@ -153,27 +153,27 @@
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 col-tratamientos mt-2" id="tratamiento2">
-                     <a href="/tratamientos"><img src="/img/icono2.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Limpieza dental</span></a>
+                     <a href="/tratamientos#limpieza"><img src="/img/icono2.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Limpieza dental</span></a>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento3">
-                     <a href="/tratamientos"><img src="/img/icono1.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Blanqueamiento dental</span></a>
+                     <a href="/tratamientos#blanqueamiento"><img src="/img/icono1.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Blanqueamiento dental</span></a>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento4">
-                    <a href="/tratamientos"><img src="/img/icono3.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Implantes</span></a>
+                    <a href="/tratamientos#implantes"><img src="/img/icono3.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Implantes</span></a>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento5">
-                    <a href="/tratamientos"> <img src="/img/icono4.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Diseño de sonrisa</span></a>
+                    <a href="/tratamientos#sonrisa"> <img src="/img/icono4.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Diseño de sonrisa</span></a>
                 </div>
             </div>
             <div class="row pl-4">
                 <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento6">
-                    <a href="/tratamientos"> <img src="/img/icono6.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Ortodoncia</span></a>
+                    <a href="/tratamientos#ortodoncia"> <img src="/img/icono6.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Ortodoncia</span></a>
                </div>
             </div>    
         </div>
