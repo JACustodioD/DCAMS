@@ -95,4 +95,9 @@ class PaymentController extends Controller
     
         return $datos;
     }
+    public function adminpayments(Request $request){
+       $datos = \App\Payment::select('credit','payments.created_at','total')->join('treatments','id_treatment','treatment')->where('treatment',$request['tratamientos'])->get();
+    
+        return $datos;
+    }
 }

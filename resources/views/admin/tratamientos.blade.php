@@ -55,7 +55,7 @@
 			<div class="col-md-12 text-center">
 				<button class="btn btn-light finTratamiento" tratamiento = "{{$treatment->id_treatment}}" namet = "{{$treatment->name}}"  data-toggle="modal" data-target="#exampleModalLong1">Finalizar tratamiento</button>
 				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalLong">Ver pagos</button>
+				<button type="button" class="btn btn-light btnDetalles" data-toggle="modal" data-target="#exampleModalLong" tratamiento = "{{$treatment->id_treatment}}">Ver pagos</button>
 				<button type="button" class="btn btn-primary"  data-toggle="modal"  data-target="#agregarpago">Agregar pago</button>
 				
 			</div>
@@ -198,7 +198,7 @@
 		  </button>
 		</div>
 		<div class="modal-body">
-			<table class="table table-hover">
+			<table class="table table-hover tableV">
 				<thead>
 				  <tr>
 					<th scope="col">Cantidad</th>
@@ -207,11 +207,7 @@
 				  </tr>
 				</thead>
 				<tbody>
-				  <tr>
-					<th scope="row">1</th>
-					<td>Mark</td>
-					<td>Otto</td>
-				  </tr>
+				  
 				</tbody>
 			  </table>
 		</div>
@@ -289,3 +285,4 @@
 @section('script')
 <script type="text/javascript" src="/js/tratamientos.js"></script>
 @endsection
+

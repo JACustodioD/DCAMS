@@ -50,6 +50,7 @@ Route::group([
 	Route::post('/servicio','ServiceController@show');
 	Route::post('/cancelartratamiento','TreatmentController@cancelarTratamiento');
 	Route::post('/agregartratamiento','TreatmentController@agregarTratamiento');
+	Route::post('/historialdepagos','PaymentController@adminpayments');
 	Route::get('/citas',function(){
 		return view('admin.citas');
 	});

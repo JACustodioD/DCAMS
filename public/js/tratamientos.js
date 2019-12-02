@@ -60,7 +60,7 @@ $(document).ready(function(){
                     '<div class="row '+treatment[0].id_treatment+'">'+
                     '<div class="col-md-12 text-center">'+
                     '<button class="btn btn-light finTratamiento" tratamiento = "'+treatment[0].id_treatment+'" namet = "'+treatment[0].name+'"  data-toggle="modal" data-target="#exampleModalLong1">Finalizar tratamiento</button>'+
-                    '<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalLong">Ver pagos</button>'+
+                    '<button type="button" class="btn btn-light btnDetalles" data-toggle="modal" data-target="#exampleModalLong" tratamiento = "'+treatment[0].id_treatment+'">Ver pagos</button>'+
                     '<button type="button" class="btn btn-primary"  data-toggle="modal"  data-target="#agregarpago">Agregar pago</button>'+
                     '</div>  </div>';
                 $('.ups').remove();
@@ -103,4 +103,39 @@ $(document).ready(function(){
         });
     });
     /* FIN FINALIZAR TRATAMIENTO */
+
+
+    /* CODIGO PARA VER PAGOS */
+    $(document).on('click','.btnDetalles',function(){
+        var table = $('.tableV').children('tbody');
+        $.post('/consultorio/historialdepagos',{
+            "_token": $("meta[name='csrf-token']").attr("content"),
+            "tratamientos": $(this).attr('tratamiento'),
+            }, function(data) {
+                if(data.length>0){
+                    for (var i = 0; i <= data.length-1; i++) {
+                        row =''+
+                        '<tr class="listaPagos">'+
+                        '<th scope="row">$ '+data[i].credit+'</th>'+
+                        '<td>'+data[i].created_at+'</td>'+
+                        '<td>$'+data[i].total+'</td>'+
+                        '</tr>';
+                        table.append(row);
+                    }
+                }else{
+                    row = ''+
+                    '<tr class="listaPagos">'+
+                    '<td scope="row" class="text-danger text-center" colspan="3">No hay pagos</td>'+
+                    '</tr>';
+                    table.append(row);
+                }
+
+        $(".close").click(function(){
+            $('.listaPagos').remove();
+        });
+                
+           });
+        });
+
+    /* FIN CODIGO PARA VER PAGOS */
 }); 
