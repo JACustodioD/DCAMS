@@ -105,20 +105,6 @@ $(document).ready(function(){
     });
     /*FIN DEL CODIGO PARA ELIMINAR PACIENTE */
 
-
-    /*Codigo para mostrar trataminetos*/
-  /*$(document).on('click','.btnTratamientos',function(){
-    var paciente = $(this).attr('patient');
-    $.post('/consultorio/tratamientos',{
-        "_token": $("meta[name='csrf-token']").attr("content"),
-        "paciente": nombre,
-    }, function(data,) {
-        /*optional stuff to do after success */
-    /*});
-    alert($(this).attr('patient'));
-  });*/
-
-    /* Fin de codigo para mostrar tratamientoss*/
-
+ 
 });
 

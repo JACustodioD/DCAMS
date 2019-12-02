@@ -47,6 +47,9 @@ Route::group([
 	Route::post('/borrarpaciente','AdminController@borrarPaciente');
 	Route::post('/buscarcitas','DateController@buscarCitas');
 	Route::post('/mostrarcitas','DateController@mostrarCitas');
+	Route::post('/servicio','ServiceController@show');
+	Route::post('/cancelartratamiento','TreatmentController@cancelarTratamiento');
+	Route::post('/agregartratamiento','TreatmentController@agregarTratamiento');
 	Route::get('/citas',function(){
 		return view('admin.citas');
 	});

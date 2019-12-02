@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Treatment;
 use Illuminate\Http\Request;
 use App\Date;
-use Illuminate\Support\Facades\Auth;
+use App\Service;
+use App\User;
+use Illuminate\Support\Facades\Auth; 
 
 class TreatmentController extends Controller
 {
@@ -94,7 +96,30 @@ class TreatmentController extends Controller
     }
     public function adminTratamientos(Request $request){
         return view('admin.tratamientos',[
-            'treatments' => \App\Treatment::join('services','services.id_service','=','treatments.service')->join('users','user','id')->where('user',$request['paciente'])->get(),
+            'users' => \App\User::where('id',$request['paciente'])->take(1)->get(),
+            'treatments' => \App\Treatment::join('services','services.id_service','=','treatments.service')->where('user',$request['paciente'])->where('status','1')->get(),
+            'services' => \App\Service::all()
+
         ]);
+    }
+    public function agregarTratamiento(Request $request, Treatment $treatment){
+
+        $treatment->service = $request['servicio'];
+        $treatment->user = $request['user'];
+        $treatment->startDate = $request['startDate'];
+        $treatment->endDate = $request['endDate'];
+        $treatment->total = $request['costo'];
+        $treatment->status = 1;
+        $treatment->save();
+       return \App\Treatment::join('services','services.id_service','=','treatments.service')->where('id_treatment',$treatment->id)->where('status','1')->take(1)->get();
+
+
+    }
+    public function cancelarTratamiento(Request $request, Treatment $treatment){
+        $tratamiento = $treatment::where('id_treatment',$request['tratamiento'])->update(['status'=>0]);
+
+        return "true";
+
+
     }
 }

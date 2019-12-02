@@ -44,9 +44,10 @@ class ServiceController extends Controller
      * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(Service $service)
+    public function show(Request $request,Service $service)
     {
-        //
+        return $service::where('id_service',$request['servicio'])->first();
+
     }
 
     /**
