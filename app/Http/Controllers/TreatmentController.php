@@ -92,4 +92,9 @@ class TreatmentController extends Controller
            'cont' => 0
         ]);
     }
+    public function adminTratamientos(Request $request){
+        return view('admin.tratamientos',[
+            'treatments' => \App\Treatment::join('services','services.id_service','=','treatments.service')->join('users','user','id')->where('user',$request['paciente'])->get(),
+        ]);
+    }
 }

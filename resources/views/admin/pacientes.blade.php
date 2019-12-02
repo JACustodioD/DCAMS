@@ -30,10 +30,14 @@
                             <div class="text-center">
                                 <h5 class="card-title text-primary">{{ $patient->name }}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Paciente desde: {{ $patient->created_at }}</h6>
-                            
-                                <button  class="btn btn-outline-secondary btn-block mb-1 btnTratamientos">Ver tratamientos</button>
-                                <button class="btn btn-outline-secondary btn-block mb-1">Ver Historia médica</button>
-                                <button class="btn btn-outline-secondary  btn-block mb-1">Crear nueva cita</button>
+                                <form action="/consultorio/tratamientos" method="POST">
+                                  @csrf
+                                  <input type="text" name="paciente" hidden value="{{$patient->id}}">
+                                   <button  class="btn btn-outline-secondary btn-block mb-1 btnTratamientos" type="submit">Ver tratamientos</button>
+                                </form>
+                               
+                                <button class="btn btn-outline-secondary btn-block mb-1" patient="{{$patient->id}}">Ver Historia médica</button>
+                                <button class="btn btn-outline-secondary  btn-block mb-1" patient="{{$patient->id}}">Crear nueva cita</button>
                              </div>
                              <p class="text-danger card-link btnEliminarP" patient="{{$patient->id}}" data-toggle="modal" data-target="#exampleModal1"> Eliminar paciente</p>
                         </div>

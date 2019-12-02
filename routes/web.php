@@ -33,9 +33,7 @@ Route::group([
 ],function(){
 	Route::get('/home','MessageController@show');
 	Route::get('/pacientes','AdminController@showPacientes');
-	Route::get('/tratamientos', function(){
-		return view('admin.tratamientos');
-	});
+	Route::post('/tratamientos','TreatmentController@adminTratamientos' );
 	Route::get('/historialmedico', function(){
 		return view('admin.historialmedico');
 	});
