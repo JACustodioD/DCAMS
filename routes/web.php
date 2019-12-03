@@ -51,6 +51,7 @@ Route::group([
 	Route::post('/citas','DateController@citasUser');
 	Route::get('/miscitas', 'DateController@show');
 	Route::post('/cancelarcita','DateController@cancelarCita');
+	Route::post('/agregarcita','DateController@store');
 });
 
 //Rutas a las que puede accesar el usuario

@@ -36,7 +36,16 @@ class DateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cita = new Date();
+        $cita->user = $request['usuario'];
+        $cita->dateOfAppointment = $request['fecha'];
+        $cita->hour = $request['hora'];
+        $cita->affair = $request['asunto'];
+        $cita->commentary = "";
+        $cita->status = "Pendiente";
+        $cita->save();
+
+        return "true";
     }
 
     /**

@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				@foreach ($users as $user)
-                    <h5 class="text-info nombrePaciente" paciente="{{$user->id}}">Pacientes / Tratamientos <b>
+                    <h5 class="text-info nombrePaciente" npaciente="{{$user->name}}" paciente="{{$user->id}}">Pacientes / Tratamientos <b>
                         {{$user->name}}</b>
                     </h5>
                 @endforeach
@@ -102,25 +102,25 @@
                  <div class="col-md-2">
                      <div class="form-group">
                          <label for="fecha">Fecha:</label>
-                         <input class="form-control" type="date" name="fecha">
+                         <input class="form-control" type="date" name="fecha" id="fecha">
                      </div>
                  </div>
                  <div class="col-md-2">
                      <div class="form-group">
                          <label for="hora">hora:</label>
-                         <input class="form-control" type="time" name="hora">
+                         <input class="form-control" type="time" name="hora" id="hora">
                      </div>
                  </div>
                  <div class="col-md-8">
                      <div class="form-group">
                         <label for="asunto">Asunto:</label>
-                        <input class="form-control" type="text" name="asunto">
+                        <input class="form-control" type="text" name="asunto" id="asunto">
                      </div>
                  </div>
                 </div>
                 <div class="row">
                      <div class="col-md-12 text-center">
-                      <button type="button" class="btn btn-primary">Generar cita</button>
+                      <button type="button" class="btn btn-primary btnAddCita">Generar cita</button>
                     </div>
                 </div>
          </div>
