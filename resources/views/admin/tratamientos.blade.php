@@ -121,7 +121,7 @@
 @else
 <div class="container mt-5">
 	<div class="row">
-           <div class="col-md-12 text-center">
+           <div class="col-md-12 text-center ups">
               <figure class="figure">
                  <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
                   <figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tiene tratamientos.</h4>  </figcaption>

@@ -28,7 +28,7 @@
             <div class="col-md-2">
                  <div class="form-group">
                      <label for="exampleFormControlTextarea1">Fecha:</label>
-                        <p>{{$date->dateOfAppointment}}</p>
+                        <p>{{date('d-m-Y',strtotime($date->dateOfAppointment)) }}</p>
                  </div>
              </div>
              <div class="col-md-2">
