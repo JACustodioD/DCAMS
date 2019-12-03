@@ -55,8 +55,8 @@
 			<div class="col-md-12 text-center">
 				<button class="btn btn-light finTratamiento" tratamiento = "{{$treatment->id_treatment}}" namet = "{{$treatment->name}}"  data-toggle="modal" data-target="#exampleModalLong1">Finalizar tratamiento</button>
 				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-light btnDetalles" data-toggle="modal" data-target="#exampleModalLong" tratamiento = "{{$treatment->id_treatment}}">Ver pagos</button>
-				<button type="button" class="btn btn-primary"  data-toggle="modal"  data-target="#agregarpago">Agregar pago</button>
+				<button type="button" class="btn btn-light btnDetalles" data-toggle="modal" data-target="#exampleModalLong" tratamiento = "{{$treatment->id_treatment}}" namet = "{{$treatment->name}}" >Ver pagos</button>
+				<button type="button" class="btn btn-primary btnAddPago"  data-toggle="modal"  data-target="#agregarpago" tratamiento = "{{$treatment->id_treatment}}" namet = "{{$treatment->name}}" >Agregar pago</button>
 				
 			</div>
 			</div>
@@ -237,17 +237,17 @@
 				  <tr>
 					<th scope="row">
 						<div class="form-group">
-							<input class="form-control" type="text" placeholder="$MXN">
+							<input class="form-control" type="text" placeholder="$MXN" id="cantidad">
 						</div>
 					</th>
 					<td>
 						<div class="form-group">
-							<input class="form-control" type="date">
+							<input class="form-control" type="date" id="fechaPago">
 						</div>
 					</td>
 					<td>
 						<div class="form-group">
-							<button type="button" class="btn btn-primary">Agregar</button>
+							<button type="button" class="btn btn-primary btnAdd" data-dismiss="modal">Agregar</button>
 						</div>
 					</td>
 				  </tr>
@@ -265,7 +265,7 @@
 	<div class="modal-dialog" role="document">
 	  <div class="modal-content">
 		<div class="modal-header bg-primary text-white">
-		  <h5 class="modal-title" id="exampleModalLongTitle1">(Nombre del tratamiento)</h5>
+		  <h5 class="modal-title2" id="exampleModalLongTitle1">(Nombre del tratamiento)</h5>
 		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		  </button>

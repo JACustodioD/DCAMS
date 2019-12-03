@@ -60,8 +60,8 @@ $(document).ready(function(){
                     '<div class="row '+treatment[0].id_treatment+'">'+
                     '<div class="col-md-12 text-center">'+
                     '<button class="btn btn-light finTratamiento" tratamiento = "'+treatment[0].id_treatment+'" namet = "'+treatment[0].name+'"  data-toggle="modal" data-target="#exampleModalLong1">Finalizar tratamiento</button>'+
-                    '<button type="button" class="btn btn-light btnDetalles" data-toggle="modal" data-target="#exampleModalLong" tratamiento = "'+treatment[0].id_treatment+'">Ver pagos</button>'+
-                    '<button type="button" class="btn btn-primary"  data-toggle="modal"  data-target="#agregarpago">Agregar pago</button>'+
+                    '<button type="button" class="btn btn-light btnDetalles" data-toggle="modal" data-target="#exampleModalLong" tratamiento = "'+treatment[0].id_treatment+'" nameT = "'+treatment[0].name+'">Ver pagos</button>'+
+                    '<button type="button" class="btn btn-primary btnAddPago"  data-toggle="modal"  data-target="#agregarpago" tratamiento = "'+treatment[0].id_treatment+'" namet = "'+treatment[0].name+'">Agregar pago</button>'+
                     '</div>  </div>';
                 $('.ups').remove();
                 $('.cont-tratamineto').append(contenido);
@@ -107,6 +107,8 @@ $(document).ready(function(){
 
     /* CODIGO PARA VER PAGOS */
     $(document).on('click','.btnDetalles',function(){
+        $('.listaPagos').remove();
+        $('.modal-title').text($(this).attr('nameT'));
         var table = $('.tableV').children('tbody');
         $.post('/consultorio/historialdepagos',{
             "_token": $("meta[name='csrf-token']").attr("content"),
@@ -129,13 +131,38 @@ $(document).ready(function(){
                     '</tr>';
                     table.append(row);
                 }
-
-        $(".close").click(function(){
-            $('.listaPagos').remove();
-        });
-                
            });
         });
 
     /* FIN CODIGO PARA VER PAGOS */
+
+    /* CODIGO PARA AGREGAR PAGO */
+    $(document).on('click','.btnAddPago',function(){
+        $('.btnAdd').attr('tratamiento',$(this).attr('tratamiento'));
+        $('.modal-title').text($(this).attr('nameT'));
+    });
+
+    $(document).on('click','.btnAdd',function(){
+        var usuario = $(".nombrePaciente").attr('paciente',);
+        var tratamiento = $(this).attr('tratamiento');
+        var cantidad = $("#cantidad").val();
+        var fecha = $('#fechaPago').val();
+
+        if (cantidad.length == 0 || fecha.length == 0) {
+            alert("Completa los campos");
+        }else{
+            if (/^([0-9])*$/.test(cantidad)) {
+               $.post('/consultorio/hacerpago',{
+                "_token": $("meta[name='csrf-token']").attr("content"),
+                "tratamiento": tratamiento,
+                "cantidad" : cantidad,
+        }, function(data) {
+            alert("Pago completado");
+        });
+            }else{
+                alert("El campo cantidad solo debe contener números");
+            }
+        }
+    });
+    /* FIN CODIGO PARA AGREGAR PAGO */
 }); 

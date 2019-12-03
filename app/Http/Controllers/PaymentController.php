@@ -100,4 +100,22 @@ class PaymentController extends Controller
     
         return $datos;
     }
+    public function hacerPago(Request $request, Payment $payment){
+        $total = \App\Treatment::select('total')->where('id_treatment',$request['tratamiento'])->get();
+        foreach ($total as $t) {
+            $to = $t['total'];
+        }
+
+        $newTotal = intval($to) - intval($request['cantidad']);
+
+        $tratamiento = \App\Treatment::where('id_treatment',$request['tratamiento'])->update(['total'=>strval($newTotal)]);
+
+        $payment->treatment = $request['tratamiento'];
+        $payment->credit = $request['cantidad'];
+        $payment->delay = 0;
+        $payment->save();
+    
+        return "true";
+
+    }
 }
