@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				@foreach ($users as $user)
-                    <h5 class="text-info nombrePaciente" npaciente="{{$user->name}}" paciente="{{$user->id}}">Pacientes / Tratamientos <b>
+                    <h5 class="text-info nombrePaciente" npaciente="{{$user->name}}" paciente="{{$user->id}}">Pacientes / Citas <b>
                         {{$user->name}}</b>
                     </h5>
                 @endforeach
