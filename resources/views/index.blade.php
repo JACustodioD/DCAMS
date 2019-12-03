@@ -231,9 +231,9 @@
                    </span>
                    <hr id="separator-contacto">
                    <span>
-                        <a href=""><i class="fab fa-instagram  icon-contacto hvr-grow-rotate"></i> </a>  
-                        <a href=""><i class="fab fa-facebook-square icon-contacto hvr-grow-rotate"></i></a>
-                        <a href=""><i class="fab fa-twitter-square icon-contacto hvr-grow-rotate"></i> </a> 
+                        <a href="https://www.instagram.com"><i class="fab fa-instagram  icon-contacto hvr-grow-rotate"></i> </a>  
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook-square icon-contacto hvr-grow-rotate"></i></a>
+                        <a href="https://www.twitter.com"><i class="fab fa-twitter-square icon-contacto hvr-grow-rotate"></i> </a> 
                    </span>
                    <hr id="separator-contacto">
                    <span>

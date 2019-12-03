@@ -29,7 +29,7 @@
 				<p>{{ $message->phone }}</p>
 			</div>
 			<div class="col-md-2">
-				<p>{{ $message->date}} | {{ $message->hour }}</p>
+				<p>{{date('d-m-Y',strtotime($message->date)) }}| {{ $message->hour }}</p>
 			</div>
 			<div class="col-md-2">
 				<button class="btn btn-danger btnAtendio" mensaje="{{ $message->id}}" data-toggle="modal" data-target="#exampleModal">Atendido</button>
@@ -86,7 +86,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Marcar como atendido</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar mensaje</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

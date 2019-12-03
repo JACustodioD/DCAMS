@@ -23,6 +23,7 @@
             </div>
         </div>
         @foreach($dates as $date)
+        @if(strcmp($date->status,'Pendiente')==0)
         <div class="row">
             <div class="col-md-2">
                  <div class="form-group">
@@ -48,6 +49,7 @@
                   <button type="button" class="btn btn-danger btnCancelar" data-toggle="modal"  data-target="#cancelarcita" cita="{{$date->id_date}}">Cancelar cita</button>
             </div>
         </div>
+        @endif
         @endforeach
      </div>
  </div>

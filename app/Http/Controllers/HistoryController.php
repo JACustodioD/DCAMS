@@ -23,7 +23,7 @@ class HistoryController extends Controller
     }
     public function store(Request $request){
 
-    	for($i=0;$i<=27;$i++){
+    	for($i=0;$i<=28;$i++){
     		if ($request[$i] == 'si') {
     			$historia[] = $i;
     		}
@@ -46,7 +46,7 @@ class HistoryController extends Controller
       	$user->save();
 
 
-    	return redirect('/pacientes/home');
+    	return redirect('/pacientes/historiamedica');
 
 
     }

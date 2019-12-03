@@ -22,6 +22,7 @@
             <div class="row">
                
                 @foreach ($payments as $payment)
+                @if($payment->status)
                 <div class="col-md-4">
                      <div class="card" style="width: 18rem;">
                          <div class="card-body">
@@ -30,8 +31,9 @@
                           <ul class="list-group list-group-flush">
                              <li class="list-group-item"><b>Costo inicio:</b> $ {{$payment->cost}} </li>
                              <li class="list-group-item"><b>Restante:</b> ${{ $payment->total }}</li>
-                             <li class="list-group-item"><b>Liquidar antes de:</b> {{$payment->endDate}} </li>
-                             <li class="list-group-item"><b>Cantidad:</b> ${{$payment->id_treatment}} </li>
+                             <li class="list-group-item"><b>Liquidar antes de:</b> {{date('d-m-Y',strtotime($payment->endDate)) }} </li>
+                             
+                            <!-- <li class="list-group-item"><b>Cantidad:</b> ${{$payment->id_treatment}} </li>-->
                            
                           </ul>
                              <div class="card-body text-center">
@@ -41,7 +43,7 @@
                              </div>
                      </div>
                 </div>
-
+                  @endif
                 @endforeach
             </div>
         </div>
