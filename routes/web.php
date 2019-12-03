@@ -28,7 +28,7 @@ Auth::routes();
 //Rutas a las que puede accesar el administrador
 Route::group([
 	'middleware' => 'admin',
-	'prefix' => 'consultorio',
+	'prefix' => 'consultorio', 
 	
 ],function(){
 	Route::get('/home','MessageController@show');
@@ -36,9 +36,6 @@ Route::group([
 	Route::post('/tratamientos','TreatmentController@adminTratamientos' );
 	Route::post('/historialmedico','HistoryController@adminShow');
 	Route::post('/habilitarhistoria','HistoryController@habilitar');
-	Route::get('/historialdepagos', function(){
-		return view('admin.historialdepagos');
-	});
 	Route::post('/atendido','MessageController@update');
 	Route::post('/borrarmensaje','MessageController@destroy');
 	Route::post('/buscarusuario','AdminController@buscarPaciente');
@@ -51,10 +48,9 @@ Route::group([
 	Route::post('/agregartratamiento','TreatmentController@agregarTratamiento');
 	Route::post('/historialdepagos','PaymentController@adminpayments');
 	Route::post('/hacerpago','PaymentController@hacerPago');
-	Route::get('/citas',function(){
-		return view('admin.citas');
-	});
+	Route::post('/citas','DateController@citasUser');
 	Route::get('/miscitas', 'DateController@show');
+	Route::post('/cancelarcita','DateController@cancelarCita');
 });
 
 //Rutas a las que puede accesar el usuario

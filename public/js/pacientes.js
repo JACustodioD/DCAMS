@@ -18,7 +18,7 @@ $(document).ready(function(){
                             '<div class="col-md-4" >'+
                             '<div class="card border-primary mb-3">'+
                             '<div class="card">'+
-                            '<img src="/perfil/'+ data[i].image+'" class="card-img-top img-paciente mt-2">'+
+                            '<img src="/perfil/'+ data[i].image+'" class="card-img-top img-paciente mt-2" alt="foto-perfil">'+
                             '<div class="card-body">'+
                             '<div class="text-center">'+
                             '<h5 class="card-title text-primary">'+data[i].name+'</h5>'+
@@ -33,8 +33,11 @@ $(document).ready(function(){
                             '<input type="text" name="paciente" hidden value="'+data[i].id+'">'+
                             '<button class="btn btn-outline-secondary btn-block mb-1" patient="'+data[i].id+'" type="submit">Ver Historia médica</button>'+
                             '</form>'+
-                            '<button class="btn btn-outline-secondary  btn-block mb-1" patient="'+data[i].id+'">Crear nueva cita</button>'+
-                            '</div>'+
+                            '<form action="/consultorio/citas" method="POST">'+
+                            '<input type="text" name="_token" hidden value="'+token+'">'+
+                            '<input type="text" name="paciente" hidden value="'+data[i].id+'">'+
+                            '<button class="btn btn-outline-secondary  btn-block mb-1" patient="'+data[0].id+'" type="submit">Crear nueva cita</button>'+
+                            '</form>'+
                             ' <p class="text-danger card-link btnEliminarP" patient="'+data[i].id+'" data-toggle="modal" data-target="#exampleModal1"> Eliminar paciente</p>'+
                             '</div> </div> </div>');
                     }     
@@ -58,7 +61,7 @@ $(document).ready(function(){
                             '<div class="col-md-4 '+data[i].id+' cont-pacientes>'+
                             '<div class="card border-primary mb-3">'+
                             '<div class="card">'+
-                            '<img src="/perfil/'+ data[i].image+'" class="card-img-top img-paciente mt-2">'+
+                            '<img src="/perfil/'+ data[i].image+'" class="card-img-top img-paciente mt-2" alt="foto-perfil">'+
                             '<div class="card-body">'+
                             '<div class="text-center">'+
                             '<h5 class="card-title text-primary">'+data[i].name+'</h5>'+
@@ -73,8 +76,11 @@ $(document).ready(function(){
                             '<input type="text" name="paciente" hidden value="'+data[i].id+'">'+
                             '<button class="btn btn-outline-secondary btn-block mb-1" patient="'+data[i].id+'" type="submit">Ver Historia médica</button>'+
                             '</form>'+
-                            '<button class="btn btn-outline-secondary  btn-block mb-1" patient="'+data[i].id+'">Crear nueva cita</button>'+
-                            '</div>'+
+                            '<form action="/consultorio/citas" method="POST">'+
+                            '<input type="text" name="_token" hidden value="'+token+'">'+
+                            '<input type="text" name="paciente" hidden value="'+data[i].id+'">'+
+                            '<button class="btn btn-outline-secondary  btn-block mb-1" patient="'+data[0].id+'" type="submit">Crear nueva cita</button>'+
+                            '</form>'+
                             ' <p class="text-danger card-link btnEliminarP" patient="'+data[i].id+'" data-toggle="modal" data-target="#exampleModal1"> Eliminar paciente</p>'+
                             '</div> </div> </div>');
                     }

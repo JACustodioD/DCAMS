@@ -58,6 +58,18 @@ class DateController extends Controller
         return $date::join('users','user','id')->get();
     }
 
+    public function citasUser(Request $request){
+        return view('admin.citas',[
+            'users' => \App\User::where('id',$request['paciente'])->take(1)->get(),
+            'dates' => \App\Date::where('user',$request['paciente'])->orderBy('id_date','desc')->take(1)->get(),
+
+        ]);
+    }
+    public function cancelarCita(Request $request, Date $date){
+        $citas = $date::where('id_date',$request['cita'])->update(['status'=>'Cancelada','commentary' => $request['comentario']]);
+        return "true";
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

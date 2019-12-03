@@ -40,7 +40,11 @@
                                   <input type="text" name="paciente" hidden value="{{$patient->id}}">
                                   <button class="btn btn-outline-secondary btn-block mb-1" patient="{{$patient->id}}" type="submit">Ver Historia médica</button>
                                 </form>
-                                <button class="btn btn-outline-secondary  btn-block mb-1" patient="{{$patient->id}}">Crear nueva cita</button>
+                                <form action="/consultorio/citas" method="POST">
+                                  @csrf
+                                  <input type="text" name="paciente" hidden value="{{$patient->id}}">
+                                   <button class="btn btn-outline-secondary  btn-block mb-1" patient="{{$patient->id}}" type="submit">Crear nueva cita</button>
+                                </form>
                              </div>
                              <p class="text-danger card-link btnEliminarP" patient="{{$patient->id}}" data-toggle="modal" data-target="#exampleModal1"> Eliminar paciente</p>
                         </div>

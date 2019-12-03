@@ -4,7 +4,7 @@
 <div class="container mt-3">
 	<div class="paciente-trat">
 		<div class="row ">
-			<div class="col-md-8">
+			<div class="col-md-8"> 
 				@foreach ($users as $user)
                 <h5 class="text-info nombrePaciente" paciente="{{$user->id}}">Pacientes / Tratamientos <b>
                     {{$user->name}}</b>
