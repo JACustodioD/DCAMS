@@ -34,9 +34,8 @@ Route::group([
 	Route::get('/home','MessageController@show');
 	Route::get('/pacientes','AdminController@showPacientes');
 	Route::post('/tratamientos','TreatmentController@adminTratamientos' );
-	Route::get('/historialmedico', function(){
-		return view('admin.historialmedico');
-	});
+	Route::post('/historialmedico','HistoryController@adminShow');
+	Route::post('/habilitarhistoria','HistoryController@habilitar');
 	Route::get('/historialdepagos', function(){
 		return view('admin.historialdepagos');
 	});

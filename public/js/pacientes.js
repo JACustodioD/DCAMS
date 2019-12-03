@@ -28,7 +28,11 @@ $(document).ready(function(){
                             '<input type="text" name="paciente" hidden value="'+data[i].id+'">'+
                             '<button  class="btn btn-outline-secondary btn-block mb-1 btnTratamientos" type="submit">Ver tratamientos</button>'+
                             '</form>'+
-                            '<button class="btn btn-outline-secondary btn-block mb-1" patient="'+data[i].id+'">Ver Historia médica</button>'+
+                            '<form action="/consultorio/historialmedico" method="POST">'+
+                            '<input type="text" name="_token" hidden value="'+token+'">'+
+                            '<input type="text" name="paciente" hidden value="'+data[i].id+'">'+
+                            '<button class="btn btn-outline-secondary btn-block mb-1" patient="'+data[i].id+'" type="submit">Ver Historia médica</button>'+
+                            '</form>'+
                             '<button class="btn btn-outline-secondary  btn-block mb-1" patient="'+data[i].id+'">Crear nueva cita</button>'+
                             '</div>'+
                             ' <p class="text-danger card-link btnEliminarP" patient="'+data[i].id+'" data-toggle="modal" data-target="#exampleModal1"> Eliminar paciente</p>'+
@@ -64,7 +68,11 @@ $(document).ready(function(){
                             '<input type="text" name="paciente" hidden value="'+data[i].id+'">'+
                             '<button  class="btn btn-outline-secondary btn-block mb-1 btnTratamientos" type="submit">Ver tratamientos</button>'+
                             '</form>'+
-                            '<button class="btn btn-outline-secondary btn-block mb-1" patient="'+data[i].id+'">Ver Historia médica</button>'+
+                            '<form action="/consultorio/historialmedico" method="POST">'+
+                            '<input type="text" name="_token" hidden value="'+token+'">'+
+                            '<input type="text" name="paciente" hidden value="'+data[i].id+'">'+
+                            '<button class="btn btn-outline-secondary btn-block mb-1" patient="'+data[i].id+'" type="submit">Ver Historia médica</button>'+
+                            '</form>'+
                             '<button class="btn btn-outline-secondary  btn-block mb-1" patient="'+data[i].id+'">Crear nueva cita</button>'+
                             '</div>'+
                             ' <p class="text-danger card-link btnEliminarP" patient="'+data[i].id+'" data-toggle="modal" data-target="#exampleModal1"> Eliminar paciente</p>'+

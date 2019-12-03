@@ -25,7 +25,7 @@
              <div class="col-md-4 {{$patient->id}} cont-pacientes">
                  <div class="card border-primary mb-3">
                      <div class="card">
-                         <img src="/perfil/{{ $patient->image }}" class="card-img-top img-paciente mt-2">
+                         <img src="/perfil/{{ $patient->image }}" class="card-img-top img-paciente mt-2" alt="foto-perfil">
                         <div class="card-body">
                             <div class="text-center">
                                 <h5 class="card-title text-primary">{{ $patient->name }}</h5>
@@ -35,8 +35,11 @@
                                   <input type="text" name="paciente" hidden value="{{$patient->id}}">
                                    <button  class="btn btn-outline-secondary btn-block mb-1 btnTratamientos" type="submit">Ver tratamientos</button>
                                 </form>
-                               
-                                <button class="btn btn-outline-secondary btn-block mb-1" patient="{{$patient->id}}">Ver Historia médica</button>
+                                <form action="/consultorio/historialmedico" method="POST">
+                                   @csrf
+                                  <input type="text" name="paciente" hidden value="{{$patient->id}}">
+                                  <button class="btn btn-outline-secondary btn-block mb-1" patient="{{$patient->id}}" type="submit">Ver Historia médica</button>
+                                </form>
                                 <button class="btn btn-outline-secondary  btn-block mb-1" patient="{{$patient->id}}">Crear nueva cita</button>
                              </div>
                              <p class="text-danger card-link btnEliminarP" patient="{{$patient->id}}" data-toggle="modal" data-target="#exampleModal1"> Eliminar paciente</p>
