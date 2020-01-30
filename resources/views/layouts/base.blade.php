@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!--FONTS GOOGLE-->
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans|Raleway&display=swap" rel="stylesheet"> 
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <!--EFECTOS HOVER-->
@@ -31,13 +31,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup" >
-             <div class="navbar-nav d-flex justify-content-around" style="width: 100%">
-                 <a class="nav-item nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
-                 <a class="nav-item nav-link" href="#">Acerca de</a>
-                 <a class="nav-item nav-link" href="#">Tratamientos</a>
-                 <a class="nav-item nav-link" href="#">Promociones</a>
-                <a class="nav-item nav-link" href="#">Contácto</a>
-                <a class="nav-item nav-link" href="#">Mi cuenta</a>
+             <div class="navbar-nav d-flex justify-content-end" style="width: 100%">
+                
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Inicio <span class="sr-only">(current)</span></a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Acerca de</a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Tratamientos</a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Promociones</a>
+                <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Contácto</a>
+                <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Mi cuenta</a>
              </div>
          </div>
      </nav>   
@@ -45,14 +46,16 @@
 </header>
 <section>
     <div class="container-fluid ">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-2 d-flex justify-content-around">
+        <div class="row  d-flex align-items-center">
+            <div class="col-md-1 ">
                 <img src="/img/icono-dental.png" alt="icono-dental" width="100" height="100">
             </div>
-            <div class="col-md-4">
-                <h3 class="text-medic"><i class="fas fa-phone"></i>553-22-09 / 552-33-01</h3>
+            <div class="col-md-5">
+                    <h3 class="slogan">Creamos sonrísas</h3>
+                    <p class="slogan">Mejoramos tu vida</p>
             </div>
-            <div class="col-md-6 d-flex justify-content-around">
+            <div class="col-md-6 d-flex justify-content-end">
+                <h6 class="text-medic mr-1"><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
                 <i class="fab fa-twitter-square icon-head"></i>
                 <i class="fab fa-facebook-square icon-head"></i>
                 <i class="fab fa-instagram icon-head"></i>

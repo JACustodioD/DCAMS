@@ -8,7 +8,9 @@ body{
     background-repeat: no-repeat;
     background-size: 100vh;
 }
-
+.link-menu:hover{
+   color: white !important;
+}
 
 .icon-head{
     font-size: 2em;
@@ -22,7 +24,11 @@ body{
 .text-phone{
     margin-bottom: 0;
 }
-.icon-head:hover{
+.slogan{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 0;
+}
+.icon-head{
     color: #007bff;
 }
 
@@ -39,7 +45,7 @@ body{
     height: 100vh;
     object-fit: cover;
     filter: grayscale(20%);
-    opacity: 0.5;
+    opacity: 0.9
 }
 #carousel{
     position: relative;

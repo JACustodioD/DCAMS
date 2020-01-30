@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('content')
-<section class="container" id="main"  >
+<section class="container-fluid" id="main"  >
      <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
          <div class="carousel-inner">
              <div class="carousel-item active">
