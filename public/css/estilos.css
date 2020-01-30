@@ -1,19 +1,24 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+
 .fondo-mensaje{
     background-image: url('/img/fondo-mensaje.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100vh;
 }
-.header-container{
-background-image: url('/img/fondoheader.png');
-
+#letter-blue{
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+.link-menu:hover{
+   color: white !important;
 }
 
 .icon-head{
-    font-size: 1.8em;
+    font-size: 2em;
     margin-right: 5px;
     color: black;
 }
@@ -24,39 +29,28 @@ background-image: url('/img/fondoheader.png');
 .text-phone{
     margin-bottom: 0;
 }
-.icon-head:hover{
+.slogan{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 0;
+}
+.icon-head{
     color: #007bff;
 }
-.icono{
-    width: 150px;
-    height: 150px;
-}
 
-.menu{
-    height: 100%;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.1em;
+.menu-padding{
+    padding-right: 0;
+    padding-left: 0;
 }
-
-.menu-list{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-.menu  a{
-    list-style: none;
-    text-decoration: none;
-    color: black;
-}
-.nav-link{
-    color: black !important;
+.menu-margin{
+    margin-bottom:  0 !important;
+    padding: 8px !important;
 }
 
 #main .carousel-inner img{
     height: 100vh;
     object-fit: cover;
     filter: grayscale(20%);
-    opacity: 0.5;
+    opacity: 0.9
 }
 #carousel{
     position: relative;
