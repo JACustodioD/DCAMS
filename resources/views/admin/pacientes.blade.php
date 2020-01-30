@@ -29,7 +29,8 @@
                         <div class="card-body">
                             <div class="text-center">
                                 <h5 class="card-title text-primary">{{ $patient->name }}</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Paciente desde: {{ $patient->created_at }}</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">Paciente desde: {{date('d-m-Y',strtotime(Str::limit($patient->created_at,10,''))) }}</h6>
+
                                 <form action="/consultorio/tratamientos" method="POST">
                                   @csrf
                                   <input type="text" name="paciente" hidden value="{{$patient->id}}">

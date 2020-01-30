@@ -102,6 +102,7 @@
         aria-multiselectable="true">
         @if(sizeOf($treatments)>0)
           @foreach ($treatments as $treatment)
+          @if($treatment->status)
           <span hidden>{{$cont++}}</span>
           <!-- Accordion card -->
           <div class="card mb-4">
@@ -138,7 +139,9 @@
             </div>
           </div>
           <!-- /Accordion card -->
+          @endif
           @endforeach
+
         @else
         <div class="row">
            <div class="col-md-12 text-center">

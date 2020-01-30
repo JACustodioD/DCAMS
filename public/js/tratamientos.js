@@ -34,7 +34,7 @@ $(document).ready(function(){
               "endDate": endDate,
               "startDate": startDate,
               "user": user,
-            }, function(treatment) {
+            }, function(treatment) { 
               var contenido = ''+
                     '<div class="row '+treatment[0].id_treatment+'cont-tratamientos">'+
                     '<div class="col-md-6">'+

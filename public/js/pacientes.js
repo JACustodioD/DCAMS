@@ -22,7 +22,7 @@ $(document).ready(function(){
                             '<div class="card-body">'+
                             '<div class="text-center">'+
                             '<h5 class="card-title text-primary">'+data[i].name+'</h5>'+
-                            '<h6 class="card-subtitle mb-2 text-muted">Paciente desde: '+data[i].created_at +'</h6>'+
+                            '<h6 class="card-subtitle mb-2 text-muted">Paciente desde: '+data[i].created_at.substr(0,10)+'</h6>'+
                             '<form action="/consultorio/tratamientos" method="POST">'+
                             '<input type="text" name="_token" hidden value="'+token+'">'+
                             '<input type="text" name="paciente" hidden value="'+data[i].id+'">'+
@@ -65,7 +65,7 @@ $(document).ready(function(){
                             '<div class="card-body">'+
                             '<div class="text-center">'+
                             '<h5 class="card-title text-primary">'+data[i].name+'</h5>'+
-                            '<h6 class="card-subtitle mb-2 text-muted">Paciente desde: '+data[i].created_at +'</h6>'+
+                            '<h6 class="card-subtitle mb-2 text-muted">Paciente desde: '+data[i].created_at.substr(0,10) +'</h6>'+
                             '<form action="/consultorio/tratamientos" method="POST">'+
                             '<input type="text" name="_token" hidden value="'+token+'">'+
                             '<input type="text" name="paciente" hidden value="'+data[i].id+'">'+

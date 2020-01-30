@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				@foreach ($users as $user)
-                    <h5 class="text-info nombrePaciente" npaciente="{{$user->name}}" paciente="{{$user->id}}">Pacientes / Tratamientos <b>
+                    <h5 class="text-info nombrePaciente" npaciente="{{$user->name}}" paciente="{{$user->id}}">Pacientes / Citas <b>
                         {{$user->name}}</b>
                     </h5>
                 @endforeach
@@ -23,11 +23,12 @@
             </div>
         </div>
         @foreach($dates as $date)
+        @if(strcmp($date->status,'Pendiente')==0)
         <div class="row">
             <div class="col-md-2">
                  <div class="form-group">
                      <label for="exampleFormControlTextarea1">Fecha:</label>
-                        <p>{{$date->dateOfAppointment}}</p>
+                        <p>{{date('d-m-Y',strtotime($date->dateOfAppointment)) }}</p>
                  </div>
              </div>
              <div class="col-md-2">
@@ -48,6 +49,7 @@
                   <button type="button" class="btn btn-danger btnCancelar" data-toggle="modal"  data-target="#cancelarcita" cita="{{$date->id_date}}">Cancelar cita</button>
             </div>
         </div>
+        @endif
         @endforeach
      </div>
  </div>

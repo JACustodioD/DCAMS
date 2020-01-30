@@ -211,3 +211,15 @@ ul li a{
     font-weight: bold;
     padding: 15px;
 }
+
+.botoncito {
+    display:none;
+    padding:20px;
+    background: transparent;
+    font-size:30px;
+    color:#007bff;
+    cursor:pointer;
+    position: fixed;
+    bottom:20px;
+    right:20px;
+}

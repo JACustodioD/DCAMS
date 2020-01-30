@@ -18,7 +18,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>  
+    <script src="{{ asset('js/app.js') }}" defer></script> 
+    <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" /> 
     
 </head>
 <body >
@@ -87,23 +88,21 @@
                     <small><b>Navegación:</b></small>
                     <ul>
                         <li><a href="/citas"><small>Citas</small></a></li>
-                        <li><a href=""><small>Home</small></a></li>
-                        <li><a href=""><small>Acerca de</small></a></li>
-                        <li><a href=""><small>Tratamientos</small></a></li>
-                        <li><a href=""><small>Promociones</small></a></li>
-                        <li><a href=""><small>Contácto</small></a></li>
+                        <li><a href="/"><small>Inicio</small></a></li>
+                        <li><a href="/#acercade"><small>Acerca de</small></a></li>
+                        <li><a href="/#tratamientos"><small>Tratamientos</small></a></li>
+                        <li><a href="/#promociones"><small>Promociones</small></a></li>
+                        <li><a href="/#contacto"><small>Contácto</small></a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mt-3 mb-3 col-foot" style="border-right: 1px solid gainsboro;">
                     <small><b>Tratamientos:</b></small>
                     <ul>
-                        <li><a href="/tratamientos"><small>Limpieza dental</small></a></li>
-                        <li><a href="/tratamientos"><small>Blanqueamiento dental</small></a></li>
-                        <li><a href="/tratamientos"><small>Implantes</small></a></li>
-                        <li><a href="/tratamientos"><small>Diseño de sonrisa</small></a></li>
-                        <li><a href="/tratamientos"><small>Ortodoncia y endodoncia</small></a></li>
-                        <li><a href="/tratamientos"><small>Periodoncia</small></a></li>
-                        <li><a href="/tratamientos"><small>Resinas</small></a></li>
+                        <li><a href="/tratamientos#limpieza"><small>Limpieza dental</small></a></li>
+                        <li><a href="/tratamientos#blanqueamiento"><small>Blanqueamiento dental</small></a></li>
+                        <li><a href="/tratamientos#implantes"><small>Implantes</small></a></li>
+                        <li><a href="/tratamientos#sonrisa"><small>Diseño de sonrisa</small></a></li>
+                        <li><a href="/tratamientos#ortodoncia"><small>Ortodoncia y endodoncia</small></a></li>
                     </ul>
                 </div>
             </div>
@@ -118,11 +117,32 @@
             </div>
         </div>
      </footer>
+
+     <span class="botoncito"><i class="far fa-arrow-alt-circle-up"></i></span>
     <!--SCRIPTS-->
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/all.js"></script>
     <script src="/js/efecto.js"></script>
     @yield('script')
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.botoncito').click(function(){
+                $('body, html').animate({
+                    scrollTop: '0px'
+                }, 300);
+            });
+      
+          $(window).scroll(function(){
+            if( $(this).scrollTop() > 0 ){
+              $('.botoncito').slideDown(300);
+            } else {
+              $('.botoncito').slideUp(300);
+            }
+          });
+        });
+      
+</script>
+
 </body>
 </html>
