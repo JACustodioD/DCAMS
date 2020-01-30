@@ -53,14 +53,13 @@
                 <img src="/img/icono-dental.png" alt="icono-dental" width="100" height="100">
             </div>
             <div class="col-md-5">
-                    <h3 class="slogan">Creamos sonrísas</h3>
+                    <h3 class="slogan"> <strong id="letter-blue">C</strong>reamos sonrísas</h3>
                     <p class="slogan">Mejoramos tu vida</p>
             </div>
             <div class="col-md-6 d-flex justify-content-end">
-                
-                <i class="fab fa-twitter-square icon-head"></i>
-                <i class="fab fa-facebook-square icon-head"></i>
-                <i class="fab fa-instagram icon-head"></i>
+                <a href=""><i class="fab fa-twitter-square icon-head hvr-grow-rotate"></i></a>
+                <a href=""><i class="fab fa-facebook-square icon-head hvr-grow-rotate"></i></a>
+                <a href=""><i class="fab fa-instagram icon-head hvr-grow-rotate"></i></a>
             </div>
         </div>
     </div>
