@@ -21,64 +21,46 @@
     <script src="{{ asset('js/app.js') }}" defer></script>  
     
 </head>
-<body>
-<header class="container  mt-2" style="width: 100%">
-    <div class="header-container">
-        <div class="row ">
-            <div class="col-md-4 col-phone">
-                <h2 class="text-phone"> <i class="fas fa-phone"></i> 55229901 ext 02</h2>
-            </div>
-            <div class=" col-md-8 col-md-2 d-flex justify-content-end ">
-                <a href="/citas"><button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-calendar-alt"><b></i>Agendar cita</b></button></a>
-               <a href="/login"><button type="button" class="btn  btn-outline-primary btn-sesion"> <i class="fas fa-user"><b></i>Iniciar sesión</b></button></a>
-            </div>
-        </div>
+<body >
 
-        <!--SOCIAL RED-->
-        <div class="row  d-flex justify-content-between ">
-            <div class=" col-sm-4 col-md-3 name-doc">
-                <span><small>Dra. Amy Hernández Hernández <i class="fas fa-check"></i></small></span>
+<!--MENU PRINC-->
+<header>
+    <div class="container-fluid menu-padding">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded menu-margin ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup" >
+             <div class="navbar-nav d-flex justify-content-around" style="width: 100%">
+                 <a class="nav-item nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
+                 <a class="nav-item nav-link" href="#">Acerca de</a>
+                 <a class="nav-item nav-link" href="#">Tratamientos</a>
+                 <a class="nav-item nav-link" href="#">Promociones</a>
+                <a class="nav-item nav-link" href="#">Contácto</a>
+                <a class="nav-item nav-link" href="#">Mi cuenta</a>
+             </div>
+         </div>
+     </nav>   
+    </div>
+</header>
+<section>
+    <div class="container-fluid ">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-2 d-flex justify-content-around">
+                <img src="/img/icono-dental.png" alt="icono-dental" width="100" height="100">
             </div>
-            <div class="col-md-2 d-flex justify-content-end">
-                <a href="https://www.instagram.com"><i class="fab fa-instagram  icon-head hvr-grow-rotate"></i> </a>  
-                <a href="https://www.facebook.com"><i class="fab fa-facebook-square icon-head hvr-grow-rotate"></i></a>
-                <a href="https://www.twitter.com"><i class="fab fa-twitter-square icon-head hvr-grow-rotate"></i> </a>   
+            <div class="col-md-4">
+                <h3 class="text-medic"><i class="fas fa-phone"></i>553-22-09 / 552-33-01</h3>
             </div>
-        </div>
-        <!--MENU-->
-            <div class="col-md-12 col-menu">
-                <nav class="navbar navbar-expand-md navbar-light menu">
-                    <a class="navbar-brand" href="/"><img src="/img/icono-dental.png " class="icono" alt="logo"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse navbarNav" id="navbarNav">
-                      <ul class="navbar-nav menu-list">
-                        <li class="nav-item">
-                          <a class="nav-link hvr-underline-from-left" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link hvr-underline-from-left"  data-scroll href="/#acercade">Acerca de </a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link hvr-underline-from-left"  data-scroll href="/#tratamientos">Tratamientos</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link hvr-underline-from-left"  data-scroll href="/#promociones">Promociones</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link hvr-underline-from-left"  data-scroll href="/#contacto">Contácto</a>
-                          </li>
-                      </ul>
-                    </div>
-                  </nav>
+            <div class="col-md-6 d-flex justify-content-around">
+                <i class="fab fa-twitter-square icon-head"></i>
+                <i class="fab fa-facebook-square icon-head"></i>
+                <i class="fab fa-instagram icon-head"></i>
             </div>
         </div>
     </div>
-</header>
+</section>
 
-    
-   
      <!--Content-->
          @yield('content')
      <!-- /Content -->

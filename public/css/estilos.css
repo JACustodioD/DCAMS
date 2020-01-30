@@ -1,19 +1,17 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+
 .fondo-mensaje{
     background-image: url('/img/fondo-mensaje.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100vh;
 }
-.header-container{
-background-image: url('/img/fondoheader.png');
 
-}
 
 .icon-head{
-    font-size: 1.8em;
+    font-size: 2em;
     margin-right: 5px;
     color: black;
 }
@@ -27,29 +25,14 @@ background-image: url('/img/fondoheader.png');
 .icon-head:hover{
     color: #007bff;
 }
-.icono{
-    width: 150px;
-    height: 150px;
-}
 
-.menu{
-    height: 100%;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.1em;
+.menu-padding{
+    padding-right: 0;
+    padding-left: 0;
 }
-
-.menu-list{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-.menu  a{
-    list-style: none;
-    text-decoration: none;
-    color: black;
-}
-.nav-link{
-    color: black !important;
+.menu-margin{
+    margin-bottom:  0 !important;
+    padding: 8px !important;
 }
 
 #main .carousel-inner img{
