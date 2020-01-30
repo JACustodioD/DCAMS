@@ -32,7 +32,9 @@
             </button>
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup" >
              <div class="navbar-nav d-flex justify-content-end" style="width: 100%">
-                
+                <div class="d-flex justify-content-start" style="width: 50%;">
+                    <h6 class="text-medic mr-1"><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
+                </div>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Inicio <span class="sr-only">(current)</span></a>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Acerca de</a>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Tratamientos</a>
@@ -55,7 +57,7 @@
                     <p class="slogan">Mejoramos tu vida</p>
             </div>
             <div class="col-md-6 d-flex justify-content-end">
-                <h6 class="text-medic mr-1"><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
+                
                 <i class="fab fa-twitter-square icon-head"></i>
                 <i class="fab fa-facebook-square icon-head"></i>
                 <i class="fab fa-instagram icon-head"></i>
