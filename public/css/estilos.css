@@ -22,12 +22,18 @@ body{
     margin-right: 5px;
     color: black;
 }
-.btn-sesion{
-  margin: 3px;
+.caption-carou{
+    height: 100%;
 }
-
-.text-phone{
-    margin-bottom: 0;
+.text-sabermas{
+    height: inherit;
+    color: #007bff;
+}
+.sabermas{
+    color: white;
+}
+.link-saber{
+    text-decoration: none !important;
 }
 .slogan{
     font-family: 'Raleway', sans-serif;
