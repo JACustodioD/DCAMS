@@ -36,15 +36,15 @@
     </div>
 </section>
      <!--SECCION ACERCA DE-->
-     <section class="container">
-         <div class="about-section" id="acercade"  >
-             <div class="row">
-                 <div class="col-12 mt-3">
-                     <h1 class="text-about text-center display-4" >¿Por qué debería <strong>elegirnos</strong>?</h1>
-                 </div>
+<section class="container-fluid">
+     <div class="about-section" id="acercade"  >
+         <div class="row">
+             <div class="col-md-12 mt-3">
+                <h1 class="text-about text-center display-4" >¿Por qué debería elegirnos?</h1>
              </div>
+        </div>
              <div class="row">
-                 <div class="col-12">
+                 <div class="col-md-12">
                      <p class="text-center p-3 parrafo-about">Nuestra <b>misión</b> es brindar un servicio odontológico integral de calidad,
                         con una atención personalizada y en un ambiente agradable; poniendo a su disposición 
                         nuestros servicios especializados comprometiendonos con el bienestar y satisfacción de nuestros pacientes.</p>
@@ -83,7 +83,7 @@
                  </div>
              </div>
          </div>
-     </section>
+</section>
      <!--SECCION DE TRATAMIENTOS-->
      <section class="container" id="tratamientos">
         <div class="tratamientos-section">

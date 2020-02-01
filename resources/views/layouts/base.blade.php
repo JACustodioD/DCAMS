@@ -58,6 +58,7 @@
                     <p class="slogan">Mejoramos tu vida</p>
             </div>
             <div class="col-md-6 d-flex justify-content-end">
+                <p class="text-siguenos mr-2">Síguenos |  </p>
                 <a href=""><i class="fab fa-twitter-square icon-head hvr-grow-rotate"></i></a>
                 <a href=""><i class="fab fa-facebook-square icon-head hvr-grow-rotate"></i></a>
                 <a href=""><i class="fab fa-instagram icon-head hvr-grow-rotate"></i></a>
