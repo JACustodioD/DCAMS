@@ -36,87 +36,110 @@
     </div>
 </section>
      <!--SECCION ACERCA DE-->
-<section class="container-fluid">
+<section class="container-fluid" style="height: 100%">
      <div class="about-section" id="acercade"  >
+         <div style="height: 50%">
+
          <div class="row">
              <div class="col-md-12 mt-3">
                 <h1 class="text-about text-center display-4" >¿Por qué debería elegirnos?</h1>
              </div>
         </div>
-             <div class="row">
-                 <div class="col-md-12">
-                     <p class="text-center p-3 parrafo-about">Nuestra <b>misión</b> es brindar un servicio odontológico integral de calidad,
-                        con una atención personalizada y en un ambiente agradable; poniendo a su disposición 
-                        nuestros servicios especializados comprometiendonos con el bienestar y satisfacción de nuestros pacientes.</p>
-                        <hr id="separator">
-                 </div>
+         <div class="row">
+             <div class="col-md-12">
+                 <p class="text-center p-3 parrafo-about">Nuestra <b>misión</b> es brindar un servicio odontológico integral de calidad,
+                     con una atención personalizada y en un ambiente agradable; poniendo a su disposición 
+                     nuestros servicios especializados comprometiendonos con el bienestar y satisfacción de nuestros pacientes.</p>
+                     <hr id="separator">
              </div>
-             <div class="row mt-5">
+             </div>
+             <div class="row">
                 <div class="col-md-12">
                     <h3 class="text-center">¡A su servicio!</h3>
                  </div>
              </div>
-             <div class="row" style="margin-top: 120px;">
-                <div class="col-md-3">
-                    <figure class="text-center">
-                        <i class="fas fa-tooth about-icon"></i>
-                        <figcaption>Servicios odontológicos especializados.</figcaption>
-                    </figure>
+         </div>
+             <div style="height: 50%" class="d-flex align-items-center ">
+                <div class="row "  >
+                    <div class="col-md-3">
+                        <figure class="text-center">
+                            <i class="fas fa-tooth about-icon"></i>
+                            <figcaption>Servicios odontológicos especializados.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3">
+                        <figure class="text-center">
+                            <i class="fas fa-dollar-sign about-icon"></i>
+                            <figcaption>Presupuestos totalmente gratis y pagos accesibles.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3">
+                        <figure class="text-center">
+                            <i class="fas fa-teeth about-icon"></i>
+                            <figcaption>Diseñamos las mejores sonrisas, con los mejores servicios.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-3">
+                        <figure class="text-center">
+                            <i class="fas fa-thumbs-up about-icon"></i>
+                            <figcaption>Mejoramos tu calidad de vida.</figcaption>
+                        </figure>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                     <figure class="text-center">
-                         <i class="fas fa-dollar-sign about-icon"></i>
-                         <figcaption>Presupuestos totalmente gratis y pagos accesibles.</figcaption>
-                     </figure>
-                </div>
-                <div class="col-md-3">
-                     <figure class="text-center">
-                         <i class="fas fa-teeth about-icon"></i>
-                         <figcaption>Diseñamos las mejores sonrisas, con los mejores servicios.</figcaption>
-                     </figure>
-                 </div>
-                 <div class="col-md-3">
-                     <figure class="text-center">
-                         <i class="fas fa-thumbs-up about-icon"></i>
-                         <figcaption>Mejoramos tu calidad de vida.</figcaption>
-                     </figure>
-                 </div>
-             </div>
+            </div>
          </div>
 </section>
      <!--SECCION DE TRATAMIENTOS-->
-     <section class="container" id="tratamientos">
+     <section class="container-fluid" id="tratamientos">
         <div class="tratamientos-section">
-            <div class="row">
-                <div class="col-md-12 mt-3" id="tratamiento1">
-                    <h1 class="pl-4 title-tratamientos">Tratamientos para ti.</h1>
-                </div>
+            <div class="col-md-6">
+                    <form >
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="inputPassword4">Password</label>
+                                <input type="password" class="form-control" id="inputPassword4">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="inputAddress">Address</label>
+                              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="form-group">
+                              <label for="inputAddress2">Address 2</label>
+                              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="inputCity">City</label>
+                                <input type="text" class="form-control" id="inputCity">
+                              </div>
+                              <div class="form-group col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                  <option selected>Choose...</option>
+                                  <option>...</option>
+                                </select>
+                              </div>
+                              <div class="form-group col-md-2">
+                                <label for="inputZip">Zip</label>
+                                <input type="text" class="form-control" id="inputZip">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                  Check me out
+                                </label>
+                              </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                          </form>
             </div>
-            <div class="row pl-4">
-                <div class="col-md-6 col-tratamientos mt-2" id="tratamiento2">
-                     <a href="/tratamientos"><img src="/img/icono2.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Limpieza dental</span></a>
-                </div>
-            </div>
-            <div class="row pl-4">
-                <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento3">
-                     <a href="/tratamientos"><img src="/img/icono1.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Blanqueamiento dental</span></a>
-                </div>
-            </div>
-            <div class="row pl-4">
-                <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento4">
-                    <a href="/tratamientos"><img src="/img/icono3.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Implantes</span></a>
-                </div>
-            </div>
-            <div class="row pl-4">
-                <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento5">
-                    <a href="/tratamientos"> <img src="/img/icono4.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Diseño de sonrisa</span></a>
-                </div>
-            </div>
-            <div class="row pl-4">
-                <div class="col-md-6 mt-1 col-tratamientos" id="tratamiento6">
-                    <a href="/tratamientos"> <img src="/img/icono6.png" class="icon-tratamientos img-fluid" alt="limpieza-dental"> <span class="text-tratamientoss">Ortodoncia</span></a>
-               </div>
-            </div>    
         </div>
      </section>
        <!--PROMOCIONES-->
