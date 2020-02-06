@@ -36,8 +36,8 @@
     </div>
 </section>
      <!--SECCION ACERCA DE-->
-<section class="container-fluid" style="height: 100%">
-     <div class="about-section" id="acercade"  >
+<section class="container-fluid shadow-sm p-3 mb-1" style="height: 100%">
+     <div class="about-section" >
          <div class="desc-about">      
             <div class="row">
                 <div class="col-md-12 mt-3">
@@ -49,7 +49,7 @@
                     <p class="text-center p-3 parrafo-about">Nuestra <b>misión</b> es brindar un servicio odontológico integral de calidad,
                         con una atención personalizada y en un ambiente agradable; poniendo a su disposición 
                         nuestros servicios especializados comprometiendonos con el bienestar y satisfacción de nuestros pacientes.</p>
-                        <hr id="separator">
+                     <hr id="separator">
                 </div>
              </div>
              <div class="row">
@@ -88,96 +88,71 @@
          </div>
      </div>
 </section>
-     <!--SECCION DE TRATAMIENTOS-->
-     <section class="container-fluid" id="tratamientos">
-        <div class="tratamientos-section">
-            <div class="col-md-6 p-3">
-                <div class="card">
-                    <div class="card-body">
-                    <form class="" >
-                            <div class="form-row ">
-                              <div class="form-group col-md-12">
-                                <label for="inputEmail4"><span class="badge badge-primary">Nombre:</span></label>
-                                <input type="email" class="form-control" id="inputEmail4">
-                              </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group col-md-6 ">
-                                    <label for="inputPassword4">Correo:</label>
-                                    <input type="password" class="form-control" id="inputPassword4">
-                                </div>
-                                <div class="form-group col-md-6 ">
-                                    <label for="inputPassword4">Teléfono:</label>
-                                    <input type="password" class="form-control" id="inputPassword4">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                             <div class="form-group col-md-12">
-                                <label for="inputState">Tratamiento:</label>
-                                <select id="inputState" class="form-control">
-                                     <option selected>...</option>
-                                    <option>Limpieza dental</option>
-                                    <option>Diseño de sonrísa</option>
-                                    <option>Ortodoncia</option>
-                                    <option>Endodoncia</option>
-                                    <option>Implantes</option>
-                                </select>
-                             </div>   
-                            </div>
-                            <div class="form-row">
-                              <div class="form-group col-md-6">
-                                <label for="inputZip">Hora estimada:</label>
-                                <input type="time" class="form-control" id="inputZip">
-                              </div>
-                              <div class="form-group col-md-6">
-                                <label for="inputZip">Día estimado:</label>
-                                <input type="date" class="form-control" id="inputZip">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                  Check me out
-                                </label>
-                              </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Sign in</button>
-                          </form>
-                        </div>
-                    </div>
+     <!--SECCION DE AGENDAR CITA-->
+<section class="container-fluid bg-primary shadow-sm p-3 mb-1" style="height: 50%">
+     <div class="cita-section d-flex align-items-center justify-content-center">
+         <div class="row ">
+             <div class="col-md-12 mt-3 text-center">
+                <h3 class="pedir-cita ">Tú sonrísa es lo más importante | <strong>Contáctanos</strong></h3>
+                <button type="button" class="btn btn-outline-light">Agendar una cita | <i class="far fa-calendar"></i></button>
+             </div>
+         </div>
+     </div>
+ </section>
+       <!--TRATAMIENTOS-->
+<section class="container-fluid" id="promociones">
+    <div class="tratamientos-section">
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <h1 class="text-center text-about">Tratamientos</h1>
+                <hr id="separator1">
+                <p class="text-center">Contamos con los tratamientos especializados para ti</p>
             </div>
         </div>
-     </section>
-       <!--PROMOCIONES-->
-       <section class="container" id="promociones">
-        <div class="promociones" style="height: 100vh;" >
-            <div class="row">
-                <div class="col-md-12 mt-3">
-                    <h1 class="pl-4 text-section"> Promociones. </h1>
-                    <span class="pl-4" style="color: white;">Disfruta de nuestras promociones</span>
-                </div>
+        <div class="row ">
+            <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                <figure class="text-center">
+                    <img src="/img/iconot1.png" alt="" height="200" width="200">
+                    <figcaption > 
+                        <h5 class="text-center text-primary">Limpieza dental</h5>
+                    </figcaption>
+                    <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                    <button type="button" class="btn btn-outline-primary">Saber más</button>
+                </figure>   
             </div>
-            <div class="row mt-3">
-              <div class="col-md-4">
-                <img src="/img/image-promo.jpg" class=" pl-3 pb-3 img-fluid img-tratamientos" alt="" height="300px" width="330px">
-              </div>
-              <div class="col-md-4">
-                <img src="/img/image-promo1.jpg" class="pl-3 pb-3 img-fluid img-tratamientos" alt="" height="300px" width="330px"> 
+            <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                 <figure class="text-center">
+                     <img src="/img/iconot2.png" alt="" height="200" width="200">
+                     <figcaption > 
+                         <h5 class="text-center text-primary">Blanqueamiento dental</h5>
+                     </figcaption>
+                     <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                     <button type="button" class="btn btn-outline-primary">Saber más</button>
+                 </figure>   
              </div>
-             <div class="col-md-4 img-tratamientos">
-                <img src="/img/image-promo2.jpg" class="pl-3 pb-3 img-fluid "  alt="" height="300px" width="330px"> 
-             </div>
-            
-           </div>
-             <div class="row">
-                <div class="col-md-12" >
-                    <img src="/img/implante.gif"  class="implante" alt="implante-gif" width="100%" height="50%" >          
-                </div>
+             <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                <figure class="text-center">
+                    <img src="/img/iconot3.png" alt="" height="200" width="200">
+                    <figcaption > 
+                         <h5 class="text-center text-primary">Implantes</h5>
+                    </figcaption>
+                    <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                    <button type="button" class="btn btn-outline-primary">Saber más</button>
+                </figure>   
             </div>
-       </div>  
-     </section>
+            <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                 <figure class="text-center">
+                    <img src="/img/iconot4.png" alt="" height="200" width="200">
+                     <figcaption > 
+                        <h5 class="text-center text-primary">Diseño de sonrísa</h5>
+                    </figcaption>
+                    <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                    <button type="button" class="btn btn-outline-primary">Saber más</button>
+                 </figure>   
+             </div>
+        </div>
+    </div>
+</section>
    
      <!--SECCION DE CONTÁCTO-->
      <section class="container" id="contacto">

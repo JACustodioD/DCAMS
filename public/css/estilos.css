@@ -56,6 +56,9 @@ body{
     font-size: 0.8em;
     text-align: justify;
 }
+.pedir-cita{
+    color: white;
+}
 
 
 
@@ -64,8 +67,11 @@ body{
 
 /*--*/
 
-.about-section {
+.about-section  {
     height: 100vh;
+}
+.cita-section{
+    height: 30vh;
 }
 .text-about{
     text-shadow: 1px 1px  #606060;
@@ -85,6 +91,11 @@ body{
     width: 25%;
     height: 5px;
 }
+#separator1{
+    background-color: #007bff;
+    width: 10%;
+    height: 0.5px;
+}
 .about-icon{
     font-size: 4em;
     color: #007bff;
@@ -97,6 +108,9 @@ body{
     background-repeat: no-repeat
    
 }
+
+
+
 .icon-tratamientos{
     height: 100px;
     width:100px;
