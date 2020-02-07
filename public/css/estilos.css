@@ -105,6 +105,7 @@ body{
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
+    width: 100%;
     background-repeat: no-repeat
    
 }

@@ -41,7 +41,7 @@
          <div class="desc-about">      
             <div class="row">
                 <div class="col-md-12 mt-3">
-                    <h1 class="text-about text-center display-4" >¿Por qué debería elegirnos?</h1>
+                    <h1 class="text-about text-center " >¿Por qué debería elegirnos?</h1>
                 </div>
             </div>
             <div class="row">
@@ -88,20 +88,9 @@
          </div>
      </div>
 </section>
-     <!--SECCION DE AGENDAR CITA-->
-<section class="container-fluid bg-primary shadow-sm p-3 mb-1" style="height: 50%">
-     <div class="cita-section d-flex align-items-center justify-content-center">
-         <div class="row ">
-             <div class="col-md-12 mt-3 text-center">
-                <h3 class="pedir-cita ">Tú sonrísa es lo más importante | <strong>Contáctanos</strong></h3>
-                <button type="button" class="btn btn-outline-light">Agendar una cita | <i class="far fa-calendar"></i></button>
-             </div>
-         </div>
-     </div>
- </section>
        <!--TRATAMIENTOS-->
-<section class="container-fluid" id="promociones">
-    <div class="tratamientos-section">
+<section class="container-fluid tratamientos-section" id="promociones">
+    <div style="height: 100%">
         <div class="row">
             <div class="col-md-12 mt-3">
                 <h1 class="text-center text-about">Tratamientos</h1>
@@ -153,6 +142,18 @@
         </div>
     </div>
 </section>
+     <!--SECCION DE AGENDAR CITA-->
+ <section class="container-fluid bg-primary shadow-sm p-3 mb-1" style="height: 50%">
+    <div class="cita-section d-flex align-items-center justify-content-center">
+        <div class="row ">
+             <div class="col-md-12 mt-3 text-center">
+                 <h3 class="pedir-cita ">Tú sonrísa es lo más importante | <strong>Contáctanos</strong></h3>
+                 <button type="button" class="btn btn-outline-light">Agendar una cita | <i class="far fa-calendar"></i></button>
+             </div>
+         </div>
+     </div>
+ </section>
+
    
      <!--SECCION DE CONTÁCTO-->
      <section class="container" id="contacto">
