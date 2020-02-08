@@ -105,13 +105,28 @@ body{
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
-    width: 100%;
     background-repeat: no-repeat
    
 }
-
-
-
+.carousel-indicators .active{
+ background-color: #007bff !important;
+}
+.carousel-control-next-icon{
+    background-image: url('/img/arrowright.png') !important;
+    justify-content: end !important;
+}
+.carousel-control-prev-icon{
+    background-image: url('/img/arrowleft.png') !important;
+  
+}
+.carousel-control-next{
+    justify-content: end !important;
+    width: 5% !important;
+}
+.carousel-control-prev{
+    justify-content: start !important;
+    width: 5% !important;
+}
 .icon-tratamientos{
     height: 100px;
     width:100px;

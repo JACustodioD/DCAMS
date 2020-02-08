@@ -89,8 +89,8 @@
      </div>
 </section>
        <!--TRATAMIENTOS-->
-<section class="container-fluid tratamientos-section" id="promociones">
-    <div style="height: 100%">
+<section class="container-fluid tratamientos-section" id="promociones" style="height: 100%">
+    <div style="">
         <div class="row">
             <div class="col-md-12 mt-3">
                 <h1 class="text-center text-about">Tratamientos</h1>
@@ -98,48 +98,156 @@
                 <p class="text-center">Contamos con los tratamientos especializados para ti</p>
             </div>
         </div>
-        <div class="row ">
-            <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
-                <figure class="text-center">
-                    <img src="/img/iconot1.png" alt="" height="200" width="200">
-                    <figcaption > 
-                        <h5 class="text-center text-primary">Limpieza dental</h5>
-                    </figcaption>
-                    <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                    <button type="button" class="btn btn-outline-primary">Saber más</button>
-                </figure>   
-            </div>
-            <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
-                 <figure class="text-center">
-                     <img src="/img/iconot2.png" alt="" height="200" width="200">
-                     <figcaption > 
-                         <h5 class="text-center text-primary">Blanqueamiento dental</h5>
-                     </figcaption>
-                     <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                     <button type="button" class="btn btn-outline-primary">Saber más</button>
-                 </figure>   
-             </div>
-             <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
-                <figure class="text-center">
-                    <img src="/img/iconot3.png" alt="" height="200" width="200">
-                    <figcaption > 
-                         <h5 class="text-center text-primary">Implantes</h5>
-                    </figcaption>
-                    <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                    <button type="button" class="btn btn-outline-primary">Saber más</button>
-                </figure>   
-            </div>
-            <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
-                 <figure class="text-center">
-                    <img src="/img/iconot4.png" alt="" height="200" width="200">
-                     <figcaption > 
-                        <h5 class="text-center text-primary">Diseño de sonrísa</h5>
-                    </figcaption>
-                    <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                    <button type="button" class="btn btn-outline-primary">Saber más</button>
-                 </figure>   
-             </div>
-        </div>
+
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+             
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    
+                        <div class="row ">
+                                <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                                    <figure class="text-center">
+                                        <img src="/img/iconot1.png" alt="" height="200" width="200">
+                                        <figcaption > 
+                                            <h5 class="text-center text-primary">Limpieza dental</h5>
+                                        </figcaption>
+                                        <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                                        <button type="button" class="btn btn-outline-primary">Saber más</button>
+                                    </figure>   
+                                </div>
+                                <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                                     <figure class="text-center">
+                                         <img src="/img/iconot2.png" alt="" height="200" width="200">
+                                         <figcaption > 
+                                             <h5 class="text-center text-primary">Blanqueamiento dental</h5>
+                                         </figcaption>
+                                         <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                                         <button type="button" class="btn btn-outline-primary">Saber más</button>
+                                     </figure>   
+                                 </div>
+                                 <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                                    <figure class="text-center">
+                                        <img src="/img/iconot3.png" alt="" height="200" width="200">
+                                        <figcaption > 
+                                             <h5 class="text-center text-primary">Implantes</h5>
+                                        </figcaption>
+                                        <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                                        <button type="button" class="btn btn-outline-primary">Saber más</button>
+                                    </figure>   
+                                </div>
+                                <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                                     <figure class="text-center">
+                                        <img src="/img/iconot4.png" alt="" height="200" width="200">
+                                         <figcaption > 
+                                            <h5 class="text-center text-primary">Diseño de sonrísa</h5>
+                                        </figcaption>
+                                        <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                                        <button type="button" class="btn btn-outline-primary">Saber más</button>
+                                     </figure>   
+                                 </div>
+                            </div>
+
+                  </div>
+                  <div class="carousel-item">
+                        <div class="row ">
+                                <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                                    <figure class="text-center">
+                                        <img src="/img/iconot1.png" alt="" height="200" width="200">
+                                        <figcaption > 
+                                            <h5 class="text-center text-primary">Limpieza dental</h5>
+                                        </figcaption>
+                                        <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                                        <button type="button" class="btn btn-outline-primary">Saber más</button>
+                                    </figure>   
+                                </div>
+                                <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                                     <figure class="text-center">
+                                         <img src="/img/iconot2.png" alt="" height="200" width="200">
+                                         <figcaption > 
+                                             <h5 class="text-center text-primary">Blanqueamiento dental</h5>
+                                         </figcaption>
+                                         <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                                         <button type="button" class="btn btn-outline-primary">Saber más</button>
+                                     </figure>   
+                                 </div>
+                                 <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                                    <figure class="text-center">
+                                        <img src="/img/iconot3.png" alt="" height="200" width="200">
+                                        <figcaption > 
+                                             <h5 class="text-center text-primary">Implantes</h5>
+                                        </figcaption>
+                                        <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                                        <button type="button" class="btn btn-outline-primary">Saber más</button>
+                                    </figure>   
+                                </div>
+                                <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                                     <figure class="text-center">
+                                        <img src="/img/iconot4.png" alt="" height="200" width="200">
+                                         <figcaption > 
+                                            <h5 class="text-center text-primary">Diseño de sonrísa</h5>
+                                        </figcaption>
+                                        <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                                        <button type="button" class="btn btn-outline-primary">Saber más</button>
+                                     </figure>   
+                                 </div>
+                            </div>
+                  </div>
+                  <div class="carousel-item">
+                        <div class="row ">
+                                <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                                    <figure class="text-center">
+                                        <img src="/img/iconot1.png" alt="" height="200" width="200">
+                                        <figcaption > 
+                                            <h5 class="text-center text-primary">Limpieza dental</h5>
+                                        </figcaption>
+                                        <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                                        <button type="button" class="btn btn-outline-primary">Saber más</button>
+                                    </figure>   
+                                </div>
+                                <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                                     <figure class="text-center">
+                                         <img src="/img/iconot2.png" alt="" height="200" width="200">
+                                         <figcaption > 
+                                             <h5 class="text-center text-primary">Blanqueamiento dental</h5>
+                                         </figcaption>
+                                         <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                                         <button type="button" class="btn btn-outline-primary">Saber más</button>
+                                     </figure>   
+                                 </div>
+                                 <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                                    <figure class="text-center">
+                                        <img src="/img/iconot3.png" alt="" height="200" width="200">
+                                        <figcaption > 
+                                             <h5 class="text-center text-primary">Implantes</h5>
+                                        </figcaption>
+                                        <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                                        <button type="button" class="btn btn-outline-primary">Saber más</button>
+                                    </figure>   
+                                </div>
+                                <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
+                                     <figure class="text-center">
+                                        <img src="/img/iconot4.png" alt="" height="200" width="200">
+                                         <figcaption > 
+                                            <h5 class="text-center text-primary">Diseño de sonrísa</h5>
+                                        </figcaption>
+                                        <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
+                                        <button type="button" class="btn btn-outline-primary">Saber más</button>
+                                     </figure>   
+                                 </div>
+                            </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
     </div>
 </section>
      <!--SECCION DE AGENDAR CITA-->
