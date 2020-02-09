@@ -27,7 +27,7 @@
 <!--MENU PRINC-->
 <header>
     <div class="container-fluid menu-padding">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded menu-margin ">
+        <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded menu-margin ">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
