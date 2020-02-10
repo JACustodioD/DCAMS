@@ -27,21 +27,21 @@
 <!--MENU PRINC-->
 <header>
     <div class="container-fluid menu-padding">
-        <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded menu-margin ">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded menu-margin ">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup" >
              <div class="navbar-nav d-flex justify-content-end" style="width: 100%">
-                <div class="d-flex justify-content-start" style="width: 50%;">
-                    <h6 class="text-medic mr-1"><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
+                <div class="d-flex justify-content-start text-phone" style="width: 50%;">
+                    <h6 class="pl-3"><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
                 </div>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Inicio <span class="sr-only">(current)</span></a>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Acerca de</a>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Tratamientos</a>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Promociones</a>
-                <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Contácto</a>
-                <a class="nav-item nav-link hvr-bounce-to-bottom link-menu" href="#">Mi cuenta</a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Inicio <span class="sr-only">(current)</span></a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Acerca de</a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Tratamientos</a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Promociones</a>
+                <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Contácto</a>
+                <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Mi cuenta</a>
              </div>
          </div>
      </nav>   
@@ -50,14 +50,14 @@
 <section>
     <div class="container-fluid ">
         <div class="row  d-flex align-items-center">
-            <div class="col-md-1 ">
+            <div class="col-md-1 col-4  icon-dental">
                 <img src="/img/icono-dental.png" alt="icono-dental" width="100" height="100">
             </div>
-            <div class="col-md-5">
-                    <h3 class="slogan"> <strong id="letter-blue">C</strong>reamos sonrísas</h3>
-                    <p class="slogan">Mejoramos tu vida</p>
+            <div class="col-md-5 col-8 text-slogan">
+                    <h3 class="slogan pl-3"> <strong id="letter-blue">C</strong>reamos sonrísas</h3>
+                    <p class="slogan pl-3 ">Mejoramos tu vida</p>
             </div>
-            <div class="col-md-6 d-flex justify-content-end">
+            <div class="col-md-6 d-flex justify-content-end text-redes">
                 <p class="text-siguenos mr-2">Síguenos |  </p>
                 <a href=""><i class="fab fa-twitter-square icon-head hvr-grow-rotate"></i></a>
                 <a href=""><i class="fab fa-facebook-square icon-head hvr-grow-rotate"></i></a>

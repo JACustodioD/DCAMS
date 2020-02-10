@@ -8,12 +8,6 @@
         }
 }
 @media screen and (max-width:800px){
-    #main .carousel-inner img{
-        height: 55vh;
-    }
-    .text-cardh{
-        font-size: 1.3em;
-    }
     .text-slider, .text-about, .title-tratamientos, .text-section, .title-contacto{
         font-size: 2em;
        
@@ -50,6 +44,14 @@
     .promociones{
         height: 45vh !important;
     }
+    .text-slogan{
+        margin-left: auto;
+        text-align: center;
+    }
+    .text-phone{
+        width: 100% !important;
+    }
+ 
 }
 }
     
@@ -89,6 +91,17 @@
     .implante{
         display: none;
     }
+    .slogan, strong{
+        font-size: 1.3em !important;
+        text-align: unset;
+    
+    }
+    .text-slogan{
+        margin-left: 0;
+    }
+    .text-redes{
+        justify-content: center !important;
+    }
 }
 }
 @media screen and (max-width:375px){
@@ -122,7 +135,9 @@
     .text-slider{
        display: none;
     }
-    
+    .icon-tratamientos{
+        align
+    }
     #main .carousel-inner img{
         height: 130vh;
     }
@@ -142,6 +157,17 @@
     }
     .img-tratamientos{
         padding-left: !important;
+    }
+    .slogan, strong{
+        font-size: 1em !important;
+        text-align: unset;
+    
+    }
+    .text-slogan{
+        margin-left: 0;
+    }
+    .text-redes{
+        justify-content: center !important;
     }
 }
 
