@@ -375,7 +375,7 @@
      </div>
  </section>   
      <!--SECCION DE CONTÁCTO-->
-     <section class="container" id="contacto">
+     <section class="container-fluid" id="contacto">
         <div class="contacto" >
             <div class="row mt-5 mb-3">
                 <div class="col-md-6">
