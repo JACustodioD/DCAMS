@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!--FONTS GOOGLE-->
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans|Raleway&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans|Raleway&display=swap" rel="stylesheet">
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <!--EFECTOS HOVER-->
@@ -18,9 +18,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script> 
-    <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" /> 
-    
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" />
+
 </head>
 <body >
 
@@ -37,14 +37,14 @@
                     <h6 class="pl-3"><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
                 </div>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Inicio <span class="sr-only">(current)</span></a>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Acerca de</a>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Tratamientos</a>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Promociones</a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#about-section">Acerca de</a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#tratamientos">Tratamientos</a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#promaciones">Promociones</a>
                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Contácto</a>
-                <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Mi cuenta</a>
+                <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="/login">Mi cuenta</a>
              </div>
          </div>
-     </nav>   
+     </nav>
     </div>
 </header>
 <section>
@@ -70,15 +70,15 @@
      <!--Content-->
          @yield('content')
      <!-- /Content -->
-    
 
-     <footer class="container">
+
+     <footer class="container-fluid">
         <div class="foot">
             <div class="row">
                 <div class="col-md-4 mt-3 mb-3 col-foot">
                     <div class="text-justify">
                         <img src="/img/icono-dental.png" alt="" class="logo-foot"> <span><small><b>El consultorio AMY</b> <br>
-                            fue fundado por la doctora Amy Hernández Hernández y abrió sus puertas el 15 de marzo de 1994, 
+                            fue fundado por la doctora Amy Hernández Hernández y abrió sus puertas el 15 de marzo de 1994,
                             con el entusiasmo que puede tener una joven dentista que desea formar su propia empresa
                             y con una clara visión: conseguir que el consultorio se convirtiera en un miembro integrado
                             en cada familia, logrando ser el consultorio de referencia del barrio y de las familias que en el viven.
@@ -109,7 +109,7 @@
             </div>
         </div>
      </footer>
-     <footer class="container">
+     <footer class="container-fluid">
         <div class="subfoot">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -133,7 +133,7 @@
                     scrollTop: '0px'
                 }, 300);
             });
-      
+
           $(window).scroll(function(){
             if( $(this).scrollTop() > 0 ){
               $('.botoncito').slideDown(300);
@@ -142,7 +142,7 @@
             }
           });
         });
-      
+
 </script>
 
 </body>

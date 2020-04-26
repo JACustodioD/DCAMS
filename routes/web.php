@@ -20,6 +20,7 @@ Route::post('/cita','MessageController@store');
 Route::get('/message',function(){
 	return view('citas.mensajeCita');
 });
+Route::get('/test','Patient\HomeController@index');
 
 
 //Rutas de Autenticacion
@@ -28,8 +29,8 @@ Auth::routes();
 //Rutas a las que puede accesar el administrador
 Route::group([
 	'middleware' => 'admin',
-	'prefix' => 'consultorio', 
-	
+	'prefix' => 'consultorio',
+
 ],function(){
 	Route::get('/home','MessageController@show');
 	Route::get('/pacientes','AdminController@showPacientes');
@@ -58,13 +59,13 @@ Route::group([
 Route::group([
 	'middleware' => 'user',
 	'prefix' => 'pacientes',
-	
+
 ],function(){
-	Route::get('/home','TreatmentController@homeUser');
-	Route::post('/image','StorageController@save');
-	Route::get('/historiamedica','HistoryController@show');
-	Route::post('/historiamedica','HistoryController@store');
-	Route::get('/historialdepagos','PaymentController@show');
-	Route::post('/historialdepagos','PaymentController@payments');
+	Route::get('/home','Patient\HomeController@index');
+	Route::post('/image','Patient\StorageController@save');
+	Route::get('/historiamedica','Patient\HistoryController@show');
+	Route::post('/historiamedica','Patient\HistoryController@store');
+	Route::get('/historialdepagos','Patient\PaymentController@show');
+	Route::post('/historialdepagos','Patient\PaymentController@payments');
 
 });

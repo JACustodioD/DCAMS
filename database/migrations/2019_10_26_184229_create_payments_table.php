@@ -17,7 +17,7 @@ class CreatePaymentsTable extends Migration
             $table->bigIncrements('id_payment');
             $table->unsignedBigInteger('treatment');
             $table->double('credit');
-            $table->boolean('delay');
+            $table->string('observation');
             $table->foreign('treatment')->references('id_treatment')->on('treatments')->onDelete('cascade');
             $table->timestamps();
         });

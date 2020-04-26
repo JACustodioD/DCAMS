@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="container mt-5 cont-form">
-             <div class="row">    
+             <div class="row">
                 <div class="col-md-3">
                     <div class="profile-photo text-center">
                         <img src="/perfil/{{Auth::user()->image}}" alt="foto-perfil" width="100%" height="100%">
@@ -48,13 +48,18 @@
                     </form>
                 </div>
               </div>
-            
+
              <!--FORMULARIO-->
              <form class="mt-5">
                 <div class="form-row">
-                    <div class="form-group col-md-12">
+                  <div class="form-group col-md-4">
+                      <label for="name">Nombre de usuario:</label>
+                      <input type="text" class="form-control" id="name" disabled value="{{Auth::user()->userName}}">
+                   </div>
+
+                    <div class="form-group col-md-8">
                         <label for="name">Nombre completo:</label>
-                        <input type="text" class="form-control" id="name" disabled value="{{Auth::user()->name}}">
+                        <input type="text" class="form-control" id="name" disabled value="{{Auth::user()->fullName}}">
                      </div>
                  </div>
                  <div class="form-row">
@@ -80,9 +85,9 @@
                         <label for="pacient">Paciente desde:</label>
                         <input type="text" class="form-control" id="pacient" disabled value="{{Str::limit(Auth::user()->created_at,10,'')}}">
                      </div>
-                     
+
                  </div>
-                      
+
              </form>
         </div>
     </div>
@@ -102,7 +107,6 @@
         aria-multiselectable="true">
         @if(sizeOf($treatments)>0)
           @foreach ($treatments as $treatment)
-          @if($treatment->status)
           <span hidden>{{$cont++}}</span>
           <!-- Accordion card -->
           <div class="card mb-4">
@@ -113,7 +117,7 @@
                 aria-controls="collapse3{{$cont}}">
                 <i aria-hidden="true"></i>
                 <h4 class="text-uppercase white-text mb-0 py-3 mt-1 text-tratamientos ml-3"><i class="fas fa-tooth"></i>
-                  {{ $treatment->name}}
+                  {{ $treatment->serviceName}}
                 </h4>
               </a>
             </div>
@@ -123,7 +127,7 @@
               data-parent="#accordionEx5">
               <div class="card-body rgba-black-light white-text z-depth-1">
               	 <p class=" mb-0">
-                  Descripción del tratamiento: <b> {{$treatment->description}}</b>
+                  Descripción del tratamiento: <b> {{$treatment->serviceDescription}}</b>
                 </p>
                 <p class=" mb-0">
                   Este tratamiento tiene un costo de: <b> ${{$treatment->total}}</b>
@@ -134,12 +138,11 @@
                 <p class=" mb-0">
                   Fecha de finalización de tratamiento: <b> {{date('d-m-Y',strtotime($treatment->endDate)) }}</b>
                 </p>
-                  
+
               </div>
             </div>
           </div>
           <!-- /Accordion card -->
-          @endif
           @endforeach
 
         @else
@@ -148,7 +151,7 @@
               <figure class="figure">
                  <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
                   <figcaption class="figure-caption"> <h4 class="text-light text-ups"> <b> ¡UPS! </b> <br> Aún no tienes tratamientos.</h4>  </figcaption>
-               </figure>   
+               </figure>
            </div>
         </div>
 
@@ -161,8 +164,10 @@
 </div>
 <!-- Content -->
 </div>
-<!-- Card --> 
+<!-- Card -->
 </section>
+
+
 <section class="container" id="citas">
   <div class="citas">
     <div class="row">
@@ -184,17 +189,6 @@
       </div>
       @if(sizeOf($dates)>0)
         @foreach ($dates as $date)
-          @if(strcmp($date->status,'Pendiente')==0)
-              <div class="col-md-6">
-                  <div class="jumbotron">
-                      <h3>Próxima cita: {{date('d-m-Y',strtotime($date->dateOfAppointment))}}</h3>
-                      <p class="lead">Hora: {{ $date->hour }}</p>
-                      <p class="lead">Consulta: {{ $date->affair }}</p>
-                      <hr class="my-4">
-                      <p>Recuerde llegar con 15 minutos de anticipación a su cita.</p>
-                    </div>
-              </div>
-          @else
             <div class="col-md-6">
                   <div class="jumbotron">
                       <h3>Próxima cita: {{date('d-m-Y',strtotime($date->dateOfAppointment))}}</h3>
@@ -202,14 +196,17 @@
                       <p class="lead">Consulta: {{ $date->affair }}</p>
                       <hr class="my-4">
                       <p>Recuerde llegar con 15 minutos de anticipación a su cita.</p>
-                      @if(strcmp($date->status,'Cancelada')==0)
-                        <p class="text-danger"><b>{{$date->status}}: </b>{{$date->commentary}}</p>
-                      @else
-                        <p class="text-success"><b>{{$date->status}}: </b>{{$date->commentary}}</p>
+                      @if(strcmp($date->status,'Pendiente')!=0)
+
+                        @if(strcmp($date->status,'Cancelada')==0)
+                          <p class="text-danger"><b>{{$date->status}}: </b>{{$date->commentary}}</p>
+                        @else
+                          <p class="text-success"><b>{{$date->status}}: </b>{{$date->commentary}}</p>
+                        @endif
+
                       @endif
                     </div>
               </div>
-          @endif
         @endforeach
       @else
         <div class="row">
@@ -217,7 +214,7 @@
                 <figure class="figure">
                      <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="150" width="150">
                      <figcaption class="figure-caption"> <h3 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tienes citas médicas.</h3>  </figcaption>
-                 </figure>   
+                 </figure>
              </div>
         </div>
       @endif

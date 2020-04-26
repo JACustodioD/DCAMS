@@ -25,7 +25,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-        
+
     }
 
     /**
@@ -41,7 +41,7 @@ class MessageController extends Controller
             'telefono' => ['required','string','min:10','max:12'],
             'fecha' => ['required','date'],
             'hora' => ['required','string'],
-            'comentario' => ['required','string'],    
+            'comentario' => ['required','string'],
         ]);
 
         $message = new Message();
@@ -63,10 +63,10 @@ class MessageController extends Controller
      */
     public function show(Message $message){
         return view('admin.index',[
-            'messages' => \App\Message::where('status','Pendiente')->orderBy('date')->orderBy('hour')->get()
+            'messages' =>\App\Message::all() //\App\Message::where('status','Pendiente')->orderBy('date')->orderBy('hour')->get()
         ]);
     }
-    
+
 
     /**
      * Show the form for editing the specified resource.

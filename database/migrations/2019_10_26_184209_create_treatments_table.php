@@ -9,7 +9,7 @@ class CreateTreatmentsTable extends Migration
     /**
      * Run the migrations.
      *
-     * @return void 
+     * @return void
      */
     public function up()
     {
@@ -20,6 +20,8 @@ class CreateTreatmentsTable extends Migration
             $table->date('startDate');
             $table->date('endDate');
             $table->double('total');
+            $table->string('observations');
+            $table->string('treatmentStatus');
             $table->foreign('service')->references('id_service')->on('services')->onDelete('cascade');
             $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

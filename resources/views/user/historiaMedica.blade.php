@@ -1,5 +1,6 @@
 @extends('layouts.user')
 @section('content')
+<!--
 @if(Auth::user()->hisotria)
     <div class="container mt-5">
         <h4 class="text-primary">Ya ha completado su historial médico</h4>
@@ -8,23 +9,23 @@
                 <h5 class="text-info">Historia médica dental</h5>
                 @foreach ($padecimientos as $padecimiento)
                   @if (strcmp($padecimiento->category,'Dental')==0)
-                    <li>{{ $padecimiento->description }}</li>  
-                  @endif  
+                    <li>{{ $padecimiento->description }}</li>
+                  @endif
                 @endforeach <br>
                 <h5 class="text-info">Historia médica general</h5>
                 @foreach ($padecimientos as $padecimiento)
                   @if (strcmp($padecimiento->category,'General')==0)
-                    <li>{{ $padecimiento->description }}</li>  
-                  @endif  
+                    <li>{{ $padecimiento->description }}</li>
+                  @endif
                 @endforeach <br>
                 <h5 class="text-info">Observaciones</h5>
                 @foreach ($padecimientos as $padecimiento)
                   @if (strcmp($padecimiento->category,'Observaciones')==0)
-                    <li>{{ $padecimiento->description }}</li>  
-                  @endif  
+                    <li>{{ $padecimiento->description }}</li>
+                  @endif
                 @endforeach
             </ul>
-       </div> 
+       </div>
     </div>
 @else
 <div class="container mt-3">
@@ -39,10 +40,10 @@
                  <p>Por favor llene su historial médico, su salud es importante para nosotros.</p>
             </div>
         </div>
-      
+
     </div>
 </div>
-
+-->
 <div class="container">
     <div class="historia-dental">
         <form action="/pacientes/historiamedica" method="POST">
@@ -52,7 +53,7 @@
                     <th scope="col" colspan="2" class="text-primary"><h3>Historia dental</h3></th>
                     <th scope="col" class="text-primary"><h3>Si</h3></th>
                     <th scope="col" class="text-primary"><h3>No</h3></th>
-                 
+
                   </tr>
                 <tbody>
                     <tr>
@@ -61,7 +62,7 @@
                         <td>
                         	<div class="form-check">
                                 <input class="form-check-input" required type="radio" name="1" id="exampleRadios1" value="si" checked>
-                                <label class="form-check-label" for="exampleRadios1"> 
+                                <label class="form-check-label" for="exampleRadios1">
                                 </label>
                             </div>
                          </td>
@@ -77,7 +78,7 @@
                     <td>¿Son sensibles sus dientes a lo caliente, frió, o presión?</td>
                     <td><div class="form-check">
                             <input class="form-check-input" required type="radio" name="2" id="exampleRadios1" value="si" checked>
-                            <label class="form-check-label" for="exampleRadios3"> 
+                            <label class="form-check-label" for="exampleRadios3">
                             </label>
                         </div>
                      </td>
@@ -187,7 +188,7 @@
                             <td scope="col">¿Considera buena su salud actualmente?</td>
                             <td><div class="form-check">
                                     <input class="form-check-input" required type="radio" name="8" id="exampleRadios1" value="si" checked>
-                                    <label class="form-check-label" for="1"> 
+                                    <label class="form-check-label" for="1">
                                     </label>
                                 </div>
                              </td>
@@ -203,7 +204,7 @@
                         <td>¿Actualmente esta bajo el cuídado de algún médico?</td>
                         <td><div class="form-check">
                                 <input class="form-check-input" type="radio" name="9" id="exampleRadios1" value="si" checked>
-                                <label class="form-check-label" for="3"> 
+                                <label class="form-check-label" for="3">
                                 </label>
                             </div>
                          </td>
@@ -345,37 +346,37 @@
                      <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1" name="17" value="si">
                          <label class="form-check-label" for="exampleCheck1"> <small>Enfermedad cardiaca.</small> </label>
-                     </div>            
+                     </div>
                 </div>
                 <div class="col-md-2">
                     <div class="form-group form-check">
                          <input type="checkbox" class="form-check-input" id="exampleCheck1" name="18" value="si">
                          <label class="form-check-label" for="exampleCheck1"> <small>Enfermedad cardiovascular.</small> </label>
-                    </div>            
+                    </div>
                  </div>
                  <div class="col-md-2">
                      <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1"si name="19" value="si">
                          <label class="form-check-label" for="exampleCheck1"> <small>Presión arterial alta.</small> </label>
-                     </div>            
+                     </div>
                  </div>
                  <div class="col-md-2">
                      <div class="form-group form-check">
                          <input type="checkbox" class="form-check-input" id="exampleCheck1" name="20" value="si">
                          <label class="form-check-label" for="exampleCheck1"> <small>Anemia.</small> </label>
-                     </div>            
+                     </div>
                  </div>
                  <div class="col-md-2">
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1" name="21" value="si">
                         <label class="form-check-label" for="exampleCheck1"> <small>SIDA o VIH.</small> </label>
-                    </div>            
+                    </div>
                  </div>
                  <div class="col-md-2">
                     <div class="form-group form-check">
                          <input type="checkbox" class="form-check-input" id="exampleCheck1" name="22" value="si">
                          <label class="form-check-label" for="exampleCheck1"> <small>Asma.</small> </label>
-                     </div>            
+                     </div>
                  </div>
             </div>
             <div class="row">
@@ -383,37 +384,37 @@
                      <div class="form-group form-check">
                          <input type="checkbox" class="form-check-input" id="exampleCheck1" name="23" value="si">
                          <label class="form-check-label" for="exampleCheck1"> <small>Lupus eritematoso.</small> </label>
-                     </div>            
+                     </div>
                  </div>
              <div class="col-md-2">
                  <div class="form-group form-check">
                      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="24" value="si">
                      <label class="form-check-label" for="exampleCheck1"> <small>Efisema.</small> </label>
-                 </div>            
+                 </div>
               </div>
              <div class="col-md-2">
                  <div class="form-group form-check">
                      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="25" value="si">
                          <label class="form-check-label" for="exampleCheck1"> <small>Sinusitis.</small> </label>
-                 </div>            
+                 </div>
              </div>
              <div class="col-md-2">
                  <div class="form-group form-check">
                      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="26" value="si">
                          <label class="form-check-label" for="exampleCheck1"> <small>Hipertensión.</small> </label>
-                 </div>            
+                 </div>
              </div>
              <div class="col-md-2">
                  <div class="form-group form-check">
                      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="27" value="si">
                      <label class="form-check-label" for="exampleCheck1"> <small>Ulceras.</small> </label>
-                 </div>            
+                 </div>
               </div>
              <div class="col-md-2">
                  <div class="form-group form-check">
                      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="28" value="si">
                      <label class="form-check-label" for="exampleCheck1"> <small>Cáncer.</small> </label>
-                 </div>            
+                 </div>
              </div>
          </div>
          <div class="row d-flex justify-content-center mb-3">
@@ -425,5 +426,5 @@
  </div>
 </form>
 
-@endif
+<!-- @endif -->
 @endsection
