@@ -15,7 +15,9 @@ class CreateSfferingsTable extends Migration
     {
         Schema::create('sfferings', function (Blueprint $table) {
             $table->bigIncrements('id_sfferings');
-            $table->text('description');
+            $table->text('sfferingDescription');
+            $table->string('sfferingCategory');
+            $table->string('sfferingStatus');
             $table->timestamps();
         });
     }

@@ -16,9 +16,9 @@ class CreateStoriesTable extends Migration
         Schema::create('stories', function (Blueprint $table) {
             $table->bigIncrements('id_stories');
             $table->unsignedBigInteger('user');
-            $table->unsignedBigInteger('sffering');
+            $table->string('Category');
+            $table->string('historyStatus');
             $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('sffering')->references('id_sfferings')->on('sfferings')->onDelete('cascade');
             $table->timestamps();
 
         });

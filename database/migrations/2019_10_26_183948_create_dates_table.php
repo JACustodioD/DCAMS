@@ -19,7 +19,7 @@ class CreateDatesTable extends Migration
             $table->date('dateOfAppointment');
             $table->string('hour');
             $table->string('affair');
-            $table->string('status');
+            $table->string('dateStatus');
             $table->string('commentary');
             $table->foreign('user')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

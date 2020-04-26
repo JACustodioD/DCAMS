@@ -1,29 +1,36 @@
-INSERT INTO sfferings (description) values ('Sangrado de encias al lavar o usar hilo dental');
-INSERT INTO sfferings (description) values ('Sensibilidad a lo caliente, frío o presión');
-INSERT INTO sfferings (description) values ('Ha tenido tratamiento periodontal (en las encias)');
-INSERT INTO sfferings (description) values ('Presenta ulceras frecuentemente en la boca');
-INSERT INTO sfferings (description) values ('Usa dentaduras o dentaduras parciales');
-INSERT INTO sfferings (description) values ('Ha tenido una herida grave en la cabeza o en la boca');
-INSERT INTO sfferings (description) values ('Tiene molestias en la mandibula');
-INSERT INTO sfferings (description) values ('Considera que su salud es buena');
-INSERT INTO sfferings (description) values ('Actuamente esta bajo el cuidado de un tratamiento');
-INSERT INTO sfferings (description) values ('Le trataron o esta actualmente en tratamiento para la degeneración
-de huesos (osteoporosis), por medio de inyección');
-INSERT INTO sfferings (description) values ('Utiliza tabaco');
-INSERT INTO sfferings (description) values ('Consume alcohol');
-INSERT INTO sfferings (description) values ('Ha tenido un cambio de salud en el ultimo año');
-INSERT INTO sfferings (description) values ('Utiliza pildoras anticonceptivas o terapia hormonal');
-INSERT INTO sfferings (description) values ('Esta embarazada');
-INSERT INTO sfferings (description) values ('Esta dando a amamantar');
-INSERT INTO sfferings (description) values ('Enfermedad cardiaca');
-INSERT INTO sfferings (description) values ('Enfermedad cardiovascular');
-INSERT INTO sfferings (description) values ('Presion arterial alta');
-INSERT INTO sfferings (description) values ('Anemia');
-INSERT INTO sfferings (description) values ('SIDA o VIH');
-INSERT INTO sfferings (description) values ('Asma');
-INSERT INTO sfferings (description) values ('Lupus eritematoso');
-INSERT INTO sfferings (description) values ('Efisema');
-INSERT INTO sfferings (description) values ('Sinusitis');
-INSERT INTO sfferings (description) values ('Hipertensión');
-INSERT INTO sfferings (description) values ('Ulceras');
-INSERT INTO sfferings (description) values ('Cáncer');
+
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Sangrado de encias al lavar o usar hilo dental','hdental','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Sensibilidad a lo caliente, frío o presión','hdental','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Ha tenido tratamiento periodontal (en las encias)','hdental','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Presenta ulceras frecuentemente en la boca','hdental','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Usa dentaduras o dentaduras parciales','hdental','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Ha tenido una herida grave en la cabeza o en la boca','hdental','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Tiene molestias en la mandibula','hdental','Active');
+
+
+
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Considera que su salud es buena','hgeneral','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Actuamente esta bajo el cuidado de un tratamiento','hgeneral','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Le trataron o esta actualmente en tratamiento para la degeneración
+de huesos (osteoporosis), por medio de inyección','hgeneral','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Utiliza tabaco','hgeneral','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Consume alcohol','hgeneral','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Ha tenido un cambio de salud en el ultimo año','hgeneral','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Utiliza pildoras anticonceptivas o terapia hormonal','hgeneral','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Esta embarazada','hgeneral','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Esta dando a amamantar','hgeneral','Active');
+
+
+
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Enfermedad cardiaca','observ','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Enfermedad cardiovascular','observ','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Presion arterial alta','observ','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Anemia','observ','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('SIDA o VIH','observ','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Asma','observ','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Lupus eritematoso','observ','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Efisema','observ','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Sinusitis','observ','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Hipertensión','observ','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Ulceras','observ','Active');
+INSERT INTO sfferings (sfferingDescription,sfferingCategory,sfferingStatus) values ('Cáncer','observ','Active');
