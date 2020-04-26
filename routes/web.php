@@ -61,10 +61,13 @@ Route::group([
 	'prefix' => 'pacientes',
 
 ],function(){
-	Route::get('/home','Patient\HomeController@index');
+	Route::get('/','Patient\HomeController@index');
+
 	Route::post('/image','Patient\StorageController@save');
+
 	Route::get('/historiamedica','Patient\HistoryController@show');
 	Route::post('/historiamedica','Patient\HistoryController@store');
+
 	Route::get('/historialdepagos','Patient\PaymentController@show');
 	Route::post('/historialdepagos','Patient\PaymentController@payments');
 

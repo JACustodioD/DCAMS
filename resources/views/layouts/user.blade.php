@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!--FONTS GOOGLE-->
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <!--EFECTOS HOVER-->
@@ -30,7 +30,7 @@
 <body>
 <header class="container " style="width: 100%;">
     <div class="encabezado ">
-        <div class="row ">  
+        <div class="row ">
              <div class="col-md-12">
                  <nav class="navbar navbar-expand-md navbar-light menu">
                      <a class="navbar-brand" href="/"><img src="/img/icono-dental.png " class="icono" alt="logo"></a>
@@ -40,13 +40,13 @@
                          <div class="collapse navbar-collapse" id="navbarNav">
                              <ul class="navbar-nav menu-list">
                                 <li class="nav-item">
-                                  <a class="nav-link hvr-underline-from-center" href="/pacientes/home"><i class="fas fa-user icon-menu mr-1"></i>Home</a>
+                                  <a class="nav-link hvr-underline-from-center" href="/pacientes"><i class="fas fa-user icon-menu mr-1"></i>Home</a>
                                 </li>
                                 <li class="nav-item">
                                   <a class="nav-link hvr-underline-from-center" href="/pacientes/historiamedica"><i class="fas fa-notes-medical icon-menu mr-1"></i>Historia Médica</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link hvr-underline-from-center" href="historialdepagos"><i class="fas fa-dollar-sign icon-menu mr-1"></i>Historial de pagos</a>
+                                  <a class="nav-link hvr-underline-from-center" href="/pacientes/historialdepagos"><i class="fas fa-dollar-sign icon-menu mr-1"></i>Historial de pagos</a>
                                 </li>
                                 <li class="nav-item">
                                    <a class="nav-link hvr-underline-from-center" href="{{ route('logout') }}"
@@ -57,7 +57,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                               
+
                                 </li>
                               </ul>
                          </div>
@@ -77,7 +77,7 @@
 <span class="botoncito"><i class="far fa-arrow-alt-circle-up"></i></span>
 
 <script src="/js/calendar.js"></script>
-<script src="/js/all.js"></script>  
+<script src="/js/all.js"></script>
 @yield('script')
 <script type="text/javascript">
         $(document).ready(function(){
@@ -86,7 +86,7 @@
                     scrollTop: '0px'
                 }, 300);
             });
-      
+
           $(window).scroll(function(){
             if( $(this).scrollTop() > 0 ){
               $('.botoncito').slideDown(300);
@@ -95,7 +95,7 @@
             }
           });
         });
-      
+
 </script>
 
 </body>

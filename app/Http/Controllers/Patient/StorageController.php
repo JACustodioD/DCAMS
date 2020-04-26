@@ -13,22 +13,27 @@ class StorageController extends Controller{
 
 
     public function save(Request $request){
-        $data = $request->validate([
-            'perfil' =>['required','image',],
-        ]);
+      
+      $data = $request->validate([
+        'perfil' =>['required','image',],
+      ]);
 
+      if(Auth::user()->image){
+        $path = Storage::disk('local')->delete(Auth::user()->image);
+      }
 
       $file = $request->file('perfil');
-      $nombre = $file->getClientOriginalName();
-      $path = Storage::disk('local')->put($nombre,$request->file('perfil'));
+      $fileName = Auth::user()->userName;
+      $path = Storage::disk('local')->put($fileName,$file);
 
 
 
     	$user = new User();
-		  $u = $user::where('id',Auth::user()->id)->take(1)->get();
 
-      foreach ($u as $t) {
-        $user = $t;
+		  $userList = $user::where('id',Auth::user()->id)->take(1)->get();
+
+      foreach ($userList as $userInfo) {
+        $user = $userInfo;
       }
       $user->image = $path;
       $user->save();

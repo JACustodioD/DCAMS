@@ -13,7 +13,7 @@ class CreateRecordsHistoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('records_history', function (Blueprint $table) {
+        Schema::create('records_histories', function (Blueprint $table) {
           $table->bigIncrements('id_records');
           $table->unsignedBigInteger('sfferings');
           $table->unsignedBigInteger('stories');

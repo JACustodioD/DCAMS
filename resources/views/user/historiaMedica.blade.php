@@ -1,27 +1,27 @@
 @extends('layouts.user')
 @section('content')
-<!--
-@if(Auth::user()->hisotria)
+
+@if(Auth::user()->history)
     <div class="container mt-5">
         <h4 class="text-primary">Ya ha completado su historial médico</h4>
        <div class="shadow p-3 mb-5 bg-white rounded">
             <ul>
                 <h5 class="text-info">Historia médica dental</h5>
-                @foreach ($padecimientos as $padecimiento)
-                  @if (strcmp($padecimiento->category,'Dental')==0)
-                    <li>{{ $padecimiento->description }}</li>
+                @foreach ($historyList as $history)
+                  @if (strcmp($history->sfferingCategory,'hdental')==0)
+                    <li>{{ $history->sfferingDescription }}</li>
                   @endif
                 @endforeach <br>
                 <h5 class="text-info">Historia médica general</h5>
-                @foreach ($padecimientos as $padecimiento)
-                  @if (strcmp($padecimiento->category,'General')==0)
-                    <li>{{ $padecimiento->description }}</li>
+                @foreach ($historyList as $history)
+                  @if (strcmp($history->sfferingCategory,'hgeneral')==0)
+                    <li>{{ $history->sfferingDescription }}</li>
                   @endif
                 @endforeach <br>
                 <h5 class="text-info">Observaciones</h5>
-                @foreach ($padecimientos as $padecimiento)
-                  @if (strcmp($padecimiento->category,'Observaciones')==0)
-                    <li>{{ $padecimiento->description }}</li>
+                @foreach ($historyList as $history)
+                  @if (strcmp($history->sfferingCategory,'observ')==0)
+                    <li>{{ $history->sfferingDescription }}</li>
                   @endif
                 @endforeach
             </ul>
@@ -43,7 +43,6 @@
 
     </div>
 </div>
--->
 <div class="container">
     <div class="historia-dental">
         <form action="/pacientes/historiamedica" method="POST">
@@ -56,119 +55,27 @@
 
                   </tr>
                 <tbody>
+
+                  @foreach ($dentalList as $dentalInfo)
                     <tr>
-                        <th scope="row" class="text-primary">A</th>
-                        <td scope="col">¿Le sangran sus encías cuando se cepilla o cuando usa hilo dental?</td>
+                        <th scope="row" class="text-primary">{{ $item ++}}</th>
+                        <td scope="col">¿{{ $dentalInfo->sfferingDescription }}?</td>
                         <td>
                         	<div class="form-check">
-                                <input class="form-check-input" required type="radio" name="1" id="exampleRadios1" value="si" checked>
+                                <input class="form-check-input" required type="radio" name="{{ $dentalInfo->id_sfferings }}" id="exampleRadios1" value="si" checked>
                                 <label class="form-check-label" for="exampleRadios1">
                                 </label>
                             </div>
                          </td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="1" id="exampleRadios2" value="no" checked>
+                        <td>
+                          <div class="form-check">
+                                <input class="form-check-input" required type="radio" name="{{ $dentalInfo->id_sfferings }}" id="exampleRadios2" value="no" checked>
                                 <label class="form-check-label" for="exampleRadios2">
                                 </label>
                             </div>
                          </td>
                     </tr>
-                  <tr>
-                    <th scope="row" class="text-primary">B</th>
-                    <td>¿Son sensibles sus dientes a lo caliente, frió, o presión?</td>
-                    <td><div class="form-check">
-                            <input class="form-check-input" required type="radio" name="2" id="exampleRadios1" value="si" checked>
-                            <label class="form-check-label" for="exampleRadios3">
-                            </label>
-                        </div>
-                     </td>
-                     <td><div class="form-check">
-                            <input class="form-check-input" required type="radio" name="2" id="exampleRadios2" value="no" checked>
-                            <label class="form-check-label" for="exampleRadios4">
-                            </label>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="text-primary">C</th>
-                    <td>¿Ha tenido tratamiento periodontal (en las encías)?</td>
-                    <td><div class="form-check">
-                            <input class="form-check-input" required type="radio" name="3" id="exampleRadios2" value="si" checked>
-                            <label class="form-check-label" for="exampleRadios5">
-                            </label>
-                        </div>
-                     </td>
-                     <td><div class="form-check">
-                            <input class="form-check-input" required type="radio" name="3" id="exampleRadios2" value="no" checked>
-                            <label class="form-check-label" for="exampleRadios6">
-                            </label>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="text-primary">D</th>
-                    <td>¿Le salen ulceras frecuentemente en su boca?</td>
-                    <td><div class="form-check">
-                            <input class="form-check-input"  required type="radio" name="4" id="exampleRadios2" value="si" checked>
-                            <label class="form-check-label" for="exampleRadios7">
-                            </label>
-                        </div>
-                     </td>
-                     <td><div class="form-check">
-                            <input class="form-check-input" required type="radio" name="4" id="exampleRadios2" value="no" checked>
-                            <label class="form-check-label" for="exampleRadios8">
-                            </label>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="text-primary">E</th>
-                    <td>¿Usted usa dentaduras o dentaduras parciales?</td>
-                    <td><div class="form-check">
-                            <input class="form-check-input" required type="radio" name="5" id="exampleRadios2" value="si" checked>
-                            <label class="form-check-label" for="exampleRadios9">
-                            </label>
-                        </div>
-                     </td>
-                     <td><div class="form-check">
-                            <input class="form-check-input"  required type="radio" name="5" id="exampleRadios2" value="no" checked>
-                            <label class="form-check-label" for="exampleRadios10">
-                            </label>
-                        </div>
-                     </td>
-                 </tr>
-                 <tr>
-                    <th scope="row" class="text-primary">F</th>
-                    <td>¿Ha tenido una herida grave en su cabeza o boca?</td>
-                    <td><div class="form-check">
-                            <input class="form-check-input" required type="radio" name="6" id="exampleRadios2" value="si" checked >
-                            <label class="form-check-label" for="exampleRadios11">
-                            </label>
-                        </div>
-                     </td>
-                     <td><div class="form-check">
-                            <input class="form-check-input" required type="radio" name="6" id="exampleRadios2" value="no" checked>
-                            <label class="form-check-label" for="exampleRadios12">
-                            </label>
-                        </div>
-                     </td>
-                 </tr>
-                 <tr>
-                    <th scope="row" class="text-primary">G</th>
-                    <td>¿Tiene molestias en su mandibula?</td>
-                    <td><div class="form-check">
-                            <input class="form-check-input" required type="radio" name="7" id="exampleRadios2" value="si" checked>
-                            <label class="form-check-label" for="exampleRadios13">
-                            </label>
-                        </div>
-                     </td>
-                     <td><div class="form-check">
-                            <input class="form-check-input" required type="radio" name="7" id="exampleRadios2" value="no" checked>
-                            <label class="form-check-label" for="exampleRadios14">
-                            </label>
-                        </div>
-                     </td>
-                 </tr>
+                    @endforeach
                 </tbody>
          </table>
     </div>
@@ -183,150 +90,25 @@
                         <th scope="col" class="text-info"><h3>No</h3></th>
                       </tr>
                     <tbody>
+                      @foreach ($generalList as $generalInfo)
                         <tr>
-                            <th scope="row" class="text-info">A</th>
-                            <td scope="col">¿Considera buena su salud actualmente?</td>
-                            <td><div class="form-check">
-                                    <input class="form-check-input" required type="radio" name="8" id="exampleRadios1" value="si" checked>
-                                    <label class="form-check-label" for="1">
+                            <th scope="row" class="text-primary">{{ $item ++}}</th>
+                            <td scope="col">¿{{ $generalInfo->sfferingDescription }}?</td>
+                            <td>
+                            	<div class="form-check">
+                                    <input class="form-check-input" required type="radio" name="{{ $generalInfo->id_sfferings }}" id="exampleRadios1" value="si" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
                                     </label>
                                 </div>
                              </td>
                             <td><div class="form-check">
-                                    <input class="form-check-input" required type="radio" name="8" id="exampleRadios2" value="no" checked>
-                                    <label class="form-check-label" for="2">
+                                    <input class="form-check-input" required type="radio" name="{{ $generalInfo->id_sfferings }}" id="exampleRadios2" value="no" checked>
+                                    <label class="form-check-label" for="exampleRadios2">
                                     </label>
                                 </div>
                              </td>
                         </tr>
-                      <tr>
-                        <th scope="row" class="text-info">B</th>
-                        <td>¿Actualmente esta bajo el cuídado de algún médico?</td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" type="radio" name="9" id="exampleRadios1" value="si" checked>
-                                <label class="form-check-label" for="3">
-                                </label>
-                            </div>
-                         </td>
-                         <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="9" id="exampleRadios2" value="si" checked>
-                                <label class="form-check-label" for="4">
-                                </label>
-                            </div>
-                         </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-info">C</th>
-                        <td>¿Le trataron o esta actualmente en tratamiento para la degeneración <br> de huesos (osteoporosis), por medio de inyección?</td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="10" id="exampleRadios2" value="si" checked>
-                                <label class="form-check-label" for="5">
-                                </label>
-                            </div>
-                         </td>
-                         <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="10" id="exampleRadios2" value="no" checked>
-                                <label class="form-check-label" for="6">
-                                </label>
-                            </div>
-                         </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-info">D</th>
-                        <td>¿Utiliza tabaco?</td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="11" id="exampleRadios2" value="si" checked>
-                                <label class="form-check-label" for="7">
-                                </label>
-                            </div>
-                         </td>
-                         <td><div class="form-check">
-                                <input class="form-check-input" type="radio" name="11" id="exampleRadios2" value="no" checked>
-                                <label class="form-check-label" for="8">
-                                </label>
-                            </div>
-                         </td>
-                      </tr>
-                      <tr>
-                        <th scope="row" class="text-info">E</th>
-                        <td>¿Utiliza alcohol?</td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="12" id="exampleRadios2" value="si" checked>
-                                <label class="form-check-label" for="9">
-                                </label>
-                            </div>
-                         </td>
-                         <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="12" id="exampleRadios2" value="no" checked>
-                                <label class="form-check-label" for="10">
-                                </label>
-                            </div>
-                         </td>
-                     </tr>
-                     <tr>
-                        <th scope="row" class="text-info">F</th>
-                        <td>¿Ha habido algún cambio general en su salud en el ultimo año?</td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="13" id="exampleRadios2" value="si" checked>
-                                <label class="form-check-label" for="11">
-                                </label>
-                            </div>
-                         </td>
-                         <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="13" id="exampleRadios2" value="no" checked>
-                                <label class="form-check-label" for="12">
-                                </label>
-                            </div>
-                         </td>
-                     </tr>
-                     <tr>
-                        <th scope="row" class="text-info">G</th>
-                        <td><b>Para mujeres</b> ¿Utiliza pildoras anticonceptivas o terapia hormonal?</td>
-                        <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="14" id="exampleRadios2" value="si" checked>
-                                <label class="form-check-label" for="13">
-                                </label>
-                            </div>
-                         </td>
-                         <td><div class="form-check">
-                                <input class="form-check-input" required type="radio" name="14" id="exampleRadios2" value="no" checked>
-                                <label class="form-check-label" for="14">
-                                </label>
-                            </div>
-                         </td>
-                     </tr>
-                     <tr>
-                        <th scope="row" class="text-info">H</th>
-                            <td><b>Para mujeres</b> ¿Esta embarazada?</td>
-                            <td><div class="form-check">
-                                    <input class="form-check-input" required type="radio" name="15" id="exampleRadios2" value="si" checked>
-                                    <label class="form-check-label" for="15">
-                                    </label>
-                                </div>
-                             </td>
-                             <td><div class="form-check">
-                                    <input class="form-check-input" required type="radio" name="15" id="exampleRadios2" value="no" checked>
-                                    <label class="form-check-label" for="16">
-                                    </label>
-                                </div>
-                             </td>
-                     </tr>
-                     <tr>
-                            <th scope="row" class="text-info">I</th>
-                                <td><b>Para mujeres</b> ¿Esta dando de amamantar?</td>
-                                <td><div class="form-check">
-                                        <input class="form-check-input" required type="radio" name="16" id="exampleRadios2" value="si">
-                                        <label class="form-check-label" for="17">
-                                        </label>
-                                    </div>
-                                 </td>
-                                 <td><div class="form-check">
-                                        <input class="form-check-input" required type="radio" name="16" id="exampleRadios2" value="no" checked>
-                                        <label class="form-check-label" for="18">
-                                        </label>
-                                    </div>
-                                 </td>
-                         </tr>
+                        @endforeach
                     </tbody>
              </table>
         </div>
@@ -340,91 +122,25 @@
                     <p>Marque cuales de los siguientes padecimientos tiene:</p>
                 </div>
             </div>
-            <hr width="100%">
+          <hr width="100%">
             <div class="row">
+              @foreach ($observList as $observ)
                 <div class="col-md-2">
                      <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="17" value="si">
-                         <label class="form-check-label" for="exampleCheck1"> <small>Enfermedad cardiaca.</small> </label>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="{{ $observ->id_sfferings }}" value="si">
+                         <label class="form-check-label" for="exampleCheck1"> <small>{{ $observ->sfferingDescription }}</small> </label>
                      </div>
                 </div>
-                <div class="col-md-2">
-                    <div class="form-group form-check">
-                         <input type="checkbox" class="form-check-input" id="exampleCheck1" name="18" value="si">
-                         <label class="form-check-label" for="exampleCheck1"> <small>Enfermedad cardiovascular.</small> </label>
-                    </div>
-                 </div>
-                 <div class="col-md-2">
-                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1"si name="19" value="si">
-                         <label class="form-check-label" for="exampleCheck1"> <small>Presión arterial alta.</small> </label>
-                     </div>
-                 </div>
-                 <div class="col-md-2">
-                     <div class="form-group form-check">
-                         <input type="checkbox" class="form-check-input" id="exampleCheck1" name="20" value="si">
-                         <label class="form-check-label" for="exampleCheck1"> <small>Anemia.</small> </label>
-                     </div>
-                 </div>
-                 <div class="col-md-2">
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="21" value="si">
-                        <label class="form-check-label" for="exampleCheck1"> <small>SIDA o VIH.</small> </label>
-                    </div>
-                 </div>
-                 <div class="col-md-2">
-                    <div class="form-group form-check">
-                         <input type="checkbox" class="form-check-input" id="exampleCheck1" name="22" value="si">
-                         <label class="form-check-label" for="exampleCheck1"> <small>Asma.</small> </label>
-                     </div>
-                 </div>
+                @endforeach
             </div>
-            <div class="row">
-                 <div class="col-md-2">
-                     <div class="form-group form-check">
-                         <input type="checkbox" class="form-check-input" id="exampleCheck1" name="23" value="si">
-                         <label class="form-check-label" for="exampleCheck1"> <small>Lupus eritematoso.</small> </label>
-                     </div>
-                 </div>
-             <div class="col-md-2">
-                 <div class="form-group form-check">
-                     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="24" value="si">
-                     <label class="form-check-label" for="exampleCheck1"> <small>Efisema.</small> </label>
-                 </div>
-              </div>
-             <div class="col-md-2">
-                 <div class="form-group form-check">
-                     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="25" value="si">
-                         <label class="form-check-label" for="exampleCheck1"> <small>Sinusitis.</small> </label>
-                 </div>
-             </div>
-             <div class="col-md-2">
-                 <div class="form-group form-check">
-                     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="26" value="si">
-                         <label class="form-check-label" for="exampleCheck1"> <small>Hipertensión.</small> </label>
-                 </div>
-             </div>
-             <div class="col-md-2">
-                 <div class="form-group form-check">
-                     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="27" value="si">
-                     <label class="form-check-label" for="exampleCheck1"> <small>Ulceras.</small> </label>
-                 </div>
-              </div>
-             <div class="col-md-2">
-                 <div class="form-group form-check">
-                     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="28" value="si">
-                     <label class="form-check-label" for="exampleCheck1"> <small>Cáncer.</small> </label>
-                 </div>
-             </div>
-         </div>
-         <div class="row d-flex justify-content-center mb-3">
-            <div class="col-md-3">
-                <button class="btn btn-primary btn-block">Guardar historia</button>
+            <div class="row d-flex justify-content-center mb-3">
+               <div class="col-md-6">
+                   <button class="btn btn-primary btn-block">Guardar historia</button>
+               </div>
             </div>
-         </div>
-     </div>
- </div>
+        </div>
+   </div>
 </form>
 
-<!-- @endif -->
+@endif
 @endsection

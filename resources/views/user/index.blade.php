@@ -21,7 +21,7 @@
     <div class="bienvenida">
         <div class="row">
             <div class="col-md-12">
-                <h3>Bienvenido(a) <span class="text-info">{{Auth::user()->name}}</span> a tu consultorio dental Amy</h3>
+                <h3>Bienvenido(a) <span class="text-info">{{Auth::user()->userName}}</span> a tu consultorio dental Amy</h3>
             </div>
         </div>
         <div class="container mt-5 cont-form">
@@ -59,7 +59,7 @@
 
                     <div class="form-group col-md-8">
                         <label for="name">Nombre completo:</label>
-                        <input type="text" class="form-control" id="name" disabled value="{{Auth::user()->fullName}}">
+                        <input type="text" class="form-control" id="name" disabled value="{{ Auth::user()->fullName }}">
                      </div>
                  </div>
                  <div class="form-row">
@@ -83,7 +83,7 @@
                      </div>
                      <div class="form-group col-md-6">
                         <label for="pacient">Paciente desde:</label>
-                        <input type="text" class="form-control" id="pacient" disabled value="{{Str::limit(Auth::user()->created_at,10,'')}}">
+                        <input type="text" class="form-control" id="pacient" disabled value="{{ date('d/m/Y',strtotime( Str::limit(Auth::user()->created_at,10,'') )) }}">
                      </div>
 
                  </div>
@@ -127,16 +127,17 @@
               data-parent="#accordionEx5">
               <div class="card-body rgba-black-light white-text z-depth-1">
               	 <p class=" mb-0">
-                  Descripción del tratamiento: <b> {{$treatment->serviceDescription}}</b>
+                  Descripción del tratamiento: <br>
+                  <b> {{$treatment->serviceDescription}}</b>
                 </p>
                 <p class=" mb-0">
-                  Este tratamiento tiene un costo de: <b> ${{$treatment->total}}</b>
+                  Costo del tratamiento: <b> ${{$treatment->total}}</b>
                 </p>
                 <p class=" mb-0">
-                  Fecha de inicio de tratamiento: <b> {{date('d-m-Y',strtotime($treatment->startDate)) }}</b>
+                  Fecha de inicio: <b> {{date('d/m/Y',strtotime($treatment->startDate)) }}</b>
                 </p>
                 <p class=" mb-0">
-                  Fecha de finalización de tratamiento: <b> {{date('d-m-Y',strtotime($treatment->endDate)) }}</b>
+                  Fecha estimada de termino: <b> {{date('d/m/Y',strtotime($treatment->endDate)) }}</b>
                 </p>
 
               </div>
@@ -191,17 +192,17 @@
         @foreach ($dates as $date)
             <div class="col-md-6">
                   <div class="jumbotron">
-                      <h3>Próxima cita: {{date('d-m-Y',strtotime($date->dateOfAppointment))}}</h3>
+                      <h3>Próxima cita: {{ date('d/m/Y',strtotime($date->dateOfAppointment)) }}</h3>
                       <p class="lead">Hora: {{ $date->hour }}</p>
                       <p class="lead">Consulta: {{ $date->affair }}</p>
                       <hr class="my-4">
                       <p>Recuerde llegar con 15 minutos de anticipación a su cita.</p>
-                      @if(strcmp($date->status,'Pendiente')!=0)
+                      @if(strcmp($date->dateStatus,'Pendiente')!=0)
 
                         @if(strcmp($date->status,'Cancelada')==0)
-                          <p class="text-danger"><b>{{$date->status}}: </b>{{$date->commentary}}</p>
+                          <p class="text-danger"><b>{{$date->dateStatus}}: </b>{{$date->commentary}}</p>
                         @else
-                          <p class="text-success"><b>{{$date->status}}: </b>{{$date->commentary}}</p>
+                          <p class="text-success"><b>{{$date->dateStatus}}: </b>{{$date->commentary}}</p>
                         @endif
 
                       @endif
@@ -222,57 +223,8 @@
   </div>
 </section>
 @endsection
+
+
 @section('script')
     <script src="/js/smooth-scroll.min.js"></script>
-
-    <script>
-        var scroll = new SmoothScroll('a[href*="#"]', {
-            // Selectors
-            ignore: '[data-scroll-ignore]', // Selector for links to ignore (must be a valid CSS selector)
-            header: null, // Selector for fixed headers (must be a valid CSS selector)
-            topOnEmptyHash: true, // Scroll to the top of the page for links with href="#"
-
-            // Speed & Duration
-            speed: 800, // Integer. Amount of time in milliseconds it should take to scroll 1000px
-            speedAsDuration: false, // If true, use speed as the total duration of the scroll animation
-            durationMax: null, // Integer. The maximum amount of time the scroll animation should take
-            durationMin: null, // Integer. The minimum amount of time the scroll animation should take
-            clip: true, // If true, adjust scroll distance to prevent abrupt stops near the bottom of the page
-            offset:25 /* function (anchor, toggle) {
-
-                // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
-                // This example is a function, but you could do something as simple as `offset: 25`
-
-                // An example returning different values based on whether the clicked link was in the header nav or not
-                if (toggle.classList.closest('.my-header-nav')) {
-                    return 25;
-                } else {
-                    return 50;
-                }
-
-            }*/,
-
-            // Easing
-            easing: 'easeInOutCubic', // Easing pattern to use
-            customEasing: function (time) {
-
-                // Function. Custom easing pattern
-                // If this is set to anything other than null, will override the easing option above
-
-                // return <your formulate with time as a multiplier>
-
-                // Example: easeInOut Quad
-                return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
-
-            },
-
-            // History
-            updateURL: true, // Update the URL on scroll
-            popstate: true, // Animate scrolling with the forward/backward browser buttons (requires updateURL to be true)
-
-            // Custom Events
-            emitEvents: true // Emit custom events
-
-        });
-    </script>
- @endsection
+@endsection

@@ -16,25 +16,32 @@
         </div>
         <hr width="100%">
     </div>
-   
+
     <div  class="container mb-3">
         <div class="historial">
             <div class="row">
-               
+
                 @foreach ($payments as $payment)
-                @if($payment->status)
+                @if($payment->treatmentStatus === 'Active')
                 <div class="col-md-4">
                      <div class="card" style="width: 18rem;">
                          <div class="card-body">
-                             <h3 class="card-title text-primary text-center">{{$payment->name}}</h3>
+                             <h3 class="card-title text-primary text-center">{{$payment->serviceName}}</h3>
                           </div>
                           <ul class="list-group list-group-flush">
-                             <li class="list-group-item"><b>Costo inicio:</b> $ {{$payment->cost}} </li>
-                             <li class="list-group-item"><b>Restante:</b> ${{ $payment->total }}</li>
-                             <li class="list-group-item"><b>Liquidar antes de:</b> {{date('d-m-Y',strtotime($payment->endDate)) }} </li>
-                             
-                            <!-- <li class="list-group-item"><b>Cantidad:</b> ${{$payment->id_treatment}} </li>-->
-                           
+                             <li class="list-group-item">
+                               <b>Costo del tratamiento:</b>
+                               <br> ${{ number_format($payment->cost,2) }}
+                             </li>
+                             <li class="list-group-item">
+                               <b>Restante:</b>
+                               ${{ number_format($payment->total,2) }}
+                             </li>
+                             <li class="list-group-item">
+                               <b>Liquidar antes del:</b>
+                               <br> {{date('d/m/Y',strtotime($payment->endDate)) }}
+                             </li>
+
                           </ul>
                              <div class="card-body text-center">
                                 <button type="button" class="btn btn-primary btnDetalles" tratamiento="{{$payment->id_treatment}}">
@@ -56,11 +63,11 @@
                              <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
                               <figcaption class="figure-caption"> <h2 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tienes historial de pagos.</h2>  </figcaption>
 
-                            </figure>   
+                            </figure>
                         </div>
                  </div>
          </div>
-                        
+
                 @endif
 
 <!--MODAL DE HISTORIAL DE PAGOS-->
@@ -83,10 +90,11 @@
                                                 <tr>
                                                     <th scope="col">Fecha</th>
                                                     <th scope="col">Cantidad</th>
+                                                    <th scope="col">Observación</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                        
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -110,10 +118,13 @@
             }, function(data) {
             	if(data.length>0){
 					for (var i = 0; i <= data.length-1; i++) {
+                date = data[i].created_at.split(' ');
+                date2 = date[0].split('-').reverse().join('/');
             			row =''+
             			'<tr class="listaPagos">'+
-                    	'<th scope="row">'+data[i].created_at+'</th>'+
-                    	'<td>$'+data[i].credit+'</td>'+
+                    	'<th scope="row">'+date2+'</th>'+
+                    	'<td>$'+new Intl.NumberFormat("en-IN").format(data[i].credit)+'</td>'+
+                      '<td>'+data[i].observation+'</td>'+
                     	'</tr>';
                     	table.append(row);
             		}
@@ -124,17 +135,17 @@
             		'</tr>';
             		table.append(row);
             	}
-                setTimeout(function(){ 
+                setTimeout(function(){
                     $(".modal").fadeIn(1500);
                 },100);
 
-                
+
 
            });
         });
 
         $(".close").click(function(){
-        	setTimeout(function(){ 
+        	setTimeout(function(){
                     $(".modal").fadeOut(1500);
                     $('.listaPagos').remove();
             },100);

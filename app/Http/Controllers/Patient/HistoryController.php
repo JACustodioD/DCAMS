@@ -5,40 +5,73 @@ namespace App\Http\Controllers\Patient;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 use App\Storie;
 use App\User;
+use App\Sffering;
+use App\Records_history;
 
 class HistoryController extends Controller
 {
 
     public function show(){
-        return view('user.historiaMedica',[
-            // 'padecimientos' => \App\Storie::select('description','category')->join('sfferings','sffering','id_sfferings')->where('user','=',Auth::user()->id)->get()
-        ]);
+
+        if(!Auth::user()->history){
+
+          $sffering = new Sffering;
+          $dentalList = $sffering::where('sfferingCategory','hdental')->get();
+          $generalList = $sffering::where('sfferingCategory','hgeneral')->get();
+          $observList = $sffering::where('sfferingCategory','observ')->get();
+
+          return view('user.historiaMedica',[
+              'dentalList' => $dentalList,
+              'generalList' => $generalList,
+              'observList' => $observList,
+              'item' => 'A'
+            ]);
+
+        }else{
+
+          $historyList = Records_history::select('sfferingDescription','sfferingCategory')->join('sfferings','sfferings','id_sfferings')->join('stories','stories','id_stories')->where('user','=',Auth::user()->id)->get();
+
+          return view('user.historiaMedica',[
+            'historyList' => $historyList
+          ]);
+
+        }
     }
 
     public function store(Request $request){
+      $sffering = new Sffering;
 
-    	for($i=0;$i<=28;$i++){
-    		if ($request[$i] == 'si') {
-    			$historia[] = $i;
-    		}
-    	}
+      $idList = Sffering::select('id_sfferings')->get();
+
+      foreach ($idList as $id) {
+        if($request[$id->id_sfferings] == 'si'){
+          $historyList[] = $id->id_sfferings;
+        }
+      }
 
 
-    	for ($i=0;$i<=sizeof($historia)-1;$i++) {
-    		$registro = new Storie();
-    		$registro->user = Auth::user()->id;
-    		$registro->sffering = intval($historia[$i]);
-    		$registro->save();
-    	}
+      $storie = new Storie();
+      $storie->user = Auth::user()->id;
+      $storie->historyStatus = "Active";
+      $storie->save();
+
+      foreach ($historyList as $history) {
+        $records = new Records_history();
+        $records->sfferings = intval($history);
+        $records->stories = $storie->id;
+        $records->save();
+      }
+
     	$user = new User();
-		$u = $user::where('id',Auth::user()->id)->take(1)->get();
+		  $userList = $user::where('id',Auth::user()->id)->take(1)->get();
 
-      	foreach ($u as $t) {
-        	$user = $t;
+      	foreach ($userList as $userInfo) {
+        	$user = $userInfo;
       	}
-      	$user->hisotria = true;
+      	$user->history = true;
       	$user->save();
 
 

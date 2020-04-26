@@ -13,15 +13,14 @@ class PaymentController extends Controller
 {
     public function show(Payment $payment)
     {
-        $payments = \App\Treatment::select('serviceName','services.cost','treatments.total','treatments.endDate','treatments.id_treatment','treatmentStatus')->join('services','treatments.service','=','services.id_service')->where('treatments.user',Auth::user()->id)->get();
-
+        $payments = Treatment::select('serviceName','services.cost','treatments.total','treatments.endDate','treatments.id_treatment','treatmentStatus')->join('services','treatments.service','=','services.id_service')->where('treatments.user',Auth::user()->id)->get();
         return view('user.historiaPagos',[
             'payments' => $payments
         ]);
     }
 
     public function payments(Request $request){
-       $datos = \App\Payment::select('credit','created_at')->where('treatment',$request['tratamientos'])->get();
+       $datos = \App\Payment::select('credit','created_at','observation')->where('treatment',$request['tratamientos'])->get();
 
         return $datos;
     }
