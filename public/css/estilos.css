@@ -1,7 +1,11 @@
 body{
     font-family: 'Raleway', sans-serif;
 }
-
+.fondo-index{
+    background-image: url('/img/fondoindex.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
 .fondo-mensaje{
     background-image: url('/img/fondo-mensaje.jpg');
     background-position: center;
