@@ -1,20 +1,19 @@
 @extends('layouts.base')
 @section('content')
 <section>
-    <div  class="container-fluid">
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/img/slider22.jpg" class="d-block w-100" alt="slider1">
-                    <div class="carousel-caption d-none d-md-block caption-carou ">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                 <img src="/img/slider22.jpg" class="d-block w-100" alt="slider1">
+                <div class="carousel-caption d-none d-md-block caption-carou ">
                     <h3 class="d-flex align-items-center justify-content-end mt-3 text-sabermas ">
-                            <a href="" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
-                    </div>
+                    <a href="" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
+                </div>
                 </div>
                 <div class="carousel-item">
                     <img src="/img/slider33.jpg" class="d-block w-100" alt="slider2">
@@ -33,15 +32,18 @@
               
             </div>
         </div>
-    </div>
 </section>
-     <!--SECCION ACERCA DE-->
+<!--SECCION FONDO-->
+<div class="container-fluid fondo-index">
+
+</div>
+<!--SECCION ACERCA DE-->
 <section class="container-fluid shadow-sm p-3 mb-1" style="height: 100%">
      <div class="about-section" >
          <div class="desc-about">      
             <div class="row">
                 <div class="col-md-12 mt-3">
-                    <h1 class="text-about text-center " >¿Por qué debería elegirnos?</h1>
+                    <h1 class="text-center " >¿Por qué debería elegirnos?</h1>
                 </div>
             </div>
             <div class="row">
@@ -92,7 +94,7 @@
 <section class="container-fluid tratamientos-section d-none d-lg-block" id="promociones" style="height: 100%">
     <div class="row">
         <div class="col-md-12 mt-3">
-            <h1 class="text-center text-about">Tratamientos</h1>
+            <h1 class="text-center">Tratamientos</h1>
             <hr id="separator1">
             <p class="text-center">Contamos con los tratamientos especializados para ti</p>
         </div>
@@ -247,7 +249,7 @@
 <section class="container-fluid tratamientos-section d-xs-block d-lg-none" id="promociones" style="height: 100%">
      <div class="row">
          <div class="col-md-12 mt-3">
-             <h1 class="text-center text-about">Tratamientos</h1>
+             <h1 class="text-center">Tratamientos</h1>
                  <hr id="separator1">
                  <p class="text-center">Contamos con los tratamientos especializados para ti</p>
          </div>
@@ -364,6 +366,7 @@
      </div>
  </section>
      <!--SECCION DE AGENDAR CITA-->
+    
  <section class="container-fluid bg-primary shadow-sm p-3 mb-1" style="height: 50%">
     <div class="cita-section d-flex align-items-center justify-content-center">
         <div class="row ">
@@ -374,8 +377,37 @@
          </div>
      </div>
  </section>   
+ <!--SECCION DE PROMOCIONES-->
+ 
+<section class="container-fluid shadow-sm p-3 mb-1" >
+    <div class="row">
+        <div class="col-md-12 mt-3">
+            <h1 class="text-center">Disfruta de nuestras promociones</h1>
+                <hr id="separator1">
+        </div>
+    </div>
+    <div class="promo-section">
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <img src="/img/promo1.jpg" alt="" width="100%">
+            </div>
+            <div class="col-md-6 mt-3">
+                <img src="/img/promo2.jpg" alt="" width="100%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <img src="/img/promo3.jpg" alt="" width="100%">
+            </div>
+            <div class="col-md-6 mt-3">
+                <img src="/img/promo2.jpg" alt="" width="100%">
+            </div>
+        </div>
+    </div>
+</section>
+
      <!--SECCION DE CONTÁCTO-->
-     <section class="container" id="contacto">
+     <section class="container-fluid" id="contacto">
         <div class="contacto" >
             <div class="row mt-5 mb-3">
                 <div class="col-md-6">

@@ -1,7 +1,11 @@
 body{
     font-family: 'Raleway', sans-serif;
 }
-
+.fondo-index{
+    background-image: url('/img/fondoindex.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
 .fondo-mensaje{
     background-image: url('/img/fondo-mensaje.jpg');
     background-position: center;
@@ -139,7 +143,7 @@ body{
     color: white;
 }
 .icon-contacto{
-    font-size: 2em;
+    font-size: 2.5em;
     color:  blue
 }
 #separator-contacto{
