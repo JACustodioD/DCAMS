@@ -13,7 +13,7 @@ class PaymentController extends Controller
 {
     public function show(Payment $payment)
     {
-        $payments = Treatment::select('serviceName','services.cost','treatments.total','treatments.endDate','treatments.id_treatment','treatmentStatus')->join('services','treatments.service','=','services.id_service')->where('treatments.user',Auth::user()->id)->get();
+        $payments = Treatment::select('serviceName','services.cost','treatments.total','treatments.endDate','treatments.id','treatmentStatus')->join('services','treatments.service','=','services.id')->where('treatments.user',Auth::user()->id)->get();
         return view('user.historiaPagos',[
             'payments' => $payments
         ]);

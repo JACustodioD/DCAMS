@@ -44,7 +44,7 @@
 
                           </ul>
                              <div class="card-body text-center">
-                                <button type="button" class="btn btn-primary btnDetalles" tratamiento="{{$payment->id_treatment}}">
+                                <button type="button" class="btn btn-primary btnDetalles" tratamiento="{{$payment->id}}">
                                     Ver detalles
                                 </button>
                              </div>

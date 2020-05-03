@@ -13,7 +13,7 @@ class StorageController extends Controller{
 
 
     public function save(Request $request){
-      
+
       $data = $request->validate([
         'perfil' =>['required','image',],
       ]);
@@ -38,6 +38,6 @@ class StorageController extends Controller{
       $user->image = $path;
       $user->save();
 
-       return redirect('/pacientes/home');
+       return redirect('/pacientes');
     }
 }

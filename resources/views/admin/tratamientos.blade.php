@@ -5,9 +5,9 @@
 	<div class="paciente-trat">
 		<div class="row">
 			<div class="col-md-12">
-				@foreach ($users as $user)
-				<h5 class="text-info nombrePaciente" paciente="{{$user->id}}">Pacientes / Tratamientos <b>
-					{{$user->name}}</b>
+				@foreach ($patients as $patient)
+				<h5 class="text-info nombrePaciente" paciente="{{$patient->id}}">Pacientes / Tratamientos <b>
+					{{$patient->fullName}}</b>
 				</h5>
 				 @endforeach
 			</div>
@@ -25,7 +25,7 @@
 		<div class="cont-tratamineto">
 		@foreach ($treatments as $treatment)
 
-			<div class="row {{$treatment->id_treatment}} cont-tratamientos">
+			<div class="row {{$treatment->id}} cont-tratamientos">
 			<div class="col-md-6">
 				<div class="form-group">
 					<label for="exampleFormControlTextarea1">Tratamiento:</label>
@@ -57,7 +57,7 @@
 				<!-- Button trigger modal -->
 				<button type="button" class="btn btn-light btnDetalles" data-toggle="modal" data-target="#exampleModalLong" tratamiento = "{{$treatment->id_treatment}}" namet = "{{$treatment->name}}" >Ver pagos</button>
 				<button type="button" class="btn btn-primary btnAddPago"  data-toggle="modal"  data-target="#agregarpago" tratamiento = "{{$treatment->id_treatment}}" namet = "{{$treatment->name}}" >Agregar pago</button>
-				
+
 			</div>
 			</div>
 		@endforeach
@@ -65,59 +65,6 @@
 	</div>
 </div>
 
-<div class="container mt-3">
-	<div class="shadow p-3 mb-5 bg-white rounded">
-			<div class="row">
-				<div class="col-md-12">
-						<h3>Agregar un nuevo tratamiento.</h3>
-						<div class="form-group">
-							<label for="seelctServicio">Tratamientos disponibles</label>
-							<select class="form-control selectServicio" id="selctServicio" name="servicio">
-							@foreach ($services as $service)
-								<option value = "{{$service->id_service}}">
-									{{$service->name}}
-								</option>
-							@endforeach
-							</select>
-						</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="form-group">
-						<label for="detallesServicio">Detalles:</label>
-						<textarea class="form-control" id="detallesServicio" rows="3" disabled>{{$service->description}}</textarea>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<label for="costoServicio">Costo:</label>
-						<input class="form-control" type="text" id="costoServicio" value="{{$service->cost}}" name="total" disabled>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="form-group">
-						<label for="exampleFormControlTextarea1">Fecha de incio:</label>
-						<input class="form-control" type="date" required id="startDate">
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<label for="exampleFormControlTextarea1">Fecha de término:</label>
-						<input class="form-control" type="date" required id="endDate">
-					</div>
-				</div>
-			</div>
-
-			<div class="row d-flex justify-content-center">
-				<div class="col-md-4">
-					<button class="btn btn-primary btn-block btnAgregarT" >Agregar tratamiento</button>
-				</div>
-			</div>
-	 </div>
-</div>
 @else
 <div class="container mt-5">
 	<div class="row">
@@ -125,10 +72,11 @@
               <figure class="figure">
                  <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
                   <figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tiene tratamientos.</h4>  </figcaption>
-               </figure>   
+               </figure>
            </div>
-     </div>	
+     </div>
 </div>
+@endif
 
 <div class="container mt-3">
 	<div class="shadow p-3 mb-5 bg-white rounded">
@@ -139,8 +87,8 @@
 							<label for="seelctServicio">Tratamientos disponibles</label>
 							<select class="form-control selectServicio" id="selctServicio" name="servicio">
 							@foreach ($services as $service)
-								<option value = "{{$service->id_service}}">
-									{{$service->name}}
+								<option value = "{{$service->id}}">
+									{{$service->serviceName}}
 								</option>
 							@endforeach
 							</select>
@@ -151,7 +99,7 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<label for="detallesServicio">Detalles:</label>
-						<textarea class="form-control" id="detallesServicio" rows="3" disabled>{{$service->description}}</textarea>
+						<textarea class="form-control" id="detallesServicio" rows="3" disabled>{{$service->serviceDescription}}</textarea>
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -183,8 +131,6 @@
 			</div>
 	 </div>
 </div>
-
-@endif
 
 <!--MODAL DE VER PAGOS-->
   <!-- Modal -->
@@ -207,7 +153,7 @@
 				  </tr>
 				</thead>
 				<tbody>
-				  
+
 				</tbody>
 			  </table>
 		</div>
@@ -285,4 +231,3 @@
 @section('script')
 <script type="text/javascript" src="/js/tratamientos.js"></script>
 @endsection
-

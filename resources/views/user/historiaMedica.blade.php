@@ -62,14 +62,14 @@
                         <td scope="col">¿{{ $dentalInfo->sfferingDescription }}?</td>
                         <td>
                         	<div class="form-check">
-                                <input class="form-check-input" required type="radio" name="{{ $dentalInfo->id_sfferings }}" id="exampleRadios1" value="si" checked>
+                                <input class="form-check-input" required type="radio" name="{{ $dentalInfo->id }}" id="exampleRadios1" value="si" checked>
                                 <label class="form-check-label" for="exampleRadios1">
                                 </label>
                             </div>
                          </td>
                         <td>
                           <div class="form-check">
-                                <input class="form-check-input" required type="radio" name="{{ $dentalInfo->id_sfferings }}" id="exampleRadios2" value="no" checked>
+                                <input class="form-check-input" required type="radio" name="{{ $dentalInfo->id }}" id="exampleRadios2" value="no" checked>
                                 <label class="form-check-label" for="exampleRadios2">
                                 </label>
                             </div>
@@ -96,13 +96,13 @@
                             <td scope="col">¿{{ $generalInfo->sfferingDescription }}?</td>
                             <td>
                             	<div class="form-check">
-                                    <input class="form-check-input" required type="radio" name="{{ $generalInfo->id_sfferings }}" id="exampleRadios1" value="si" checked>
+                                    <input class="form-check-input" required type="radio" name="{{ $generalInfo->id }}" id="exampleRadios1" value="si" checked>
                                     <label class="form-check-label" for="exampleRadios1">
                                     </label>
                                 </div>
                              </td>
                             <td><div class="form-check">
-                                    <input class="form-check-input" required type="radio" name="{{ $generalInfo->id_sfferings }}" id="exampleRadios2" value="no" checked>
+                                    <input class="form-check-input" required type="radio" name="{{ $generalInfo->id }}" id="exampleRadios2" value="no" checked>
                                     <label class="form-check-label" for="exampleRadios2">
                                     </label>
                                 </div>
@@ -127,7 +127,7 @@
               @foreach ($observList as $observ)
                 <div class="col-md-2">
                      <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="{{ $observ->id_sfferings }}" value="si">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="{{ $observ->id }}" value="si">
                          <label class="form-check-label" for="exampleCheck1"> <small>{{ $observ->sfferingDescription }}</small> </label>
                      </div>
                 </div>

@@ -32,7 +32,7 @@ class HistoryController extends Controller
 
         }else{
 
-          $historyList = Records_history::select('sfferingDescription','sfferingCategory')->join('sfferings','sfferings','id_sfferings')->join('stories','stories','id_stories')->where('user','=',Auth::user()->id)->get();
+          $historyList = Records_history::select('sfferingDescription','sfferingCategory')->join('sfferings','sfferings','sfferings.id')->join('stories','stories','stories.id')->where('user','=',Auth::user()->id)->get();
 
           return view('user.historiaMedica',[
             'historyList' => $historyList
@@ -44,11 +44,11 @@ class HistoryController extends Controller
     public function store(Request $request){
       $sffering = new Sffering;
 
-      $idList = Sffering::select('id_sfferings')->get();
+      $idList = Sffering::select('id')->get();
 
       foreach ($idList as $id) {
-        if($request[$id->id_sfferings] == 'si'){
-          $historyList[] = $id->id_sfferings;
+        if($request[$id->id] == 'si'){
+          $historyList[] = $id->id;
         }
       }
 

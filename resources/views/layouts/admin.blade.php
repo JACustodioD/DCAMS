@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!--FONTS GOOGLE-->
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap" rel="stylesheet">
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <!--EFECTOS HOVER-->
@@ -18,13 +18,14 @@
     <link rel="stylesheet" href="/css/calendar.css">
       <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-       <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" />
+
+   <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" />
 </head>
 </head>
 <body>
 <header class="container " style="width: 100%;">
     <div class="encabezado ">
-        <div class="row ">  
+        <div class="row ">
              <div class="col-md-12">
                  <nav class="navbar navbar-expand-md navbar-light menu">
                      <a class="navbar-brand" href="/"><img src="/img/icono-dental.png " class="icono" alt="logo"></a>
@@ -51,7 +52,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                               
+
                                 </li>
                               </ul>
                          </div>
@@ -75,7 +76,7 @@
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/calendar.js"></script>
-<script src="/js/all.js"></script>  
+<script src="/js/all.js"></script>
 @yield('script')
 <script type="text/javascript">
         $(document).ready(function(){
@@ -84,7 +85,7 @@
                     scrollTop: '0px'
                 }, 300);
             });
-      
+
           $(window).scroll(function(){
             if( $(this).scrollTop() > 0 ){
               $('.botoncito').slideDown(300);
@@ -93,7 +94,7 @@
             }
           });
         });
-      
+
 </script>
 
 </body>

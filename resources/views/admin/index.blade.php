@@ -1,38 +1,38 @@
 @extends('layouts.admin')
 
 @section('content')
-@if(sizeOf($messages)>0)
+@if(sizeOf($petitions)>0)
 <div class="container mt-3">
-	<div class="mensaje">
+	<div class="petition">
 		<div class="row">
 			<div class="col-md-6 titulo">
-				<h1>Mis mensajes</h1>
-			</div> 
+				<h1>Mis Peticiones de citas</h1>
+			</div>
 		</div>
 	</div>
 </div>
 <div class="container">
 
-	@foreach ($messages as $message)
-	<div class="cont-mensaje {{$message->id}}">
-			<button type="button" class="close mb-2" aria-label="Close" mensaje="{{ $message->id}}" data-toggle="modal" data-target="#exampleModal1">
+	@foreach ($petitions as $petition)
+	<div class="cont-petition {{ $petition->id }}">
+			<button type="button" class="close mb-2" aria-label="Close" petition="{{ $petition->id }}" data-toggle="modal" data-target="#exampleModal1">
 					<span aria-hidden="true">&times;</span>
 			</button>
 		<div class="row shadow-sm p-3 mb-5 bg-white rounded">
-			<div class="col-md-3">	
-				<p>{{ $message->name }}</p>		
+			<div class="col-md-3">
+				<p>{{ $petition->name }}</p>
 			</div>
 			<div class="col-md-3">
-				<p> {{ $message->commentary }} </p>
+				<p> {{ $petition->petitionCommentary }} </p>
 			</div>
 			<div class="col-md-2">
-				<p>{{ $message->phone }}</p>
+				<p>{{ $petition->phone }}</p>
 			</div>
 			<div class="col-md-2">
-				<p>{{date('d-m-Y',strtotime($message->date)) }}| {{ $message->hour }}</p>
+				<p>{{date('d-m-Y',strtotime($petition->date)) }}| {{ $petition->hour }}</p>
 			</div>
 			<div class="col-md-2">
-				<button class="btn btn-danger btnAtendio" mensaje="{{ $message->id}}" data-toggle="modal" data-target="#exampleModal">Atendido</button>
+				<button class="btn btn-danger btnAttended" petition="{{ $petition->id }}" data-toggle="modal" data-target="#exampleModal">Atendido</button>
 			</div>
 		</div>
 	</div>
@@ -48,9 +48,9 @@
               <figure class="figure">
                  <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
                   <figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tienes mensajes.</h4>  </figcaption>
-               </figure>   
+               </figure>
            </div>
-     </div>	
+     </div>
 </div>
 
 
@@ -73,7 +73,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btnAceptar" data-dismiss="modal" autofocus="">Aceptar</button>
+        <button type="button" class="btn btn-primary btnConfirm" data-dismiss="modal" autofocus="">Aceptar</button>
       </div>
     </div>
   </div>
@@ -96,15 +96,15 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary btnEliminar" data-dismiss="modal">Aceptar</button>
+        <button type="button" class="btn btn-primary btnRemove" data-dismiss="modal">Aceptar</button>
       </div>
     </div>
   </div>
 </div>
 <!-- /FIN DE MODAL-->
 
-@endsection  
+@endsection
 
 @section('script')
-<script type="text/javascript" src="/js/message.js"></script>
+<script type="text/javascript" src="/js/petition.js"></script>
 @endsection

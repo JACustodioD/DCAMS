@@ -14,7 +14,7 @@ class CreateDatesTable extends Migration
     public function up()
     {
         Schema::create('dates', function (Blueprint $table) {
-            $table->bigIncrements('id_date');
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('user');
             $table->date('dateOfAppointment');
             $table->string('hour');

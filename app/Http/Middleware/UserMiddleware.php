@@ -18,6 +18,6 @@ class UserMiddleware
         if (auth()->check() && auth()->user()->typeOfUser == 'U') {
             return $next($request);
         }
-        return redirect('/consultorio/home');
+        return redirect('/consultorio');
     }
 }

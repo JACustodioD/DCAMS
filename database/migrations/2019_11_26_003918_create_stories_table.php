@@ -14,7 +14,7 @@ class CreateStoriesTable extends Migration
     public function up()
     {
         Schema::create('stories', function (Blueprint $table) {
-            $table->bigIncrements('id_stories');
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('user');
             $table->string('historyStatus');
             $table->foreign('user')->references('id')->on('users')->onDelete('cascade');

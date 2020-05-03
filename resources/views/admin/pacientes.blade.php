@@ -28,7 +28,7 @@
                          <img src="/perfil/{{ $patient->image }}" class="card-img-top img-paciente mt-2" alt="foto-perfil">
                         <div class="card-body">
                             <div class="text-center">
-                                <h5 class="card-title text-primary">{{ $patient->name }}</h5>
+                                <h5 class="card-title text-primary">{{ $patient->fullName }}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Paciente desde: {{date('d-m-Y',strtotime(Str::limit($patient->created_at,10,''))) }}</h6>
 
                                 <form action="/consultorio/tratamientos" method="POST">
@@ -38,7 +38,7 @@
                                 </form>
                                 <form action="/consultorio/historialmedico" method="POST">
                                    @csrf
-                                  <input type="text" name="paciente" hidden value="{{$patient->id}}">
+                                  <input type="text" name="patient" hidden value="{{$patient->id}}">
                                   <button class="btn btn-outline-secondary btn-block mb-1" patient="{{$patient->id}}" type="submit">Ver Historia médica</button>
                                 </form>
                                 <form action="/consultorio/citas" method="POST">
@@ -54,7 +54,7 @@
              </div>
                 @endforeach
          </div>
-      
+
     </div>
     @else
 
@@ -64,9 +64,9 @@
               <figure class="figure">
                  <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
                   <figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tienes pacientes.</h4>  </figcaption>
-               </figure>   
+               </figure>
            </div>
-     </div> 
+     </div>
 </div>
 
 

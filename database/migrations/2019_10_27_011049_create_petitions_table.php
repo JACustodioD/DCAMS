@@ -14,12 +14,12 @@ class CreatePetitionsTable extends Migration
     public function up()
     {
         Schema::create('petitions', function (Blueprint $table) {
-            $table->bigIncrements('id_petition');
+            $table->bigIncrements('id');
             $table->string('name');
             $table->string('phone');
             $table->date('date');
             $table->string('hour');
-            $table->text('PetitionCommentary');
+            $table->text('petitionCommentary');
             $table->string('petitionStatus');
             $table->timestamps();
         });
