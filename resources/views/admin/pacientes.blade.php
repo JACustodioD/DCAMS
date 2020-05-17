@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+
 @if(sizeOf($patients)>0)
  <div class="container mt-3" >
      <div class="pacientes">
@@ -31,19 +32,13 @@
                                 <h5 class="card-title text-primary">{{ $patient->fullName }}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Paciente desde: {{date('d-m-Y',strtotime(Str::limit($patient->created_at,10,''))) }}</h6>
 
-                                <form action="/consultorio/tratamientos" method="POST">
-                                  @csrf
-                                  <input type="text" name="paciente" hidden value="{{$patient->id}}">
+                                <form action="/consultorio/tratamientos/{{base64_encode($patient->id)}}" method="GET">
                                    <button  class="btn btn-outline-secondary btn-block mb-1 btnTratamientos" type="submit">Ver tratamientos</button>
                                 </form>
-                                <form action="/consultorio/historialmedico" method="POST">
-                                   @csrf
-                                  <input type="text" name="patient" hidden value="{{$patient->id}}">
+                                <form action="/consultorio/historialmedico/{{base64_encode($patient->id)}}" method="GET">
                                   <button class="btn btn-outline-secondary btn-block mb-1" patient="{{$patient->id}}" type="submit">Ver Historia médica</button>
                                 </form>
-                                <form action="/consultorio/citas" method="POST">
-                                  @csrf
-                                  <input type="text" name="paciente" hidden value="{{$patient->id}}">
+                                <form action="/consultorio/citas/{{base64_encode($patient->id)}}" method="GET">
                                    <button class="btn btn-outline-secondary  btn-block mb-1" patient="{{$patient->id}}" type="submit">Crear nueva cita</button>
                                 </form>
                              </div>

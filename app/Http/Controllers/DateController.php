@@ -57,7 +57,7 @@ class DateController extends Controller
     public function show(Date $date)
     {
         return view('admin.miscitas',[
-            'citas' => $date::join('users','user','id')->orderBy('dateOfAppointment')->orderBy('hour')->get()
+            'citas' => $date::join('users','user','user.id')->orderBy('dateOfAppointment')->orderBy('hour')->get()
         ]);
     }
     public function buscarCitas(Request $request, Date $date){

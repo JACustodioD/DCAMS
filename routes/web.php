@@ -35,11 +35,13 @@ Route::group([
 
 	Route::get('/','Dcams\PetitionController@index');
 
-	Route::post('/tratamientos','Dcams\TreatmentController@adminTratamientos' );
+	Route::get('/tratamientos/{patient}','Dcams\TreatmentController@adminTratamientos' );
+
+
 	Route::post('/servicio','Dcams\TreatmentController@show');
 	Route::post('/agregartratamiento','Dcams\TreatmentController@agregarTratamiento');
 
-	Route::post('/historialmedico','Dcams\HistoryController@index');
+	Route::get('/historialmedico/{patient}','Dcams\HistoryController@index');
 	Route::post('/habilitarhistoria','Dcams\HistoryController@enabled');
 
 	Route::post('/peticionvista','Dcams\PetitionController@update');
@@ -50,19 +52,20 @@ Route::group([
 	Route::post('/mostrarpaciente','Dcams\PatientController@showPatients');
 	Route::post('/borrarpaciente','Dcams\PatientController@deletePatient	');
 
+	Route::get('/citas/{patient}','Dcams\DateController@citasUser');
+	Route::get('/miscitas', 'Dcams\DateController@show');
+	Route::post('/agregarcita','Dcams\DateController@store');
+	Route::post('/cancelarcita','Dcams\DateController@cancelarCita');
 
 
+	Route::post('/buscarcitas','Dcams\DateController@buscarCitas');
+	Route::post('/mostrarcitas','Dcams\DateController@mostrarCitas');
 
-	Route::post('/buscarcitas','DateController@buscarCitas');
-	Route::post('/mostrarcitas','DateController@mostrarCitas');
+	Route::post('/cancelartratamiento','Dcams\TreatmentController@cancelarTratamiento');
 
-	Route::post('/cancelartratamiento','TreatmentController@cancelarTratamiento');
+	Route::post('/hacerpago','Dcams\PaymentController@hacerPago');
 
-	Route::post('/hacerpago','PaymentController@hacerPago');
-	Route::post('/citas','DateController@citasUser');
-	Route::get('/miscitas', 'DateController@show');
-	Route::post('/cancelarcita','DateController@cancelarCita');
-	Route::post('/agregarcita','DateController@store');
+
 });
 
 //Rutas a las que puede accesar el usuario

@@ -12,7 +12,7 @@ $(document).ready(function(){
                 "cita": cita,
                 "comentario": comentario
         }, function(data) {
-
+					location.reload();
         });
 	});
 

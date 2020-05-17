@@ -51,12 +51,12 @@
 				</div>
 			</div>
 			</div>
-			<div class="row {{$treatment->id_treatment}}">
+			<div class="row {{$treatment->id}}">
 			<div class="col-md-12 text-center">
-				<button class="btn btn-light finTratamiento" tratamiento = "{{$treatment->id_treatment}}" namet = "{{$treatment->name}}"  data-toggle="modal" data-target="#exampleModalLong1">Finalizar tratamiento</button>
+				<button class="btn btn-light finTratamiento" tratamiento = "{{$treatment->id}}" namet = "{{$treatment->name}}"  data-toggle="modal" data-target="#exampleModalLong1">Finalizar tratamiento</button>
 				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-light btnDetalles" data-toggle="modal" data-target="#exampleModalLong" tratamiento = "{{$treatment->id_treatment}}" namet = "{{$treatment->name}}" >Ver pagos</button>
-				<button type="button" class="btn btn-primary btnAddPago"  data-toggle="modal"  data-target="#agregarpago" tratamiento = "{{$treatment->id_treatment}}" namet = "{{$treatment->name}}" >Agregar pago</button>
+				<button type="button" class="btn btn-light btnDetalles" data-toggle="modal" data-target="#exampleModalLong" tratamiento = "{{$treatment->id}}" namet = "{{$treatment->name}}" >Ver pagos</button>
+				<button type="button" class="btn btn-primary btnAddPago"  data-toggle="modal"  data-target="#agregarpago" tratamiento = "{{$treatment->id}}" namet = "{{$treatment->name}}" >Agregar pago</button>
 
 			</div>
 			</div>

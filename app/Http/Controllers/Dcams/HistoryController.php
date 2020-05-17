@@ -12,10 +12,13 @@ class HistoryController extends Controller
 {
 
 
-    public function index(Request $request){
+    public function index($patientID){
+
+      $patientID = base64_decode($patientID);
+
         return view('admin.historialmedico',[
-            'sfferings' => \App\Records_history::select('sfferingDescription','sfferingCategory')->join('stories','stories','stories.id')->join('sfferings','sfferings','sfferings.id')->where('user',$request['patient'])->get(),
-            'patients' => \App\User::where('id',$request['patient'])->get()
+            'sfferings' => \App\Records_history::select('sfferingDescription','sfferingCategory')->join('stories','stories','stories.id')->join('sfferings','sfferings','sfferings.id')->where('user',$patientID)->get(),
+            'patients' => \App\User::where('id',$patientID)->get()
         ]);
     }
 

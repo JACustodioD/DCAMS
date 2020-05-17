@@ -9,8 +9,10 @@ use App\User;
 class PatientController extends Controller
 {
     public function index(){
+      $patients = \App\User::where('typeOfUser','U')->where('userStatus','Active')->get();
+      
     	return view('admin.pacientes',[
-    		"patients" => \App\User::where('typeOfUser','U')->where('userStatus','Active')->get()
+    		"patients" => $patients
     	]);
     }
 

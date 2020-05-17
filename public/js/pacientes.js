@@ -44,6 +44,8 @@ $(document).ready(function(){
         const mo = new Intl.DateTimeFormat('en', { month: 'numeric' }).format(d)
         const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d)
 
+        data[i].id = btoa(data[i].id);
+
            $("#pacientes").append(''+
                '<div class="col-md-4" >'+
                '<div class="card border-primary mb-3">'+
@@ -53,19 +55,13 @@ $(document).ready(function(){
                '<div class="text-center">'+
                '<h5 class="card-title text-primary">'+data[i].fullName+'</h5>'+
                '<h6 class="card-subtitle mb-2 text-muted">Paciente desde: '+`${da}-${mo}-${ye}`+'</h6>'+
-               '<form action="/consultorio/tratamientos" method="POST">'+
-               '<input type="text" name="_token" hidden value="'+token+'">'+
-               '<input type="text" name="paciente" hidden value="'+data[i].id+'">'+
+               '<form action="/consultorio/tratamientos/'+data[i].id+'" method="GET">'+
                '<button  class="btn btn-outline-secondary btn-block mb-1 btnTratamientos" type="submit">Ver tratamientos</button>'+
                '</form>'+
-               '<form action="/consultorio/historialmedico" method="POST">'+
-               '<input type="text" name="_token" hidden value="'+token+'">'+
-               '<input type="text" name="patient" hidden value="'+data[i].id+'">'+
+                '<form action="/consultorio/historialmedico/'+data[i].id+'" method="GET">'+
                '<button class="btn btn-outline-secondary btn-block mb-1" patient="'+data[i].id+'" type="submit">Ver Historia médica</button>'+
                '</form>'+
-               '<form action="/consultorio/citas" method="POST">'+
-               '<input type="text" name="_token" hidden value="'+token+'">'+
-               '<input type="text" name="paciente" hidden value="'+data[i].id+'">'+
+               '<form action="/consultorio/citas/'+data[i].id+'" method="GET">'+
                '<button class="btn btn-outline-secondary  btn-block mb-1" patient="'+data[0].id+'" type="submit">Crear nueva cita</button>'+
                '</form>'+
                ' <p class="text-danger card-link btnEliminarP" patient="'+data[i].id+'" data-toggle="modal" data-target="#exampleModal1"> Eliminar paciente</p>'+

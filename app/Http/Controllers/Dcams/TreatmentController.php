@@ -13,10 +13,21 @@ use Illuminate\Support\Facades\Auth;
 class TreatmentController extends Controller
 {
 
-    public function adminTratamientos(Request $request){
+
+    public function adminTratamientos($patient){
+
+      $patientID = base64_decode($patient);
+
+      $patients = \App\User::where('id',$patientID)->take(1)->get();
+
+      if(sizeOf($patients) == 0)
+      {
+        return redirect("/");
+      }
+
         return view('admin.tratamientos',[
-            'patients' => \App\User::where('id',$request['paciente'])->take(1)->get(),
-            'treatments' => \App\Treatment::join('services','services.id','=','treatments.service')->where('user',$request['paciente'])->where('treatmentStatus','Active')->get(),
+            'patients' => $patients,
+            'treatments' => \App\Treatment::join('services','services.id','=','treatments.service')->where('user',$patientID)->where('treatmentStatus','Active')->get(),
             'services' => \App\Service::all()
 
         ]);
@@ -36,7 +47,7 @@ class TreatmentController extends Controller
 
     }
     public function cancelarTratamiento(Request $request, Treatment $treatment){
-        $tratamiento = $treatment::where('id_treatment',$request['tratamiento'])->update(['status'=>0]);
+        $tratamiento = $treatment::where('id',$request['tratamiento'])->update(['treatmentStatus'=>0]);
 
         return "true";
 

@@ -13,7 +13,7 @@
 			</div>
 		</div>
 	</div>
-</div> 
+</div>
 @if(sizeOf($dates)>0)
 <div class="container mt-3">
     <div class="shadow p-3 mb-5 bg-white rounded">
@@ -23,7 +23,7 @@
             </div>
         </div>
         @foreach($dates as $date)
-        @if(strcmp($date->status,'Pendiente')==0)
+        @if(strcmp($date->dateStatus,'Pendiente')==0)
         <div class="row">
             <div class="col-md-2">
                  <div class="form-group">
@@ -46,7 +46,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                  <button type="button" class="btn btn-danger btnCancelar" data-toggle="modal"  data-target="#cancelarcita" cita="{{$date->id_date}}">Cancelar cita</button>
+                  <button type="button" class="btn btn-danger btnCancelar" data-toggle="modal"  data-target="#cancelarcita" cita="{{$date->id}}">Cancelar cita</button>
             </div>
         </div>
         @endif
@@ -60,9 +60,9 @@
               <figure class="figure">
                  <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
                   <figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tiene citas.</h4>  </figcaption>
-               </figure>   
+               </figure>
            </div>
-     </div> 
+     </div>
 </div>
 @endif
 <!--MODAL CANCELACION DE CITA-->
