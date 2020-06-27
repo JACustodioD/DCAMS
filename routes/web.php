@@ -31,9 +31,13 @@ Route::group([
 	'middleware' => 'admin',
 	'prefix' => 'consultorio',
 
-],function(){
+],function(){ 
 
+	
 	Route::get('/','Dcams\PetitionController@index');
+	Route::post('/peticionvista','Dcams\PetitionController@update');
+	Route::post('/borrarpeticion','Dcams\PetitionController@delete');
+
 
 	Route::get('/tratamientos/{patient}','Dcams\TreatmentController@adminTratamientos' );
 
@@ -44,13 +48,11 @@ Route::group([
 	Route::get('/historialmedico/{patient}','Dcams\HistoryController@index');
 	Route::post('/habilitarhistoria','Dcams\HistoryController@enabled');
 
-	Route::post('/peticionvista','Dcams\PetitionController@update');
-	Route::post('/borrarpeticion','Dcams\PetitionController@destroy');
-
+	
 	Route::get('/pacientes','Dcams\PatientController@index');
 	Route::post('/buscarpaciente','Dcams\PatientController@searchPatient');
 	Route::post('/mostrarpaciente','Dcams\PatientController@showPatients');
-	Route::post('/borrarpaciente','Dcams\PatientController@deletePatient	');
+	Route::post('/borrarpaciente','Dcams\PatientController@deletePatient');
 
 	Route::get('/citas/{patient}','Dcams\DateController@citasUser');
 	Route::get('/miscitas', 'Dcams\DateController@show');

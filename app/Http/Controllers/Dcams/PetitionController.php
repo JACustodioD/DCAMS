@@ -12,7 +12,41 @@ use Illuminate\Support\Facades\Validator;
 
 class PetitionController extends Controller
 {
+    function index(){
+        $petitionList = \App\Petition::where('petitionStatus','Activo')->orderBY('date')->get();
+        
+        return view ('admin.index', ['petitions' => $petitionList]);
+    }
 
+
+    /** @param Request $request */
+    function update(Request $request){
+        
+        $petition_attended =  \App\Petition::find($request['petition']);
+
+        $petition_attended->petitionStatus = 'Atendido';
+        $petition_attended->save();
+        
+
+        return $petition_attended->id;
+    }
+
+
+    /** @param Request $request */
+    function delete(Request $request){
+        
+        $petition_attended =  \App\Petition::find($request['petition']);
+
+        $petition_attended->petitionStatus = 'Eliminado';
+        $petition_attended->save();
+        
+
+        return $petition_attended->id;
+    }
+
+}
+    /** Código que meteremos en message */
+    /*
     public function store(Request $request)
     {
         $validData = $request->validate([
@@ -57,3 +91,5 @@ class PetitionController extends Controller
         return ($mensaje);
     }
 }
+
+*/

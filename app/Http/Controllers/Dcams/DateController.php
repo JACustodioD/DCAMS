@@ -11,6 +11,10 @@ use Illuminate\Http\Request;
 class DateController extends Controller
 {
 
+    /** 
+     * @param Request $request
+     * @return boolean 
+     */
     public function store(Request $request)
     {
 
@@ -32,7 +36,7 @@ class DateController extends Controller
         return "true";
     }
 
-
+    /** @param Date $date */
     public function show(Date $date)
     {
         return view('admin.miscitas',[
@@ -41,14 +45,32 @@ class DateController extends Controller
     }
 
 
+    /**
+     * @param Request $request
+     * @param Date $date
+     * 
+     * @return array
+     */
     public function buscarCitas(Request $request, Date $date){
         return $date::join('users','user','id')->where('name', 'like', $request['paciente'].'%')->where('typeOfUser','=','U')->get();
     }
 
+    /**
+     * @param Request $request
+     * @param Date $date
+     * 
+     * @return array
+     */
      public function mostrarCitas(Request $request, Date $date){
         return $date::join('users','user','id')->get();
     }
 
+    /**
+     * @param Request $request
+     * @param Date $date
+     * 
+     * @return array
+     */
     public function citasUser($patientID){
 
       $patientID = base64_decode($patientID);
@@ -58,6 +80,13 @@ class DateController extends Controller
 
         ]);
     }
+    
+    /**
+     * @param Request $request
+     * @param Date $date
+     * 
+     * @return array
+     */
     public function cancelarCita(Request $request, Date $date){
         $citas = $date::where('id',$request['cita'])->update(['dateStatus'=>'Cancelada','commentary' => $request['comentario']]);
         return "true";

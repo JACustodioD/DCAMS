@@ -16,21 +16,33 @@ class PatientController extends Controller
     	]);
     }
 
+    /** 
+     * @param Request $request
+     * @return array
+     */
     public function searchPatient(Request $request, User $user){
-    	return $user::where('fullName', 'like', $request['paciente'].'%')->where('typeOfUser','=','U')->where('userStatus','Active')->get();
+    	return $user::where('fullName', 'like', $request['patient'].'%')->where('typeOfUser','=','U')->where('userStatus','Active')->get();
     }
 
-
+    /** 
+     * @param Request $request
+     * @return array
+     */
     public function showPatients(Request $request, User $user){
     	return $user::where('typeOfUser','U')->where('userStatus','Active')->get();
     }
 
+    /** 
+     * @param Request $request
+     * @return int|array
+     */
+    public function deletePatient(Request $request){
 
-    public function deletePatient(Request $request, User $user){
-        $user = $user->find($request['paciente']);
-        $user->UserStatus = "Eliminado";
-        $user->save();
+      $patient = \App\User::find($request['patient']);
+      $patient->userStatus = 'Eliminado';
+      $patient->save();
 
-        return ($user);
+      return $patient->id;
+
     }
 }
