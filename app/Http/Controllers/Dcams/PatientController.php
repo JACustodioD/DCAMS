@@ -29,7 +29,7 @@ class PatientController extends Controller
      * @return array
      */
     public function showPatients(Request $request, User $user){
-    	return $user::where('typeOfUser','U')->where('userStatus','Active')->get();
+    	return $user::where('typeOfUser','U')->where('userStatus','Active')->where('userStatus','Active')->get();
     }
 
     /** 

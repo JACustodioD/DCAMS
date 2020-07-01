@@ -1,36 +1,52 @@
 $(document).ready(function(){
+	const token = $("meta[name='csrf-token']").attr("content");
+
+	/**  cancel date */
 	$(document).on('click','.btnCancelar',function(){
 		$(".modal-title").text($(".nombrePaciente").attr('npaciente'));
 		$('.btnCancelarC').attr('cita',$(this).attr('cita'));
 	});
 
 	$(document).on('click','.btnCancelarC',function(){
-		var cita = $(this).attr('cita');
-		var comentario = $("#selectCancelar").val();
+		let date = $(this).attr('cita');
+		let commentary = $("#selectCancelar").val();
+		
 		$.post('/consultorio/cancelarcita',{
-                "_token": $("meta[name='csrf-token']").attr("content"),
-                "cita": cita,
-                "comentario": comentario
+                "_token": token,
+                "date": date,
+                "commentary": commentary
         }, function(data) {
-					location.reload();
+				alert('Cambios Aplicados');
+				location.reload();
         });
 	});
 
 
+	/** add date */
 	$(document).on('click','.btnAddCita',function(){
-		var usuario = $(".nombrePaciente").attr('paciente');
-		var fecha = $("#fecha").val();
-		var hora = $("#hora").val();
-		var asunto = $("#asunto").val();
+
+		let patient = $(".nombrePaciente").attr('paciente');
+		let date = $("#fecha").val();
+		let hour = $("#hora").val();
+		let affair = $("#asunto").val();
+
 		$.post('/consultorio/agregarcita',{
-            "_token": $("meta[name='csrf-token']").attr("content"),
-            "usuario": usuario,
-            "fecha": fecha,
-            "hora" : hora,
-            "asunto": asunto,
+            "_token": token,
+            "patient": patient,
+            "date": date,
+            "hour" : hour,
+			"affair": affair,
+			
         }, function(data) {
-        	alert("Cita agregada");
-        	location.reload();
+
+			if(data.response) {
+				$("#alert_error").removeAttr('hidden');
+				$("#alert_error").html(data.message);
+			} else {
+				alert("cambios aplicados");
+        		location.reload();
+			}
+        	
         });
 	});
 });

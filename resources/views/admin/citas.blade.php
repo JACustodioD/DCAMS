@@ -20,6 +20,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h3>Próxima cita:</h3>
+               
             </div>
         </div>
         @foreach($dates as $date)
@@ -98,6 +99,7 @@
              <div class="row">
                  <div class="col-md-12">
                      <h3>Nueva  cita:</h3>
+                     <div class="alert alert-danger" id="alert_error" role="alert" hidden></div>
                  </div>
              </div>
              <div class="row">

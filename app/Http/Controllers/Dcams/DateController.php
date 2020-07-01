@@ -12,31 +12,41 @@ class DateController extends Controller
 {
 
     /** 
-     * @param Request $request
+     * @param Illuminate\Http\Request $request
      * @return boolean 
      */
-    public function store(Request $request)
+    public function store(\Illuminate\Http\Request $request)
     {
+        $today = date('Y-m-d');
+        $open_hour = '09:00';
+        $close_hour = '18:00';
 
-      $today =  date("Y-m-d");
+        if ($request['date'] < $today) {
+            $error = ['response' => true, 'message' => 'no puede agendar cita antes de hoy'];
+            return  $error;
+            
+        }
+        if($request['hour'] < $open_hour || $request['hour'] > $close_hour) {
+            $error = ['response' => true, 'message' => 'Nuestros horarios de atencion son de 9:00 - 18:00'];
+            return  $error;
+        }
 
-      if ($request['fecha'] < $today){
-      return false;
+        $new_date = new Date();
 
-      }
-        $cita = new Date();
-        $cita->user = $request['usuario'];
-        $cita->dateOfAppointment = $request['fecha'];
-        $cita->hour = $request['hora'];
-        $cita->affair = $request['asunto'];
-        $cita->commentary = "";
-        $cita->dateStatus = "Pendiente";
-        $cita->save();
+        $new_date->user = $request['patient'];
+        $new_date->dateOfAppointment = $request['date'];
+        $new_date->hour = $request['hour'];
+        $new_date->affair = $request['affair'];
+        $new_date->dateStatus = 'Pendiente';
+        $new_date->commentary = "";
+        $new_date->save();
+    
+       return ['response' => false];
 
-        return "true";
+        
     }
 
-    /** @param Date $date */
+    /** @param \App\Date $date */
     public function show(Date $date)
     {
         return view('admin.miscitas',[
@@ -46,8 +56,8 @@ class DateController extends Controller
 
 
     /**
-     * @param Request $request
-     * @param Date $date
+     * @param Illuminate\Http\Request $request
+     * @param \App\Date $date
      * 
      * @return array
      */
@@ -56,8 +66,8 @@ class DateController extends Controller
     }
 
     /**
-     * @param Request $request
-     * @param Date $date
+     * @param Illuminate\Http\Request $request
+     * @param App\Date $date
      * 
      * @return array
      */
@@ -66,8 +76,8 @@ class DateController extends Controller
     }
 
     /**
-     * @param Request $request
-     * @param Date $date
+     * @param Illuminate\Http\Request $request
+     * @param \App\Date $date
      * 
      * @return array
      */
@@ -82,13 +92,13 @@ class DateController extends Controller
     }
     
     /**
-     * @param Request $request
-     * @param Date $date
+     * @param Illuminate\Http\Request $request
+     * @param App\Date $date
      * 
      * @return array
      */
     public function cancelarCita(Request $request, Date $date){
-        $citas = $date::where('id',$request['cita'])->update(['dateStatus'=>'Cancelada','commentary' => $request['comentario']]);
+        $citas = $date::where('id',$request['date'])->update(['dateStatus'=>'Cancelada','commentary' => $request['commentary']]);
         return "true";
     }
 

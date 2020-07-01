@@ -18,6 +18,10 @@ class AdminMiddleware
         if (auth()->check() && auth()->user()->typeOfUser == 'A') {
             return $next($request);
         }
+        else
+        {
+            return redirect('/');
+        }
         return redirect('/pacientes');
     }
 }
