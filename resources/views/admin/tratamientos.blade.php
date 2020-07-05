@@ -5,7 +5,7 @@
 	<div class="paciente-trat">
 		<div class="row">
 			<div class="col-md-12">
-				@foreach ($patients as $patient)
+				@foreach ($patient as $patient)
 				<h5 class="text-info nombrePaciente" paciente="{{$patient->id}}">Pacientes / Tratamientos <b>
 					{{$patient->fullName}}</b>
 				</h5>
@@ -29,7 +29,7 @@
 			<div class="col-md-6">
 				<div class="form-group">
 					<label for="exampleFormControlTextarea1">Tratamiento:</label>
-					<p>{{$treatment->name}}</p>
+					<p>{{$treatment->serviceName}}</p>
 				</div>
 			</div>
 			<div class="col-md-2">
@@ -85,7 +85,7 @@
 						<h3>Agregar un nuevo tratamiento.</h3>
 						<div class="form-group">
 							<label for="seelctServicio">Tratamientos disponibles</label>
-							<select class="form-control selectServicio" id="selctServicio" name="servicio">
+							<select class="form-control selectServicio" id="selectServicio" name="servicio">
 							@foreach ($services as $service)
 								<option value = "{{$service->id}}">
 									{{$service->serviceName}}
@@ -99,13 +99,13 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<label for="detallesServicio">Detalles:</label>
-						<textarea class="form-control" id="detallesServicio" rows="3" disabled>{{$service->serviceDescription}}</textarea>
+						<textarea class="form-control" id="serviceDescription" rows="3" disabled>{{$service->serviceDescription}}</textarea>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
 						<label for="costoServicio">Costo:</label>
-						<input class="form-control" type="text" id="costoServicio" value="{{$service->cost}}" name="total" disabled>
+						<input class="form-control" type="text" id="serviceCost" value="{{$service->cost}}" name="total" disabled>
 					</div>
 				</div>
 			</div>

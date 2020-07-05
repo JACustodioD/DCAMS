@@ -39,11 +39,11 @@ Route::group([
 	Route::post('/borrarpeticion','Dcams\PetitionController@delete');
 
 
-	Route::get('/tratamientos/{patient}','Dcams\TreatmentController@adminTratamientos' );
+	Route::get('/tratamientos/{patient}','Dcams\TreatmentController@showTreatments' );
 
 
-	Route::post('/servicio','Dcams\TreatmentController@show');
-	Route::post('/agregartratamiento','Dcams\TreatmentController@agregarTratamiento');
+	Route::post('/servicio','Dcams\TreatmentController@getServiceValues');
+	Route::post('/agregartratamiento','Dcams\TreatmentController@addTreatment');
 
 	Route::get('/historialmedico/{patient}','Dcams\HistoryController@index');
 	Route::post('/habilitarhistoria','Dcams\HistoryController@enabled');
