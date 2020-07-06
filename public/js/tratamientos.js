@@ -81,95 +81,115 @@ $(document).ready(function(){
     /** end add treatment */
 
 
-    /* FINALIZAR TRATAMIENTO */
+
+    /** cancel tratment */
     $(document).on('click','.finTratamiento',function(){
         $('.btnBorrarT').attr('tratamiento',$(this).attr('tratamiento'));
-        $('.modal-title').text($(this).attr('nameT'));
+        const treatment_name = $(this).attr('nameT');
+        $('.modal-title').text(treatment_name);
     });
     $(document).on('click','.btnBorrarT',function(){
-        var usuario = $(".nombrePaciente").attr('paciente',);
-        var tratamiento = $(this).attr('tratamiento');
+        let patient = $(".nombrePaciente").attr('paciente',);
+        let treatment = $(this).attr('tratamiento');
         $.post('/consultorio/cancelartratamiento',{
-                "_token": $("meta[name='csrf-token']").attr("content"),
-                "tratamiento": tratamiento,
-                "paciente": usuario, 
+                "_token": token,
+                "treatment": treatment,
+                "patient": patient, 
         }, function(data) {
-            $("."+tratamiento).remove();
-            if($('.cont-tratamientos').length == 0){
-                    var vacio = ''+
-                     '<div class="container mt-5 ups">'+
-                     '<div class="row">'+
-                     '<div class="col-md-12 text-center">'+
-                     '<figure class="figure">'+
-                     '<img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">'+
-                     '<figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Ya no tiene más tratamientos.</h4>  </figcaption>'+
-                     '</figure> </div> </div> </div>';
-                    
-                    $(".cont-tratamineto").append(vacio);
+            if(data.response) {
+                alert(data.message);
+			
+			} else {    
+                
+                $("."+data.treatment).remove();
+                if($('.cont-tratamientos').length == 0){
+                    let empty = `
+                        <div class="container mt-5 ups">
+                        <div class="row">
+                        <div class="col-md-12 text-center">
+                        <figure class="figure">
+                        <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
+                        <figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Ya no tiene más tratamientos.</h4>  </figcaption>
+                        </figure> </div> </div> </div>
+                    `; 
+                
+                    $(".cont-tratamineto").append(empty);
                 }
+
+                alert(data.message);
+            }
         });
     });
-    /* FIN FINALIZAR TRATAMIENTO */
+    /** end cancel tratment */
 
 
-    /* CODIGO PARA VER PAGOS */
-    $(document).on('click','.btnDetalles',function(){
-        $('.listaPagos').remove();
-        $('.modal-title').text($(this).attr('nameT'));
-        var table = $('.tableV').children('tbody');
-        $.post('/consultorio/historialdepagos',{
-            "_token": $("meta[name='csrf-token']").attr("content"),
-            "tratamientos": $(this).attr('tratamiento'),
-            }, function(data) {
-                if(data.length>0){
-                    for (var i = 0; i <= data.length-1; i++) {
-                        row =''+
-                        '<tr class="listaPagos">'+
-                        '<th scope="row">$ '+data[i].credit+'</th>'+
-                        '<td>'+data[i].created_at+'</td>'+
-                        '<td>$'+data[i].total+'</td>'+
-                        '</tr>';
-                        table.append(row);
-                    }
-                }else{
-                    row = ''+
-                    '<tr class="listaPagos">'+
-                    '<td scope="row" class="text-danger text-center" colspan="3">No hay pagos</td>'+
-                    '</tr>';
-                    table.append(row);
-                }
-           });
-        });
-
-    /* FIN CODIGO PARA VER PAGOS */
-
-    /* CODIGO PARA AGREGAR PAGO */
+    /** add payment */
     $(document).on('click','.btnAddPago',function(){
         $('.btnAdd').attr('tratamiento',$(this).attr('tratamiento'));
         $('.modal-title').text($(this).attr('nameT'));
     });
 
     $(document).on('click','.btnAdd',function(){
-        var usuario = $(".nombrePaciente").attr('paciente',);
-        var tratamiento = $(this).attr('tratamiento');
-        var cantidad = $("#cantidad").val();
-        var fecha = $('#fechaPago').val();
+        
+        const treatment = $(this).attr('tratamiento');
+        const amount = $("#cantidad").val();
+        const date = $('#fechaPago').val();
 
-        if (cantidad.length == 0 || fecha.length == 0) {
+        if (amount.length == 0 || date.length == 0) {
             alert("Completa los campos");
         }else{
-            if (/^([0-9])*$/.test(cantidad)) {
+            if (/^([0-9])*$/.test(amount)) {
                $.post('/consultorio/hacerpago',{
-                "_token": $("meta[name='csrf-token']").attr("content"),
-                "tratamiento": tratamiento,
-                "cantidad" : cantidad,
-        }, function(data) {
-            alert("Pago completado");
-        });
-            }else{
+                    "_token": token,
+                    "treatment": treatment,
+                    "amount" : amount,
+                }, function(data) {
+                    alert(data.message);
+                    location.reload();
+            
+                });
+            } else {
                 alert("El campo cantidad solo debe contener números");
             }
         }
     });
-    /* FIN CODIGO PARA AGREGAR PAGO */
+    /** end add payment */
+
+
+    /** show payments */
+    $(document).on('click','.btnDetalles',function(){
+        $('.listaPagos').remove();
+        $('.modal-title').text($(this).attr('namet'));
+        let table = $('.tableV').children('tbody');
+        $.post('/consultorio/historialpagos',{
+            "_token": token,
+            "treatment": $(this).attr('tratamiento'),
+            }, function(data) {
+                if(data.response) {
+                    alert(data.message);
+                } else {
+                    if(data.payments.length>0){
+                        for (var i = 0; i <= data.payments.length-1; i++) {
+                            row = `
+                            <tr class="listaPagos">'+
+                            <th scope="row">${data.payments[i].credit}</th>
+                            <td>${data.payments[i].created_at}</td>
+                            <td>${data.total}</td>
+                            </tr> `;
+                            table.append(row);
+                        }
+                    } else {
+                        row = `
+                        <tr class="listaPagos">
+                        <td scope="row" class="text-danger text-center" colspan="3">No hay pagos</td>
+                        </tr> `;
+                        
+                        table.append(row);
+                    }
+                }
+                
+           });
+        });
+    /** end show payments */
+
 }); 

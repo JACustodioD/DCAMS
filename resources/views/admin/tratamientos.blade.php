@@ -14,7 +14,6 @@
 		</div>
 	</div>
 </div>
-@if(sizeOf($treatments)>0)
 <div class="container mt-3">
 	<div class="shadow p-3 mb-5 bg-white rounded">
 		<div class="row">
@@ -23,60 +22,63 @@
 			</div>
 		</div>
 		<div class="cont-tratamineto">
-		@foreach ($treatments as $treatment)
+			@if(sizeOf($treatments)>0)
+				@foreach ($treatments as $treatment)
 
-			<div class="row {{$treatment->id}} cont-tratamientos">
-			<div class="col-md-6">
-				<div class="form-group">
-					<label for="exampleFormControlTextarea1">Tratamiento:</label>
-					<p>{{$treatment->serviceName}}</p>
-				</div>
-			</div>
-			<div class="col-md-2">
-				<div class="form-group">
-					<label for="exampleFormControlTextarea1">Costo:</label>
-					<p>{{$treatment->cost}}</p>
-				</div>
-			</div>
-			<div class="col-md-2">
-				<div class="form-group">
-					<label for="exampleFormControlTextarea1" >Fecha de inicio:</label>
-					<p>{{$treatment->startDate}}</p>
-				</div>
-			</div>
-			<div class="col-md-2">
-				<div class="form-group">
-					<label for="exampleFormControlTextarea1">Fecha de término:</label>
-					<p>{{$treatment->endDate}}</p>
-				</div>
-			</div>
-			</div>
-			<div class="row {{$treatment->id}}">
-			<div class="col-md-12 text-center">
-				<button class="btn btn-light finTratamiento" tratamiento = "{{$treatment->id}}" namet = "{{$treatment->name}}"  data-toggle="modal" data-target="#exampleModalLong1">Finalizar tratamiento</button>
-				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-light btnDetalles" data-toggle="modal" data-target="#exampleModalLong" tratamiento = "{{$treatment->id}}" namet = "{{$treatment->name}}" >Ver pagos</button>
-				<button type="button" class="btn btn-primary btnAddPago"  data-toggle="modal"  data-target="#agregarpago" tratamiento = "{{$treatment->id}}" namet = "{{$treatment->name}}" >Agregar pago</button>
+					<div class="row {{$treatment->id}} cont-tratamientos">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">Tratamiento:</label>
+							<p>{{$treatment->serviceName}}</p>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">Costo:</label>
+							<p>{{$treatment->cost}}</p>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1" >Fecha de inicio:</label>
+							<p>{{$treatment->startDate}}</p>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">Fecha de término:</label>
+							<p>{{$treatment->endDate}}</p>
+						</div>
+					</div>
+					</div>
+					<div class="row {{$treatment->id}}">
+					<div class="col-md-12 text-center">
+						<button class="btn btn-light finTratamiento" tratamiento = "{{$treatment->id}}" namet = "{{$treatment->serviceName}}"  data-toggle="modal" data-target="#exampleModalLong1">Finalizar tratamiento</button>
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-light btnDetalles" data-toggle="modal" data-target="#exampleModalLong" tratamiento = "{{$treatment->id}}" namet = "{{$treatment->name}}" >Ver pagos</button>
+						<button type="button" class="btn btn-primary btnAddPago"  data-toggle="modal"  data-target="#agregarpago" tratamiento = "{{$treatment->id}}" namet = "{{$treatment->name}}" >Agregar pago</button>
 
-			</div>
-			</div>
-		@endforeach
+					</div>
+					</div>
+				@endforeach
+				@else
+				
+					<div class="container mt-5">
+						<div class="row">
+							<div class="col-md-12 text-center ups">
+								<figure class="figure">
+									<img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
+									<figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tiene tratamientos.</h4>  </figcaption>
+								</figure>
+							</div>
+						</div>
+					</div>
+				@endif
+
+
 		</div>
 	</div>
 </div>
-
-@else
-<div class="container mt-5">
-	<div class="row">
-           <div class="col-md-12 text-center ups">
-              <figure class="figure">
-                 <img src="/img/diente.png" class="figure-img img-fluid rounded" alt="ups" height="300" width="300">
-                  <figcaption class="figure-caption"> <h4 class="text-primary text-ups"> <b> ¡UPS! </b> <br> Aún no tiene tratamientos.</h4>  </figcaption>
-               </figure>
-           </div>
-     </div>
-</div>
-@endif
 
 <div class="container mt-3">
 	<div class="shadow p-3 mb-5 bg-white rounded">
@@ -211,7 +213,7 @@
 	<div class="modal-dialog" role="document">
 	  <div class="modal-content">
 		<div class="modal-header bg-primary text-white">
-		  <h5 class="modal-title2" id="exampleModalLongTitle1">(Nombre del tratamiento)</h5>
+		  <h5 class="modal-title" id="exampleModalLongTitle1">(Nombre del tratamiento)</h5>
 		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		  </button>

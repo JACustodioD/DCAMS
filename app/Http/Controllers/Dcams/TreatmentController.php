@@ -26,7 +26,7 @@ class TreatmentController extends Controller
       
         }
         
-        $treatmentList = \App\Treatment::join('services','services.id','=','treatments.service')->where('user',$patientID)->where('treatmentStatus','Active')->get();
+        $treatmentList = \App\Treatment::select('treatments.id','startDate','endDate','serviceName','serviceDescription','cost')->join('services','services.id','=','treatments.service')->where('user',$patientID)->where('treatmentStatus','Active')->get();
         
         foreach($treatmentList as $treatmentInfo){
             $treatmentInfo->cost = "$".number_format ( $treatmentInfo->cost ,  0 , "." , "," );
@@ -52,17 +52,32 @@ class TreatmentController extends Controller
      * @return array
      *  */
     public function addTreatment(Request $request){
+
+        $today = date('Y-m-d');
+
+
+        if($request['startDate'] < $today){
+            $error = ['response' => 'true', 'message' => "No puede agendar citas en días anteriores a hoy."];
+        }
         
+        if($request['startDate'] > $request['endDate']){
+            $error = ['response' => 'true','message' => 'La fecha de termino de tratamiento debe ser mayor a la de incio'];
+        }
+
         $serviceInfo =  \App\Service::select('id','cost')->where('id',$request['service'])->first();
         
         if(!$serviceInfo) {
-            return ['response' => 'true', 'message' => 'El servicio seleccionado no existe.'];
+            $error = ['response' => 'true', 'message' => 'El servicio seleccionado no existe.'];
         }
 
         $patientInfo =  \App\User::where('id',$request['patient'])->first();
         
         if(!$patientInfo) {
-            return ['response' => 'true', 'message' => 'No es posible continuar. Existe un error con el paciente.'];
+            $error = ['response' => 'true', 'message' => 'No es posible continuar. Existe un error con el paciente.'];
+        }
+
+        if ($error){
+            return $error;
         }
 
         $new_treatment = new Treatment();
@@ -92,10 +107,27 @@ class TreatmentController extends Controller
 
 
     }
-    public function cancelarTratamiento(Request $request, Treatment $treatment){
-        $tratamiento = $treatment::where('id',$request['tratamiento'])->update(['treatmentStatus'=>0]);
 
-        return "true";
+    /**
+     * @param Illiminate\Http\Request $request
+     * @return array
+     */
+    public function cancelTreatment(Request $request){
+
+        $treatment = new Treatment();
+
+        $update_treatment = $treatment::find($request['treatment']); 
+
+        if(!$update_treatment){
+            return ['response' => 'true', 'messsage' => 'El tratamineto seleccionado no existe. No es posible continuar'];
+        }
+        
+
+        $update_treatment->treatmentStatus = "Cancelled";
+        $update_treatment->save();
+        
+    
+        return ['response' => false, 'message' => 'Cambios Aplicados', 'treatment' => $update_treatment->id];
 
 
     }

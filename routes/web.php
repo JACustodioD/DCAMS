@@ -63,9 +63,10 @@ Route::group([
 	Route::post('/buscarcitas','Dcams\DateController@buscarCitas');
 	Route::post('/mostrarcitas','Dcams\DateController@mostrarCitas');
 
-	Route::post('/cancelartratamiento','Dcams\TreatmentController@cancelarTratamiento');
+	Route::post('/cancelartratamiento','Dcams\TreatmentController@cancelTreatment');
 
-	Route::post('/hacerpago','Dcams\PaymentController@hacerPago');
+	Route::post('/hacerpago','Dcams\PaymentController@addPayment');
+	Route::post('/historialpagos','Dcams\PaymentController@paymentHistory');
 
 
 });
