@@ -76,7 +76,7 @@ class TreatmentController extends Controller
             $error = ['response' => 'true', 'message' => 'No es posible continuar. Existe un error con el paciente.'];
         }
 
-        if ($error){
+        if (isset($error)){
             return $error;
         }
 
