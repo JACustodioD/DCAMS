@@ -12,21 +12,21 @@
                  <img src="/img/slider22.jpg" class="d-block w-100" alt="slider1">
                 <div class="carousel-caption d-none d-md-block caption-carou ">
                     <h3 class="d-flex align-items-center justify-content-end mt-3 text-sabermas ">
-                    <a href="" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
+                    <a href="/tratamientos/#implantes" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
                 </div>
                 </div>
                 <div class="carousel-item">
                     <img src="/img/slider33.jpg" class="d-block w-100" alt="slider2">
                     <div class="carousel-caption d-none d-md-block caption-carou ">
                     <h3 class="d-flex align-items-center justify-content-end mt-3 text-sabermas mt-5">
-                    <a href="" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
+                    <a href="/tratamientos/#sonrisa" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
                 </div>
                 </div>
                 <div class="carousel-item">
                     <img src="/img/slider55.jpg" class="d-block w-100" alt="slider2">
                     <div class="carousel-caption d-none d-md-block caption-carou ">
                     <h3 class="d-flex align-items-center justify-content-end mt-3 text-sabermas mt-5">
-                    <a href="" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
+                    <a href="#promociones" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
                     </div>
                 </div>
               
