@@ -38,7 +38,7 @@
 
 </div>
 <!--SECCION ACERCA DE-->
-<section class="container-fluid shadow-sm p-3 mb-1" style="height: 100%">
+<section class="container-fluid shadow-sm p-3 mb-1" style="height: 100%" id="acercade">
      <div class="about-section" >
          <div class="desc-about">      
             <div class="row">
@@ -91,7 +91,7 @@
      </div>
 </section>
        <!--TRATAMIENTOS-->
-<section class="container-fluid tratamientos-section d-none d-lg-block" id="promociones" style="height: 100%">
+<section class="container-fluid tratamientos-section d-none d-lg-block" id="tratamientos" style="height: 100%">
     <div class="row">
         <div class="col-md-12 mt-3">
             <h1 class="text-center">Tratamientos</h1>
@@ -246,7 +246,7 @@
 </section>
 
 <!-- SLIDER RESPONSIVE DE TRATAMIENTOS-->
-<section class="container-fluid tratamientos-section d-xs-block d-lg-none" id="promociones" style="height: 100%">
+<section class="container-fluid tratamientos-section d-xs-block d-lg-none" id="tratamientos" style="height: 100%">
      <div class="row">
          <div class="col-md-12 mt-3">
              <h1 class="text-center">Tratamientos</h1>
@@ -379,7 +379,7 @@
  </section>   
  <!--SECCION DE PROMOCIONES-->
  
-<section class="container-fluid shadow-sm p-3 mb-1" >
+<section class="container-fluid shadow-sm p-3 mb-1" id="promociones" >
     <div class="row">
         <div class="col-md-12 mt-3">
             <h1 class="text-center">Disfruta de nuestras promociones</h1>
