@@ -372,7 +372,7 @@
         <div class="row ">
              <div class="col-md-12 mt-3 text-center">
                  <h3 class="pedir-cita ">Tú sonrísa es lo más importante | <strong>Contáctanos</strong></h3>
-                 <button type="button" class="btn btn-outline-light">Agendar una cita | <i class="far fa-calendar"></i></button>
+                 <a href="/citas" class="btn btn-outline-light">Agendar una cita | <i class="far fa-calendar"></i></a>
              </div>
          </div>
      </div>
