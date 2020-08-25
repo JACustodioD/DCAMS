@@ -110,7 +110,7 @@
                                 <h5 class="text-center text-primary">Limpieza dental</h5>
                             </figcaption>
                             <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                            <button type="button" class="btn btn-outline-primary">Saber más</button>
+                            <a href="/tratamientos/#limpieza" type="button" class="btn btn-outline-primary">Saber más</a>
                         </figure>   
                     </div>
                     <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
@@ -120,7 +120,7 @@
                                 <h5 class="text-center text-primary">Blanqueamiento dental</h5>
                             </figcaption>
                             <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                            <button type="button" class="btn btn-outline-primary">Saber más</button>
+                            <a href="/tratamientos/#blanqueamiento" type="button" class="btn btn-outline-primary">Saber más</a>
                         </figure>   
                     </div>
                     <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
@@ -130,7 +130,7 @@
                                 <h5 class="text-center text-primary">Implantes</h5>
                             </figcaption>
                             <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                            <button type="button" class="btn btn-outline-primary">Saber más</button>
+                            <a href="/tratamientos/#implantes" type="button" class="btn btn-outline-primary">Saber más</a>
                         </figure>   
                     </div>
                     <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
@@ -140,7 +140,7 @@
                                  <h5 class="text-center text-primary">Diseño de sonrísa</h5>
                             </figcaption>
                             <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                            <button type="button" class="btn btn-outline-primary">Saber más</button>
+                            <a href="/tratamientos/#sonrisa" type="button" class="btn btn-outline-primary">Saber más</a>
                          </figure>   
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                                 <h5 class="text-center text-primary">Limpieza dental</h5>
                             </figcaption>
                             <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                            <button type="button" class="btn btn-outline-primary">Saber más</button>
+                            <a href="/tratamientos/#limpieza" type="button" class="btn btn-outline-primary">Saber más</a>
                         </figure>   
                     </div>
                     <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
@@ -164,7 +164,7 @@
                                 <h5 class="text-center text-primary">Blanqueamiento dental</h5>
                             </figcaption>
                             <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                            <button type="button" class="btn btn-outline-primary">Saber más</button>
+                            <a href="/tratamientos/#blanqueamiento" type="button" class="btn btn-outline-primary">Saber más</a>
                         </figure>   
                     </div>
                     <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
@@ -174,7 +174,7 @@
                                 <h5 class="text-center text-primary">Implantes</h5>
                             </figcaption>
                             <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                            <button type="button" class="btn btn-outline-primary">Saber más</button>
+                            <a href="/tratamientos/#implantes" type="button" class="btn btn-outline-primary">Saber más</a>
                         </figure>   
                     </div>
                     <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
@@ -184,7 +184,7 @@
                                 <h5 class="text-center text-primary">Diseño de sonrísa</h5>
                             </figcaption>
                             <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                            <button type="button" class="btn btn-outline-primary">Saber más</button>
+                            <a href="/tratamientos/#sonrisa" type="button" class="btn btn-outline-primary">Saber más</a>
                         </figure>   
                     </div>
                 </div>
@@ -198,7 +198,7 @@
                                 <h5 class="text-center text-primary">Limpieza dental</h5>
                             </figcaption>
                             <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                            <button type="button" class="btn btn-outline-primary">Saber más</button>
+                            <a href="/tratamientos/#limpieza" type="button" class="btn btn-outline-primary">Saber más</a>
                         </figure>   
                     </div>
                     <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
@@ -208,7 +208,7 @@
                                 <h5 class="text-center text-primary">Blanqueamiento dental</h5>
                             </figcaption>
                             <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                            <button type="button" class="btn btn-outline-primary">Saber más</button>
+                            <a href="/tratamientos/#blanqueamiento" type="button" class="btn btn-outline-primary">Saber más</a>
                         </figure>   
                     </div>
                     <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
@@ -218,7 +218,7 @@
                                 <h5 class="text-center text-primary">Implantes</h5>
                             </figcaption>
                             <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                            <button type="button" class="btn btn-outline-primary">Saber más</button>
+                            <a href="/tratamientos/#implantes" type="button" class="btn btn-outline-primary">Saber más</a>
                         </figure>   
                     </div>
                     <div class="col-md-3 shadow p-3 mb-5 bg-white rounded">
@@ -228,7 +228,7 @@
                                 <h5 class="text-center text-primary">Diseño de sonrísa</h5>
                             </figcaption>
                             <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                            <button type="button" class="btn btn-outline-primary">Saber más</button>
+                            <a href="/tratamientos/#sonrisa" type="button" class="btn btn-outline-primary">Saber más</a>
                         </figure>   
                     </div>
                 </div>
@@ -265,7 +265,7 @@
                                  <h5 class="text-center text-primary">Limpieza dental</h5>
                              </figcaption>
                              <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, sit numquam deleniti recusandae enim quidem quibusdam corporis laborum, aut mollitia sint possimus hic fuga ea ullam quis, in quisquam veniam!</p>
-                             <button type="button" class="btn btn-outline-primary">Saber más</button>
+                             <a href="" type="button" class="btn btn-outline-primary">Saber más</a>
                          </figure>   
                      </div>
                  </div>
