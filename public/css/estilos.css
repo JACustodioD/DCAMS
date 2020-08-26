@@ -142,14 +142,18 @@ body{
 .text-section{
     color: white;
 }
+.contacto{
+    background-color: #007bff;
+    color: white;
+}
 .icon-contacto{
     font-size: 2.5em;
-    color:  blue
+    color:  white;
 }
 #separator-contacto{
     height: 2px;
     width: 100%;
-    background-color: #007bff;
+    background-color: white
 }
 .logo-foot{
     width: 100px;

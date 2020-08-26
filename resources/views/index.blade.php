@@ -407,15 +407,15 @@
 </section>
 
      <!--SECCION DE CONTÁCTO-->
-     <section class="container-fluid" id="contacto">
-        <div class="contacto" >
-            <div class="row mt-5 mb-3">
+<section class="container-fluid shadow-sm p-3 mb-1 contacto" style="height: 100%" id="contacto">
+
+         <div class="row mt-3">
                 <div class="col-md-6">
                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.9968264891002!2d-99.15708017083129!3d19.542153799176397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f79a7764e5e3%3A0x32a6f5e67a308dfa!2sAv%20Alfredo%20del%20Mazo%20V%C3%A9lez%2029%2C%20Chalma%20La%20Barranca%2C%2054143%20Tlalnepantla%20de%20Baz%2C%20M%C3%A9x.!5e0!3m2!1sen!2smx!4v1572051999050!5m2!1sen!2smx"
                           width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="">
                      </iframe>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     <h1 class="title-contacto">Contáctenos</h1>
                     <span><i class="fas fa-map-marker-alt icon-contacto"></i>Av Alfredo del Mazo Vélez 29, Chalma La Barranca,
                          54143 Tlalnepantla de Baz, Méx.
@@ -436,12 +436,11 @@
                    </span>
                    <hr id="separator-contacto">
                    <span>
-                       <a href="/citas"><button class="btn btn-primary">Agendar una cita</button></a>
+                       <a href="/citas"><button class="btn btn-light">Agendar una cita</button></a>
                    </span>
                 </div>
             </div>
-        </div>
-     </section>
+</section>
     
  @endsection
  @section('script')
