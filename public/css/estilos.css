@@ -12,7 +12,7 @@ body{
     background-repeat: no-repeat;
     background-size: 100vh;
 }
-#letter-blue{
+.letter-blue{
     color: #007bff;
     font-weight: bold;
     font-size: 1.8em;

@@ -53,9 +53,9 @@
             <div class="col-md-1 col-4  icon-dental">
                 <img src="/img/icono-dental.png" alt="icono-dental" width="100" height="100">
             </div>
-            <div class="col-md-5 col-8 text-slogan">
-                    <h3 class="slogan pl-3"> <strong id="letter-blue">C</strong>reamos sonrísas</h3>
-                    <p class="slogan pl-3 ">Mejoramos tu vida</p>
+            <div class="col-md-5  d-flex text-slogan">
+                    <h3 class="slogan pl-3"> <strong class="letter-blue">C</strong>reamos sonrísas,
+                     mejoramos tu vida.</h3>
             </div>
             <div class="col-md-6 d-flex justify-content-end text-redes">
                 <p class="text-siguenos mr-2">Síguenos |  </p>
@@ -71,7 +71,7 @@
          @yield('content')
      <!-- /Content -->
 
-<footer class="container-fluid shadow-sm p-3 mb-1">
+<footer class="container-fluid shadow-sm p-3 mb-1 " style=" padding-bottom: 0 !important;">
     <div class="row">
         <div class="col-md-4 col-foot-log">
             <div class=" d-flex">       
