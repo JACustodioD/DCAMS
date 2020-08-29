@@ -155,29 +155,28 @@ body{
     width: 100%;
     background-color: white
 }
-.logo-foot{
-    width: 100px;
-    height: 100px;
+.text-foot{
+    color: #007bff ;
 }
-.foot{
+.text-foot strong{
+    font-size: 2em;
+}
+.col-foot-log{
     background-color: #007bff;
     color: white;
-    padding-left: 60px;
-    padding-right: 60px;
+    
 }
-.col-foot{
-    border-left: 1px solid gainsboro;
-
+.col-foot-log strong{
+    font-size: 2em;
 }
 ul li a{
     list-style: !important;
     text-decoration: none !important;
-    color: white;
+    color: black;
     line-height: 30px;
 }
 .subfoot{
-    background-color: #003abf;
-    color: white;
+   
 }
 
 /*TRATAMIENTOS*/
