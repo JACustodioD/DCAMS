@@ -32,11 +32,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup" >
-             <div class="navbar-nav d-flex justify-content-end" style="width: 100%">
+             <div class="navbar-nav d-flex justify-content-around " style="width: 100%">
                 <div class="d-flex justify-content-start text-phone" style="width: 50%;">
-                    <h6 class="pl-3"><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
+                    <h6><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
                 </div>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Inicio <span class="sr-only">(current)</span></a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu btn btn-outline-primary" href="#"><b>Haz una cita</b> <span class="sr-only">(current)</span></a>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#acercade">Acerca de</a>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#tratamientos">Tratamientos</a>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#promociones">Promociones</a>
@@ -47,8 +47,8 @@
      </nav>
     </div>
 </header>
-<section>
-    <div class="container-fluid ">
+<section class="container-fluid">
+    <div class="submenuu">
         <div class="row  d-flex align-items-center">
             <div class="col-md-1 col-4  icon-dental">
                 <img src="/img/icono-dental.png" alt="icono-dental" width="100" height="100">
@@ -108,7 +108,7 @@
      <div class="row">
          <div class="col-md-12 d-flex justify-content-between">
              <small>&copy; Todos los derechos reservados </small> 
-             <small>Provered By: Provisions Systems S.A. de C.V.</small>
+             <small>Powered By: Provisions Systems</small>
          </div>
      </div>
 </footer>
