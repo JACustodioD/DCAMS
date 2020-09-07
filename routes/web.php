@@ -1,26 +1,14 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 
 //Rutas generales que no necesitan acceso
 Route::get('/','HomeController@index');
 Route::get('/tratamientos','HomeController@tratamientos');
 Route::get('/citas','HomeController@citas');
-Route::post('/cita','Dcams\PetitionController@store');
+Route::post('/cita','Petition\PetitionController@add_petition');
 Route::get('/message',function(){
 	return view('citas.mensajeCita');
 });
-Route::get('/test','Patient\HomeController@index');
 
 
 //Rutas de Autenticacion
@@ -34,39 +22,38 @@ Route::group([
 ],function(){ 
 
 	
-	Route::get('/','Dcams\PetitionController@index');
-	Route::post('/peticionvista','Dcams\PetitionController@update');
-	Route::post('/borrarpeticion','Dcams\PetitionController@delete');
+	Route::get('/','Petition\PetitionController@show_petitions');
+	Route::post('/peticionvista','Petition\PetitionController@status_petition');
+	Route::post('/borrarpeticion','Petition\PetitionController@delete_petition');
 
 
-	Route::get('/tratamientos/{patient}','Dcams\TreatmentController@showTreatments' );
+	Route::get('/tratamientos/{patient}','Treatment\TreatmentController@show_treatments' );
 
 
-	Route::post('/servicio','Dcams\TreatmentController@getServiceValues');
-	Route::post('/agregartratamiento','Dcams\TreatmentController@addTreatment');
+	Route::post('/servicio','Treatment\TreatmentController@service_values');
+	Route::post('/agregartratamiento','Treatment\TreatmentController@assign_treatment');
+	Route::post('/cancelartratamiento','Treatment\TreatmentController@cancel_treatment');
 
-	Route::get('/historialmedico/{patient}','Dcams\HistoryController@index');
-	Route::post('/habilitarhistoria','Dcams\HistoryController@enabled');
+	Route::get('/historialmedico/{patient}','History\HistoryController@patient_history_admin');
+	Route::post('/habilitarhistoria','History\HistoryController@enabled');
 
 	
-	Route::get('/pacientes','Dcams\PatientController@index');
-	Route::post('/buscarpaciente','Dcams\PatientController@searchPatient');
-	Route::post('/mostrarpaciente','Dcams\PatientController@showPatients');
-	Route::post('/borrarpaciente','Dcams\PatientController@deletePatient');
+	Route::get('/pacientes','Patient\PatientController@show_patients');
+	Route::post('/buscarpaciente','Patient\PatientController@search_patient');
+	Route::post('/mostrarpaciente','Patient\PatientController@get_patients');
+	Route::post('/borrarpaciente','Patient\PatientController@delete_patient');
 
-	Route::get('/citas/{patient}','Dcams\DateController@citasUser');
-	Route::get('/miscitas', 'Dcams\DateController@show');
-	Route::post('/agregarcita','Dcams\DateController@store');
-	Route::post('/cancelarcita','Dcams\DateController@cancelarCita');
+	Route::get('/citas/{patient}','Appointment\AppointmentController@citasUser');
+	Route::get('/miscitas', 'Appointment\AppointmentController@show_appointment');
+	Route::post('/agregarcita','Appointment\AppointmentController@add_appointment');
+	Route::post('/cancelarcita','Appointment\AppointmentController@cancel_appointment');
 
 
-	Route::post('/buscarcitas','Dcams\DateController@buscarCitas');
-	Route::post('/mostrarcitas','Dcams\DateController@mostrarCitas');
+	Route::post('/buscarcitas','Appointment\AppointmentController@search_appointment');
+	Route::post('/mostrarcitas','Appointment\AppointmentController@mostrarCitas');
 
-	Route::post('/cancelartratamiento','Dcams\TreatmentController@cancelTreatment');
-
-	Route::post('/hacerpago','Dcams\PaymentController@addPayment');
-	Route::post('/historialpagos','Dcams\PaymentController@paymentHistory');
+	Route::post('/hacerpago','Payment\PaymentController@add_payment');
+	Route::post('/historialpagos','Payment\PaymentController@payment_history');
 
 
 });
@@ -77,14 +64,15 @@ Route::group([
 	'prefix' => 'pacientes',
 
 ],function(){
-	Route::get('/','Patient\HomeController@index');
+	Route::get('/','Patient\PatientController@show_patient');
 
 	Route::post('/image','Patient\StorageController@save');
 
-	Route::get('/historiamedica','Patient\HistoryController@show');
-	Route::post('/historiamedica','Patient\HistoryController@store');
+	Route::get('/historiamedica','History\HistoryController@patient_history_user');
+	Route::post('/historiamedica','History\HistoryController@add_history');
 
-	Route::get('/historialdepagos','Patient\PaymentController@show');
-	Route::post('/historialdepagos','Patient\PaymentController@payments');
+	Route::get('/historialdepagos','Payment\PaymentController@show_payment');
+	Route::post('/historialdepagos','Payment\PaymentController@payment_history');
 
 });
+ 

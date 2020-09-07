@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Dcams;
+namespace App\Http\Controllers\Petition;
 
 use App\Petition;
 
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Validator;
 
 class PetitionController extends Controller
 {
-    function index(){
+    function show_petitions(){
         
         $petitionList = \App\Petition::where('petitionStatus','Pendiente')->orderBY('date')->get();
         
@@ -20,7 +20,7 @@ class PetitionController extends Controller
 
 
     /** @param Request $request */
-    function update(Request $request){
+    function petition_status(Request $request){
         
         $petition_attended =  \App\Petition::find($request['petition']);
 
@@ -33,7 +33,7 @@ class PetitionController extends Controller
 
 
     /** @param Request $request */
-    function delete(Request $request){
+    function delete_petition(Request $request){
         
         $petition_attended =  \App\Petition::find($request['petition']);
 
@@ -46,11 +46,11 @@ class PetitionController extends Controller
 
 
     /** @param \Illuminate\Http\Request $request */
-    function store(Request $request){
+    function add_petition(Request $request){
 
         $valid_data = $request->validate([
             'nombre' =>['required','string','max:255'],
-            'telefono' => ['required','string','min:10','max:12'],
+            'telefono' => ['required','numeric','min:10','max:12'],
             'fecha' => ['required','date'],
             'hora' => ['required','string'],
             'comentario' => ['required','string'],

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Dcams;
+namespace App\Http\Controllers\Treatment;
 
 use App\Http\Controllers\Controller;
 use App\Treatment;
@@ -14,7 +14,7 @@ class TreatmentController extends Controller
 {
 
     /** @param App\User $patient */
-    public function showTreatments($patient){
+    public function show_treatments($patient){
 
         $patientID = base64_decode($patient);
 
@@ -51,7 +51,7 @@ class TreatmentController extends Controller
      * @param Illuminate\Http\Request $request
      * @return array
      *  */
-    public function addTreatment(Request $request){
+    public function assign_treatment(Request $request){
 
         $today = date('Y-m-d');
 
@@ -112,7 +112,7 @@ class TreatmentController extends Controller
      * @param Illiminate\Http\Request $request
      * @return array
      */
-    public function cancelTreatment(Request $request){
+    public function cancel_treatment(Request $request){
 
         $treatment = new Treatment();
 
@@ -131,11 +131,13 @@ class TreatmentController extends Controller
 
 
     }
+
+
     /** 
      * @param Illuminate\Http\Request $request
      * @return array
      * */
-    public function getServiceValues(Request $request){
+    public function service_values(Request $request){
 
         $service = new Service();
 
@@ -146,4 +148,8 @@ class TreatmentController extends Controller
         return $serviceInfo;
 
     }
+
+    public function add_treatment(){}
+    public function update_treatment(){}
+    public function delete_treatment(){}
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Dcams;
+namespace App\Http\Controllers\Appointment;
 
 
 use App\Http\Controllers\Controller;
@@ -8,15 +8,14 @@ use App\Date;
 use App\User;
 use Illuminate\Http\Request;
 
-class DateController extends Controller
+class AppointmentController extends Controller
 {
 
     /** 
      * @param Illuminate\Http\Request $request
      * @return boolean 
      */
-    public function store(\Illuminate\Http\Request $request)
-    {
+    public function add_appointment(\Illuminate\Http\Request $request) {
         $today = date('Y-m-d');
         $open_hour = '09:00';
         $close_hour = '18:00';
@@ -47,11 +46,20 @@ class DateController extends Controller
     }
 
     /** @param \App\Date $date */
-    public function show(Date $date)
-    {
+    public function show_appointment(Date $date) {
         return view('admin.miscitas',[
             'citas' => $date::join('users','user','users.id')->orderBy('dateOfAppointment')->orderBy('hour')->get()
         ]);
+    }
+
+    /**
+     * @param Illuminate\Http\Request $request
+     * @param App\Date $date
+     * 
+     * @return array
+     */
+    public function mostrarCitas(Request $request, Date $date){
+        return $date::join('users','user','id')->get();
     }
 
 
@@ -61,19 +69,10 @@ class DateController extends Controller
      * 
      * @return array
      */
-    public function buscarCitas(Request $request, Date $date){
+    public function search_appointment(Request $request, Date $date){
         return $date::join('users','user','id')->where('name', 'like', $request['paciente'].'%')->where('typeOfUser','=','U')->get();
     }
 
-    /**
-     * @param Illuminate\Http\Request $request
-     * @param App\Date $date
-     * 
-     * @return array
-     */
-     public function mostrarCitas(Request $request, Date $date){
-        return $date::join('users','user','id')->get();
-    }
 
     /**
      * @param Illuminate\Http\Request $request
@@ -97,7 +96,7 @@ class DateController extends Controller
      * 
      * @return array
      */
-    public function cancelarCita(Request $request, Date $date){
+    public function cancel_appointment(Request $request, Date $date){
         $citas = $date::where('id',$request['date'])->update(['dateStatus'=>'Cancelada','commentary' => $request['commentary']]);
         return "true";
     }

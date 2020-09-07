@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Dcams;
+namespace App\Http\Controllers\Payment;
 
 use App\Http\Controllers\Controller;
 use App\Payment;
@@ -16,7 +16,7 @@ class PaymentController extends Controller
      * @param Illuminate\Htpp\Request $request
      * @return array
      */
-    public function addPayment(Request $request, Payment $payment){
+    public function add_payment(Request $request, Payment $payment){
 
         $today = date('Y-m-d');
         
@@ -66,7 +66,7 @@ class PaymentController extends Controller
      * @return array
      */
 
-     public function paymentHistory(Request $request) {
+     public function payment_history(Request $request) {
 
 
         $treatmentInfo = Treatment::find($request['treatment']);
@@ -94,4 +94,13 @@ class PaymentController extends Controller
         ];
         return $response;
      }
+
+     public function show_payment(Payment $payment)
+     {
+         $payments = Treatment::select('serviceName','services.cost','treatments.total','treatments.endDate','treatments.id','treatmentStatus')->join('services','treatments.service','=','services.id')->where('treatments.user',Auth::user()->id)->get();
+         return view('user.historiaPagos',[
+             'payments' => $payments
+         ]);
+     }
+ 
 }
