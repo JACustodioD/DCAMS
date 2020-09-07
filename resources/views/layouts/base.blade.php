@@ -18,6 +18,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" />
 
@@ -112,10 +113,8 @@
          </div>
      </div>
 </footer>
-
- <span class="botoncito"><i class="far fa-arrow-alt-circle-up"></i></span>
+<span class="botoncito"><i class="far fa-arrow-alt-circle-up"></i></span>
     <!--SCRIPTS-->
-    <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/all.js"></script>
     <script src="/js/efecto.js"></script>
@@ -125,14 +124,13 @@
           $('.botoncito').click(function(){
                 $('body, html').animate({
                     scrollTop: '0px'
-                }, 300);
+                }, 3000);
             });
-
           $(window).scroll(function(){
             if( $(this).scrollTop() > 0 ){
-              $('.botoncito').slideDown(300);
+              $('.botoncito').slideDown(3000);
             } else {
-              $('.botoncito').slideUp(300);
+              $('.botoncito').slideUp(3000);
             }
           });
         });

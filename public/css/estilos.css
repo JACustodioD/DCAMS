@@ -188,11 +188,11 @@ ul li a{
 }
 
 .botoncito {
-    display:none;
+    display: none;
     padding:20px;
     background: transparent;
-    font-size:30px;
-    color:#007bff;
+    font-size:50px;
+    color: #f7b2d5;
     cursor:pointer;
     position: fixed;
     bottom:20px;
