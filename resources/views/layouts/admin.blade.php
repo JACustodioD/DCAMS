@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/estilos.css">
     <link rel="stylesheet" href="/css/responsive.css">
     <link rel="stylesheet" href="/css/calendar.css">
+    <link rel="stylesheet" href="/css/ohsnap.css">
       <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -71,31 +72,16 @@
 
 
 <span class="botoncito"><i class="far fa-arrow-alt-circle-up"></i></span>
+<div id="ohsnap"></div>
 
 <!--SCRIPT-->
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/calendar.js"></script>
 <script src="/js/all.js"></script>
+<script type="text/javascript" src="/js/ohsnap.min.js"></script>
+<script type="text/javascript" src="/js/boton.js"></script>
 @yield('script')
-<script type="text/javascript">
-        $(document).ready(function(){
-          $('.botoncito').click(function(){
-                $('body, html').animate({
-                    scrollTop: '0px'
-                }, 300);
-            });
-
-          $(window).scroll(function(){
-            if( $(this).scrollTop() > 0 ){
-              $('.botoncito').slideDown(300);
-            } else {
-              $('.botoncito').slideUp(300);
-            }
-          });
-        });
-
-</script>
 
 </body>
 </html>

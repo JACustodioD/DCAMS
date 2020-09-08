@@ -16,8 +16,10 @@ $(document).ready(function(){
                 "date": date,
                 "commentary": commentary
         }, function(data) {
-				alert('Cambios Aplicados');
-				location.reload();
+			ohSnap('Cambios Aplicados', {color:'blue',duration:'1000'});
+				 setTimeout(function() {
+					location.reload();
+				}, 1000);
         });
 	});
 
@@ -43,8 +45,14 @@ $(document).ready(function(){
 				$("#alert_error").removeAttr('hidden');
 				$("#alert_error").html(data.message);
 			} else {
-				alert("cambios aplicados");
-        		location.reload();
+				ohSnap('Cambios Aplicados', {color:'blue',duration:'1000'});
+				 setTimeout(function() {
+					location.reload();
+				}, 1000);
+
+				
+				
+        		
 			}
         	
         });

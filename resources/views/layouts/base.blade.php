@@ -20,7 +20,6 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" />
-
 </head>
 <body >
 
@@ -121,31 +120,15 @@
 
      <span class="botoncito"><i class="far fa-arrow-alt-circle-up"></i></span>
      
-    <!--SCRIPTS-->
-    <script src="/js/jquery.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/all.js"></script>
-    <script src="/js/efecto.js"></script>
-    @yield('script')
-  
-<script type="text/javascript">
-    $(document).ready(function(){
-      $('.botoncito').click(function(){
-            $('body, html').animate({
-                scrollTop: '0px'
-            }, 300);
-        });
 
-      $(window).scroll(function(){
-        if( $(this).scrollTop() > 0 ){
-          $('.botoncito').slideDown(300);
-        } else {
-          $('.botoncito').slideUp(300);
-        }
-      });
-    });
 
-</script>
+<!--SCRIPT-->
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/all.js"></script>
+<script src="/js/boton.js"></script>
+@yield('script')
+<script src="/js/efecto.js"></script>
 
 
 </body>

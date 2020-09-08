@@ -6,9 +6,7 @@ $(document).ready(function(){
                 "_token": $("meta[name='csrf-token']").attr("content"),
                 "patient": patient,
         }, function(data) {
-    		alert("¡Historia medica habilitada!");
-
-
+			ohSnap('Historia medica habilitada', {color:'blue',duration: '1000'});
         });
 	});
 });
