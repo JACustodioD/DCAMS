@@ -18,6 +18,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" />
 </head>
@@ -31,11 +32,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup" >
-             <div class="navbar-nav d-flex justify-content-end" style="width: 100%">
+             <div class="navbar-nav d-flex justify-content-around " style="width: 100%">
                 <div class="d-flex justify-content-start text-phone" style="width: 50%;">
-                    <h6 class="pl-3"><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
+                    <h6><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
                 </div>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#">Inicio <span class="sr-only">(current)</span></a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu btn btn-outline-primary" href="#"><b>Haz una cita</b> <span class="sr-only">(current)</span></a>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#acercade">Acerca de</a>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#tratamientos">Tratamientos</a>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#promociones">Promociones</a>
@@ -46,15 +47,15 @@
      </nav>
     </div>
 </header>
-<section>
-    <div class="container-fluid ">
+<section class="container-fluid">
+    <div class="submenuu">
         <div class="row  d-flex align-items-center">
             <div class="col-md-1 col-4  icon-dental">
                 <img src="/img/icono-dental.png" alt="icono-dental" width="100" height="100">
             </div>
-            <div class="col-md-5 col-8 text-slogan">
-                    <h3 class="slogan pl-3"> <strong id="letter-blue">C</strong>reamos sonrísas</h3>
-                    <p class="slogan pl-3 ">Mejoramos tu vida</p>
+            <div class="col-md-5  d-flex text-slogan">
+                    <h3 class="slogan pl-3"> <strong class="letter-blue">C</strong>reamos sonrísas,
+                     mejoramos tu vida.</h3>
             </div>
             <div class="col-md-6 d-flex justify-content-end text-redes">
                 <p class="text-siguenos mr-2">Síguenos |  </p>
@@ -70,58 +71,51 @@
          @yield('content')
      <!-- /Content -->
 
-
-     <footer class="container-fluid">
-        <div class="foot">
-            <div class="row">
-                <div class="col-md-4 mt-3 mb-3 col-foot">
-                    <div class="text-justify">
-                        <img src="/img/icono-dental.png" alt="" class="logo-foot"> <span><small><b>El consultorio AMY</b> <br>
-                            fue fundado por la doctora Amy Hernández Hernández y abrió sus puertas el 15 de marzo de 1994,
-                            con el entusiasmo que puede tener una joven dentista que desea formar su propia empresa
-                            y con una clara visión: conseguir que el consultorio se convirtiera en un miembro integrado
-                            en cada familia, logrando ser el consultorio de referencia del barrio y de las familias que en el viven.
-                    </small></span>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-3 mb-3 col-foot">
-                    <small><b>Navegación:</b></small>
-                    <ul>
-                        <li><a href="/citas"><small>Citas</small></a></li>
+<footer class="container-fluid shadow-sm p-3 mb-1 " style=" padding-bottom: 0 !important;">
+    <div class="row">
+        <div class="col-md-4 col-foot-log">
+            <div class=" d-flex">       
+                <img src="../img/icono-dental.png" alt="logo" height="100" width="100">
+                <p> <strong>N</strong>os importa tu sonrísa</p>
+            </div> 
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi nostrum optio maiores? Laborum explicabo magni nulla quam voluptatem 
+                deserunt rem, culpa debitis odio consectetur delectus magnam nam amet aut ex!</p>
+        </div>
+        <div class="col-md-4 mt-1  mb-3 col-foot text-foot">
+            <h6> <strong>N</strong> avegación </h6>
+                 <ul>
+                    <li><a href="/citas"><small>Citas</small></a></li>
                         <li><a href="/"><small>Inicio</small></a></li>
                         <li><a href="/#acercade"><small>Acerca de</small></a></li>
                         <li><a href="/#tratamientos"><small>Tratamientos</small></a></li>
                         <li><a href="/#promociones"><small>Promociones</small></a></li>
                         <li><a href="/#contacto"><small>Contácto</small></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mt-3 mb-3 col-foot" style="border-right: 1px solid gainsboro;">
-                    <small><b>Tratamientos:</b></small>
-                    <ul>
-                        <li><a href="/tratamientos#limpieza"><small>Limpieza dental</small></a></li>
+                 </ul>
+         </div>
+         <div class="col-md-4 mt-1 mb-3 col-foot text-foot">
+            <h6> <strong>T</strong> ratamientos </h6> 
+                 <ul>
+                    <li><a href="/tratamientos#limpieza"><small>Limpieza dental</small></a></li>
                         <li><a href="/tratamientos#blanqueamiento"><small>Blanqueamiento dental</small></a></li>
                         <li><a href="/tratamientos#implantes"><small>Implantes</small></a></li>
                         <li><a href="/tratamientos#sonrisa"><small>Diseño de sonrisa</small></a></li>
                         <li><a href="/tratamientos#ortodoncia"><small>Ortodoncia y endodoncia</small></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-     </footer>
-     <footer class="container-fluid">
-        <div class="subfoot">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <small>&copy; Todos los derechos reservados </small>
-                </div>
-            </div>
-        </div>
-     </footer>
+                 </ul>
+         </div>
+    </div>
+</footer>
 
-     <span class="botoncito"><i class="far fa-arrow-alt-circle-up"></i></span>
-     
+<footer class="container-fluid subfoot">
+     <div class="row">
+         <div class="col-md-12 d-flex justify-content-between">
+             <small>&copy; Todos los derechos reservados </small> 
+             <small>Powered By: Provisions Systems</small>
+         </div>
+     </div>
+</footer>
 
-
+<span class="botoncito"><i class="far fa-arrow-alt-circle-up"></i></span>
+   
 <!--SCRIPT-->
 <script src="/js/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>

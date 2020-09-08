@@ -1,27 +1,17 @@
-@extends('layouts.base')
+@extends('layouts.app')
 @section('content')
-<section class="container">
-    <div class="tratamientosd">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Haz tu cita de manera rápida y segura</h1>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="container mt-5 mb-5">
+<section class="container-fluid">
     <div class="formulario">
         <div class="row">
             <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-4">
+                   <a href="/"> <img src="/img/icono-dental.png" alt="" height="150" width="150" class="mb-5"></a>
+                </div>
+            </div>
                 <form action="/cita" method="POST">
                     @csrf
                     <div class="card form-card">
-                        <div class="card-header card-encabezado">
-                            <div class="row d-flex justify-content-between">
-                                <span class="text-cardh">Agenda una cita</span>
-                                <img src="/img/icono-calendar.png" class="icono-calendar" alt="">
-                            </div>
-                        </div>
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="nombre">Nombre:</label>
@@ -81,9 +71,9 @@
                      </div>
                 </form>
             </div>
-            <div class="col-md-6">
-                    <img src="/img/imgform.png" alt="imagenform" class="img-fluid">
-            </div>
+            <div class="col-md-6 col-login d-flex align-items-center">
+                 <h1 class=" text-image-login display-4 text-center">Agenda una cita <br> ¡hoy mismo!</h1> 
+             </div>
         </div>
     </div>
 </section>
