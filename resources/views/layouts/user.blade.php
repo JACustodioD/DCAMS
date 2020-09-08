@@ -19,7 +19,7 @@
       <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-       <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" />
 
    
 
@@ -75,11 +75,11 @@
 <span class="botoncito"><i class="far fa-arrow-alt-circle-up"></i></span>
 
  <!--SCRIPT-->
-<script src="/js/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/calendar.js"></script>
-<script src="/js/all.js"></script>
-<script src="/js/boton.js"></script>
+<script src="/js/lib/jquery.js"></script>
+<script src="/js/lib/bootstrap.min.js"></script>
+<script src="/js/lib/calendar.js"></script>
+<script src="/js/lib/all.js"></script>
+<script src="/js/dcams/boton.js"></script>
 @yield('script')
 
 </body>

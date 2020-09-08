@@ -226,5 +226,5 @@
 
 
 @section('script')
-    <script src="/js/smooth-scroll.min.js"></script>
+    <script src="/js/lib/smooth-scroll.min.js"></script>
 @endsection

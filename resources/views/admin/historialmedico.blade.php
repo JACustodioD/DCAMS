@@ -69,5 +69,5 @@
 @endsection
 
 @section('script')
-<script type="text/javascript" src="/js/historiamedica.js"></script>
+<script type="text/javascript" src="/js/dcams/historiamedica.js"></script>
 @endsection

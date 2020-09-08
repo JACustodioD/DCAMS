@@ -75,12 +75,12 @@
 <div id="ohsnap"></div>
 
 <!--SCRIPT-->
-<script src="/js/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/calendar.js"></script>
-<script src="/js/all.js"></script>
-<script type="text/javascript" src="/js/ohsnap.min.js"></script>
-<script type="text/javascript" src="/js/boton.js"></script>
+<script src="/js/lib/jquery.js"></script>
+<script src="/js/lib/bootstrap.min.js"></script>
+<script src="/js/lib/calendar.js"></script>
+<script src="/js/lib/all.js"></script>
+<script src="/js/lib/ohsnap.min.js"></script>
+<script src="/js/dcams/boton.js"></script>
 @yield('script')
 
 </body>

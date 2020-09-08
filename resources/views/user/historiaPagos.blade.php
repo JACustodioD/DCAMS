@@ -138,54 +138,8 @@
 @endsection
 
 @section('script')
-<!--
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('.btnDetalles').click(function(){
-           table = $('.table').children('tbody');
-            $.post('/pacientes/historialdepagos',{
-                "_token": $("meta[name='csrf-token']").attr("content"),
-                "tratamientos": $(this).attr('tratamiento'),
-            }, function(data) {
-            	if(data.length>0){
-					for (var i = 0; i <= data.length-1; i++) {
-                date = data[i].created_at.split(' ');
-                date2 = date[0].split('-').reverse().join('/');
-            			row =''+
-            			'<tr class="listaPagos">'+
-                    	'<th scope="row">'+date2+'</th>'+
-                    	'<td>$'+new Intl.NumberFormat("en-IN").format(data[i].credit)+'</td>'+
-                      '<td>'+data[i].observation+'</td>'+
-                    	'</tr>';
-                    	table.append(row);
-            		}
-            	}else{
-            		row = ''+
-            		'<tr class="listaPagos">'+
-            		'<td scope="row" class="text-danger text-center" colspan="2">No hay pagos</td>'+
-            		'</tr>';
-            		table.append(row);
-            	}
-                setTimeout(function(){
-                    $(".modal").fadeIn(1500);
-                },100);
-
-
-
-           });
-        });
-
-        $(".close").click(function(){
-        	setTimeout(function(){
-                    $(".modal").fadeOut(1500);
-                    $('.listaPagos').remove();
-            },100);
-        });
-    });
-</script>-->
 
 <script type="text/javascript">
-
 
     /** show payments */
     $(document).on('click','.btnDetalles',function(){

@@ -63,5 +63,5 @@
 
 @endsection
 @section('script')
-<script type="text/javascript" src="/js/citas.js"></script>
+<script type="text/javascript" src="/js/dcams/citas.js"></script>
 @endsection

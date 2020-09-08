@@ -109,7 +109,7 @@
      <div class="row">
          <div class="col-md-12 d-flex justify-content-between">
              <small>&copy; Todos los derechos reservados </small> 
-             <small>Powered By: Provisions Systems</small>
+             <small>Powered By: <a href="https://provisionssystems.com/" class="text-primary" target="_blank">ProVisions Systems </a></small>
          </div>
      </div>
 </footer>
@@ -117,10 +117,10 @@
 <span class="botoncito"><i class="far fa-arrow-alt-circle-up"></i></span>
    
 <!--SCRIPT-->
-<script src="/js/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/all.js"></script>
-<script src="/js/boton.js"></script>
+<script src="/js/lib/jquery.js"></script>
+<script src="/js/lib/bootstrap.min.js"></script>
+<script src="/js/lib/all.js"></script>
+<script src="/js/dcams/boton.js"></script>
 @yield('script')
 <script src="/js/efecto.js"></script>
 

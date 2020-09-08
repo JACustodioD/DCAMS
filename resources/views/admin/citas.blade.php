@@ -155,5 +155,5 @@
 
 @endsection
 @section('script')
-<script type="text/javascript" src="/js/citasAdmin.js"></script>
+<script type="text/javascript" src="/js/dcams/citasAdmin.js"></script>
 @endsection

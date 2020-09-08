@@ -106,5 +106,5 @@
 @endsection
 
 @section('script')
-<script type="text/javascript" src="/js/petition.js"></script>
+<script type="text/javascript" src="/js/dcams/petition.js"></script>
 @endsection

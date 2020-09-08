@@ -19,8 +19,8 @@
             </div>
         </div>
     </div>
-<script src="/js/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+<script src="/js/lib/jquery.js"></script>
+<script src="/js/lib/bootstrap.min.js"></script>
     <script>
         function redireccionarPagina() {
             window.location = "/";
