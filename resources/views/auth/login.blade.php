@@ -1,13 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
- 
 <div class="container-fluid" >
-    <div class="row" style="height: 500px;">
+    <div class="row">
         <div class="col-md-6 ">
             <div class="row">
                 <div class="col-md-4">
-                   <a href="/"> <img src="/img/icono-dental.png" alt="" height="150" width="150" class="mb-5"></a>
+                   <a href="/"> <img src="/img/icono-dental.png" alt="" height="120" width="120" class="mb-5"></a>
                 </div>
             </div>
             <div cla class="card">
