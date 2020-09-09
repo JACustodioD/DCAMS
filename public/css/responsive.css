@@ -171,8 +171,18 @@
     }
 }
 
+/*CITAS Y LOGIN*/
+@media(min-width:320px){
+    .title-res-citas{
+        color: white;
+        text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+        font-size: 1.8em;
 
-
+    }
+    .col-login{
+        display:none !important;
+    }
+}
 
 /*USUARIO*/
 

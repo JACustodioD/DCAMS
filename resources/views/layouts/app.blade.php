@@ -19,6 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/responsive.css">
 
     <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" />
 </head>

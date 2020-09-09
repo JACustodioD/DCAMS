@@ -4,9 +4,12 @@
     <div class="formulario">
         <div class="row">
             <div class="col-md-6">
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-3 col-4">
                    <a href="/"> <img src="/img/icono-dental.png" alt="" height="120" width="120" class="mb-5"></a>
+                </div>
+                <div class="col-md-9 col-7">
+                    <h4 class="title-res-citas d-md-none text-center">Agenda una cita hoy mismo</h4>
                 </div>
             </div>
                 <form action="/cita" method="POST">
@@ -71,7 +74,7 @@
                      </div>
                 </form>
             </div>
-            <div class="col-md-6 col-login d-flex align-items-center">
+            <div class="col-md-6 d-xs-none col-login d-flex align-items-center">
                  <h1 class=" text-image-login display-4 text-center">Agenda una cita <br> ¡hoy mismo!</h1> 
              </div>
         </div>
