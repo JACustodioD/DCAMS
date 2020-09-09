@@ -91,7 +91,7 @@
      </div>
 </section>
        <!--TRATAMIENTOS-->
-<section class="container-fluid tratamientos-section d-none d-lg-block" id="tratamientos" style="height: 100%">
+<section class="container-fluid tratamientos-section d-none d-md-block" id="tratamientos" style="height: 100%">
     <div class="row">
         <div class="col-md-12 mt-3">
             <h1 class="text-center">Tratamientos</h1>
@@ -246,7 +246,7 @@
 </section>
 
 <!-- SLIDER RESPONSIVE DE TRATAMIENTOS-->
-<section class="container-fluid tratamientos-section d-xs-block d-lg-none" id="tratamientos" style="height: 100%">
+<section class="container-fluid tratamientos-section d-xs-block d-md-none" id="tratamientos" style="height: 100%">
      <div class="row">
          <div class="col-md-12 mt-3">
              <h1 class="text-center">Tratamientos</h1>

@@ -50,7 +50,7 @@
 <section class="container-fluid">
     <div class="submenuu">
         <div class="row  d-flex align-items-center">
-            <div class="col-md-1 col-4  icon-dental">
+            <div class="col-md-1 col-12  icon-dental">
                 <img src="/img/icono-dental.png" alt="icono-dental" width="100" height="100">
             </div>
             <div class="col-md-5  d-flex text-slogan">

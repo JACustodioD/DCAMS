@@ -135,9 +135,6 @@
     .text-slider{
        display: none;
     }
-    .icon-tratamientos{
-        align
-    }
     #main .carousel-inner img{
         height: 130vh;
     }
@@ -172,7 +169,7 @@
 }
 
 /*CITAS Y LOGIN*/
-@media(min-width:320px){
+@media screen and (min-width:320px){
     .title-res-citas{
         color: white;
         text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
@@ -183,10 +180,16 @@
         display:none !important;
     }
 }
+/*INDEX*/
+@media screen and (min-width:320px){
+ .icon-dental{
+    text-align: center;
+ }
+}
 
 /*USUARIO*/
 
-@media(max-width:770px){
+@media screen and (max-width:770px){
     .calendar{
         margin-bottom: 10px;
         margin-left: auto;
@@ -200,7 +203,7 @@
         text-align: center;
     }
 }
-@media(max-width:478px){
+@media screen and (max-width:478px){
     .text-tratamientos{
         font-size: 1em;
     }
