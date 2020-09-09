@@ -17,9 +17,6 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Scripts -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body >
@@ -28,25 +25,26 @@
 <header>
     <div class="container-fluid menu-padding">
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded menu-margin ">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarPrincipal" aria-controls="navBarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        <div class="collapse navbar-collapse " id="navbarNavAltMarkup" >
-             <div class="navbar-nav d-flex justify-content-around " style="width: 100%">
-                <div class="d-flex justify-content-start text-phone" style="width: 50%;">
-                    <h6><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
+            <div class="collapse navbar-collapse " id="navBarPrincipal" >
+                <div class="navbar-nav d-flex justify-content-around " style="width: 100%">
+                    <div class="d-flex justify-content-start text-phone" style="width: 50%;">
+                        <h6><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
+                    </div>
+                    <a class="nav-item nav-link hvr-bounce-to-bottom link-menu btn btn-outline-primary" href="#"><b>Haz una cita</b> <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#acercade">Acerca de</a>
+                    <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#tratamientos">Tratamientos</a>
+                    <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#promociones">Promociones</a>
+                    <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#contacto">Contácto</a>
+                    <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="/login">Mi cuenta</a>
                 </div>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu btn btn-outline-primary" href="#"><b>Haz una cita</b> <span class="sr-only">(current)</span></a>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#acercade">Acerca de</a>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#tratamientos">Tratamientos</a>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#promociones">Promociones</a>
-                <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#contacto">Contácto</a>
-                <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="/login">Mi cuenta</a>
-             </div>
-         </div>
-     </nav>
+            </div>
+        </nav>
     </div>
 </header>
+
 <section class="container-fluid">
     <div class="submenuu">
         <div class="row  d-flex align-items-center">

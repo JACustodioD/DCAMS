@@ -23,7 +23,7 @@ Route::group([
 
 	
 	Route::get('/','Petition\PetitionController@show_petitions');
-	Route::post('/peticionvista','Petition\PetitionController@status_petition');
+	Route::post('/peticionvista','Petition\PetitionController@petition_status');
 	Route::post('/borrarpeticion','Petition\PetitionController@delete_petition');
 
 
@@ -50,7 +50,7 @@ Route::group([
 
 
 	Route::post('/buscarcitas','Appointment\AppointmentController@search_appointment');
-	Route::post('/mostrarcitas','Appointment\AppointmentController@mostrarCitas');
+	Route::post('/mostrarcitas','Appointment\AppointmentController@show_appointment');
 
 	Route::post('/hacerpago','Payment\PaymentController@add_payment');
 	Route::post('/historialpagos','Payment\PaymentController@payment_history');

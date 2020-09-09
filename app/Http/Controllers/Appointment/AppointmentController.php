@@ -36,7 +36,7 @@ class AppointmentController extends Controller
         $new_date->dateOfAppointment = $request['date'];
         $new_date->hour = $request['hour'];
         $new_date->affair = $request['affair'];
-        $new_date->dateStatus = 'Pendiente';
+        $new_date->dateStatus = 'Active';
         $new_date->commentary = "";
         $new_date->save();
     
@@ -45,24 +45,30 @@ class AppointmentController extends Controller
         
     }
 
-    /** @param \App\Date $date */
-    public function show_appointment(Date $date) {
-        return view('admin.miscitas',[
-            'citas' => $date::join('users','user','users.id')->orderBy('dateOfAppointment')->orderBy('hour')->get()
-        ]);
-    }
-
-    /**
+    /** 
+     * @param \App\Date $date
      * @param Illuminate\Http\Request $request
-     * @param App\Date $date
-     * 
      * @return array
-     */
-    public function mostrarCitas(Request $request, Date $date){
-        return $date::join('users','user','id')->get();
+     * */
+    public function show_appointment(Date $date, Request $request) {
+
+        $AppointmentsList = $date = $date::select('dates.id','dateOfAppointment','hour','affair','users.id','fullName')->join('users','user','users.id')->where('dateStatus','Active')->orderBy('dateOfAppointment')->get();
+        
+        foreach ($AppointmentsList as $Appointment) {
+            $Appointment['dateOfAppointment'] = date("d-m-Y", strtotime($Appointment['dateOfAppointment']));;
+        }
+
+        if($request->empty) {
+            return $AppointmentsList;
+        } else {
+            
+            return view('admin.miscitas',[
+                'citas' => $AppointmentsList
+            ]);
+        }
+
     }
-
-
+ 
     /**
      * @param Illuminate\Http\Request $request
      * @param \App\Date $date
@@ -70,7 +76,13 @@ class AppointmentController extends Controller
      * @return array
      */
     public function search_appointment(Request $request, Date $date){
-        return $date::join('users','user','id')->where('name', 'like', $request['paciente'].'%')->where('typeOfUser','=','U')->get();
+        
+        $AppointmentsList = $date::join('users','user','users.id')->where('fullName', 'like', $request['paciente'].'%')->where('typeOfUser','=','U')->where('dateStatus','Active')->get();
+    
+        foreach ($AppointmentsList as $Appointment) {
+            $Appointment['dateOfAppointment'] = date("d-m-Y", strtotime($Appointment['dateOfAppointment']));;
+        }
+        return $AppointmentsList;
     }
 
 
@@ -97,7 +109,7 @@ class AppointmentController extends Controller
      * @return array
      */
     public function cancel_appointment(Request $request, Date $date){
-        $citas = $date::where('id',$request['date'])->update(['dateStatus'=>'Cancelada','commentary' => $request['commentary']]);
+        $citas = $date::where('id',$request['date'])->update(['dateStatus'=>'Cancelled','commentary' => $request['commentary']]);
         return "true";
     }
 

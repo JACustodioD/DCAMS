@@ -4,7 +4,7 @@
         if (nombre.length == 0) {
             $.post('/consultorio/mostrarcitas',{
                 "_token": $("meta[name='csrf-token']").attr("content"),
-                "paciente": nombre,
+                "empty": 1,
             }, function(data) {
 
                 $('#tbody').children().remove();
@@ -12,7 +12,7 @@
                     for (var i = 0; i <= data.length - 1; i++) {
                         $("#tbody").append(''+
                             '<tr>'+
-                            '<th scope="row"><p>'+data[i].name+'</p></th>'+
+                            '<th scope="row"><p>'+data[i].fullName+'</p></th>'+
                             '<td><p>'+data[i].dateOfAppointment+'</p></td>'+
                             '<td><p>'+data[i].hour+'</p></td>'+
                             '<td><p>'+data[i].affair+'</p></td>'+
@@ -39,7 +39,7 @@
                     for (var i = 0; i <= data.length - 1; i++) {
                         $("#tbody").append(''+
                            '<tr>'+
-                            '<th scope="row"><p>'+data[i].name+'</p></th>'+
+                            '<th scope="row"><p>'+data[i].fullName+'</p></th>'+
                             '<td><p>'+data[i].dateOfAppointment+'</p></td>'+
                             '<td><p>'+data[i].hour+'</p></td>'+
                             '<td><p>'+data[i].affair+'</p></td>'+

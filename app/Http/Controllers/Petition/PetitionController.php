@@ -50,7 +50,7 @@ class PetitionController extends Controller
 
         $valid_data = $request->validate([
             'nombre' =>['required','string','max:255'],
-            'telefono' => ['required','numeric','min:10','max:12'],
+            'telefono' => ['required','string','min:10','max:12'],
             'fecha' => ['required','date'],
             'hora' => ['required','string'],
             'comentario' => ['required','string'],

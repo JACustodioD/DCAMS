@@ -28,14 +28,14 @@
                       <tr>
                         <th scope="col">Paciente:</th>
                         <th scope="col">Fecha</th>
-                        <th scope="col">hora</th>
+                        <th scope="col">Hora</th>
                         <th scope="col">Asunto</th>
                       </tr>
                     </thead>
                     <tbody id="tbody">
                       @foreach ($citas as $cita)
                         <tr>
-                          <th scope="row"><p>{{$cita->name}}</p></th>
+                          <th scope="row"><p>{{$cita->fullName}}</p></th>
                           <td><p>{{$cita->dateOfAppointment}}</p></td>
                           <td><p>{{$cita->hour}}</p></td>
                           <td><p>{{$cita->affair}}</p></td>

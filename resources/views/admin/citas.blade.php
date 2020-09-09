@@ -6,8 +6,8 @@
 		<div class="row">
 			<div class="col-md-12">
 				@foreach ($users as $user)
-                    <h5 class="text-info nombrePaciente" npaciente="{{$user->name}}" paciente="{{$user->id}}">Pacientes / Citas <b>
-                        {{$user->name}}</b>
+                    <h5 class="text-info nombrePaciente" npaciente="{{$user->userName}}" paciente="{{$user->id}}">Pacientes / Citas <b>
+                        {{$user->userName}}</b>
                     </h5>
                 @endforeach
 			</div>
@@ -37,7 +37,7 @@
                 </div>
             </div>
             @foreach($dates as $date)
-            @if(strcmp($date->dateStatus,'Pendiente')==0)
+            @if(strcmp($date->dateStatus,'Active')==0)
             <div class="row">
                 <div class="col-md-2">
                      <div class="form-group">

@@ -197,15 +197,11 @@
                       <p class="lead">Consulta: {{ $date->affair }}</p>
                       <hr class="my-4">
                       <p>Recuerde llegar con 15 minutos de anticipación a su cita.</p>
-                      @if(strcmp($date->dateStatus,'Pendiente')!=0)
-
-                        @if(strcmp($date->status,'Cancelada')==0)
+                        @if(strcmp($date->dateStatus,'Cancelada')==0)
                           <p class="text-danger"><b>{{$date->dateStatus}}: </b>{{$date->commentary}}</p>
-                        @else
+                        @elseif (strcmp($date->dateStatus,'Atendida')==0) 
                           <p class="text-success"><b>{{$date->dateStatus}}: </b>{{$date->commentary}}</p>
                         @endif
-
-                      @endif
                     </div>
               </div>
         @endforeach

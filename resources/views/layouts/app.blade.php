@@ -21,6 +21,16 @@
     <link rel="stylesheet" href="/css/login.css">
 
     <link href="/img/icono-dental.png" rel="shortcut icon" type="image/x-icon" />
+
+    <style>
+
+
+        @media(max-width:754px){
+                .col-login{
+                        display: none !important;
+                }
+        }
+    </style>
 </head>
 <body class="fondo-login">
        
