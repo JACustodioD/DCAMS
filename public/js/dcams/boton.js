@@ -2,14 +2,14 @@ $(document).ready(function(){
     $('.botoncito').click(function(){
           $('body, html').animate({
               scrollTop: '0px'
-          }, 300);
+          }, 2000);
       });
 
     $(window).scroll(function(){
-      if( $(this).scrollTop() > 0 ){
-        $('.botoncito').slideDown(300);
+      if( $(this).scrollTop() > 300 ){
+        $('.botoncito').slideDown(500);
       } else {
-        $('.botoncito').slideUp(300);
+        $('.botoncito').slideUp(500);
       }
     });
 });

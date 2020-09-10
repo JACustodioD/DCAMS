@@ -36,7 +36,6 @@
                 <div class="d-flex justify-content-start text-phone" style="width: 50%;">
                     <h6><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
                 </div>
-                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu btn btn-outline-primary" href="#"><b>Haz una cita</b> <span class="sr-only">(current)</span></a>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#acercade">Acerca de</a>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#tratamientos">Tratamientos</a>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#promociones">Promociones</a>
