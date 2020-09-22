@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup" >
              <div class="navbar-nav d-flex justify-content-around " style="width: 100%">
                 <div class="d-flex justify-content-start text-phone" style="width: 50%;">
-                    <h6><i class="fas fa-phone icon-head"></i>553-22-09 / 552-33-01</h6>
+                    
                 </div>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#acercade">Acerca de</a>
                  <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#tratamientos">Tratamientos</a>
@@ -46,22 +46,29 @@
      </nav>
     </div>
 </header>
-<section class="container-fluid">
+<section class="container-fluid"  style="background-color: #f8f8f8;">
     <div class="submenuu">
         <div class="row  d-flex align-items-center">
             <div class="col-md-1 col-12  icon-dental">
-                <img src="/img/icono-dental.png" alt="icono-dental" width="100" height="100">
+                <img src="/img/icono-dental.png" alt="icono-dental" width="120" height="120">
             </div>
             <div class="col-md-5  d-flex text-slogan">
                     <h3 class="slogan pl-3"> <strong class="letter-blue">C</strong>reamos sonrísas,
                      mejoramos tu vida.</h3>
             </div>
-            <div class="col-md-6 d-flex justify-content-end text-redes">
+            <div class="col-md-3 d-flex justify-content-center align-items-center text-redes">
+
                 <p class="text-siguenos mr-2">Síguenos |  </p>
                 <a href=""><i class="fab fa-twitter-square icon-head hvr-grow-rotate"></i></a>
                 <a href=""><i class="fab fa-facebook-square icon-head hvr-grow-rotate"></i></a>
                 <a href=""><i class="fab fa-instagram icon-head hvr-grow-rotate"></i></a>
             </div>
+            <div class="col-md-3 d-flex justify-content-center align-items-center text-redes">
+
+                <p class="text-siguenos mr-2">Llámanos |  </p>
+                <i class="fas fa-phone-square icon-head"></i> <p class="text-siguenos">553-55-333</p>
+            </div>
+           
         </div>
     </div>
 </section>
@@ -113,7 +120,7 @@
      </div>
 </footer>
 
-<span class="botoncito"><i class="far fa-arrow-alt-circle-up"></i></span>
+<span class="botoncito"><img src="/img/up.png" alt="boton" width = "70" height = "50"></span>
    
 <!--SCRIPT-->
 <script src="/js/lib/jquery.js"></script>

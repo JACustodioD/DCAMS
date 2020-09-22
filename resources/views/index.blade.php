@@ -38,7 +38,7 @@
 
 </div>
 <!--SECCION ACERCA DE-->
-<section class="container-fluid shadow-sm p-3 mb-1" style="height: 100%" id="acercade">
+<section class="container-fluid shadow-sm p-3 mb-1"  id="acercade">
      <div class="about-section" >
          <div class="desc-about">      
             <div class="row">
@@ -60,7 +60,7 @@
                 </div>
              </div>
          </div>
-        <div class=" desc-about d-flex align-items-center ">
+        <div class=" desc-about d-flex align-items-center">
              <div class="row "  >
                 <div class="col-md-3">
                     <figure class="text-center">
@@ -440,11 +440,12 @@
                 </div>
             </div>
 </section>
+<a href="/citas" class="btn btn-outline-primary botoncita type1">Agenda una cita</a>
     
  @endsection
  @section('script')
     <script src="/js/lib/smooth-scroll.min.js"></script>
-
+    
     <script>
         var scroll = new SmoothScroll('a[href*="#"]', {
             // Selectors

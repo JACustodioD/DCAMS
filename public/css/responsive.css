@@ -167,6 +167,16 @@
         justify-content: center !important;
     }
 }
+@media screen and (min-width:320px){
+    .icon-dental{
+       text-align: center;
+    }
+   }
+   @media screen and (max-width:415px){
+       .about-section{
+           
+       }
+   }
 
 /*CITAS Y LOGIN*/
 @media screen and (max-width:360px){
@@ -181,11 +191,7 @@
     }
 }
 /*INDEX*/
-@media screen and (min-width:320px){
- .icon-dental{
-    text-align: center;
- }
-}
+
 
 /*USUARIO*/
 
