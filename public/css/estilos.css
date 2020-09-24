@@ -64,6 +64,9 @@ body{
     color: white;
 }
 
+.submenu{
+    background-color: #f8f8f8;
+}
 
 
 
@@ -135,7 +138,9 @@ body{
     height: 100px;
     width:100px;
 }
-
+.carouselslide{
+height: 50% !important;
+}
 .promociones{
     background-color: #007bff;
 }
@@ -175,9 +180,7 @@ ul li a{
     color: black;
     line-height: 30px;
 }
-.subfoot{
-   
-}
+
 
 /*TRATAMIENTOS*/
 .tratamientosd{
@@ -189,15 +192,39 @@ ul li a{
 
 .botoncito {
     display: none;
-    padding:20px;
+    text-align: center;
+    align-items: center !important;
+    padding:10px;
     background: transparent;
-    font-size:50px;
-    color: #f7b2d5;
+    font-size:20px;
+    background-color: #F08080;
+    color: white;
     cursor:pointer;
     position: fixed;
-    bottom:20px;
-    right:20px;
+    bottom:0px;
+    right:0px;
+    width: 60px;
+    height: 60px;
 }
+.botoncita {
+    display: none;
+    padding:20px;
+    font-size:15px;
+    cursor:pointer;
+    position: fixed;
+    top:10px;
+    right:0px;
+    color: black;
+    font: bold;
+}
+.sticky-menu{
+    display: none;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+
+}
+
 
 .alert-dcams{
     position:relative;

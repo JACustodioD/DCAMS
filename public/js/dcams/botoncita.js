@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.botoncito').click(function(){
+    $('.botoncita').click(function(){
           $('body, html').animate({
               scrollTop: '0px'
           }, 2000);
@@ -7,9 +7,9 @@ $(document).ready(function(){
 
     $(window).scroll(function(){
       if( $(this).scrollTop() > 300 ){
-        $('.botoncito').slideDown(500);
+        $('.botoncita').slideDown(500);
       } else {
-        $('.botoncito').slideUp(500);
+        $('.botoncita ').slideUp(500);
       }
     });
 });

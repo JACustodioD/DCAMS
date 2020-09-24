@@ -1,7 +1,9 @@
 .fondo-login{
-    background-image: url('/img/citas.jpg');
+    background-image: url('/img/fondocita.png');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position:center;
+    height: 100vh;
 }
 
 .col-login{

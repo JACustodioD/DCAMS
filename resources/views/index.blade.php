@@ -1,7 +1,7 @@
 @extends('layouts.base')
 @section('content')
 <section>
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleCaptions" class="carouselslide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -16,14 +16,14 @@
                 </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/slider33.jpg" class="d-block w-100" alt="slider2">
+                    <img src="/img/slider33.jpg" class="d-block w-100 " alt="slider2">
                     <div class="carousel-caption d-none d-md-block caption-carou ">
                     <h3 class="d-flex align-items-center justify-content-end mt-3 text-sabermas mt-5">
                     <a href="/tratamientos/#sonrisa" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
                 </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/slider55.jpg" class="d-block w-100" alt="slider2">
+                    <img src="/img/slider55.jpg" class="d-block w-100" alt="slider3">
                     <div class="carousel-caption d-none d-md-block caption-carou ">
                     <h3 class="d-flex align-items-center justify-content-end mt-3 text-sabermas mt-5">
                     <a href="#promociones" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
@@ -34,11 +34,9 @@
         </div>
 </section>
 <!--SECCION FONDO-->
-<div class="container-fluid fondo-index">
 
-</div>
 <!--SECCION ACERCA DE-->
-<section class="container-fluid shadow-sm p-3 mb-1" style="height: 100%" id="acercade">
+<section class="container-fluid shadow-sm p-3 mb-1"  id="acercade">
      <div class="about-section" >
          <div class="desc-about">      
             <div class="row">
@@ -60,7 +58,7 @@
                 </div>
              </div>
          </div>
-        <div class=" desc-about d-flex align-items-center ">
+        <div class=" desc-about d-flex align-items-center">
              <div class="row "  >
                 <div class="col-md-3">
                     <figure class="text-center">
@@ -91,7 +89,7 @@
      </div>
 </section>
        <!--TRATAMIENTOS-->
-<section class="container-fluid tratamientos-section d-none d-lg-block" id="tratamientos" style="height: 100%">
+<section class="container-fluid tratamientos-section d-none d-md-block" id="tratamientos" style="height: 100%">
     <div class="row">
         <div class="col-md-12 mt-3">
             <h1 class="text-center">Tratamientos</h1>
@@ -246,7 +244,7 @@
 </section>
 
 <!-- SLIDER RESPONSIVE DE TRATAMIENTOS-->
-<section class="container-fluid tratamientos-section d-xs-block d-lg-none" id="tratamientos" style="height: 100%">
+<section class="container-fluid tratamientos-section d-xs-block d-md-none" id="tratamientos" style="height: 100%">
      <div class="row">
          <div class="col-md-12 mt-3">
              <h1 class="text-center">Tratamientos</h1>
@@ -440,11 +438,12 @@
                 </div>
             </div>
 </section>
+<a href="/citas" class="btn btn-outline-primary botoncita type1">Agenda una cita</a>
     
  @endsection
  @section('script')
     <script src="/js/lib/smooth-scroll.min.js"></script>
-
+    
     <script>
         var scroll = new SmoothScroll('a[href*="#"]', {
             // Selectors
