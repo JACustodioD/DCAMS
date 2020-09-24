@@ -1,7 +1,7 @@
 @extends('layouts.base')
 @section('content')
 <section>
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleCaptions" class="carouselslide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -16,14 +16,14 @@
                 </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/slider33.jpg" class="d-block w-100" alt="slider2">
+                    <img src="/img/slider33.jpg" class="d-block w-100 " alt="slider2">
                     <div class="carousel-caption d-none d-md-block caption-carou ">
                     <h3 class="d-flex align-items-center justify-content-end mt-3 text-sabermas mt-5">
                     <a href="/tratamientos/#sonrisa" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
                 </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/slider55.jpg" class="d-block w-100" alt="slider2">
+                    <img src="/img/slider55.jpg" class="d-block w-100" alt="slider3">
                     <div class="carousel-caption d-none d-md-block caption-carou ">
                     <h3 class="d-flex align-items-center justify-content-end mt-3 text-sabermas mt-5">
                     <a href="#promociones" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
@@ -34,9 +34,7 @@
         </div>
 </section>
 <!--SECCION FONDO-->
-<div class="container-fluid fondo-index">
 
-</div>
 <!--SECCION ACERCA DE-->
 <section class="container-fluid shadow-sm p-3 mb-1"  id="acercade">
      <div class="about-section" >

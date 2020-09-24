@@ -46,8 +46,7 @@
      </nav>
     </div>
 </header>
-<section class="container-fluid"  style="background-color: #f8f8f8;">
-    <div class="submenuu">
+<section class="container-fluid submenu">
         <div class="row  d-flex align-items-center">
             <div class="col-md-1 col-12  icon-dental">
                 <img src="/img/icono-dental.png" alt="icono-dental" width="120" height="120">
@@ -56,22 +55,47 @@
                     <h3 class="slogan pl-3"> <strong class="letter-blue">C</strong>reamos sonrísas,
                      mejoramos tu vida.</h3>
             </div>
-            <div class="col-md-3 d-flex justify-content-center align-items-center text-redes">
+            <div class="col-md-3 d-flex justify-content-end align-items-center text-redes">
 
                 <p class="text-siguenos mr-2">Síguenos |  </p>
                 <a href=""><i class="fab fa-twitter-square icon-head hvr-grow-rotate"></i></a>
                 <a href=""><i class="fab fa-facebook-square icon-head hvr-grow-rotate"></i></a>
                 <a href=""><i class="fab fa-instagram icon-head hvr-grow-rotate"></i></a>
             </div>
-            <div class="col-md-3 d-flex justify-content-center align-items-center text-redes">
+            <div class="col-md-3 d-flex justify-content-end align-items-center text-redes">
 
                 <p class="text-siguenos mr-2">Llámanos |  </p>
                 <i class="fas fa-phone-square icon-head"></i> <p class="text-siguenos">553-55-333</p>
             </div>
            
         </div>
-    </div>
 </section>
+
+<!--STICKY MENU-->
+<header>
+    <div class="container-fluid menu-padding sticky-menu">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm  mb-5 bg-white rounded menu-margin " style="padding:0px !important;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup" >
+             <div class="navbar-nav d-flex justify-content-around  align-items-center" style="width: 100%">
+                <div class="d-flex justify-content-between align-items-center" style="width: 50%;">
+                <a href="/"><img src="/img/icono-dental.png" alt="" height="90" width="90"></a>
+                <a href="/citas" class="btn btn-outline-primary hvr-grow-shadow">Pide una cita</a>
+                </div>
+                
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#acercade">Acerca de</a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#tratamientos">Tratamientos</a>
+                 <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#promociones">Promociones</a>
+                <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="#contacto">Contácto</a>
+                <a class="nav-item nav-link hvr-bounce-to-bottom link-menu " href="/login">Mi cuenta</a>
+             </div>
+         </div>
+     </nav>
+    </div>
+</header>
+<!--STICKY MENU-->
 
      <!--Content-->
          @yield('content')
@@ -120,13 +144,16 @@
      </div>
 </footer>
 
-<span class="botoncito"><img src="/img/up.png" alt="boton" width = "70" height = "50"></span>
+<span class="botoncito"><i class="fas fa-angle-double-up"></i></span>
+<span class="botoncita"><a href=""><i class="far fa-calendar-check"></i></a>Pide tu cita</span>
    
 <!--SCRIPT-->
+<script src="/js/dcams/sticky-menu.js"></script>
 <script src="/js/lib/jquery.js"></script>
 <script src="/js/lib/bootstrap.min.js"></script>
 <script src="/js/lib/all.js"></script>
 <script src="/js/dcams/boton.js"></script>
+
 @yield('script')
 <script src="/js/efecto.js"></script>
 
