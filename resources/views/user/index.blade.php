@@ -105,7 +105,7 @@
       <!--Accordion wrapper-->
       <div class="accordion md-accordion accordion-5" id="accordionEx5" role="tablist"
         aria-multiselectable="true">
-        @if(sizeOf($treatments)>0)
+        @if(empty($treatments))
           @foreach ($treatments as $treatment)
           <span hidden>{{$cont++}}</span>
           <!-- Accordion card -->
@@ -134,10 +134,10 @@
                   Costo del tratamiento: <b> ${{$treatment->total}}</b>
                 </p>
                 <p class=" mb-0">
-                  Fecha de inicio: <b> {{date('d/m/Y',strtotime($treatment->startDate)) }}</b>
+                  Fecha de inicio: <b> {{ $treatment->startDate }}</b>
                 </p>
                 <p class=" mb-0">
-                  Fecha estimada de termino: <b> {{date('d/m/Y',strtotime($treatment->endDate)) }}</b>
+                  Fecha estimada de termino: <b> {{ $treatment->endDate }}</b>
                 </p>
 
               </div>
@@ -188,20 +188,21 @@
          <div class="calendar_content"></div>
       </div>
       </div>
-      @if(sizeOf($dates)>0)
-        @foreach ($dates as $date)
+      @if(!empty($appointment_info))
+        @foreach ($appointment_info as $appointment)
             <div class="col-md-6">
                   <div class="jumbotron">
-                      <h3>Próxima cita: {{ date('d/m/Y',strtotime($date->dateOfAppointment)) }}</h3>
-                      <p class="lead">Hora: {{ $date->hour }}</p>
-                      <p class="lead">Consulta: {{ $date->affair }}</p>
+                      <h3>Próxima cita: {{ $appointment->dateOfAppointment }}</h3>
+                      <p class="lead">Hora: {{ $appointment->hour }}</p>
+                      <p class="lead">Consulta: {{ $appointment->affair }}</p>
                       <hr class="my-4">
                       <p>Recuerde llegar con 15 minutos de anticipación a su cita.</p>
-                        @if(strcmp($date->dateStatus,'Cancelada')==0)
-                          <p class="text-danger"><b>{{$date->dateStatus}}: </b>{{$date->commentary}}</p>
-                        @elseif (strcmp($date->dateStatus,'Atendida')==0) 
-                          <p class="text-success"><b>{{$date->dateStatus}}: </b>{{$date->commentary}}</p>
+                        @if(strcmp($appointment->dateStatus,'Cancelled')==0)
+                          <p class="text-danger"><b> Cancelada: </b>{{$appointment->commentary}}</p>
+                        @elseif (strcmp($appointment->dateStatus,'attended')==0) 
+                          <p class="text-success"><b>Completada: </b>{{$appointment->commentary}}</p> 
                         @endif
+                       
                     </div>
               </div>
         @endforeach

@@ -11,8 +11,6 @@ use App\User;
 class HistoryController extends Controller
 {
 
-
-   
     public function patient_history_admin($patientID){
 
         $patientID = base64_decode($patientID);
@@ -50,6 +48,12 @@ class HistoryController extends Controller
           }
       }
 
+    /**
+     * Habilita la edicion de la historia medica en la vista de usuario
+     * @param Illuminate\Http\Request $request
+     * @param App\User $patient
+     * @return boolean 
+     */
     public function enabled(Request $request, User $patient){
         $patient = $patient::where('id',$request['patient'])->update(['history'=>0]);
         $historia = \App\Storie::where('user', '=', $request['patient'])->delete();
@@ -58,43 +62,61 @@ class HistoryController extends Controller
         return "true";
     }
 
-
+    /**
+     * Agrega el historial medico con los padecimientos seleccionados
+     * @param Illuminate\Http\Request $request
+     * @return redirect
+     */
     public function add_history(Request $request){
         $sffering = new \App\Sffering;
   
-        $idList = \App\Sffering::select('id')->get();
-  
-        foreach ($idList as $id) {
-          if($request[$id->id] == 'si'){
-            $historyList[] = $id->id;
+        $sffering_ID_list = \App\Sffering::select('id')->get();
+
+        $sffering_list = [];
+        
+        // Verficamos que padecimientos fueron seleccionados
+        foreach ($sffering_ID_list as $sffering_ID)
+        {
+          if($request[$sffering_ID->id] == 'si')
+          {
+            $sffering_list[] = $sffering_ID->id;
           }
         }
-  
-  
+        
+        // Si no se selecciono algún tratamiento finalizamos el proceso
+        if(!$sffering_list)
+        {
+            return redirect('/pacientes/historiamedica');
+        }
+        
+        // creamos una nueva historia medica
         $storie = new Storie();
         $storie->user = Auth::user()->id;
         $storie->historyStatus = "Active";
         $storie->save();
   
-        foreach ($historyList as $history) {
+        // Creamos todos los registros de la historia por cada padecimiento seleccionado
+        foreach ($sffering_list as $sffering)
+        {
           $records = new \App\Records_history();
-          $records->sfferings = intval($history);
+          $records->sfferings = intval($sffering);
           $records->stories = $storie->id;
           $records->save();
         }
   
-          $user = new User();
-            $userList = $user::where('id',Auth::user()->id)->take(1)->get();
+        // Actualizamos el status del historial medico del paciente
+        $user = new User();
+        $userList = $user::where('id',Auth::user()->id)->take(1)->get();
   
-            foreach ($userList as $userInfo) {
-              $user = $userInfo;
-            }
-            $user->history = true;
-            $user->save();
+        foreach ($userList as $userInfo)
+        {
+            $user = $userInfo;
+        }
+        $user->history = true;
+        $user->save();
   
   
-          return redirect('/pacientes/historiamedica');
-  
-  
-      }
+        return redirect('/pacientes/historiamedica');
+
+    }
 }

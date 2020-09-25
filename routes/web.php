@@ -66,7 +66,7 @@ Route::group([
 ],function(){
 	Route::get('/','Patient\PatientController@show_patient');
 
-	Route::post('/image','Patient\StorageController@save');
+	Route::post('/image','Storage\StorageController@save');
 
 	Route::get('/historiamedica','History\HistoryController@patient_history_user');
 	Route::post('/historiamedica','History\HistoryController@add_history');
