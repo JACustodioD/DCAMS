@@ -11,7 +11,13 @@ use App\User;
 class HistoryController extends Controller
 {
 
-    public function patient_history_admin($patientID){
+    /**
+     * Muestra la historia medica del paciente seleccionado del lado de admin
+     * @param string $patientID
+     * @return view
+     */
+    public function print_history_admin($patientID)
+    {
 
         $patientID = base64_decode($patientID);
   
@@ -19,34 +25,41 @@ class HistoryController extends Controller
               'sfferings' => \App\Records_history::select('sfferingDescription','sfferingCategory')->join('stories','stories','stories.id')->join('sfferings','sfferings','sfferings.id')->where('user',$patientID)->get(),
               'patients' => \App\User::where('id',$patientID)->get()
           ]);
-      }
+    }
   
-      public function patient_history_user(){
-  
-          if(!Auth::user()->history){
+    /**
+     * Muestra la historia medica en caso de existir o el forumulario en caso no existir
+     * la historia medica en el lado del paciente.
+     * 
+     * @return view
+     */
+    public function print_history_user()
+    {
+        if(!Auth::user()->history) {
   
             $sffering = new \App\Sffering;
-            $dentalList = $sffering::where('sfferingCategory','hdental')->get();
-            $generalList = $sffering::where('sfferingCategory','hgeneral')->get();
-            $observList = $sffering::where('sfferingCategory','observ')->get();
-  
-            return view('user.historiaMedica',[
-                'dentalList' => $dentalList,
-                'generalList' => $generalList,
-                'observList' => $observList,
+            $dental_list = $sffering::where('sfferingCategory','hdental')->get();
+            $general_list = $sffering::where('sfferingCategory','hgeneral')->get();
+            $observ_list = $sffering::where('sfferingCategory','observ')->get();
+
+            $data = [
+                'dentalList' => $dental_list,
+                'generalList' => $general_list,
+                'observList' => $observ_list,
                 'item' => 'A'
-              ]);
+            ];
   
-          }else{
+        } else {
   
             $historyList = \App\Records_history::select('sfferingDescription','sfferingCategory')->join('sfferings','sfferings','sfferings.id')->join('stories','stories','stories.id')->where('user','=',Auth::user()->id)->get();
+            
+            $data = ['historyList' => $historyList];
   
-            return view('user.historiaMedica',[
-              'historyList' => $historyList
-            ]);
-  
-          }
-      }
+        }
+
+          return view('user.historiaMedica', $data);
+    }
+
 
     /**
      * Habilita la edicion de la historia medica en la vista de usuario
@@ -54,7 +67,8 @@ class HistoryController extends Controller
      * @param App\User $patient
      * @return boolean 
      */
-    public function enabled(Request $request, User $patient){
+    public function enabled(Request $request, User $patient)
+    {
         $patient = $patient::where('id',$request['patient'])->update(['history'=>0]);
         $historia = \App\Storie::where('user', '=', $request['patient'])->delete();
 
@@ -67,7 +81,8 @@ class HistoryController extends Controller
      * @param Illuminate\Http\Request $request
      * @return redirect
      */
-    public function add_history(Request $request){
+    public function add_history(Request $request)
+    {
         $sffering = new \App\Sffering;
   
         $sffering_ID_list = \App\Sffering::select('id')->get();

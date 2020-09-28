@@ -1,6 +1,7 @@
 @extends('layouts.user')
+
 @section('content')
- @if(sizeOf($payments)>0)
+ @if(!empty($payments))
     <div class="container mt-3">
         <div class="pagos">
             <div class="row">
@@ -31,15 +32,15 @@
                           <ul class="list-group list-group-flush">
                              <li class="list-group-item">
                                <b>Costo del tratamiento:</b>
-                               <br> ${{ number_format($payment->cost,2) }}
+                               <br> ${{ $payment->cost }}
                              </li>
                              <li class="list-group-item">
                                <b>Restante:</b>
-                               ${{ number_format($payment->total,2) }}
+                               ${{ $payment->total }}
                              </li>
                              <li class="list-group-item">
                                <b>Liquidar antes del:</b>
-                               <br> {{date('d/m/Y',strtotime($payment->endDate)) }}
+                               <br> {{ $payment->endDate }}
                              </li>
 
                           </ul>
@@ -117,14 +118,14 @@
             "treatment": $(this).attr('tratamiento'),
             }, function(data) {
                 if(data.response) {
-                    alert(data.message);
+                  ohSnap(data.message, {color:'red',duration:'1000'});
                 } else {
                     if(data.payments.length>0){
                         for (var i = 0; i <= data.payments.length-1; i++) {
                             row = `
                             <tr class="listaPagos">'+
                             <th scope="row">${data.payments[i].credit}</th>
-                            <td>${data.payments[i].created_at}</td>
+                            <td>${data.payments[i].date}</td>
                             <td>${data.total}</td>
                             </tr> `;
                             table.append(row);

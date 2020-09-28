@@ -62,12 +62,12 @@ class PaymentController extends Controller
     }
 
     /**
+     * Muestra el historial de los pagos realizados
      * @param Illuminate\Http\Request $request
      * @return array
      */
-
-     public function payment_history(Request $request) {
-
+     public function payment_history(Request $request)
+     {
 
         $treatmentInfo = Treatment::find($request['treatment']);
 
@@ -75,12 +75,12 @@ class PaymentController extends Controller
             $error = ['response' => true, 'message' => 'El tratamiento no existe. No es posible continuar'];
         }
 
-        $paymentList = Payment::where('treatment', $treatmentInfo->id)->get();
+        $payment_list = Payment::where('treatment', $treatmentInfo->id)->get();
 
-       foreach($paymentList as $payment) {
+       foreach($payment_list as $payment) {
             $payment->credit = "$".number_format($payment->credit, 0, '.', ',');
-            //list($date,$hour) = explode(" ",$payment->created_at);
-            //$payment->created_at = date("d/m/Y", strtotime($date));
+            list($date,$hour) = explode(" ",$payment->created_at);
+            $payment->date = date("d-m-Y", strtotime($date));
         }
 
         if(isset($error)) {
@@ -89,18 +89,30 @@ class PaymentController extends Controller
 
         $response = [
             'response' => false,
-            'payments' => $paymentList,
+            'payments' => $payment_list,
             'total' => "$".number_format($treatmentInfo->total, 0, '.', ',')
         ];
         return $response;
      }
 
-     public function show_payment(Payment $payment)
-     {
-         $payments = Treatment::select('serviceName','services.cost','treatments.total','treatments.endDate','treatments.id','treatmentStatus')->join('services','treatments.service','=','services.id')->where('treatments.user',Auth::user()->id)->get();
-         return view('user.historiaPagos',[
-             'payments' => $payments
-         ]);
-     }
+    /**
+     * Muestra el tratamiento con su respectiva información de pagos
+     * @param App\Payment
+     * @return view
+     */
+    public function show_payment(Payment $payment)
+    {
+        $payments_list = Treatment::select('serviceName','services.cost','treatments.total','treatments.endDate','treatments.id','treatmentStatus')->join('services','treatments.service','=','services.id')->where('treatments.user',Auth::user()->id)->get();
+         
+        foreach ($payments_list as $payment) {
+            $payment->cost = number_format($payment->cost, 2, '.', ',');
+            $payment->total = number_format($payment->total, 2, '.', ',');
+            $payment->endDate = date('d-m-Y',strtotime($payment->endDate));
+        }    
+
+        return view('user.historiaPagos',[
+            'payments' => $payments_list
+        ]);
+}
  
 }

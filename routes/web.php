@@ -34,7 +34,7 @@ Route::group([
 	Route::post('/agregartratamiento','Treatment\TreatmentController@assign_treatment');
 	Route::post('/cancelartratamiento','Treatment\TreatmentController@cancel_treatment');
 
-	Route::get('/historialmedico/{patient}','History\HistoryController@patient_history_admin');
+	Route::get('/historialmedico/{patient}','History\HistoryController@print_history_admin');
 	Route::post('/habilitarhistoria','History\HistoryController@enabled');
 
 	
@@ -68,7 +68,7 @@ Route::group([
 
 	Route::post('/image','Storage\StorageController@save');
 
-	Route::get('/historiamedica','History\HistoryController@patient_history_user');
+	Route::get('/historiamedica','History\HistoryController@print_history_user');
 	Route::post('/historiamedica','History\HistoryController@add_history');
 
 	Route::get('/historialdepagos','Payment\PaymentController@show_payment');

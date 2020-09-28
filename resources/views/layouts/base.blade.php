@@ -28,7 +28,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarPrincipal" aria-controls="navBarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        <div class="collapse navbar-collapse " id="navbarNavAltMarkup" >
+        <div class="collapse navbar-collapse" id="navBarPrincipal" >
              <div class="navbar-nav d-flex justify-content-around " style="width: 100%">
                 <div class="d-flex justify-content-start text-phone" style="width: 50%;">
                     
