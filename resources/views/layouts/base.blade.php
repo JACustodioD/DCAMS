@@ -143,9 +143,8 @@
          </div>
      </div>
 </footer>
-
 <span class="botoncito"><i class="fas fa-angle-double-up"></i></span>
-<span class="botoncita"><a href=""><i class="far fa-calendar-check"></i></a>Pide tu cita</span>
+
    
 <!--SCRIPT-->
 <script src="/js/dcams/sticky-menu.js"></script>

@@ -147,19 +147,25 @@ height: 50% !important;
 .text-section{
     color: white;
 }
-.contacto{
-    background-color: #007bff;
-    color: white;
-}
+
 .icon-contacto{
     font-size: 2.5em;
-    color:  white;
+    color:  #007bff;
 }
 #separator-contacto{
     height: 2px;
     width: 100%;
-    background-color: white
+    background-color: #007bff;
 }
+.fondo-section{
+    background-image: url('/img/fondoseccion2.jpg');
+    background-size: cover;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+
+
 .text-foot{
     color: #007bff ;
 }
@@ -175,7 +181,7 @@ height: 50% !important;
     font-size: 2em;
 }
 ul li a{
-    list-style: !important;
+    list-style: none !important;
     text-decoration: none !important;
     color: black;
     line-height: 30px;
@@ -206,17 +212,7 @@ ul li a{
     width: 60px;
     height: 60px;
 }
-.botoncita {
-    display: none;
-    padding:20px;
-    font-size:15px;
-    cursor:pointer;
-    position: fixed;
-    top:10px;
-    right:0px;
-    color: black;
-    font: bold;
-}
+
 .sticky-menu{
     display: none;
     position: fixed;
@@ -224,7 +220,12 @@ ul li a{
     z-index: 2;
 
 }
-
+.iconcindex{
+    color: #007bff;
+}
+.container-cita{
+    background-color: #f8f8f8;;
+}
 
 .alert-dcams{
     position:relative;
