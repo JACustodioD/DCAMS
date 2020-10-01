@@ -4,34 +4,33 @@
     <div id="carouselExampleCaptions" class="carouselslide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1" ></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2" ></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
                  <img src="/img/slider22.jpg" class="d-block w-100" alt="slider1">
                 <div class="carousel-caption d-none d-md-block caption-carou ">
-                    <h3 class="d-flex align-items-center justify-content-end mt-3 text-sabermas ">
+                    <h3 class="d-flex align-items-end justify-content-end mt-3 text-sabermas ">
                     <a href="/tratamientos/#implantes" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
                 </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/slider33.jpg" class="d-block w-100 " alt="slider2">
-                    <div class="carousel-caption d-none d-md-block caption-carou ">
-                    <h3 class="d-flex align-items-center justify-content-end mt-3 text-sabermas mt-5">
+             </div>
+             <div class="carousel-item">
+                 <img src="/img/slider33.jpg" class="d-block w-100 " alt="slider2">
+                 <div class="carousel-caption d-none d-md-block caption-carou ">
+                    <h3 class="d-flex align-items-end justify-content-end mt-3 text-sabermas">
                     <a href="/tratamientos/#sonrisa" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
                 </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="/img/slider55.jpg" class="d-block w-100" alt="slider3">
-                    <div class="carousel-caption d-none d-md-block caption-carou ">
-                    <h3 class="d-flex align-items-center justify-content-end mt-3 text-sabermas mt-5">
+             </div>
+             <div class="carousel-item">
+                 <img src="/img/slider55.jpg" class="d-block w-100" alt="slider3">
+                 <div class="carousel-caption d-none d-md-block caption-carou ">
+                    <h3 class="d-flex align-items-end justify-content-end mt-3 text-sabermas">
                     <a href="#promociones" class="hvr-wobble-horizontal link-saber">Saber más<i class="fas fa-chevron-right"></i></a></h3>  
-                    </div>
-                </div>
-              
-            </div>
-        </div>
+                 </div>
+             </div>
+         </div>
+     </div>
 </section>
 <!--SECCION FONDO-->
 
@@ -89,9 +88,6 @@
      </div>
 </section>
 
-<section class="container-fluid fondo-section shadow-sm p-3 mb-1s">
-  
-</section>
        <!--TRATAMIENTOS-->
 <section class="container-fluid tratamientos-section d-none d-md-block" id="tratamientos" style="height: 100%">
     <div class="row">
@@ -473,7 +469,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fas fa-user iconcindex"></i></div>
                                 </div>
-                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required autofocus autocomplete value="{{ old('nombre')}}">
+                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required  autocomplete value="{{ old('nombre')}}">
                                     @error('nombre')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -487,7 +483,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fas fa-user iconcindex"></i></div>
                                 </div>
-                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required autofocus autocomplete value="{{ old('nombre')}}">
+                                <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" id="nombre" required  autocomplete value="{{ old('nombre')}}">
                                     @error('nombre')
                                     <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -504,7 +500,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fas fa-phone iconcindex"></i></div>
                                 </div>
-                                <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required autofocus autocomplete value="{{ old('telefono')}}">
+                                <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required  autocomplete value="{{ old('telefono')}}">
                                     @error('telefono')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -518,7 +514,7 @@
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fas fa-envelope iconcindex"></i></div>
                                 </div>
-                                 <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required autofocus autocomplete value="{{ old('telefono')}}">
+                                 <input type="text" class="form-control @error('telefono') is-invalid @enderror" name="telefono" required  autocomplete value="{{ old('telefono')}}">
                                  @error('telefono')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -554,7 +550,7 @@
                                    <div class="input-group-prepend">
                                        <div class="input-group-text"><i class="fas fa-calendar iconcindex"></i></div>
                                    </div>
-                                   <input type="date" class="form-control @error('fecha') is-invalid @enderror" name="fecha" required autofocus autocomplete value="{{ old('telefono')}}">
+                                   <input type="date" class="form-control @error('fecha') is-invalid @enderror" name="fecha" required autocomplete value="{{ old('telefono')}}">
                                        @error('fecha')
                                    <span class="invalid-feedback" role="alert">
                                        <strong>{{ $message }}</strong>
@@ -578,7 +574,7 @@
                        </div>
                      <div class="form-group">
                          <label for="comentarios">Comentarios adicionales:</label>
-                             <textarea class="form-control @error('comentario') is-invalid @enderror" id="comentario" rows="1" name="comentario" required autofocus autocomplete >{{old('comentario')}}</textarea>
+                             <textarea class="form-control @error('comentario') is-invalid @enderror" id="comentario" rows="1" name="comentario" required  autocomplete >{{old('comentario')}}</textarea>
 
                              @error('comentario')
                              <span class="invalid-feedback" role="alert">
@@ -587,7 +583,7 @@
                              @enderror
                      </div>
                      <div class="form-group text-center">
-                        <button type="submit" class="btn btn-primary form-control" style="width:50%;" autofocus><b>Agendar</b></button>
+                        <button type="submit" class="btn btn-primary form-control" style="width:50%;" ><b>Agendar</b></button>
                      </div>
              </form>
         </div>
